@@ -204,7 +204,7 @@
 ## 更详细的 分流选项
 
 
-```  
+```yaml  
    # [1st-01] -  DNS \ NTP               
     - { name : '📡.<DNS>—HttpDNS'                                    
     - { name : '📡.<DNS>—GlobalDNS'                                  
