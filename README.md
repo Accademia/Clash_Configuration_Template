@@ -7,7 +7,7 @@
 本模版 已实现的分流规则：
 
 - **分流 DNS查询**：
-    - 非中国网站的DNS查询，支持配置代理（ 效果 = 无DNS泄漏 + 无DNS污染）
+    - 非中国网站的DNS查询，全部走代理（首次查询直接走VPN代理，不会发起Fallback。 效果 = 无DNS泄漏 + 无DNS污染）
     - 中国网站，使用操作系统的内置查询路径
 - **分流 NTP查询**：
 - **分流 广告、偷窥隐私、反诈监控等流氓流量**：
@@ -207,10 +207,8 @@
 ```  
    # [1st-01] -  DNS \ NTP               
     - { name : '📡.<DNS>—HttpDNS'                                    
-
     - { name : '📡.<DNS>—GlobalDNS'                                  
     - { name : '📡.<DNS>—ChinaDNS'                                   
-
     - { name : '📡.<NTP>—GlobalNTP'                                  
     - { name : '📡.<NTP>—ChinaNTP'                                   
 
@@ -218,19 +216,10 @@
     - { name : '⛔️.<Protection>—Hijacking'                           
 
    # [1st-08]  [1st-09] -  隐私保护（Privacy） 屏蔽广告 
-   # 🔻🔻🔻 开始（ FewRule ） ✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅
     - { name : '⛔️.<Protection>—Privacy'                             
     - { name : '⛔️.<Protection>—ADblock'                             
-   # 🔺🔺🔺 结束（ FewRule ） ✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅
-
-   # [1st-10] -  UDP 
-   #- { name : '🎲.<Protocol>—GlobalUDP'                             
-   #- { name : '🎲.<Protocol>—ChinaUDP'                              
+                           
   
-  
-    - { name : '_____________________________________________________
-
-
    # [1st-02] -  局域网（Lan）         
     - { name : '💻.<Lan>'                                            
 
@@ -278,7 +267,6 @@
 
    # [2st-14] - 不支持VPN的网站（除 银行、HomeIP 分流规则以外的 网站
     - { name : '❌.<UnsupportVPN>'                                   
-
 
    # [2st-20] -  购物                                                
     - { name : '🛒.<Shopping>—eBay'                                  
@@ -355,8 +343,6 @@
     - { name : '🖥️.<Remote>—Rustdesk'                                
     - { name : '🖥️.<Remote>—Parsec'                                  
 
-    - { name : '_____________________________________________________
-
    # [5st-01] -  大厂                                                
     - { name : '☁️.<Apps>—Google'                                    
     - { name : '☁️.<Apps>—Microsoft'                                 
@@ -365,8 +351,6 @@
 
    # [7st-01] -  CDM 
     - { name : '☁️.<CDN>—Cloudflare'                                 
-
-    - { name : '_____________________________________________________
 
    # [4st-01] -  修改IP归属地   
     - { name : '🇨🇳.<ShowIP>—BiliBili'                                
@@ -380,9 +364,7 @@
     - { name : '🇨🇳.<ShowIP>—豆瓣'                                    
     - { name : '🇨🇳.<ShowIP>—闲鱼'                                    
 
-   # 🔻🔻🔻 开始 （ BlackList ） ❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌
-
-   # [4st-02] -  回国 - 网盘  视频  社交 媒体  购物 大厂    [ Default
+   # [4st-02] -  回国 中国 - 网盘  视频  社交 媒体  购物 大厂    [ Default
     - { name : '🇨🇳.<ReturnCN>—Drive'                                 
     - { name : '🇨🇳.<ReturnCN>—Video'                                 
     - { name : '🇨🇳.<ReturnCN>—Social'                                
@@ -391,43 +373,31 @@
     - { name : '🇨🇳.<ReturnCN>—Other'                                 
     - { name : '🇨🇳.<ReturnCN>—Final'                                 
 
-
-    - { name : '_____________________________________________________
-
+   #  回国 美国
     - { name : '🇺🇸.<ReturnUS>—Final'                                 
 
-    - { name : '_____________________________________________________
-
-   #- { name : '🇺🇸.<Country>—US'                                     
-   #- { name : '🇯🇵.<Country>—JP'                                     
-   #- { name : '🇬🇧.<Country>—UK'                                     
-   #- { name : '🇦🇺.<Country>—AU'                                     
-   #- { name : '🇭🇰.<Country>—HK'                                     
-   #- { name : '🇹🇼.<Country>—TW'                                     
-   #- { name : '🇸🇬.<Country>—SG'                                     
-   #- { name : '🇳🇱.<Country>—NL'                                     
-   #- { name : '🇩🇪.<Country>—DE'                                     
-   #- { name : '🇫🇷.<Country>—FR'                                     
-   #- { name : '🇨🇦.<Country>—CA'                                     
-   #- { name : '🇨🇳.<Country>—CN'                                     
-   # 注意：fallback ，当最靠前的节点无法连接时，按顺序依次尝试连接后
+   #  按目标网站所在国家分流
     - { name : '🌎.<Region>—North.America'                           
     - { name : '🌎.<Region>—South.America'                           
     - { name : '🌍.<Region>—Europe'                                  
     - { name : '🌏.<Region>—Oceania'                                 
     - { name : '🌏.<Region>—East.Asia'                               
     - { name : '🌏.<Region>—West.Asia'                               
-    - { name : '🌍.<Region>—Africa'                                  
+    - { name : '🌍.<Region>—Africa'     
+            
+   # 兜底                   
+    - { name : 'Final'   
+           
 ```
 
 .
 
 
-## 其他
+## 关于在 苹果手机 iOS （Stash）上使用
 
-对于iOS上使用时，要特别注意以下几点：
+要特别注意以下几点：
 
-1. Stash无法分流中国网站（Geostie:CN）的DNS查询（到中国DNS）.
+1. Stash for iOS/Mac 无法分流中国网站（Geostie:CN）的DNS查询（到中国DNS）.
     - 由于并不能在DNS的nameserver-policy:中支持Geostie:CN，所以导致了，非CN域名的中国网站需要走境外DNS查询，从而导致如京东养车等APP会返回海外IP。向开发者多次反馈后，开发者压根不回复 不响应 （不知道怎么想的） 。而Clash Verga rec客户端，不会有这个问题。
 
 2. 多DNS查询，可能会导致iOS的VPN频繁崩溃.
@@ -440,9 +410,18 @@
     - tcp-concurrent            : false     （不建议ture，因为开启后会导致移动端费电、并且导致iOS内存占用增加30%，而且耗电严重）
     - interval                  :  900      （不建议太频繁进行 “心跳测试”，这里设置为 15分钟=900秒 测试一次，否则耗电严重）
 
+5. 除了以上配置，如果想达到最大省电效果，请在Stash图形界面完成如下配置：
+    - 设置 -> 网络设置 -> 启用混合网络 （❌关闭）
+    - 设置 -> 网络设置 -> 并发连接  （❌关闭）    
+    - 设置 -> 网络设置 -> 启用Fallback DNS （❌关闭）
+    - 设置 -> 网络设置 -> 包含所有网络 （❌关闭）
+
 .
 
-对于DNS，要特别注意：
+
+## 关于 DNS策略
+
+本模版的DNS策略 已按如下思路进行配置：
 
 - 本模版的DNS请求，采用白名单制度，只有命中了的中国域名，才会使用操作系统内置的的DNS进行请求，其他域名的DNS请求，均通过VPS进行代理，并且在此过程中，不会通过系统内置的DNS请求功能向国内DNS发起请求。从而最大限度的避免DNS泄漏。并且也没有Fake IP，所有DNS请求，只请求一次，只返回1.1.1.1/8.8.8.8解析后的真实IP。并且全程（通过VPS代理DNS请求的全过程）只使用DOH（DNS over Https），通过境外VPS，加密访问DNS。
   
@@ -451,6 +430,8 @@
 - 唯一的代价就是，要求VPS必须要快，如果在中国大陆使用，建议使用日本CN2/9929线路的VPS。本配置会通过每60秒一次的全自动ping，选取延迟最的VPS代理DNS请求。
 
 .
+
+## 其他
 
 请不要使用任何，国产安卓、鸿蒙系统、运营商路由器的非桥接模式，进行 翻墙：
 
