@@ -206,187 +206,187 @@
 
 ```yaml  
    # [1st-01] -  DNS \ NTP               
-    '📡.<DNS>—HttpDNS'                                    
-    '📡.<DNS>—GlobalDNS'                                  
-    '📡.<DNS>—ChinaDNS'                                   
-    '📡.<NTP>—GlobalNTP'                                  
-    '📡.<NTP>—ChinaNTP'                                   
+       '📡.<DNS>—HttpDNS'                                    
+       '📡.<DNS>—GlobalDNS'                                  
+       '📡.<DNS>—ChinaDNS'                                   
+       '📡.<NTP>—GlobalNTP'                                  
+       '📡.<NTP>—ChinaNTP'                                   
 
    # [1st-05] -  反劫持（Hijacking） 反私有DNS跟踪（HttpDNS）  
-    '⛔️.<Protection>—Hijacking'                           
+       '⛔️.<Protection>—Hijacking'                           
 
    # [1st-08]  [1st-09] -  隐私保护（Privacy） 屏蔽广告 
-    '⛔️.<Protection>—Privacy'                             
-    '⛔️.<Protection>—ADblock'                             
+       '⛔️.<Protection>—Privacy'                             
+       '⛔️.<Protection>—ADblock'                             
                            
   
    # [1st-02] -  局域网（Lan）         
-    '💻.<Lan>'                                            
+       '💻.<Lan>'                                            
 
    # [2st-01] -  私有云：NAS           
-    '💻.<NAS>—Synology'                                   
-    '💻.<NAS>—QNAP'                                       
+       '💻.<NAS>—Synology'                                   
+       '💻.<NAS>—QNAP'                                       
 
    # [2st-02] -  公有云：云盘、云存储                                
-    '📂.<Drive>—iCloud'                                   
-    '📂.<Drive>—OneDrive'                                 
-    '📂.<Drive>—Dropbox'                                  
-    '📂.<Drive>—GoogleDrive'                              
-    '📂.<Drive>—MEGA'                                     
-    '📂.<Drive>—Imgur'                                    
-    '📂.<Drive>—InternetArchive'                          
+       '📂.<Drive>—iCloud'                                   
+       '📂.<Drive>—OneDrive'                                 
+       '📂.<Drive>—Dropbox'                                  
+       '📂.<Drive>—GoogleDrive'                              
+       '📂.<Drive>—MEGA'                                     
+       '📂.<Drive>—Imgur'                                    
+       '📂.<Drive>—InternetArchive'                          
 
    # [2st-04] -  被GFW阻挡的，其他下载站云盘                         
-    '⬇️.<P2P>—PT-Server'                                   
-    '⬇️.<P2P>—eMule-Server'                                
+       '⬇️.<P2P>—PT-Server'                                   
+       '⬇️.<P2P>—eMule-Server'                                
 
    # [2st-05] -  需加速 才能流畅访问的网站                           
-    '⬇️.<Download>—MacAppUpgrade'                          
+       '⬇️.<Download>—MacAppUpgrade'                          
 
    # [2st-11] -  金 融                                               
-    '💰.<Finance>—Paypal'                                 
-    '💰.<Finance>—Wise'                                   
-    '₿.<Crypto>—Binance'                                  
-    '₿.<Crypto>—OKX'                                      
-    '💳.<Virtual>—Monzo'                                  
-    '💳.<Virtual>—Revolut'                                
+       '💰.<Finance>—Paypal'                                 
+       '💰.<Finance>—Wise'                                   
+       '₿.<Crypto>—Binance'                                  
+       '₿.<Crypto>—OKX'                                      
+       '💳.<Virtual>—Monzo'                                  
+       '💳.<Virtual>—Revolut'                                
 
   # [2st-12] -  各国银行                                             
-    '🇺🇸.<Bank>—US'                                        
-    '🇨🇦.<Bank>—CA'                                        
-    '🇬🇧.<Bank>—UK'                                        
-    '🇦🇺.<Bank>—AU'                                        
-    '🇯🇵.<Bank>—JP'                                        
+       '🇺🇸.<Bank>—US'                                        
+       '🇨🇦.<Bank>—CA'                                        
+       '🇬🇧.<Bank>—UK'                                        
+       '🇦🇺.<Bank>—AU'                                        
+       '🇯🇵.<Bank>—JP'                                        
 
    # [2st-13] -  专属网站（必须要所属国IP才能正常下单的网站，银行除外
-    '🇺🇸.<HomeIP>—US'                                      
-   #'🇨🇦.<HomeIP>—CA'                                      
-   #'🇬🇧.<HomeIP>—UK'                                      
-   #'🇦🇺.<HomeIP>—AU'                                      
-    '🇯🇵.<HomeIP>—JP'                                      
+       '🇺🇸.<HomeIP>—US'                                      
+   #   '🇨🇦.<HomeIP>—CA'                                      
+   #   '🇬🇧.<HomeIP>—UK'                                      
+   #   '🇦🇺.<HomeIP>—AU'                                      
+       '🇯🇵.<HomeIP>—JP'                                      
 
    # [2st-14] - 不支持VPN的网站（除 银行、HomeIP 分流规则以外的 网站
-    '❌.<UnsupportVPN>'                                   
+       '❌.<UnsupportVPN>'                                   
 
    # [2st-20] -  购物                                                
-    '🛒.<Shopping>—eBay'                                  
-    '🛒.<Shopping>—Patreon'                               
+       '🛒.<Shopping>—eBay'                                  
+       '🛒.<Shopping>—Patreon'                               
 
    # [2st-21] -  游戏平台                                            
-    '🕹️.<Game>—Xbox'                                      
-    '🕹️.<Game>—PlayStation'                               
-    '🕹️.<Game>—Nintendo'                                  
-    '🕹️.<Game>—Steam'                                     
-    '🕹️.<Game>—EPIC'                                      
-    '🕹️.<Game>—GOG'                                       
-    '🕹️.<Game>—RockStar'                                  
-    '🕹️.<Game>—EA.Origin'                                 
-    '🕹️.<Game>—UbiSoft'                                   
+       '🕹️.<Game>—Xbox'                                      
+       '🕹️.<Game>—PlayStation'                               
+       '🕹️.<Game>—Nintendo'                                  
+       '🕹️.<Game>—Steam'                                     
+       '🕹️.<Game>—EPIC'                                      
+       '🕹️.<Game>—GOG'                                       
+       '🕹️.<Game>—RockStar'                                  
+       '🕹️.<Game>—EA.Origin'                                 
+       '🕹️.<Game>—UbiSoft'                                   
 
    # [2st-22] -  视频 软件                                           
-    '📺.<Video>—YouTube'                                  
-    '📺.<Video>—Netflix'                                  
-    '📺.<Video>—PrimeVideo'                               
-    '📺.<Video>—Disney'                                   
-    '📺.<Video>—HBO'                                      
-    '📺.<Video>—FOX'                                      
-    '📺.<Video>—AppleTV'                                  
-    '📺.<Video>—Porn'                                     
+       '📺.<Video>—YouTube'                                  
+       '📺.<Video>—Netflix'                                  
+       '📺.<Video>—PrimeVideo'                               
+       '📺.<Video>—Disney'                                   
+       '📺.<Video>—HBO'                                      
+       '📺.<Video>—FOX'                                      
+       '📺.<Video>—AppleTV'                                  
+       '📺.<Video>—Porn'                                     
 
    # [2st-23] -  短视频                                              
-    '🎬.<Short>—TikTok'                                   
-    '🎬.<Short>—Instagram'                                
-    '🎬.<Short>—Snapchat'                                 
-    '🎬.<Short>—Triller'                                  
+       '🎬.<Short>—TikTok'                                   
+       '🎬.<Short>—Instagram'                                
+       '🎬.<Short>—Snapchat'                                 
+       '🎬.<Short>—Triller'                                  
 
    # [2st-24] -  直播                                                
-    '🎞️.<Live>—Twitch'                                    
+       '🎞️.<Live>—Twitch'                                    
 
    # [2st-25] -  音频                                                
-    '🎧.<Audio>—Spotify'                                  
-    '🎧.<Audio>—YouTubeMusic'                             
-    '🎧.<Audio>—AppleMusic'                               
+       '🎧.<Audio>—Spotify'                                  
+       '🎧.<Audio>—YouTubeMusic'                             
+       '🎧.<Audio>—AppleMusic'                               
 
    # [2st-26] -  社交                                                
-    '💛.<Social>—Facebook'                                
-    '💛.<Social>—Twitter'                                 
-    '💛.<Social>—Telegram'                                
-    '💛.<Social>—Reddit'                                  
-    '💛.<Social>—Whatsapp'                                
-    '💛.<Social>—Line'                                    
-    '💛.<Social>—Discord'                                 
-    '💛.<Social>—LinkedIn'                                
-    '💛.<Social>—Teams'                                   
-    '💛.<Social>—Clubhouse'                               
-    '💛.<Social>—Signal'                                  
-    '💛.<Social>—Tumblr'                                  
-    '💛.<Social>—Pixiv'                                   
+       '💛.<Social>—Facebook'                                
+       '💛.<Social>—Twitter'                                 
+       '💛.<Social>—Telegram'                                
+       '💛.<Social>—Reddit'                                  
+       '💛.<Social>—Whatsapp'                                
+       '💛.<Social>—Line'                                    
+       '💛.<Social>—Discord'                                 
+       '💛.<Social>—LinkedIn'                                
+       '💛.<Social>—Teams'                                   
+       '💛.<Social>—Clubhouse'                               
+       '💛.<Social>—Signal'                                  
+       '💛.<Social>—Tumblr'                                  
+       '💛.<Social>—Pixiv'                                   
 
    # [2st-28] -  资讯                                                
-    '📰.<News>—Wikipedia'                                 
-    '📰.<News>—AppleNews'                                 
+       '📰.<News>—Wikipedia'                                 
+       '📰.<News>—AppleNews'                                 
 
    # [2st-29] -  AI                                                  
-    '💡.<AI>—OpenAI'                                      
-    '💡.<AI>—xAI'                                         
-    '💡.<AI>—Gemini'                                      
-    '💡.<AI>—Claude'                                      
-    '💡.<AI>—Copilot'                                     
-    '💡.<AI>—GlobalAI'                                    
+       '💡.<AI>—OpenAI'                                      
+       '💡.<AI>—xAI'                                         
+       '💡.<AI>—Gemini'                                      
+       '💡.<AI>—Claude'                                      
+       '💡.<AI>—Copilot'                                     
+       '💡.<AI>—GlobalAI'                                    
 
    # [2st-30] -  工具                                                
-    '🔧.<Tools>—Adobe'                                    
-    '🔧.<Tools>—Github'                                   
-    '🔧.<Tools>—Notion'                                   
-    '🔧.<Tools>—Pinterest'                                
-    '🔧.<Tools>—Bing/Edge'                                
-    '🖥️.<Remote>—Rustdesk'                                
-    '🖥️.<Remote>—Parsec'                                  
+       '🔧.<Tools>—Adobe'                                    
+       '🔧.<Tools>—Github'                                   
+       '🔧.<Tools>—Notion'                                   
+       '🔧.<Tools>—Pinterest'                                
+       '🔧.<Tools>—Bing/Edge'                                
+       '🖥️.<Remote>—Rustdesk'                                
+       '🖥️.<Remote>—Parsec'                                  
 
    # [5st-01] -  大厂                                                
-    '☁️.<Apps>—Google'                                    
-    '☁️.<Apps>—Microsoft'                                 
-    '☁️.<Apps>—Apple'                                     
-    '☁️.<Apps>—Amazon'                                    
+       '☁️.<Apps>—Google'                                    
+       '☁️.<Apps>—Microsoft'                                 
+       '☁️.<Apps>—Apple'                                     
+       '☁️.<Apps>—Amazon'                                    
 
    # [7st-01] -  CDM 
-    '☁️.<CDN>—Cloudflare'                                 
+       '☁️.<CDN>—Cloudflare'                                 
 
    # [4st-01] -  修改IP归属地   
-    '🇨🇳.<ShowIP>—BiliBili'                                
-    '🇨🇳.<ShowIP>—抖音'                                    
-    '🇨🇳.<ShowIP>—快手'                                    
-    '🇨🇳.<ShowIP>—小红书'                                  
-    '🇨🇳.<ShowIP>—西瓜'                                    
-    '🇨🇳.<ShowIP>—微博'                                    
-    '🇨🇳.<ShowIP>—知乎'                                    
-    '🇨🇳.<ShowIP>—贴吧'                                    
-    '🇨🇳.<ShowIP>—豆瓣'                                    
-    '🇨🇳.<ShowIP>—闲鱼'                                    
+       '🇨🇳.<ShowIP>—BiliBili'                                
+       '🇨🇳.<ShowIP>—抖音'                                    
+       '🇨🇳.<ShowIP>—快手'                                    
+       '🇨🇳.<ShowIP>—小红书'                                  
+       '🇨🇳.<ShowIP>—西瓜'                                    
+       '🇨🇳.<ShowIP>—微博'                                    
+       '🇨🇳.<ShowIP>—知乎'                                    
+       '🇨🇳.<ShowIP>—贴吧'                                    
+       '🇨🇳.<ShowIP>—豆瓣'                                    
+       '🇨🇳.<ShowIP>—闲鱼'                                    
 
    # [4st-02] -  回国 中国 - 网盘  视频  社交 媒体  购物 大厂    [ Default
-    '🇨🇳.<ReturnCN>—Drive'                                 
-    '🇨🇳.<ReturnCN>—Video'                                 
-    '🇨🇳.<ReturnCN>—Social'                                
-    '🇨🇳.<ReturnCN>—News'                                  
-    '🇨🇳.<ReturnCN>—Shopping'                              
-    '🇨🇳.<ReturnCN>—Other'                                 
-    '🇨🇳.<ReturnCN>—Final'                                 
+       '🇨🇳.<ReturnCN>—Drive'                                 
+       '🇨🇳.<ReturnCN>—Video'                                 
+       '🇨🇳.<ReturnCN>—Social'                                
+       '🇨🇳.<ReturnCN>—News'                                  
+       '🇨🇳.<ReturnCN>—Shopping'                              
+       '🇨🇳.<ReturnCN>—Other'                                 
+       '🇨🇳.<ReturnCN>—Final'                                 
 
    #  回国 美国
-    '🇺🇸.<ReturnUS>—Final'                                 
+       '🇺🇸.<ReturnUS>—Final'                                 
 
    #  按目标网站所在国家分流
-    '🌎.<Region>—North.America'                           
-    '🌎.<Region>—South.America'                           
-    '🌍.<Region>—Europe'                                  
-    '🌏.<Region>—Oceania'                                 
-    '🌏.<Region>—East.Asia'                               
-    '🌏.<Region>—West.Asia'                               
-    '🌍.<Region>—Africa'     
+       '🌎.<Region>—North.America'                           
+       '🌎.<Region>—South.America'                           
+       '🌍.<Region>—Europe'                                  
+       '🌏.<Region>—Oceania'                                 
+       '🌏.<Region>—East.Asia'                               
+       '🌏.<Region>—West.Asia'                               
+       '🌍.<Region>—Africa'     
             
    # 兜底                   
-    'Final'   
+       'Final'   
            
 ```
 
