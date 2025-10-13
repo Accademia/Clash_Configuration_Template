@@ -206,187 +206,187 @@
 
 ```yaml  
    # [1st-01] -  DNS \ NTP               
-    - { name : '📡.<DNS>—HttpDNS'                                    
-    - { name : '📡.<DNS>—GlobalDNS'                                  
-    - { name : '📡.<DNS>—ChinaDNS'                                   
-    - { name : '📡.<NTP>—GlobalNTP'                                  
-    - { name : '📡.<NTP>—ChinaNTP'                                   
+    '📡.<DNS>—HttpDNS'                                    
+    '📡.<DNS>—GlobalDNS'                                  
+    '📡.<DNS>—ChinaDNS'                                   
+    '📡.<NTP>—GlobalNTP'                                  
+    '📡.<NTP>—ChinaNTP'                                   
 
    # [1st-05] -  反劫持（Hijacking） 反私有DNS跟踪（HttpDNS）  
-    - { name : '⛔️.<Protection>—Hijacking'                           
+    '⛔️.<Protection>—Hijacking'                           
 
    # [1st-08]  [1st-09] -  隐私保护（Privacy） 屏蔽广告 
-    - { name : '⛔️.<Protection>—Privacy'                             
-    - { name : '⛔️.<Protection>—ADblock'                             
+    '⛔️.<Protection>—Privacy'                             
+    '⛔️.<Protection>—ADblock'                             
                            
   
    # [1st-02] -  局域网（Lan）         
-    - { name : '💻.<Lan>'                                            
+    '💻.<Lan>'                                            
 
    # [2st-01] -  私有云：NAS           
-    - { name : '💻.<NAS>—Synology'                                   
-    - { name : '💻.<NAS>—QNAP'                                       
+    '💻.<NAS>—Synology'                                   
+    '💻.<NAS>—QNAP'                                       
 
    # [2st-02] -  公有云：云盘、云存储                                
-    - { name : '📂.<Drive>—iCloud'                                   
-    - { name : '📂.<Drive>—OneDrive'                                 
-    - { name : '📂.<Drive>—Dropbox'                                  
-    - { name : '📂.<Drive>—GoogleDrive'                              
-    - { name : '📂.<Drive>—MEGA'                                     
-    - { name : '📂.<Drive>—Imgur'                                    
-    - { name : '📂.<Drive>—InternetArchive'                          
+    '📂.<Drive>—iCloud'                                   
+    '📂.<Drive>—OneDrive'                                 
+    '📂.<Drive>—Dropbox'                                  
+    '📂.<Drive>—GoogleDrive'                              
+    '📂.<Drive>—MEGA'                                     
+    '📂.<Drive>—Imgur'                                    
+    '📂.<Drive>—InternetArchive'                          
 
    # [2st-04] -  被GFW阻挡的，其他下载站云盘                         
-    - { name : '⬇️.<P2P>—PT-Server'                                   
-    - { name : '⬇️.<P2P>—eMule-Server'                                
+    '⬇️.<P2P>—PT-Server'                                   
+    '⬇️.<P2P>—eMule-Server'                                
 
    # [2st-05] -  需加速 才能流畅访问的网站                           
-    - { name : '⬇️.<Download>—MacAppUpgrade'                          
+    '⬇️.<Download>—MacAppUpgrade'                          
 
    # [2st-11] -  金 融                                               
-    - { name : '💰.<Finance>—Paypal'                                 
-    - { name : '💰.<Finance>—Wise'                                   
-    - { name : '₿.<Crypto>—Binance'                                  
-    - { name : '₿.<Crypto>—OKX'                                      
-    - { name : '💳.<Virtual>—Monzo'                                  
-    - { name : '💳.<Virtual>—Revolut'                                
+    '💰.<Finance>—Paypal'                                 
+    '💰.<Finance>—Wise'                                   
+    '₿.<Crypto>—Binance'                                  
+    '₿.<Crypto>—OKX'                                      
+    '💳.<Virtual>—Monzo'                                  
+    '💳.<Virtual>—Revolut'                                
 
   # [2st-12] -  各国银行                                             
-    - { name : '🇺🇸.<Bank>—US'                                        
-    - { name : '🇨🇦.<Bank>—CA'                                        
-    - { name : '🇬🇧.<Bank>—UK'                                        
-    - { name : '🇦🇺.<Bank>—AU'                                        
-    - { name : '🇯🇵.<Bank>—JP'                                        
+    '🇺🇸.<Bank>—US'                                        
+    '🇨🇦.<Bank>—CA'                                        
+    '🇬🇧.<Bank>—UK'                                        
+    '🇦🇺.<Bank>—AU'                                        
+    '🇯🇵.<Bank>—JP'                                        
 
    # [2st-13] -  专属网站（必须要所属国IP才能正常下单的网站，银行除外
-    - { name : '🇺🇸.<HomeIP>—US'                                      
-   #- { name : '🇨🇦.<HomeIP>—CA'                                      
-   #- { name : '🇬🇧.<HomeIP>—UK'                                      
-   #- { name : '🇦🇺.<HomeIP>—AU'                                      
-    - { name : '🇯🇵.<HomeIP>—JP'                                      
+    '🇺🇸.<HomeIP>—US'                                      
+   #'🇨🇦.<HomeIP>—CA'                                      
+   #'🇬🇧.<HomeIP>—UK'                                      
+   #'🇦🇺.<HomeIP>—AU'                                      
+    '🇯🇵.<HomeIP>—JP'                                      
 
    # [2st-14] - 不支持VPN的网站（除 银行、HomeIP 分流规则以外的 网站
-    - { name : '❌.<UnsupportVPN>'                                   
+    '❌.<UnsupportVPN>'                                   
 
    # [2st-20] -  购物                                                
-    - { name : '🛒.<Shopping>—eBay'                                  
-    - { name : '🛒.<Shopping>—Patreon'                               
+    '🛒.<Shopping>—eBay'                                  
+    '🛒.<Shopping>—Patreon'                               
 
    # [2st-21] -  游戏平台                                            
-    - { name : '🕹️.<Game>—Xbox'                                      
-    - { name : '🕹️.<Game>—PlayStation'                               
-    - { name : '🕹️.<Game>—Nintendo'                                  
-    - { name : '🕹️.<Game>—Steam'                                     
-    - { name : '🕹️.<Game>—EPIC'                                      
-    - { name : '🕹️.<Game>—GOG'                                       
-    - { name : '🕹️.<Game>—RockStar'                                  
-    - { name : '🕹️.<Game>—EA.Origin'                                 
-    - { name : '🕹️.<Game>—UbiSoft'                                   
+    '🕹️.<Game>—Xbox'                                      
+    '🕹️.<Game>—PlayStation'                               
+    '🕹️.<Game>—Nintendo'                                  
+    '🕹️.<Game>—Steam'                                     
+    '🕹️.<Game>—EPIC'                                      
+    '🕹️.<Game>—GOG'                                       
+    '🕹️.<Game>—RockStar'                                  
+    '🕹️.<Game>—EA.Origin'                                 
+    '🕹️.<Game>—UbiSoft'                                   
 
    # [2st-22] -  视频 软件                                           
-    - { name : '📺.<Video>—YouTube'                                  
-    - { name : '📺.<Video>—Netflix'                                  
-    - { name : '📺.<Video>—PrimeVideo'                               
-    - { name : '📺.<Video>—Disney'                                   
-    - { name : '📺.<Video>—HBO'                                      
-    - { name : '📺.<Video>—FOX'                                      
-    - { name : '📺.<Video>—AppleTV'                                  
-    - { name : '📺.<Video>—Porn'                                     
+    '📺.<Video>—YouTube'                                  
+    '📺.<Video>—Netflix'                                  
+    '📺.<Video>—PrimeVideo'                               
+    '📺.<Video>—Disney'                                   
+    '📺.<Video>—HBO'                                      
+    '📺.<Video>—FOX'                                      
+    '📺.<Video>—AppleTV'                                  
+    '📺.<Video>—Porn'                                     
 
    # [2st-23] -  短视频                                              
-    - { name : '🎬.<Short>—TikTok'                                   
-    - { name : '🎬.<Short>—Instagram'                                
-    - { name : '🎬.<Short>—Snapchat'                                 
-    - { name : '🎬.<Short>—Triller'                                  
+    '🎬.<Short>—TikTok'                                   
+    '🎬.<Short>—Instagram'                                
+    '🎬.<Short>—Snapchat'                                 
+    '🎬.<Short>—Triller'                                  
 
    # [2st-24] -  直播                                                
-    - { name : '🎞️.<Live>—Twitch'                                    
+    '🎞️.<Live>—Twitch'                                    
 
    # [2st-25] -  音频                                                
-    - { name : '🎧.<Audio>—Spotify'                                  
-    - { name : '🎧.<Audio>—YouTubeMusic'                             
-    - { name : '🎧.<Audio>—AppleMusic'                               
+    '🎧.<Audio>—Spotify'                                  
+    '🎧.<Audio>—YouTubeMusic'                             
+    '🎧.<Audio>—AppleMusic'                               
 
    # [2st-26] -  社交                                                
-    - { name : '💛.<Social>—Facebook'                                
-    - { name : '💛.<Social>—Twitter'                                 
-    - { name : '💛.<Social>—Telegram'                                
-    - { name : '💛.<Social>—Reddit'                                  
-    - { name : '💛.<Social>—Whatsapp'                                
-    - { name : '💛.<Social>—Line'                                    
-    - { name : '💛.<Social>—Discord'                                 
-    - { name : '💛.<Social>—LinkedIn'                                
-    - { name : '💛.<Social>—Teams'                                   
-    - { name : '💛.<Social>—Clubhouse'                               
-    - { name : '💛.<Social>—Signal'                                  
-    - { name : '💛.<Social>—Tumblr'                                  
-    - { name : '💛.<Social>—Pixiv'                                   
+    '💛.<Social>—Facebook'                                
+    '💛.<Social>—Twitter'                                 
+    '💛.<Social>—Telegram'                                
+    '💛.<Social>—Reddit'                                  
+    '💛.<Social>—Whatsapp'                                
+    '💛.<Social>—Line'                                    
+    '💛.<Social>—Discord'                                 
+    '💛.<Social>—LinkedIn'                                
+    '💛.<Social>—Teams'                                   
+    '💛.<Social>—Clubhouse'                               
+    '💛.<Social>—Signal'                                  
+    '💛.<Social>—Tumblr'                                  
+    '💛.<Social>—Pixiv'                                   
 
    # [2st-28] -  资讯                                                
-    - { name : '📰.<News>—Wikipedia'                                 
-    - { name : '📰.<News>—AppleNews'                                 
+    '📰.<News>—Wikipedia'                                 
+    '📰.<News>—AppleNews'                                 
 
    # [2st-29] -  AI                                                  
-    - { name : '💡.<AI>—OpenAI'                                      
-    - { name : '💡.<AI>—xAI'                                         
-    - { name : '💡.<AI>—Gemini'                                      
-    - { name : '💡.<AI>—Claude'                                      
-    - { name : '💡.<AI>—Copilot'                                     
-    - { name : '💡.<AI>—GlobalAI'                                    
+    '💡.<AI>—OpenAI'                                      
+    '💡.<AI>—xAI'                                         
+    '💡.<AI>—Gemini'                                      
+    '💡.<AI>—Claude'                                      
+    '💡.<AI>—Copilot'                                     
+    '💡.<AI>—GlobalAI'                                    
 
    # [2st-30] -  工具                                                
-    - { name : '🔧.<Tools>—Adobe'                                    
-    - { name : '🔧.<Tools>—Github'                                   
-    - { name : '🔧.<Tools>—Notion'                                   
-    - { name : '🔧.<Tools>—Pinterest'                                
-    - { name : '🔧.<Tools>—Bing/Edge'                                
-    - { name : '🖥️.<Remote>—Rustdesk'                                
-    - { name : '🖥️.<Remote>—Parsec'                                  
+    '🔧.<Tools>—Adobe'                                    
+    '🔧.<Tools>—Github'                                   
+    '🔧.<Tools>—Notion'                                   
+    '🔧.<Tools>—Pinterest'                                
+    '🔧.<Tools>—Bing/Edge'                                
+    '🖥️.<Remote>—Rustdesk'                                
+    '🖥️.<Remote>—Parsec'                                  
 
    # [5st-01] -  大厂                                                
-    - { name : '☁️.<Apps>—Google'                                    
-    - { name : '☁️.<Apps>—Microsoft'                                 
-    - { name : '☁️.<Apps>—Apple'                                     
-    - { name : '☁️.<Apps>—Amazon'                                    
+    '☁️.<Apps>—Google'                                    
+    '☁️.<Apps>—Microsoft'                                 
+    '☁️.<Apps>—Apple'                                     
+    '☁️.<Apps>—Amazon'                                    
 
    # [7st-01] -  CDM 
-    - { name : '☁️.<CDN>—Cloudflare'                                 
+    '☁️.<CDN>—Cloudflare'                                 
 
    # [4st-01] -  修改IP归属地   
-    - { name : '🇨🇳.<ShowIP>—BiliBili'                                
-    - { name : '🇨🇳.<ShowIP>—抖音'                                    
-    - { name : '🇨🇳.<ShowIP>—快手'                                    
-    - { name : '🇨🇳.<ShowIP>—小红书'                                  
-    - { name : '🇨🇳.<ShowIP>—西瓜'                                    
-    - { name : '🇨🇳.<ShowIP>—微博'                                    
-    - { name : '🇨🇳.<ShowIP>—知乎'                                    
-    - { name : '🇨🇳.<ShowIP>—贴吧'                                    
-    - { name : '🇨🇳.<ShowIP>—豆瓣'                                    
-    - { name : '🇨🇳.<ShowIP>—闲鱼'                                    
+    '🇨🇳.<ShowIP>—BiliBili'                                
+    '🇨🇳.<ShowIP>—抖音'                                    
+    '🇨🇳.<ShowIP>—快手'                                    
+    '🇨🇳.<ShowIP>—小红书'                                  
+    '🇨🇳.<ShowIP>—西瓜'                                    
+    '🇨🇳.<ShowIP>—微博'                                    
+    '🇨🇳.<ShowIP>—知乎'                                    
+    '🇨🇳.<ShowIP>—贴吧'                                    
+    '🇨🇳.<ShowIP>—豆瓣'                                    
+    '🇨🇳.<ShowIP>—闲鱼'                                    
 
    # [4st-02] -  回国 中国 - 网盘  视频  社交 媒体  购物 大厂    [ Default
-    - { name : '🇨🇳.<ReturnCN>—Drive'                                 
-    - { name : '🇨🇳.<ReturnCN>—Video'                                 
-    - { name : '🇨🇳.<ReturnCN>—Social'                                
-    - { name : '🇨🇳.<ReturnCN>—News'                                  
-    - { name : '🇨🇳.<ReturnCN>—Shopping'                              
-    - { name : '🇨🇳.<ReturnCN>—Other'                                 
-    - { name : '🇨🇳.<ReturnCN>—Final'                                 
+    '🇨🇳.<ReturnCN>—Drive'                                 
+    '🇨🇳.<ReturnCN>—Video'                                 
+    '🇨🇳.<ReturnCN>—Social'                                
+    '🇨🇳.<ReturnCN>—News'                                  
+    '🇨🇳.<ReturnCN>—Shopping'                              
+    '🇨🇳.<ReturnCN>—Other'                                 
+    '🇨🇳.<ReturnCN>—Final'                                 
 
    #  回国 美国
-    - { name : '🇺🇸.<ReturnUS>—Final'                                 
+    '🇺🇸.<ReturnUS>—Final'                                 
 
    #  按目标网站所在国家分流
-    - { name : '🌎.<Region>—North.America'                           
-    - { name : '🌎.<Region>—South.America'                           
-    - { name : '🌍.<Region>—Europe'                                  
-    - { name : '🌏.<Region>—Oceania'                                 
-    - { name : '🌏.<Region>—East.Asia'                               
-    - { name : '🌏.<Region>—West.Asia'                               
-    - { name : '🌍.<Region>—Africa'     
+    '🌎.<Region>—North.America'                           
+    '🌎.<Region>—South.America'                           
+    '🌍.<Region>—Europe'                                  
+    '🌏.<Region>—Oceania'                                 
+    '🌏.<Region>—East.Asia'                               
+    '🌏.<Region>—West.Asia'                               
+    '🌍.<Region>—Africa'     
             
    # 兜底                   
-    - { name : 'Final'   
+    'Final'   
            
 ```
 
