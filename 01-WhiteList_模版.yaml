@@ -84,7 +84,7 @@ tun                       :                                                     
   enable                  : true 
   auto-detect-interface   : true                                                # 自动检测出口网卡
   auto-route              : true 
-  tack                    : gvisor                                              # 配置TUN使用哪种核心，是自带核心（gvisor），还是系统核心（system）。
+  stack                   : system                                              # 配置TUN使用哪种核心，是自带核心（gvisor），还是系统核心（system）。
   dns-hijack              : { any : 53}                                                                       
 
 
@@ -4462,7 +4462,8 @@ rules:
 
    # [2st-05] -  需加速 才能流畅访问的网站
 
-    - RULE-SET        , MacAppUpgrade_Domain                       , ⬇️.<Download>—MacAppUpgrade                     #                                        # [2st-04]  [ Default : MaxTraffic ]      https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/MacAppUpgrade               Mac APP 下载   - MacAppUpgrade    
+   # 请看 # [2st-40] 其他
+   #- RULE-SET        , MacAppUpgrade_Domain                       , ⬇️.<Download>—MacAppUpgrade                     #                                        # [2st-04]  [ Default : MaxTraffic ]      https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/MacAppUpgrade               Mac APP 下载   - MacAppUpgrade    
 
 
    # [2st-11] -  金融    
@@ -4709,6 +4710,12 @@ rules:
     - RULE-SET        , RustDesk_Domain                            , 🖥️.<Remote>—Rustdesk                            # , no-resolve                           # [2st-30]  [ Default : DIRECT      ]     https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/RustDesk                    其他 - RustDesk               
     - RULE-SET        , Parsec_Domain                              , 🖥️.<Remote>—Parsec                              #                                        # [2st-30]  [ Default : DIRECT      ]     https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/Parsec                      其他 - Parsec                       
 
+
+
+   # [2st-40] 其他
+
+   # 来自于 [2st-05]
+    - RULE-SET        , MacAppUpgrade_Domain                       , ⬇️.<Download>—MacAppUpgrade                     #                                        # [2st-04]  [ Default : MaxTraffic ]      https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/MacAppUpgrade               Mac APP 下载   - MacAppUpgrade    
 
 
 
