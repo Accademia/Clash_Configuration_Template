@@ -2,7 +2,8 @@
 
 ## 项目概述
 
-本项目提供一套 ** Clash Verge（Rev）/ Clash Meta / Stash ** 的分流策略模版，力求 “ 0 DNS泄漏” 的情况下，做到 “大而全” 的极致分流。
+本项目提供一套 同时支持 ** Clash Verge（Rev）/ Clash Meta / Stash ** 的分流策略模版。
+力求 “ 0 DNS泄漏” 的情况下，做到 “大而全” 的极致分流。
 
 .
 
