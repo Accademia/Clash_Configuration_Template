@@ -82,7 +82,7 @@
 
 将本模版作为附件，扔给AI。强烈建议，使用 ChatGPT 5。1 Pro ，让AI 将 “你的节点、存量规则 。本规则” ，上述三者做融合。 并且，你要给AI讲明白，你想达到什么效果。越细致越好。
 
-经过对比，在处理模版到实际规则这一块，Grok 4.1 、 Gemini 3 Think ，都远远达不到 ChatGPT 5.1 Pro 的效果（包括 C哈他GPT Agent 目前也不行，其处理 有些emoji 会乱码 ）❕❕❕❕❕
+经过对比，在处理模版到实际规则这一块，Grok 4.1 、 Gemini 3 Think ，都远远达不到 ChatGPT 5.1 Pro 的效果（包括 ChatGPT O3 Agent 目前也不行，其处理 有些emoji 会乱码 ）❕❕❕❕❕
 
 此模版，本人已在Stash、Clash Verge、其他Clash Meta核心的VPN工具上 ，使用了一年多，而且是24小时不关闭，功能上是没有问题的 ！
 
