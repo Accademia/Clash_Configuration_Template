@@ -435,7 +435,7 @@
 要特别注意以下几点：
 
 1. Stash for iOS/Mac 无法分流中国网站（Geostie:CN）的DNS查询（到中国DNS）.
-    - 由于并不能在DNS的nameserver-policy:中支持Geostie:CN，所以导致了，非CN域名的中国网站需要走境外DNS查询，从而导致如京东养车等APP会返回海外IP。向开发者多次反馈后，开发者压根不回复 不响应 （不知道怎么想的） 。而Clash Verga rec客户端，不会有这个问题。
+    - 由于并不能在DNS的nameserver-policy:中支持Geostie:CN，所以导致了，非CN域名的中国网站需要走境外DNS查询，从而导致如京东养车等APP会返回海外IP。向开发者多次反馈后，开发者压根不回复 不响应 （不知道怎么想的） 。而Clash Verga rec客户端，不会有这个问题。目前只能通过展开Geostie:CN来解决此问题。这是临时性的方法。
 
 2. 多DNS查询，可能会导致iOS的VPN频繁崩溃.
     - 在iOS上，多DNS查询会导致内存爆炸（超过iOS的50MB限制），从而导致VPN崩溃。如果遇到这种情况，请删除一个DNS，只使用 1.1.1.1 。多DNS查询，会成倍增加内存使用。本模版使用了2个DNS 1.1.1.1 、8.8.8.8
