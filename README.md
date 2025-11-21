@@ -10,7 +10,7 @@
 
 - 不影响国内APP直连 ( 或 国内APP走回国节点)
 - 海外主流APP 都可 逐个APP 配置分流规则
-- 不用FakeIP （避免被APP，通过FakeIP识别出，当前使用了VPN）
+- 不用FakeIP （避免 APP通过FakeIP，识别出 当前使用了VPN）
 - 不会DNS泄漏
 - 最小化电力消耗
 - 不影响国内网站使用体验
