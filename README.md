@@ -52,15 +52,15 @@
 
 ## 配置描述
 
- - （最全） 01-WhiteList_模版.yaml
+ - （最全）规则 1 : 01-WhiteList_模版.yaml
    - 规则9万多
    - 包含了全部分流策略，包括3万条反广告和4万条隐私保护
 
- - （建议） 02-WhiteList-Min.AntiAD_模版.yaml    
+ - （建议）规则 2 :  02-WhiteList-Min.AntiAD_模版.yaml    
    - 规则1.2万多
    - 与上述比，仅保留了4000多条反广告（无隐私保护）
 
- - （精简） 03-WhiteList-Non.AntiAD_模版.yaml
+ - （精简）规则 3 :  03-WhiteList-Non.AntiAD_模版.yaml
    - 规则1.2万多
    - 与上述比，无任何反广告（无隐私保护）
 
