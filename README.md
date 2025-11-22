@@ -123,7 +123,14 @@
 - 澳洲中转节点
 - 归属地落地节点
 
-  
+.
+
+## 引用的规则库
+
+  - 本套模版仅引用三个外部规则库：
+     - GeoSite
+     - https://github.com/Accademia/Additional_Rule_For_Clash
+     - https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash
 .
 
 
