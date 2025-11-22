@@ -12,9 +12,10 @@
 
 - 不影响 国内APP 使用体验 （ 国内APP：直连 或 回国节点)
 - 海外主流APP 都可 逐个APP 配置分流规则
-- 不用FakeIP （避免 APP通过FakeIP，识别出 当前使用了VPN）
-- 不会DNS泄漏 （且DNS解析力拉满）
-- 最小化电力消耗
+- 避免 被APP识别出 使用了VPN（不用FakeIP，以避免 APP通过FakeIP 识别VPN ）
+- 无DNS泄漏 （且DNS解析力拉满）
+- 极致节约内存（ DNS请求只发送一次，无需Fallback DNS ）
+- 最小化电力消耗 
 - 国内主流APP的 IP归属地显示 可切换到国外
 - 支持黑白名单模式 实时切换 （默认 白名单）
 
