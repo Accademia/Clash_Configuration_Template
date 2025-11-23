@@ -56,7 +56,7 @@
 
 
 | 规则 | 总规则数 | RuleSet规则数 | GeoSite规则数 |
-|---|---|---|---|---|
+|---|---|---|---|
 | 01-WhiteList_模版.yaml  | 11万条 |  9万条 | 2万条 | 
 | 02-WhiteList-Min.AntiAD_模版.yaml | 1.9万条  | 1.2万条 | 0.7万条 | 
 | 03-WhiteList-Non.AntiAD_模版.yaml | 1.7万条 | 1.2万条 | 0.5万条| 
