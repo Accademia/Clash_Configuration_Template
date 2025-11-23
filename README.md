@@ -58,7 +58,7 @@
 | 规则 | 总规则数 | RuleSet规则数 | GeoSite规则数 |特色 |
 |---|---|---|---|---|
 | 01-WhiteList_模版.yaml  | 11万条 |  9万条 | 2万条 | 防护方面最全面 = 3万条反广告 + 4万条隐私保护 （ 基于EasyPrivacy ） |
-| 02-WhiteList-Min.AntiAD_模版.yaml | 1.9万条  | 1.2万条 | 0.7万条 | 与 规则1 的区别 ： “反广告 + 隐私保护” 从7万条 精简到 1500 条（ 基于Geosite ），以及 “Porn类网站” 的规则，从 1.2万 精简到 仅十几条（pornhub）|
+| 02-WhiteList-Min.AntiAD_模版.yaml | 1.9万条  | 1.2万条 | 0.7万条 | 与 规则1 的区别 ： “反广告 + 隐私保护” 从7.7万条 精简到 1500 条（ 基于Geosite ），以及 “Porn类网站” 的规则，从 1.2万 精简到 仅十几条（pornhub）|
 | 03-WhiteList-Non.AntiAD_模版.yaml | 1.7万条 | 1.2万条 | 0.5万条| 与 规则2 的区别比 ：无反广告 + 无隐私保护 |
 
 总规则数 =  RuleSet规则数 + GeoSite规则数
