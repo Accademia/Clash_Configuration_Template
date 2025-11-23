@@ -4582,7 +4582,8 @@ rules:
     - GEOSITE         , apple-tvplus                               , 📺.<Video>—AppleTV                              #                                        # [2st-22]  [ Default : US          ]     
     - RULE-SET        , AppleTV_Do_Resolve                         , 📺.<Video>—AppleTV                              # , no-resolve                           # [2st-22]  [ Default : US          ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/AppleTV               视频 - AppleTV            
 
-    - GEOSITE         , category-porn                              , 📺.<Video>—Porn                                 #                                        # [2st-22]  [ Default : JP          ]    
+   #- GEOSITE         , category-porn                              , 📺.<Video>—Porn                                 #                                        # [2st-22]  [ Default : JP          ]    
+    - GEOSITE         , pornhub                                    , 📺.<Video>—Porn                                 #                                        # [2st-22]  [ Default : JP          ]    
     - RULE-SET        , Pornhub_Domain                             , 📺.<Video>—Porn                                                                          # [2st-22]  [ Default : JP          ]     https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/Pornhub                     视频 - Pornhub            
 
 
