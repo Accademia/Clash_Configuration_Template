@@ -4392,7 +4392,7 @@ rules:
 
 
    ##[1st-08] -  保护隐私  -  补充
-    - RULE-SET        , PreRepairEasyPrivacy_REJECT_Do_Resolve     , REJECT                                          # , no-resolve                           # [1st-08]  [ Default : US         ]      https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/PreRepairEasyPrivacy        保护隐私 - PreRepairEasyPrivacy                                                                                                                                           
+    - RULE-SET        , PreRepairEasyPrivacy_REJECT_Do_Resolve     , REJECT-DROP                                     # , no-resolve                           # [1st-08]  [ Default : US         ]      https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/PreRepairEasyPrivacy        保护隐私 - PreRepairEasyPrivacy                                                                                                                                           
    #- RULE-SET        , PreRepairEasyPrivacy_DIRECT_Do_Resolve     , DIRECT                                          # , no-resolve                           # [1st-08]  [ Default : US         ]      https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/PreRepairEasyPrivacy        保护隐私 - PreRepairEasyPrivacy        
    # 🔻🔻🔻 开始（FewRule） ✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅   开始（FewRule）      
    ##[1st-08] -  保护隐私                                                                                                                                   
