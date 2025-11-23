@@ -555,13 +555,14 @@
 
 # geosite 规则统计表
 
-以下表格列出了用户提供的 Clash 分流配置中用到的每个 geosite 标签及其对应的规则数量（包括文件中引用的子规则），表格顺序与配置中出现的顺序一致。最后一行给出所有规则的总数。
+以下表格列出了，当前 Clash 分流模版中，用到的每个 geosite 标签及其对应的规则数量（包括文件中引用的子规则），表格顺序与配置中出现的顺序一致。最后一行给出所有规则的总数。
 
 更新 ： 2025-10-22
+来源 ： https://github.com/v2fly/domain-list-community/tree/master/data
 
 | 分类 (geosite) | 规则数量 | 归类 |
 |---|---|---|
-| category-httpdns-cn | 96 | [1st-01] -  DNS \ NTP |
+| category-httpdns-cn | 96 | [1st-01] - 反DNS跟踪 |
 | private | 243 | [1st-02] -  局域网 |
 | category-ads | 1517 | [1st-09] -  屏蔽广告 & 隐私保护 |
 | ookla-speedtest | 13 | [2st-00] -  测速 |
