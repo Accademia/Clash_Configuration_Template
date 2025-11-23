@@ -53,17 +53,25 @@
 
 ## 配置描述
 
- - （最全面）规则 1 : 01-WhiteList_模版.yaml
-     +  总规则，9万多条（不统计GeoSite规则数量）
-     +  包含了全部分流策略，包括3万条反广告和4万条隐私保护
+ - （最全面）规则 1 : 01-WhiteList_模版.yaml  
+      + 总规则数量 ：11万条
+          + RuleSet = 9万条
+          + GeoSite = 2万条
+     +  特色：防护方面最全面 = 3万条反广告 + 4万条隐私保护 （ 基于EasyPrivacy ）
 
  - （最均衡）规则 2 :  02-WhiteList-Min.AntiAD_模版.yaml    
-      + 总规则，1.2万多（不统计GeoSite规则数量）
-      + 与 规则1 的区别 ： 仅保留了1500多条反广告 + 无隐私保护 
+      + 总规则数量 ：1.9万条
+          + RuleSet = 1.2万条
+          + GeoSite = 6500条
+      + 与 规则1 的区别 ： 
+          + 仅保留了 最精简的 1500 条 “反广告 + 无隐私保护” （ 基于Geosite ）
+          + Porn类网站，仅保留 十几条的 pornhub
 
- - （最精简）规则 3 :  03-WhiteList-Non.AntiAD_模版.yaml
-      + 总规则，1.2万多（不统计GeoSite规则数量）
-      + 与 规则1 的区别比 ：无任何反广告 + 无隐私保护
+ - （最精简）规则 3 :  03-WhiteList-Non.AntiAD_模版.yaml 
+      + 总规则数量 ：1.7万条
+          + RuleSet = 1.2万条
+          + GeoSite = 5000条
+      + 与 规则2 的区别比 ：无反广告 + 无隐私保护
 
 .
 
@@ -74,7 +82,7 @@
     - 规则1，虽然更全面，但是在移动端会极大消耗电力，续航➗2。
     - 规则2，已经可以屏蔽90%的广告，并且电力消耗 与 规则3（无反广告 无反隐私泄漏）基本持平。
 
- - 【PC端】 ：  规则2 + Adguard客户端。
+ - 【PC端】 ：  规则2 + Adguard客户端
      - Adguard 用来防止隐私泄漏和屏蔽广告，效果 比规则1 更好用。因为可以 Adguard 实时更新，规则集也更全面。（注意，Adguard 正版是 “买断制付费” ）
         
 
@@ -545,8 +553,80 @@
 
 .
 
+# geosite 规则统计表
+
+以下表格列出了用户提供的 Clash 分流配置中用到的每个 geosite 标签及其对应的规则数量（包括文件中引用的子规则），表格顺序与配置中出现的顺序一致。最后一行给出所有规则的总数。
+
+更新 ： 2025-10-22
+
+| 分类 (geosite) | 规则数量 | 归类 |
+|---|---|---|
+| category-httpdns-cn | 96 | [1st-01] -  DNS \ NTP |
+| private | 243 | [1st-02] -  局域网 |
+| category-ads | 1517 | [1st-09] -  屏蔽广告 |
+| ookla-speedtest | 13 | [2st-00] -  测速 |
+| synology | 20 | [2st-01] -  智能设备 |
+| onedrive | 11 | [2st-02] -  公有云： 云盘 、云存储 |
+| dropbox | 16 | [2st-02] -  公有云： 云盘 、云存储 |
+| mega | 3 | [2st-02] -  公有云： 云盘 、云存储 |
+| imgur | 3 | [2st-02] -  公有云： 云盘 、云存储 |
+| category-pt | 196 | [2st-04] -  P2P(海外) |
+| paypal | 489 | [2st-11] -  金融 |
+| wise | 2 | [2st-11] -  金融 |
+| binance | 36 | [2st-11] -  金融 |
+| okx | 6 | [2st-11] -  金融 |
+| ebay | 725 | [2st-20] -  购物 |
+| patreon | 4 | [2st-20] -  购物 |
+| xbox | 79 | [2st-21] -  游戏 |
+| playstation | 4 | [2st-21] -  游戏 |
+| nintendo | 248 | [2st-21] -  游戏 |
+| steam | 88 | [2st-21] -  游戏 |
+| epicgames | 31 | [2st-21] -  游戏 |
+| gog | 13 | [2st-21] -  游戏 |
+| rockstar | 5 | [2st-21] -  游戏 |
+| ea | 324 | [2st-21] -  游戏 |
+| origin | 9 | [2st-21] -  游戏 |
+| ubisoft | 8 | [2st-21] -  游戏 |
+| youtube | 351 | [2st-22] -  视频 |
+| netflix | 28 | [2st-22] -  视频 |
+| disney | 317 | [2st-22] -  视频 |
+| primevideo | 23 | [2st-22] -  视频 |
+| hbo | 25 | [2st-22] -  视频 |
+| fox | 488 | [2st-22] -  视频 |
+| apple-tvplus | 8 | [2st-22] -  视频 |
+| category-porn | 12915 | [2st-22] -  视频 |
+| tiktok | 21 | [2st-23] -  短视频 |
+| instagram | 148 | [2st-23] -  短视频 |
+| snap | 7 | [2st-23] -  短视频 |
+| twitch | 32 | [2st-24] -  直播 |
+| spotify | 23 | [2st-25] -  音频 |
+| twitter | 24 | [2st-26] -  社交 |
+| telegram | 19 | [2st-26] -  社交 |
+| whatsapp | 13 | [2st-26] -  社交 |
+| line | 20 | [2st-26] -  社交 |
+| reddit | 12 | [2st-26] -  社交 |
+| discord | 28 | [2st-26] -  社交 |
+| linkedin | 12 | [2st-26] -  社交 |
+| clubhouse | 3 | [2st-26] -  社交 |
+| signal | 8 | [2st-26] -  社交 |
+| tumblr | 1 | [2st-26] -  社交 |
+| pixiv | 11 | [2st-26] -  社交 |
+| apple-intelligence | 5 | [2st-29] -  AI |
+| openai | 18 | [2st-29] -  AI |
+| xai | 2 | [2st-29] -  AI |
+| anthropic | 6 | [2st-29] -  AI |
+| google-gemini | 23 | [2st-29] -  AI |
+| category-ai-!cn | 109 | [2st-29] -  AI |
+| adobe | 390 | [2st-30] -  工具 |
+| github | 32 | [2st-30] -  工具 |
+| bing | 38 | [2st-30] -  工具 |
+| notion | 8 | [2st-30] -  工具 |
+| pinterest | 104 | [2st-30] -  工具 |
+| **总计** | **19461** |  |
 
 
+
+.
 
 
 ## 许可与声明
