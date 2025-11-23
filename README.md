@@ -563,7 +563,7 @@
 |---|---|---|
 | category-httpdns-cn | 96 | [1st-01] -  DNS \ NTP |
 | private | 243 | [1st-02] -  局域网 |
-| category-ads | 1517 | [1st-09] -  屏蔽广告 |
+| category-ads | 1517 | [1st-09] -  屏蔽广告 & 隐私保护 |
 | ookla-speedtest | 13 | [2st-00] -  测速 |
 | synology | 20 | [2st-01] -  智能设备 |
 | onedrive | 11 | [2st-02] -  公有云： 云盘 、云存储 |
