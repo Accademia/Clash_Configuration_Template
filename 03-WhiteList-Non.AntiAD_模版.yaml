@@ -16,16 +16,17 @@
 # Additional_Rule_For_Clash |  https://github.com/Accademia/Additional_Rule_For_Clash                    |
 #---------------------------+----------------------------------------------------------------------------+
 
-port                      : 7890                                                # 配置：代理服务端口           # HTTP(S) 和 SOCKS4(A)/SOCKS5 服务器在本地端口
-socks-port                : 7891                                                # 配置：代理服务端口           # 本地 SOCKS5 代理服务器端口
-mixed-port                : 7892                                                # 配置：代理服务端口           # HTTP(S) and SOCKS4(A)/SOCKS5 server on the same port
-redir-port                : 7893                                                # 配置：代理服务端口           # Linux 和 macOS 的透明代理服务器端口（ReDIRECT TCP 和 TProxy UDP）
-tproxy-port               : 7894                                                # 配置：代理服务端口           # Linux 的透明代理服务器端口（TProxy TCP 和 TProxy UDP）
- 
-
-ipv6                      : true                                                # 配置： 是否启用IPv6         # 当设置为false时，解析器不会将主机名转换为IPv6地址。(默认为 true)
-allow-lan                 : false                                               # 配置： 是否允许 局域网代理  # 设置为true以允许来自局域网的其他IP地址（其他终端）的通过Clash翻墙上网。
 mode                      : rule                                                # 配置： 默认模式             # 规则模式 (rule)  /  全局翻墙 (global)  /  直连模式 (driect)
+
+mixed-port                : 7890                                                # 配置：代理服务端口           # 在同一个端口上，同时提供 HTTP(S) + SOCKS4/5
+#port                      : 7891                                                # 配置：代理服务端口           # 只提供 HTTP(S) 代理
+#socks-port                : 7892                                                # 配置：代理服务端口           # 只提供 SOCKS 代理
+#redir-port                : 7893                                                # 配置：代理服务端口           # Linux 和 macOS 的透明代理服务器端口（ReDIRECT TCP 和 TProxy UDP）
+#tproxy-port               : 7894                                                # 配置：代理服务端口           # Linux 的透明代理服务器端口（TProxy TCP 和 TProxy UDP）
+
+allow-lan                 : false                                               # 配置： 是否允许 局域网代理  # 设置为true以允许来自局域网的其他IP地址（其他终端）的通过Clash翻墙上网。
+ 
+ipv6                      : true                                                # 配置： 是否启用IPv6         # 当设置为false时，解析器不会将主机名转换为IPv6地址。(默认为 true)
 log-level                 : warning                                             # 配置： Logo记录模式         # info / warning / error / debug / silent  (设置 Clash 日志输出详细程度（STDOUT）。)
 external-controller       : '127.0.0.1:9090'                                    # 配置： RESTful web API监听地址
 secret                    : ''                                                  # 配置： RESTful API的密钥（可选） 
@@ -33,7 +34,7 @@ global-client-fingerprint : firefox                                             
 keep-alive-interval       : 60                                                  # TCP跳间隔时长（默认是15s），缓解移动设备耗电问题    # https://github.com/vernesong/OpenClash/issues/2614
 find-process-mode         : strict                                              # always 开启，强制匹配所有进程 \ strict 默认，由 Clash 判断是否开 \ off 不匹配进程，推荐在路由器上使用此模式
 unified-delay             : true                                                # 开启统一延迟时，会计算 RTT，以消除连接握手等带来的不同类型节点的延迟差异
-tcp-concurrent            : false                                                # TCP 并发 （ture会导致移动端费电，如果网络不好，可以启用ture） ⚠️ ⚠️ ⚠️
+tcp-concurrent            : false                                               # TCP 并发 （ture会导致移动端费电，如果网络不好，可以启用ture） ⚠️ ⚠️ ⚠️
 
 
 geodata-mode              : false                                               # 更改 geoip 文件类型 （true为 dat，此项有默认值 false为mmdb）
@@ -52,13 +53,6 @@ profile                   :                                                     
   store-selected          : true                                                # 储存 API 对策略组的选择，以供下次启动时使用
   store-fake-ip           : true                                                # 储存 fakeip 映射表，域名再次发生连接时，使用原有映射地址
 
-
-#hosts                     :                                                     # 仅DIRECT 策略中生效
-#  '*.clash.dev'           : '127.0.0.1'                                         # 支持通配符域名 (例如: *.clash.dev, *.foo.*.example.com 。+.foo.com 的效果等同于 .foo.com 和 foo.com)
-#  'alpha.clash.dev'       : '::1'    
-#
-#proxy-hosts               :                                                     # 非DIRECT 策略中生效
-#  'grok.com'              : [ '104.18.29.234' , '104.18.29.234' ]
 
 sniffer                   :                                                     # 设置 ： 嗅探       Clash Meta (Clash Verge Rec) 专用规则
   enable                  : true                                                # 嗅探器开关 :  开启后对 redir-host 类型识别的流量进行强制嗅探       
@@ -89,6 +83,37 @@ tun                       :                                                     
   stack                   : system                                              # 配置TUN使用哪种核心，是自带核心（gvisor），还是系统核心（system）。 ⚠️ gvisor 在Mac OS上对IPv6兼容不佳
   dns-hijack              : [ 'any:53'   ]                                      # 把所有 DNS（53 端口）交给内置 DNS 处理，防止 DNS 走直连                                 
   inet6-route-address     : [ '2000::/3' ]                                      # 仅让公网 IPv6通过 TUN，避免 IPv6 泄漏，同时保留本地 IPv6 直连
+
+
+hosts                             :                                             # Clash:全局生效 / Stash:仅DIRECT生效 
+  '+.clash.dev'                   :   '127.0.0.1'                               # 支持通配符域名 (例如: *.clash.dev, *.foo.*.example.com 。+.foo.com 的效果等同于 .foo.com 和 foo.com)
+  '+.stash.dev'                   :   '127.0.0.1'
+  'dns.alidns.com'                : [ '223.5.5.5'      , '223.6.6.6'        ]   # 🇨🇳 阿里 DNS
+  'pdns.dnspod.cn'                : [ '119.29.29.29'   , '119.28.28.28'     ]   # 🇨🇳 腾讯 DNS \ DNSPod
+ #'dns.pub'                       :   '119.29.29.29'                            # 🇨🇳 腾讯 DNS  
+ #'doh.pub'                       : [ '1.12.12.12'     , '120.53.53.53'     ]   # 🇨🇳 腾讯 DNS
+ #'dot.pub'                       : [ '1.12.12.12'     , '120.53.53.53'     ]   # 🇨🇳 腾讯 DNS
+  'one.one.one.one'               : [ '1.0.0.1'        , '1.1.1.1'          ]   # 🇺🇸 Cloudflare DNS
+  'dns.google'                    : [ '8.8.8.8'        , '8.8.4.4'          ]   # 🇺🇸 Google DNS  
+  'dns.adguard.com'               : [ '94.140.14.14'   , '94.140.15.15'     ]   # 🇺🇸 AdGuard DNS
+  'dns.adguard-dns.com'           : [ '94.140.14.14'   , '94.140.15.15'     ]   # 🇺🇸 AdGuard DNS
+  'dns.quad9.net'                 :   '9.9.9.9'                                 # 🇺🇸 Quad9 DNS 威胁拦截 + DNSSEC
+  'dns10.quad9.net'               :   '9.9.9.10'                                # 🇺🇸 Quad9 DNS 无拦截
+  'dns11.quad9.net'               :   '9.9.9.11'                                # 🇺🇸 Quad9 DNS Secured w/ECS
+  'dns12.quad9.net'               :   '9.9.9.12'                                # 🇺🇸 Quad9 DNS No blocking + ECS
+  'a.resolvers.level3.net'        :   '4.2.2.1'                                 # 🇺🇸 Level 3 DNS
+  'b.resolvers.level3.net'        :   '4.2.2.2'                                 # 🇺🇸 Level 3 DNS
+  'c.resolvers.level3.net'        :   '4.2.2.3'                                 # 🇺🇸 Level 3 DNS
+  'd.resolvers.level3.net'        :   '4.2.2.4'                                 # 🇺🇸 Level 3 DNS
+  'e.resolvers.level3.net'        :   '4.2.2.5'                                 # 🇺🇸 Level 3 DNS
+  'f.resolvers.level3.net'        :   '4.2.2.6'                                 # 🇺🇸 Level 3 DNS
+  'security.cloudflare-dns.com'   : [ '1.0.0.2'         , '1.1.1.2'         ]   # 🇺🇸 Cloudflare Families（恶意软件 / 成人内容过滤） 
+  'family.cloudflare-dns.com'     : [ '1.0.0.3'         , '1.1.1.3'         ]   # 🇺🇸 Cloudflare Families（恶意软件 / 成人内容过滤） 
+  'family.adguard-dns.com'        : [ '94.140.14.15'    , '94.140.15.16'    ]   # 🇺🇸 AdGuard DNS 家庭保护（成人内容拦截）
+  'unfiltered.adguard-dns.com'    : [ '94.140.14.140'   , '94.140.14.141'   ]   # 🇺🇸 AdGuard DNS 非过滤
+
+proxy-hosts                       :                                             # Stash:仅通过节点代理生效
+ #'grok.com'                      : [ '104.18.29.234' , '104.18.29.234' ]
 
 
 # ----------------------------------------------------------------------------------------------------------------------
