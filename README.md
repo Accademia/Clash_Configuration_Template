@@ -159,7 +159,7 @@
 ## 引用的规则库
 
   - 本套模版仅引用三个外部规则库：
-     - GeoSite
+     - GeoSite ： https://github.com/v2fly/domain-list-community
      - https://github.com/Accademia/Additional_Rule_For_Clash
      - https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash
 
