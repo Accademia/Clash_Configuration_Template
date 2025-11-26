@@ -595,6 +595,10 @@
    上述两者，相互互斥 （Stash功能缺失所致）。而在Clash Meta中，是没这种情况的。
    同样向开发者多次反馈后，开发者压根不回复 不响应 （不知道怎么想的）
 
+
+4. Stash ，无法支持外部规则中的 REJECT、REJECT-DROP
+    这个功能会导致IP归属地修改的规则（ https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/FakeLocation ），出现隐私泄漏的情况。同样这个问题已经跟开发者反馈过很多次，依然石沉大海。而Clash Meta则不会有次问题。
+
 如果有人能联系上Stash开发者，也请帮助转达。以便于在最小化的核心功能上，能补齐与Clash meta 之间的短板。
 
 
