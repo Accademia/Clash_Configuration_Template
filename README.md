@@ -159,7 +159,7 @@
 ## 引用的规则库
 
   - 本套模版仅引用三个外部规则库：
-     - GeoSite
+     - GeoSite ： https://github.com/v2fly/domain-list-community
      - https://github.com/Accademia/Additional_Rule_For_Clash
      - https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash
 
@@ -585,15 +585,20 @@
    
 3. Stash ，即无法 “关闭DNS的IPv6解析” ，也无做到 “全透明转发IPv6流量”。
     
-    这导致了（在关闭Stash的FakeIP功能后），如果在Stash中 “关闭” IPv6路由，那么如下软件，都会出现出现了连接不上的情况：
+    这导致了（在关闭Stash的FakeIP功能后），如果在Stash中 “关闭” IPv6路由，那么如下软件，都会出现出现了连接不上的情况：【因为下述两个软件，只会使用从DNS解析到的IPv6疯狂发起链接（而不尝试IPv4），而IPv6路由又被关闭了。】
     - 在 Grok APP中，使用文字提问
     - 在 苹果智能设置页面 ，链接登录ChatGPT账号 
     
-    这还导致了（在关闭Stash的FakeIP功能后），如果在Stash中 “开启” IPv6路由，那么如下软件，都会出现出现了连接不上的情况：
-    - 在 homekit中 观看 局域网摄像头
+    这还导致了（在关闭Stash的FakeIP功能后），如果在Stash中 “开启” IPv6路由，那么如下软件，都会出现出现了连接不上的情况：【因为Stash的“IPv6路由”支持功能并不完整，导致的此问题】
+    - 在 局域网中 ，无法观看 挂载到Apple Homekit摄像头的实时视频（苹果家庭APP）
    
    上述两者，相互互斥 （Stash功能缺失所致）。而在Clash Meta中，是没这种情况的。
    同样向开发者多次反馈后，开发者压根不回复 不响应 （不知道怎么想的）
+
+
+4. Stash ，无法支持 远程规则 内置的 REJECT、REJECT-DROP
+
+     这个功能会导致IP归属地修改的规则（ https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/FakeLocation ），出现隐私泄漏的情况。同样这个问题已经跟开发者反馈过很多次，依然石沉大海。而Clash Meta则不会有次问题。
 
 如果有人能联系上Stash开发者，也请帮助转达。以便于在最小化的核心功能上，能补齐与Clash meta 之间的短板。
 
