@@ -161,29 +161,39 @@ dns                       :
   # 哪些域名 使用 哪些DNS服务器，进行解析 （⚠️⚠️ 注意；如果 在非中国地区 使用本规则，建议注释掉本段，以便降低DNS泄漏风险）
   nameserver-policy       :     
                           # 以下规则，是对 GeoSite:CN 的修补 （ 解决：GeoSite:CN中存在大量的境外域名被收录的问题，从而最小化的隐私暴露 ）
-                          # 'rule-set:PreRepairGeositeCN_Domain'          : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 仅Clash Meta支持，但 Stash 3.0 不支持！  
+                          # 'rule-set:PreRepairGeositeCN_Global_Domain'   : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 仅Clash Meta支持，但 Stash 3.0 不支持！  
+                          # 'rule-set:PreRepairGeositeCN_China_Domain'    : [ 'https://dns.alidns.com/dns-query'    , 'https://doh.pub/dns-query'                  ]        # 仅Clash Meta支持，但 Stash 3.0 不支持！  
                           # 'geosite:cn'                                  : [ 'https://dns.alidns.com/dns-query'    , 'https://doh.pub/dns-query'                  ]        # 仅Clash Meta支持，但 Stash 3.0 不支持！
 
                           # # 以下为'geosite:cn'的展开，主要应对Stash不支持 nameserver-policy : 'geosite:cn'的情况（一旦Stash支持后，请立刻删除以下规则）
                             '+.cn'                                        : 'https://dns.alidns.com/dns-query'  
-                                                        
-                            'doubao.com'                                  : 'https://dns.alidns.com/dns-query' 
-                            'doubaocdn.com'                               : 'https://dns.alidns.com/dns-query' 
-                            'maoxiangai.com'                              : 'https://dns.alidns.com/dns-query' 
-                            'myparallelstory.com'                         : 'https://dns.alidns.com/dns-query' 
-                            'pixeldance.com'                              : 'https://dns.alidns.com/dns-query' 
-                            'coze.site'                                   : 'https://dns.alidns.com/dns-query' 
-                            'rwkv.com'                                    : 'https://dns.alidns.com/dns-query' 
-                            'qianwen.com'                                 : 'https://dns.alidns.com/dns-query' 
-                            'qwen.ai'                                     : 'https://dns.alidns.com/dns-query' 
-                            'qwenlm.ai'                                   : 'https://dns.alidns.com/dns-query' 
-                            'tongyi.com'                                  : 'https://dns.alidns.com/dns-query' 
-                            'hailuoai.com'                                : 'https://dns.alidns.com/dns-query' 
-                            'minimaxi.com'                                : 'https://dns.alidns.com/dns-query' 
-                            'xingyeai.com'                                : 'https://dns.alidns.com/dns-query' 
-                            'baichuan-ai.com'                             : 'https://dns.alidns.com/dns-query' 
-                            'deepseek.com'                                : 'https://dns.alidns.com/dns-query' 
-
+                            
+                            '+.doubao.com'                                : 'https://dns.alidns.com/dns-query' 
+                            '+.doubaocdn.com'                             : 'https://dns.alidns.com/dns-query' 
+                            '+.maoxiangai.com'                            : 'https://dns.alidns.com/dns-query' 
+                            '+.myparallelstory.com'                       : 'https://dns.alidns.com/dns-query' 
+                            '+.pixeldance.com'                            : 'https://dns.alidns.com/dns-query' 
+                            '+.coze.site'                                 : 'https://dns.alidns.com/dns-query' 
+                            '+.rwkv.com'                                  : 'https://dns.alidns.com/dns-query' 
+                            '+.qianwen.com'                               : 'https://dns.alidns.com/dns-query' 
+                            '+.qwen.ai'                                   : 'https://dns.alidns.com/dns-query' 
+                            '+.qwenlm.ai'                                 : 'https://dns.alidns.com/dns-query' 
+                            '+.tongyi.com'                                : 'https://dns.alidns.com/dns-query' 
+                            '+.hailuoai.com'                              : 'https://dns.alidns.com/dns-query' 
+                            '+.minimaxi.com'                              : 'https://dns.alidns.com/dns-query' 
+                            '+.xingyeai.com'                              : 'https://dns.alidns.com/dns-query' 
+                            '+.baichuan-ai.com'                           : 'https://dns.alidns.com/dns-query' 
+                            '+.deepseek.com'                              : 'https://dns.alidns.com/dns-query' 
+                            '+.ke.com'                                    : 'https://dns.alidns.com/dns-query' 
+                            '+.tlivesource.com'                           : 'https://dns.alidns.com/dns-query' 
+                            '+.vegslb.com'                                : 'https://dns.alidns.com/dns-query' 
+                            '+.siomxity.com'                              : 'https://dns.alidns.com/dns-query' 
+                            '+.byteacctimg.com'                           : 'https://dns.alidns.com/dns-query'
+                            '+.cdnhwc1.com'                               : 'https://dns.alidns.com/dns-query'
+                            '+.cdnhwc2.com'                               : 'https://dns.alidns.com/dns-query'
+                            '+.cdnhwc3.com'                               : 'https://dns.alidns.com/dns-query'
+                            '+.cdnhwc4.com'                               : 'https://dns.alidns.com/dns-query'
+                            
                           # 'analytics.strava.com'                        : 'https://dns.alidns.com/dns-query'  # Strava 运动 (美国)，隐私敏感
                           # 'blzddist1-a.akamaihd.net'                    : 'https://dns.alidns.com/dns-query'
                           # 'cdn.angruo.com'                              : 'https://dns.alidns.com/dns-query'  # Angruo是一个国际CDN/托管服务
@@ -201,7 +211,7 @@ dns                       :
                           # 'sms.imagetasks.com'                          : 'https://dns.alidns.com/dns-query'  # ImageTasks是国际图像处理/任务平台
                           # 'steamcommunity-a.akamaihd.net'               : 'https://dns.alidns.com/dns-query'  # Steam 社区 (美国/Akamai)，国内解析通常是被阻断或污染的
                           # 'tx.lilyemby.com'                             : 'https://dns.alidns.com/dns-query'  # LilyEmby变体
-                            'weixin.com'                                  : 'https://dns.alidns.com/dns-query'
+                            '+.weixin.com'                                : 'https://dns.alidns.com/dns-query'
                           # 'www.libvideo.com'                            : 'https://dns.alidns.com/dns-query'  # LibVideo是国际视频库/开源项目
                             'www.yxssp.com'                               : 'https://dns.alidns.com/dns-query'
                           # '+.00cdn.com'                                 : 'https://dns.alidns.com/dns-query'  # 00CDN是国际CDN服务
@@ -4922,7 +4932,8 @@ rules:
     - RULE-SET        , 360_Do_Resolve                             , 🇨🇳.<ReturnCN>—Other                             # , no-resolve                           # [5st-02]  [ Default : CN          ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/360                   回国 - 大厂 - 360               
 
    # [5st-05] -  GEOSITE + GeoIP（中国）   
-    - RULE-SET        , PreRepairGeositeCN_Domain                  , 🇺🇸.<ReturnUS>—Final                             # , no-resolve                           # [5st-05]  [ Default : CN          ]              
+    - RULE-SET        , PreRepairGeositeCN_Global_Domain           , 🇺🇸.<ReturnUS>—Final                             # , no-resolve                           # [5st-05]  [ Default : CN          ]     https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/PreRepairGeositeCN         
+    - RULE-SET        , PreRepairGeositeCN_China_Domain            , 🇨🇳.<ReturnCN>—Final                             # , no-resolve                           # [5st-05]  [ Default : CN          ]     https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/PreRepairGeositeCN         
     - GEOSITE         , cn                                         , 🇨🇳.<ReturnCN>—Final                                                                      # [5st-05]  [ Default : CN          ]  
     - GEOIP           , cn                                         , 🇨🇳.<ReturnCN>—Final                                                                      # [7st-01]  [ Default : CN          ]                                                                                                  GeoIP - 中国   - 亚洲               
 
@@ -5269,7 +5280,8 @@ rule-providers:
     Huawei_Do_Resolve                         : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@latest/rule/Clash/Huawei/Huawei.yaml'                                                 , path : './ruleset/Huawei.yaml'                                        }            # [5st-02]  [ Default : CN          ]     🇨🇳.<ReturnCN>—Other             https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Huawei                回国 - 大厂 - 华为                                     
     360_Do_Resolve                            : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@latest/rule/Clash/360/360.yaml'                                                       , path : './ruleset/360.yaml'                                           }            # [5st-02]  [ Default : CN          ]     🇨🇳.<ReturnCN>—Other             https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/360                   回国 - 大厂 - 360                            
 
-    PreRepairGeositeCN_Domain                 : { type : 'http'  , behavior : 'domain'     , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/Accademia/Additional_Rule_For_Clash@latest/PreRepairGeositeCN/PreRepairGeositeCN_Domain.yaml'                      , path : './ruleset/PreRepairGeositeCN_Domain.yaml'                     }            # [5st-02]  [ Default : US          ]     🌎.<<Region>—North.America      https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/GeoRouting_For_Domain       国家顶级域名 - 北美   America (North America)                                 
+    PreRepairGeositeCN_Global_Domain          : { type : 'http'  , behavior : 'domain'     , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/Accademia/Additional_Rule_For_Clash@latest/PreRepairGeositeCN/PreRepairGeositeCN_Global_Domain.yaml'               , path : './ruleset/PreRepairGeositeCN_Global_Domain.yaml'              }            # [5st-02]  [ Default : US          ]     🇺🇸.<ReturnUS>—Final             https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/GeoRouting_For_Domain                                      
+    PreRepairGeositeCN_China_Domain           : { type : 'http'  , behavior : 'domain'     , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/Accademia/Additional_Rule_For_Clash@latest/PreRepairGeositeCN/PreRepairGeositeCN_China_Domain.yaml'                , path : './ruleset/PreRepairGeositeCN_China_Domain.yaml'               }            # [5st-02]  [ Default : CN          ]     🇨🇳.<ReturnCN>—Other             https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/GeoRouting_For_Domain                                      
 
    # 🔻🔻🔻 开始 （ BlackList ） 🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻  开始 （ BlackList ）
 
@@ -5380,7 +5392,7 @@ rule-providers:
    # [2st-04] -  P2P下载软件        
    # [2st-05] -  需加速 才能流畅访问的网站      
    #                    
-   # [2st-10] -  专属网站    (默认路由：不可配置)
+   # [2st-10] -  专属网站（ 必须HomeIP才能下单的网站 … ）   (默认路由：不可配置)
    # [2st-11] -  金融                
    # [2st-12] -  各国银行    (默认路由：不可配置)
    #                                                   
