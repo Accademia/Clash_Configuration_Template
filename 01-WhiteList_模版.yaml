@@ -165,7 +165,25 @@ dns                       :
                           # 'geosite:cn'                                  : [ 'https://dns.alidns.com/dns-query'    , 'https://doh.pub/dns-query'                  ]        # 仅Clash Meta支持，但 Stash 3.0 不支持！
 
                           # # 以下为'geosite:cn'的展开，主要应对Stash不支持 nameserver-policy : 'geosite:cn'的情况（一旦Stash支持后，请立刻删除以下规则）
-                            '+.cn'                                        : 'https://dns.alidns.com/dns-query'  
+                            '+.cn'                                        : 'https://dns.alidns.com/dns-query'       
+                                                   
+                            'doubao.com'                                  : 'https://dns.alidns.com/dns-query' 
+                            'doubaocdn.com'                               : 'https://dns.alidns.com/dns-query' 
+                            'maoxiangai.com'                              : 'https://dns.alidns.com/dns-query' 
+                            'myparallelstory.com'                         : 'https://dns.alidns.com/dns-query' 
+                            'pixeldance.com'                              : 'https://dns.alidns.com/dns-query' 
+                            'coze.site'                                   : 'https://dns.alidns.com/dns-query' 
+                            'rwkv.com'                                    : 'https://dns.alidns.com/dns-query' 
+                            'qianwen.com'                                 : 'https://dns.alidns.com/dns-query' 
+                            'qwen.ai'                                     : 'https://dns.alidns.com/dns-query' 
+                            'qwenlm.ai'                                   : 'https://dns.alidns.com/dns-query' 
+                            'tongyi.com'                                  : 'https://dns.alidns.com/dns-query' 
+                            'hailuoai.com'                                : 'https://dns.alidns.com/dns-query' 
+                            'minimaxi.com'                                : 'https://dns.alidns.com/dns-query' 
+                            'xingyeai.com'                                : 'https://dns.alidns.com/dns-query' 
+                            'baichuan-ai.com'                             : 'https://dns.alidns.com/dns-query' 
+                            'deepseek.com'                                : 'https://dns.alidns.com/dns-query' 
+
                           # 'analytics.strava.com'                        : 'https://dns.alidns.com/dns-query'  # Strava 运动 (美国)，隐私敏感
                           # 'blzddist1-a.akamaihd.net'                    : 'https://dns.alidns.com/dns-query'
                           # 'cdn.angruo.com'                              : 'https://dns.alidns.com/dns-query'  # Angruo是一个国际CDN/托管服务
