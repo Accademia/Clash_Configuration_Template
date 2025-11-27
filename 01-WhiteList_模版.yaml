@@ -2532,7 +2532,7 @@ dns                       :
                             '+.morganstanleyhuaxin.com'                   : 'https://dns.alidns.com/dns-query'
                             '+.moulem.com'                                : 'https://dns.alidns.com/dns-query'
                           # '+.mpg.de'                                    : 'https://dns.alidns.com/dns-query'  # 马普所 (德国)
-                            '+.ms'                                        : 'https://dns.alidns.com/dns-query'
+                          # '+.ms'                                        : 'https://dns.alidns.com/dns-query'
                             '+.msanjia.com'                               : 'https://dns.alidns.com/dns-query'
                             '+.msauth.net'                                : 'https://dns.alidns.com/dns-query'
                             '+.mscbsc.com'                                : 'https://dns.alidns.com/dns-query'
