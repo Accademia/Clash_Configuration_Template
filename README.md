@@ -569,7 +569,7 @@
 以下 4 个问题，是本模版与Stash无法兼容的地方 （ 但是 与Clash Meta核心 完美兼容 ）
 
 
-1. Stash 无法批量分流DNS查询到指定的DNS服务器
+1. Stash 无法 “批量分流” DNS查询到指定的DNS服务器
    
    Stash 无法按照（Geostie:CN）分流 🇨🇳 中国网站 的 DNS查询 ，到 🇨🇳 中国大陆的DNS服务器
     - 由于Stash并不支持在DNS的nameserver-policy:中声明Geostie:CN。所以导致了，在本模版启用了follow-rule后，所有域名查询，智能全走境外DNS查询，从而导致如京东养车等APP会返回海外IP。向开发者多次反馈后，开发者压根不回复 不响应 （不知道怎么想的） 。而Clash Verga rec客户端（Clash Meta核心），不会有这个问题。
