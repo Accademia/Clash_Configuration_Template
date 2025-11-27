@@ -138,7 +138,7 @@ dns                       :
  #direct-nameserver       : [ system ]     # 仅用于，直连请求  的 域名解析
   proxy-server-nameserver : [ system ]     # 仅用于，代理节点  的 域名解析 
   default-nameserver      : [ system ]     # 仅用于，DNS服务器 的 域名解析
-  nameserver              :                                                  # 注意：⚠️ iOS（Stash） 对 DNS 数量非常敏感，不建议超过2个（否则会导致：网络内存占用上升超过50MB限制、iOS网络模块频繁崩溃）  ⚠️⚠️⚠️ 请不要配置 域名链接的DNS 不然会抱错，因为开启了follow-rule ⚠️⚠️⚠️
+  nameserver              :                                                  # 注意：⚠️ iOS（Stash） 对 DNS 数量非常敏感，不建议超过2个（否则会导致：网络内存占用上升超过50MB限制、iOS网络模块频繁崩溃）  ⚠️⚠️⚠️ 注意：follow-rule开启后，域名链接的DNS、DOH ，必须配合GlobalDNS分流策略 ⚠️⚠️⚠️
                             - 'https://cloudflare-dns.com/dns-query'         # Cloudflare DNS   # 1.1.1.1             1.0.0.1
                             - 'https://dns.google/dns-query'                 # Google DNS       # 8.8.8.8             8.8.4.4
                           # - 'https://dns.quad9.net/dns-query'              # IBM Quad9        # 9.9.9.11            149.112.112.11     
