@@ -161,184 +161,36 @@ dns                       :
   # 哪些域名 使用 哪些DNS服务器，进行解析 （⚠️⚠️ 注意；如果 在非中国地区 使用本规则，建议注释掉本段，以便降低DNS泄漏风险）
   nameserver-policy       :     
                           # 以下规则，是对 GeoSite:CN 的修补 （ 解决：GeoSite:CN中存在大量的境外域名被收录的问题，从而最小化的隐私暴露 ）
-                          # 'analytics.strava.com'                        : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # Strava 运动 (美国)，隐私敏感
-                          # 'download.jetbrains.com'                      : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # JetBrains 开发工具 (捷克/国际)，国内解析有时会被污染
-                          # 'download.microsoft.com'                      : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 微软 (美国)
-                          # 'ip.istatmenus.app'                           : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # iStat Menus (Bjango, 澳大利亚/美国)
-                          # 'ntservicepack.microsoft.com'                 : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 微软
-                          # 'steamcommunity-a.akamaihd.net'               : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # Steam 社区 (美国/Akamai)，国内解析通常是被阻断或污染的
-                          # '+.aaplimg.com'                               : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # Apple 图片服务 (美国)。隐私敏感。
-                          # '+.abercrombie.com'                           : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # A&F 服装 (美国)
-                          # '+.adobe.com'                                 : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # (注意列表里有 adobesc.com 是中国版，但建议 adobe 均走代理)
-                          # '+.amd.com'                                   : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # AMD 芯片 (美国)
-                          # '+.beatsbydre.com'                            : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # Beats/Apple (美国)
-                          # '+.browserleaks.com'                          : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 隐私检测网站 (国际)，走国内 DNS 会暴露你在测隐私
-                          # '+.bstatic.com'                               : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # Booking.com 缤客 CDN (荷兰/美国)
-                          # '+.clashroyaleapp.com'                        : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # Clash Royale 皇室战争 (Supercell, 芬兰)
-                          # '+.cloudflare-dns.com'                        : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # Cloudflare DoH 地址，绝对不能走国内 DNS
-                          # '+.crashlytics.com'                           : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # Google 旗下的崩溃分析 (美国)，常被广告拦截误杀，建议走国外
-                          # '+.dockerone.com'                             : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # (虽是国内社区，但 Docker 官方相关建议走代理)
-                          # '+.ford.com'                                  : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 福特汽车 (美国)
-                          # '+.gandi.net'                                 : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 域名注册商 (法国)，隐私敏感
-                          # '+.garmin.com'                                : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 佳明 (美国/瑞士)，地理位置数据敏感
-                          # '+.hollisterco.com'                           : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 服装 (美国)
-                          # '+.java.com'                                  : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # Oracle (美国)
-                          # '+.kaspersky-labs.com'                        : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 卡巴斯基 (俄罗斯/国际)
-                          # '+.lazada.com'                                : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 阿里旗下但主要面向东南亚，服务器主要在新加坡
-                          # '+.metatrader4.com'                           : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 外汇软件 (俄罗斯/国际)
-                          # '+.metatrader5.com'                           : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 外汇软件
-                          # '+.microsoftonline.com'                       : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 微软在线服务 (美国)，隐私极度敏感 (Office/OneDrive 登录)
-                          # '+.office.com'                                : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 微软 Office
-                          # '+.office.net'                                : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 微软 Office
-                          # '+.office365.com'                             : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 微软 Office 365
-                          # '+.officese.com'                              : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 微软相关
-                          # '+.onenote.net'                               : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 微软 OneNote笔记
-                          # '+.ooklaserver.net'                           : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # Speedtest 测速节点 (国际)
-                          # '+.oppodigital.com'                           : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # OPPO 影音 (已停产，服务器多在海外)
-                          # '+.oracle.com'                                : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # Oracle 甲骨文 (美国)
-                          # '+.outlook.com'                               : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 微软邮箱 (美国)，隐私极度敏感
-                          # '+.pubghelper.com'                            : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # PUBG 绝地求生 (韩国)，国内通常需加速器
-                          # '+.pubgtool.com'                              : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # PUBG 工具
-                          # '+.sony.com'                                  : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 索尼 (日本/美国)
-                          # '+.sonyentertainmentnetwork.com'              : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 索尼 PSN 服务
-                          # '+.supercell.com'                             : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # Supercell 游戏 (芬兰)
-                          # '+.tawk.link'                                 : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 客服聊天插件 (国际)
-                          # '+.tawk.to'                                   : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 客服聊天插件 (国际)
-                          # '+.trello.com'                                : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # (列表未直接列出但注意 trellocdn)
-                          # '+.trellocdn.com'                             : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # Trello 协作工具 (Atlassian, 澳大利亚/美国)
-                          # '+.udacity.com'                               : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 优达学城 (美国)
-                          # '+.unity3d.com'                               : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # (注意列表可能有 Unity 相关)
-                          # '+.visualstudio.com'                          : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 微软开发工具
-                          # '+.westlaw.com'                               : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 法律数据库 (美国)
-                          # '+.whatismyip.com'                            : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # IP 查询 (国际)，走国内 DNS 查不到你的真实出口 IP
-                          # '+.windows.com'                               : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 微软 Windows
-                          # '+.windows.net'                               : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 微软云服务/Azure
-                          # '+.windowsupdate.com'                         : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 微软更新
-                          # '+.windowsupdate.microsoft.com'               : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 微软更新
-                          # '+.xbox.com'                                  : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 微软 Xbox
-                          # '+.xboxlive.com'                              : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 微软 Xbox Live
-                          # '+.acm.org'                                   : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 计算机协会 (美国)
-                          # '+.acs.org'                                   : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 化学学会 (美国)
-                          # '+.ams.org'                                   : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 数学学会 (美国)
-                          # '+.annualreviews.org'                         : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 年度评论 (美国)
-                          # '+.aps.org'                                   : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 物理学会 (美国)
-                          # '+.ascelibrary.org'                           : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 土木工程 (美国)
-                          # '+.asm.org'                                   : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 微生物学会 (美国)
-                          # '+.asme.org'                                  : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 机械工程 (美国)
-                          # '+.astm.org'                                  : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 国际标准 (美国)
-                          # '+.bmj.com'                                   : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 英国医学杂志 (英国)
-                          # '+.cambridge.org'                             : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 剑桥大学出版社 (英国)
-                          # '+.cas.org'                                   : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 化学文摘社 (美国)
-                          # '+.clarivate.com'                             : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 科睿唯安 (Web of Science) (英国/美国)
-                          # '+.engineeringvillage.com'                    : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 工程索引 (Elsevier, 荷兰/国际)
-                          # '+.ieee.org'                                  : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 电气电子工程师学会 (美国)
-                          # '+.imf.org'                                   : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 国际货币基金组织
-                          # '+.iop.org'                                   : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 物理学会 (英国)
-                          # '+.jamanetwork.com'                           : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 美国医学会杂志
-                          # '+.jhu.edu'                                   : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 约翰霍普金斯大学 (美国)
-                          # '+.karger.com'                                : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 医学出版 (瑞士)
-                          # '+.mpg.de'                                    : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 马普所 (德国)
-                          # '+.nature.com'                                : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 自然杂志 (英国)
-                          # '+.oecd-ilibrary.org'                         : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 经合组织
-                          # '+.osapublishing.org'                         : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 光学学会 (美国)
-                          # '+.oup.com'                                   : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 牛津大学出版社 (英国)
-                          # '+.ovid.com'                                  : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 医学数据库 (美国)
-                          # '+.oxfordartonline.com'                       : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 牛津艺术
-                          # '+.oxfordbibliographies.com'                  : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 牛津参考书目
-                          # '+.oxfordmusiconline.com'                     : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 牛津音乐
-                          # '+.pnas.org'                                  : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 美国科学院院刊
-                          # '+.proquest.com'                              : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 学位论文数据库 (美国)
-                          # '+.rsc.org'                                   : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 皇家化学会 (英国)
-                          # '+.sagepub.com'                               : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # SAGE 出版 (美国)
-                          # '+.sciencedirect.com'                         : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # Elsevier 数据库 (荷兰)
-                          # '+.scopus.com'                                : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 引用数据库 (荷兰)
-                          # '+.siam.org'                                  : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 工业应用数学 (美国)
-                          # '+.spiedigitallibrary.org'                    : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 光学工程 (美国)
-                          # '+.springer.com'                              : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 施普林格 (德国)
-                          # '+.springerlink.com'                          : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 施普林格数据库
-                          # '+.tandfonline.com'                           : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # Taylor & Francis (英国)
-                          # '+.un.org'                                    : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 联合国
-                          # '+.uni-bielefeld.de'                          : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 比勒费尔德大学 (德国)
-                          # '+.webofknowledge.com'                        : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # WoS 数据库
-                          # '+.wiley.com'                                 : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # Wiley 出版 (美国)
-                          # '+.worldbank.org'                             : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 世界银行
-                          # '+.worldscientific.com'                       : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 世界科技出版 (新加坡)
-                          # '+.broadcasthe.net'                           : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # PT 站 (BTN)
-                          # '+.empornium.me'                              : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # PT 站
-                          # '+.gazellegames.net'                          : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # PT 站 (Games)
-                          # '+.hdbits.org'                                : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # PT 站 (顶级高清)
-                          # '+.hdchina.org'                               : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # PT 站 (虽叫China，但域名和服务器常变动，建议走代理)
-                          # '+.hdcmct.org'                                : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # PT 站
-                          # '+.hddolby.com'                               : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # PT 站
-                          # '+.hdhome.org'                                : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # PT 站
-                          # '+.jpopsuki.eu'                               : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # PT 站 (日音)
-                          # '+.m-team.cc'                                 : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # (列表里可能有 mt 相关，注意检查)
-                          # '+.ncore.cc'                                  : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # PT 站
-                          # '+.passthepopcorn.me'                         : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # PT 站 (电影)
-                          # '+.privatehd.to'                              : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # PT 站
-                          # '+.pterclub.com'                              : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # PT 站 (猫站)
-                          # '+.redacted.ch'                               : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # PT 站 (音乐)
-                          # '+.springsunday.net'                          : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # PT 站
-                          # '+.totheglory.im'                             : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # PT 站 (TTG)
-                          # '+.u2.dmhy.org'                               : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # (列表里没看到，但如果有幼儿园也要删)
-                          # '+.zimuzu.io'                                 : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 字幕组 (敏感)
-                          # '+.zimuzu.tv'                                 : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 字幕组
-                          # '+.ctexcel.ca'                                : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 中国电信加拿大 (海外业务)
-                          # '+.ctexcel.fr'                                : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 中国电信法国
-                          # '+.ctexcel.us'                                : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 中国电信美国
-                          # '+.ctrip.co.id'                               : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 携程印尼站
-                          # '+.ctrip.co.kr'                               : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 携程韩国站
-                          # '+.ctrip.co.th'                               : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 携程泰国站
-                          # '+.ctrip.my'                                  : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 携程大马站
-                          # '+.ctrip.sg'                                  : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 携程新加坡站
-                          # '+.didiaustralia.blog'                        : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 滴滴澳洲
-                          # '+.didimobility.co.jp'                        : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 滴滴日本
-                          # '+.icbc-at.com'                               : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 工行 奥地利
-                          # '+.icbc-cz.com'                               : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 工行 捷克
-                          # '+.icbc-uk.com'                               : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 工行 英国
-                          # '+.icbc-us.com'                               : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 工行 美国
-                          # '+.icbc.ae'                                   : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 工行 阿联酋
-                          # '+.icbc.be'                                   : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 工行 比利时
-                          # '+.icbc.co.id'                                : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 工行 印尼
-                          # '+.icbc.co.jp'                                : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 工行 日本
-                          # '+.icbc.de'                                   : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 工行 德国
-                          # '+.icbc.eu'                                   : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 工行 欧洲
-                          # '+.icbc.lu'                                   : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 工行 卢森堡
-                          # '+.jd.ru'                                     : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 京东 俄罗斯站
-                          # '+.sinopec-usa.com'                           : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 中石化 美国
-                          # '+.tiktokd.net'                               : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # TikTok (海外抖音) - 必须移除
-                          # '+.tiktokd.org'                               : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # TikTok - 必须移除
-                          # '+.tmall.ru'                                  : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 天猫 俄罗斯
-                          # 'images-cn.ssl-images-amazon.com'             : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 亚马逊中国 CDN
+                          # 'rule-set:PreRepairGeositeCN_Domain'          : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 仅Clash Meta支持，但 Stash 3.0 不支持！  
                           # 'geosite:cn'                                  : [ 'https://dns.alidns.com/dns-query'    , 'https://doh.pub/dns-query'                  ]        # 仅Clash Meta支持，但 Stash 3.0 不支持！
 
                           # # 以下为'geosite:cn'的展开，主要应对Stash不支持 nameserver-policy : 'geosite:cn'的情况（一旦Stash支持后，请立刻删除以下规则）
                             '+.cn'                                        : 'https://dns.alidns.com/dns-query'  
                           # 'analytics.strava.com'                        : 'https://dns.alidns.com/dns-query'  # Strava 运动 (美国)，隐私敏感
                           # 'blzddist1-a.akamaihd.net'                    : 'https://dns.alidns.com/dns-query'
-                            'cdn.angruo.com'                              : 'https://dns.alidns.com/dns-query'
-                            'cdn.lilyemby.com'                            : 'https://dns.alidns.com/dns-query'
+                          # 'cdn.angruo.com'                              : 'https://dns.alidns.com/dns-query'  # Angruo是一个国际CDN/托管服务
+                          # 'cdn.lilyemby.com'                            : 'https://dns.alidns.com/dns-query'  # LilyEmby是开源媒体服务器Emby的变体
                           # 'client.amplifi.com'                          : 'https://dns.alidns.com/dns-query'
                           # 'download.jetbrains.com'                      : 'https://dns.alidns.com/dns-query'  # JetBrains 开发工具 (捷克/国际)，国内解析有时会被污染
                           # 'download.microsoft.com'                      : 'https://dns.alidns.com/dns-query'  # 微软 (美国)
                           # 'images-cn.ssl-images-amazon.com'             : 'https://dns.alidns.com/dns-query'
                           # 'ip.istatmenus.app'                           : 'https://dns.alidns.com/dns-query'  # iStat Menus (Bjango, 澳大利亚/美国)
-                            'kc.kexinshe.com'                             : 'https://dns.alidns.com/dns-query'
+                          # 'kc.kexinshe.com'                             : 'https://dns.alidns.com/dns-query'  # Kexinshe是国际设计/艺术平台
                           # 'ntservicepack.microsoft.com'                 : 'https://dns.alidns.com/dns-query'  # 微软
                           # 'origin-a.akamaihd.ne'                        : 'https://dns.alidns.com/dns-query'
                           # 'origin-a.akamaihd.net'                       : 'https://dns.alidns.com/dns-query'
-                            'smart.uhdnow.com'                            : 'https://dns.alidns.com/dns-query'
-                            'sms.imagetasks.com'                          : 'https://dns.alidns.com/dns-query'
+                          # 'smart.uhdnow.com'                            : 'https://dns.alidns.com/dns-query'  # UHDNow是国际4K视频/媒体服务
+                          # 'sms.imagetasks.com'                          : 'https://dns.alidns.com/dns-query'  # ImageTasks是国际图像处理/任务平台
                           # 'steamcommunity-a.akamaihd.net'               : 'https://dns.alidns.com/dns-query'  # Steam 社区 (美国/Akamai)，国内解析通常是被阻断或污染的
-                            'tx.lilyemby.com'                             : 'https://dns.alidns.com/dns-query'
+                          # 'tx.lilyemby.com'                             : 'https://dns.alidns.com/dns-query'  # LilyEmby变体
                             'weixin.com'                                  : 'https://dns.alidns.com/dns-query'
-                            'www.libvideo.com'                            : 'https://dns.alidns.com/dns-query'
+                          # 'www.libvideo.com'                            : 'https://dns.alidns.com/dns-query'  # LibVideo是国际视频库/开源项目
                             'www.yxssp.com'                               : 'https://dns.alidns.com/dns-query'
-                            '+.00cdn.com'                                 : 'https://dns.alidns.com/dns-query'
-                            '+.0123456789.com'                            : 'https://dns.alidns.com/dns-query'
-                            '+.0379home.com'                              : 'https://dns.alidns.com/dns-query'
-                            '+.055110.com'                                : 'https://dns.alidns.com/dns-query'
-                            '+.05sun.com'                                 : 'https://dns.alidns.com/dns-query'
+                          # '+.00cdn.com'                                 : 'https://dns.alidns.com/dns-query'  # 00CDN是国际CDN服务
+                          # '+.0123456789.com'                            : 'https://dns.alidns.com/dns-query'  # 
+                          # '+.0379home.com'                              : 'https://dns.alidns.com/dns-query'  # 国际家居/房产平台
+                          # '+.055110.com'                                : 'https://dns.alidns.com/dns-query'  # 国际电话/通信服务域名
+                          # '+.05sun.com'                                 : 'https://dns.alidns.com/dns-query'  # 国际科技/博客平台
                             '+.0759job.com'                               : 'https://dns.alidns.com/dns-query'
                             '+.10010.com'                                 : 'https://dns.alidns.com/dns-query'
                             '+.100bt.com'                                 : 'https://dns.alidns.com/dns-query'
@@ -741,9 +593,9 @@ dns                       :
                           # '+.ams.org'                                   : 'https://dns.alidns.com/dns-query'  # 数学学会 (美国)
                             '+.andfx.net'                                 : 'https://dns.alidns.com/dns-query'
                             '+.anfensi.com'                               : 'https://dns.alidns.com/dns-query'
-                            '+.animebytes.tv'                             : 'https://dns.alidns.com/dns-query'
+                          # '+.animebytes.tv'                             : 'https://dns.alidns.com/dns-query'  # AnimeBytes 是面向国际用户的私人动漫下载站点
                             '+.animetamashi.com'                          : 'https://dns.alidns.com/dns-query'
-                            '+.animetorrents.me'                          : 'https://dns.alidns.com/dns-query'
+                          # '+.animetorrents.me'                          : 'https://dns.alidns.com/dns-query'  # 私人动漫 BT Tracker
                             '+.anitama.net'                               : 'https://dns.alidns.com/dns-query'
                             '+.anjuke.com'                                : 'https://dns.alidns.com/dns-query'
                             '+.anjukestatic.com'                          : 'https://dns.alidns.com/dns-query'
@@ -765,7 +617,7 @@ dns                       :
                             '+.apaas-zone-test.com'                       : 'https://dns.alidns.com/dns-query'
                             '+.apabi.com'                                 : 'https://dns.alidns.com/dns-query'
                             '+.apcdns.net'                                : 'https://dns.alidns.com/dns-query'
-                            '+.api.crisp.chat'                            : 'https://dns.alidns.com/dns-query'
+                          # '+.api.crisp.chat'                            : 'https://dns.alidns.com/dns-query'  # 法国在线客服 SaaS 
                             '+.apifox.com'                                : 'https://dns.alidns.com/dns-query'
                             '+.apigwtencent.com'                          : 'https://dns.alidns.com/dns-query'
                             '+.apimkt.net'                                : 'https://dns.alidns.com/dns-query'
@@ -790,7 +642,7 @@ dns                       :
                             '+.atatech.org'                               : 'https://dns.alidns.com/dns-query'
                             '+.autonavi.com'                              : 'https://dns.alidns.com/dns-query'
                             '+.avicsec.com'                               : 'https://dns.alidns.com/dns-query'
-                            '+.awesome-hd.me'                             : 'https://dns.alidns.com/dns-query'
+                          # '+.awesome-hd.me'                             : 'https://dns.alidns.com/dns-query'  # 私人高清影视下载站点
                             '+.b23.tv'                                    : 'https://dns.alidns.com/dns-query'
                             '+.b2byao.com'                                : 'https://dns.alidns.com/dns-query'
                             '+.b3log.org'                                 : 'https://dns.alidns.com/dns-query'
@@ -1164,7 +1016,7 @@ dns                       :
                             '+.cjsc.com'                                  : 'https://dns.alidns.com/dns-query'
                           # '+.clarivate.com'                             : 'https://dns.alidns.com/dns-query'  # 科睿唯安 (Web of Science) (英国/美国)
                           # '+.clashroyaleapp.com'                        : 'https://dns.alidns.com/dns-query'  # Clash Royale 皇室战争 (Supercell, 芬兰)
-                            '+.classix-unlimited.co.uk'                   : 'https://dns.alidns.com/dns-query'
+                          # '+.classix-unlimited.co.uk'                   : 'https://dns.alidns.com/dns-query'  # 英国的经典影视网站
                             '+.click.qianqian.com'                        : 'https://dns.alidns.com/dns-query'
                             '+.clk1.top'                                  : 'https://dns.alidns.com/dns-query'
                             '+.cloud-beijing.com'                         : 'https://dns.alidns.com/dns-query'
@@ -1916,7 +1768,7 @@ dns                       :
                             '+.hongyuanqh.com'                            : 'https://dns.alidns.com/dns-query'
                             '+.hori-gz.com'                               : 'https://dns.alidns.com/dns-query'
                             '+.hostbuf.com'                               : 'https://dns.alidns.com/dns-query'
-                            '+.hotmail.com'                               : 'https://dns.alidns.com/dns-query'
+                          # '+.hotmail.com'                               : 'https://dns.alidns.com/dns-query'  # 微软邮箱
                             '+.houdao.com'                                : 'https://dns.alidns.com/dns-query'
                             '+.houyicaiji.com'                            : 'https://dns.alidns.com/dns-query'
                             '+.houyuantuan.com'                           : 'https://dns.alidns.com/dns-query'
@@ -2040,7 +1892,7 @@ dns                       :
                             '+.icbkfs.com'                                : 'https://dns.alidns.com/dns-query'
                             '+.icbkus.com'                                : 'https://dns.alidns.com/dns-query'
                             '+.icedropper.com'                            : 'https://dns.alidns.com/dns-query'
-                            '+.icetorrent.org'                            : 'https://dns.alidns.com/dns-query'
+                          # '+.icetorrent.org'                            : 'https://dns.alidns.com/dns-query'  # 欧洲的私人 torrent 社区
                             '+.icevirtuallibrary.com'                     : 'https://dns.alidns.com/dns-query'
                             '+.ichangtou.com'                             : 'https://dns.alidns.com/dns-query'
                             '+.iciba.com'                                 : 'https://dns.alidns.com/dns-query'
@@ -2086,7 +1938,7 @@ dns                       :
                             '+.imooc.com'                                 : 'https://dns.alidns.com/dns-query'
                             '+.imqq.com'                                  : 'https://dns.alidns.com/dns-query'
                             '+.imweb.io'                                  : 'https://dns.alidns.com/dns-query'
-                            '+.in.th'                                     : 'https://dns.alidns.com/dns-query'
+                          # '+.in.th'                                     : 'https://dns.alidns.com/dns-query'
                             '+.incopat.com'                               : 'https://dns.alidns.com/dns-query'
                             '+.indienova.com'                             : 'https://dns.alidns.com/dns-query'
                             '+.infinitynewtab.com'                        : 'https://dns.alidns.com/dns-query'
@@ -2544,7 +2396,7 @@ dns                       :
                             '+.lvmama.com'                                : 'https://dns.alidns.com/dns-query'
                             '+.lvsexitong.com'                            : 'https://dns.alidns.com/dns-query'
                             '+.lvtds.com'                                 : 'https://dns.alidns.com/dns-query'
-                            '+.lwurl.to'                                  : 'https://dns.alidns.com/dns-query'
+                          # '+.lwurl.to'                                  : 'https://dns.alidns.com/dns-query'  # 
                             '+.lxdns.com'                                 : 'https://dns.alidns.com/dns-query'
                             '+.lxdns.info'                                : 'https://dns.alidns.com/dns-query'
                             '+.lxdns.org'                                 : 'https://dns.alidns.com/dns-query'
@@ -2676,7 +2528,7 @@ dns                       :
                             '+.moleecel.com'                              : 'https://dns.alidns.com/dns-query'
                             '+.moocollege.com'                            : 'https://dns.alidns.com/dns-query'
                             '+.mop.com'                                   : 'https://dns.alidns.com/dns-query'
-                            '+.morethan.tv'                               : 'https://dns.alidns.com/dns-query'
+                          # '+.morethan.tv'                               : 'https://dns.alidns.com/dns-query'  # 面向国际用户的“ratio‑free”电视剧/电影 tracker
                             '+.morganstanleyhuaxin.com'                   : 'https://dns.alidns.com/dns-query'
                             '+.moulem.com'                                : 'https://dns.alidns.com/dns-query'
                           # '+.mpg.de'                                    : 'https://dns.alidns.com/dns-query'  # 马普所 (德国)
@@ -3017,7 +2869,7 @@ dns                       :
                             '+.qyunapp.com'                               : 'https://dns.alidns.com/dns-query'
                             '+.qzone.com'                                 : 'https://dns.alidns.com/dns-query'
                             '+.rainclassroom.com'                         : 'https://dns.alidns.com/dns-query'
-                            '+.rarbg.to'                                  : 'https://dns.alidns.com/dns-query'
+                          # '+.rarbg.to'                                  : 'https://dns.alidns.com/dns-query'  # 公共 BT 索引站点（保加利亚）
                             '+.raychase.net'                              : 'https://dns.alidns.com/dns-query'
                             '+.rdfybk.com'                                : 'https://dns.alidns.com/dns-query'
                             '+.readnovel.com'                             : 'https://dns.alidns.com/dns-query'
@@ -3658,7 +3510,7 @@ dns                       :
                             '+.wo116114.com'                              : 'https://dns.alidns.com/dns-query'
                             '+.wo1wan.com'                                : 'https://dns.alidns.com/dns-query'
                             '+.wodingche.com'                             : 'https://dns.alidns.com/dns-query'
-                            '+.wol.tv'                                    : 'https://dns.alidns.com/dns-query'
+                          # '+.wol.tv'                                    : 'https://dns.alidns.com/dns-query'  # 美国休斯敦附近教会的宗教频道
                             '+.wolai.com'                                 : 'https://dns.alidns.com/dns-query'
                             '+.womai.com'                                 : 'https://dns.alidns.com/dns-query'
                             '+.wondercv.com'                              : 'https://dns.alidns.com/dns-query'
