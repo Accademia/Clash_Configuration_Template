@@ -4929,8 +4929,8 @@ rules:
    #- GEOSITE     ### , microsoft@cn                               , 🇨🇳.<ReturnCN>—Other                             #                                        # [4st-01]  [ Default : CN          ] ❌ 谨慎启用！ 可能存在错误分流
     - GEOSITE         , microsoft                                  , ☁️.<Apps>—Microsoft                             #                                        # [4st-01]  [ Default : DIRECT      ]      
     - RULE-SET        , Microsoft_Do_Resolve                       , ☁️.<Apps>—Microsoft                             # , no-resolve                           # [4st-01]  [ Default : DIRECT      ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Microsoft             大厂 - Microsoft              # 注意：微软的office、Bing、copilot等规则 ，已提前完成分流，请查看规则集  [2st-30]
-    - IP-CIDR         , 20.0.0.0/8                                 , ☁️.<Apps>—Microsoft                             # , no-resolve                           # [4st-01]  [ Default : DIRECT      ]     
-    - IP-CIDR         , 40.0.0.0/8                                 , ☁️.<Apps>—Microsoft                             # , no-resolve                           # [4st-01]  [ Default : DIRECT      ]     
+   #- IP-CIDR         , 20.0.0.0/8                                 , ☁️.<Apps>—Microsoft                             # , no-resolve                           # [4st-01]  [ Default : DIRECT      ]     
+   #- IP-CIDR         , 40.0.0.0/8                                 , ☁️.<Apps>—Microsoft                             # , no-resolve                           # [4st-01]  [ Default : DIRECT      ]     
 
    #- GEOSITE     ### , google@cn                                  , 🇨🇳.<ReturnCN>—Other                             #                                        # [4st-01]  [ Default : CN          ] ❌ 谨慎启用！ 可能存在错误分流
     - GEOSITE         , youtube                                    , 📺.<Video>—YouTube                              #                                        # [2st-22]  [ Default : US          ]     
