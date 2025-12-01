@@ -611,7 +611,7 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 本模版的DNS策略 已按如下思路进行配置：
 
-- 本模版的DNS请求，采用白名单制度，只有命中了的中国域名，才会使用操作系统内置的的DNS进行请求，其他域名的DNS请求，均通过VPS进行代理，并且在此过程中，不会通过系统内置的DNS请求功能向国内DNS发起请求。从而最大限度的避免DNS泄漏。并且也没有Fake IP，所有DNS请求，只请求一次，只返回1.1.1.1/8.8.8.8解析后的真实IP。并且全程（通过VPS代理DNS请求的全过程）只使用DOH（DNS over Https），通过境外VPS，加密访问DNS。
+- 本模版的DNS请求，采用白名单制度，只有命中了的中国域名，才会使用🇨🇳国内的DNS（DOH加密访问）进行请求，其他域名的DNS请求，均通过VPS进行代理（境外DOH加密访问），并且在请求境外DNS的过程中，不会向国内DNS发起请求。从而最大限度的避免DNS泄漏。并且也没有Fake IP，所有DNS请求，只请求一次，只返回1.1.1.1/8.8.8.8解析后的真实IP。并且全程（通过VPS代理DNS请求的全过程）只使用DOH（DNS over Https），通过境外VPS，加密访问DNS。
   
 - 本模版，通过上述方法，做到完美的保护隐私，以防止防火墙通过DNS请求窥探用户都去了哪些网站。
 
