@@ -72,13 +72,15 @@
 规则 ：01-WhiteList_模版.yaml  
   + 最大特色：
       + 防护方面最全面 = 3万条反广告 + 4万条隐私保护 （ 基于EasyPrivacy ）
-。
+      
+.
 
 规则 ：02-WhiteList-Min.AntiAD_模版.yaml 
   +  与 规则1 的区别 ： 
      + RuleSet规则中， “反广告 + 隐私保护” ，从7.7万条 精简到 1500 条（ 基于Geosite ）
      + GeoSite规则中，“Porn类网站” 的规则，从 1.3万 精简到 仅十几条（pornhub）
-。
+     
+.
 
 规则 ：03-WhiteList-Non.AntiAD_模版.yaml 
  + 与 规则2 的区别比 ：
