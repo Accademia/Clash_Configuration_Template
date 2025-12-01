@@ -631,7 +631,8 @@ If you are not located in China but instead in rogue countries like Russia, Iran
   
 - 所以，对于代理DNS解析的VPS，唯一要求，必须要快，比如香港、日本的VPS节点。如果在中国大陆使用，建议使用日本CN2/9929线路的海外VPS。哪怕带宽低都不怕，只要响应延迟低就可以。本配置也会通过每900秒一次的全自动ping，选取你VPS代理池中，延迟最的VPS代理DNS请求。
 
-- 另外，还需要特别注意，geosite:cn 中，存在大量的错误。他们把很多海外域名归类到了中国网站。本模版为了修复这些错了，在nameserver-policy中和 回国分流 （PreRepairGeositeCN_Domain），这两处，做了特殊处理。
+- 另外，还需要特别注意，geosite:cn 中，存在大量的错误。他们把很多海外域名归类到了中国网站。而且错误高达上千个，很多错误都非常离谱，比如Tiktok都被归类为中国网站。所以 本模版的DNS分流并没有使用geosite:cn ！！！
+- 本模版的DNS分流，使用了https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/China。虽然比geosite:cn 的错误少很多，但是目前已知的错误，也超过了200个。为了修复这些错了，在nameserver-policy中和 回国分流 （PreRepairChina_Domain），这两处，做了特殊处理。
     + 最终达到效果：非中国大陆域名，不将域名请求发送给中国的DNS，以便最大化避免DNS泄漏。
 
 .
