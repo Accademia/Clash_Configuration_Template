@@ -156,8 +156,8 @@
 
 推荐的 节点协议 ：
 
-  - 优质线路 ： Vless + Reality + Vision + XUDP
-  - 劣质线路 ： Hysteria2 、歇斯底里2
+  - 优质线路 的 建议协议 ： Vless + Reality + Vision + XUDP
+  - 劣质线路 的 建议协议 ： Hysteria2 、歇斯底里2
   - 注意：优质线路使用 Hysteria2 ，100%会降速 ！！！！中美的劣质线路（如10美金一年不限流量的线路）使用Hysteria2，往往晚高峰网速能稳定在 10MByte/s，而如果使用其他协议，可能也就0.1 MByte/s
  
 .
