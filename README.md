@@ -635,8 +635,8 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 1. Stash 无法 “批量分流” DNS查询到指定的DNS服务器
    
    Stash 无法按照（Geostie、RULE-SET）分流 🇨🇳 中国域名 的 DNS查询 ，到 🇨🇳 中国大陆的DNS服务器
-        - 由于Stash并不支持在DNS的nameserver-policy:中声明 “Geostie:CN” 和 “RULE-SET:远程规则”。所以导致了，在本模版启用了follow-rule后，所有域名查询，智能全走境外DNS查询，从而导致如京东养车等APP会返回海外IP。向开发者多次反馈后，开发者压根不回复 不响应 （不知道怎么想的） 。而Clash Verga rec客户端（Clash Meta核心），不会有这个问题。
-    - 目前这个问题，已经通过手动展开Geostie:CN来解决，但是导致了，本模版多了4000多行。一旦Stash的nameserver-policy支持Geostie:CN，本套模版将立刻删除这些手动展开的规则。以确保 模版拥有最低的行数。
+        - 由于Stash并不支持在DNS的nameserver-policy:中声明 “Geostie:CN” 和 “RULE-SET:远程规则”。所以导致了，在本模版启用了follow-rule后，所有域名查询，一度只能全走境外DNS查询，从而导致如京东养车等APP会返回海外IP。向开发者多次反馈后，开发者压根不回复 不响应 （不知道怎么想的） 。而Clash Verga rec客户端（Clash Meta核心），不会有这个问题。
+    - 目前这个问题，已经通过手动展开Geostie:CN来解决。但是导致了，本模版多了4000多行。一旦Stash的nameserver-policy支持Geostie:CN，本套模版将立刻删除这些手动展开的规则。以确保 模版拥有最低的行数。
 
 2. Stash 的链式代理，不支持UDP流量
    
