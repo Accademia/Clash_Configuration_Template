@@ -688,7 +688,7 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 1. 中转节点，优先选择 “外国人运营 + 大厂” 的VPS，如：
     - VPS hosting（ 此为 搬瓦工的上游 ）
     - 搬瓦工 
-   等等，这些大厂中使用CN2、9929、10999线路的节点。
+   等等，这些大厂中使用CN2、9929、10099线路的节点。
 
 2. 尽量不要选择 ：海外华人、中国人 开设的VPS。坑非常多，例举几点：
     - 国产厂商，普遍雷军附体。
