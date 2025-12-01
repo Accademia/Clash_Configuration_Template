@@ -58,8 +58,8 @@
 | 规则 | 总规则数 | RuleSet规则数 | GeoSite规则数 |
 |---|---|---|---|
 | 01-WhiteList_模版.yaml  | 11万条 |  9万条 | 2万条 | 
-| 02-WhiteList-Min.AntiAD_模版.yaml | 1.9万条  | 1.2万条 | 0.7万条 | 
-| 03-WhiteList-Non.AntiAD_模版.yaml | 1.7万条 | 1.2万条 | 0.5万条| 
+| 02-WhiteList-Min.AntiAD_模版.yaml | 1.6万条  | 0.9万条 | 0.7万条 | 
+| 03-WhiteList-Non.AntiAD_模版.yaml | 1.4万条 | 0.9万条 | 0.5万条| 
 
 总规则数 =  RuleSet规则数 + GeoSite规则数
 
@@ -81,6 +81,13 @@
     + 在 RuleSet、GeoSite规则中，删除了所有的 “反广告 + 隐私保护” 
 
 
+.
+
+如何将本模版从白名单切换成黑名单模式？
+
+- 在配置模版中，检索 “ BlackList ” 关键词，注释掉这些关键词包裹住的行，你就会得到一个 黑名单模版。
+
+- 当然，我个人建议，如果想省心，还是要 1TB以上月流量的 高质量节点 + 白名单模式。这样才能做到足够省心，最大程度避免三天两头补充规则。关于节点推荐，可以看本文末尾。
 
 .
 
@@ -91,6 +98,8 @@
 
 - 要省电是因为，在iPhone上，往往的VPN软件电量消耗，占整机电量消耗的20%（VPN永驻后台不关闭）
   + 所以，必须在分流规则的安排上，就考虑到如何省电 ！！！
+  + 所以，在本模版规则中，一般用户，被使用最频繁的国内分流（回国分流），被安排在（在广告后的）最前面。而是重负载的海外规则，被安排在了国内分流之后（回国分流）。杜绝要匹配上万条规则，才发现是国内直连的连接。
+  
 
 - 要避免DNS泄漏是因为，避免让 上层监控路由器（如校园网出口）、运营商、GFW 等 监测到 ，如下两种行为
    + 使用 “国内DNS” ，解析境外域名，但是又没有 境外域名的流量。
@@ -178,21 +187,21 @@
    # ----------------------------------------------------- 
    #  说明文档 ： 路由规则（Rule）  -  大纲！！！ 总计九级 
    # ----------------------------------------------------- 
-   #      [第一级] 分流规则   :  前置规则（如局域网）      
+   #      [第一级] 分流规则   :  前置规则 （ 如 局域网 ）      
    # -----------------------------------------------------                      
-   #      [第二级] 分流规则   :  APP、网站                 
+   #      [第二级] 分流规则   :  回国 （ 如 CN ）      🇨🇳
    # -----------------------------------------------------                      
-   #      [第三级] 分流规则   :  GFWList                    
+   #      [第三级] 分流规则   :  外国 APP、网站        🌍             
    # -----------------------------------------------------                      
-   #      [第四级] 分流规则   :  大厂                      
-   # -----------------------------------------------------                      
-   #      [第五级] 分流规则   :  使用者所在国、回国（如CN）             
+   #      [第四级] 分流规则   :  外国 大厂             🌍                      
    # -----------------------------------------------------                    
-   #      [第六级] 分流规则   :  国家（根域名）            
+   #      [第五级] 分流规则   :  国家、洲际（ 根域名 ） 🌍           
    # -----------------------------------------------------                     
-   #      [第七级] 分流规则   :  国家（GeoIP）   
+   #      [第六级] 分流规则   :  国家、洲际（ GeoIP ）  🌍 
    # -----------------------------------------------------                 
-   #      [第八级] 分流规则   :  CDN                       
+   #      [第七级] 分流规则   :  CDN                   🌍    
+   # -----------------------------------------------------                      
+   #      [第八级] 分流规则   :  GFWList               🌍    
    # ----------------------------------------------------- 
    #      [第九级] 分流规则   :  兜底策略 
    # ----------------------------------------------------- 
@@ -210,7 +219,7 @@
 
    #  说明文档 ： 路由规则（Rule）  -  明细
    # ------------------------------------------------------------------------------
-   #           [第一级] 分流规则 : 前置 规则                 (IP匹配 + DNS解析)
+   #           [第一级] 分流规则 : 前置 规则                 ( IP匹配 + DNS解析 )
    # ------------------------------------------------------------------------------
    #
    # [1st-00] -  基础协议 
@@ -225,86 +234,84 @@
    # [1st-09] -  VNP软件                      - [默认路由：直连]
    #
    # ------------------------------------------------------------------------------
-   #         [第二级] 分流规则 : APP、网站                     (IP匹配 + DNS解析)
-   # ------------------------------------------------------------------------------
-   #
-   # [2st-00] -  测速
-   #  
-   # [2st-01] -  智能设备    
-   # [2st-02] -  公有云：云盘、云存储                  
-   # [2st-04] -  P2P下载软件        
-   # [2st-05] -  需加速 才能流畅访问的网站      
-   #                    
-   # [2st-10] -  专属网站(默认路由：不可配置)
-   # [2st-11] -  金融                
-   # [2st-12] -  各国银行    (默认路由：不可配置)
-   #                                                   
-   # [2st-20] -  购物                 
-   # [2st-21] -  游戏                 
-   # [2st-22] -  视频                 
-   # [2st-23] -  短视频               
-   # [2st-24] -  直播                 
-   # [2st-25] -  音频                 
-   # [2st-26] -  社交                 
-   # [2st-27] -  网络电话、eSIM        
-   # [2st-28] -  资讯                 
-   # [2st-29] -  AI                 
-   # [2st-30] -  工具                 
-   #                          
-   # [2st-80] -  特定软件 (默认路由：不可配置)
-   #
-   # ------------------------------------------------------------------------------
-   #       [第三级] 分流规则 :  （GFWList）                     (仅域名匹配)
+   #       [第二级] 分流规则 :  回国  （如 中国）              ( IP匹配 + DNS解析 )
    # ------------------------------------------------------------------------------
    # 
-   # [3st-01] -  GFWList （目前白名单模式，所以暂时弃用。只适合黑名单模式） 
+   # [2st-01] -  IP归属地        
+   #                       
+   # [2st-02] -  回国：网盘、云盘、下载软件                       # 未启用            
+   # [2st-02] -  回国：视音频                                    # 未启用            
+   # [2st-02] -  回国：社交                                      # 未启用                
+   # [2st-02] -  回国：媒体                                      # 未启用     
+   # [2st-02] -  回国：购物                                      # 未启用        
+   # [2st-02] -  回国：游戏                                      # 未启用        
+   # [2st-02] -  回国：硬件                                      # 未启用        
+   # [2st-02] -  回国：BAT                                       # 未启用            
+   # [2st-02] -  回国：其他                                      # 未启用        
+   #                      
+   # [2st-05] -  国家根域名（中国） 
+   # [2st-05] -  GeoIP（中国）    
    #
+   # ------------------------------------------------------------------------------
+   #         [第三级] 分流规则 : 外国 APP、网站                     ( IP匹配 + DNS解析 )
+   # ------------------------------------------------------------------------------
    #
-   #------------------------------------------------------------------------------
-   #       [第四级] 分流规则 :  大厂                          (IP匹配 + DNS解析)
+   # [3st-00] -  测速
+   #  
+   # [3st-01] -  智能设备    
+   # [3st-02] -  公有云：云盘、云存储                  
+   # [3st-04] -  P2P下载软件        
+   # [3st-05] -  需加速 才能流畅访问的网站      
+   #                    
+   # [3st-10] -  专属网站（ 必须HomeIP才能下单的网站 … ）   (默认路由：不可配置)
+   # [3st-11] -  金融                
+   # [3st-12] -  各国银行    (默认路由：不可配置)
+   #                                                   
+   # [3st-20] -  购物                 
+   # [3st-21] -  游戏                 
+   # [3st-22] -  视频                 
+   # [3st-23] -  短视频               
+   # [3st-24] -  直播                 
+   # [3st-25] -  音频                 
+   # [3st-26] -  社交                 
+   # [3st-27] -  网络电话、eSIM        
+   # [3st-28] -  资讯                 
+   # [3st-29] -  AI                 
+   # [3st-30] -  工具                 
+   #                          
+   # [3st-80] -  特定软件 (默认路由：不可配置)
+   #
+   # ------------------------------------------------------------------------------
+   #       [第四级] 分流规则 :  外国 大厂                            ( IP匹配 + DNS解析 )
    # ------------------------------------------------------------------------------
    #  
    # [4st-01] -  大厂          
    #
    # ------------------------------------------------------------------------------
-   #       [第五级] 分流规则 :  使用者常驻国家、回国               (IP匹配 + DNS解析)
-   # ------------------------------------------------------------------------------
-   # 
-   # [5st-01] -  IP归属地      
-   #                       
-   # [5st-02] -  回国：网盘、云盘、下载软件 
-   # [5st-02] -  回国：视音频
-   # [5st-02] -  回国：社交
-   # [5st-02] -  回国：媒体
-   # [5st-02] -  回国：购物
-   # [5st-02] -  回国：游戏
-   # [5st-02] -  回国：其他
-   #                      
-   # [5st-05] -  国家顶级域名（中国） 
-   # [5st-05] -  GeoIP（中国）    
-   # 
-   #
-   #------------------------------------------------------------------------------
-   #      [第六级] 分流规则 : 国家（顶级域名）          (仅域名匹配)
+   #      [第五级] 分流规则 : 国家、洲际（根域名）              ( 域名匹配 )
    # ------------------------------------------------------------------------------
    #
-   # [6st-01] -  国家顶级域名（VPS所在国家）    
-   # 
-   # [6st-02] -  国家顶级域名（全球：按洲际分类）         
+   # [5st-01] -  国家根域名（VPS所在国家）     
+   # [5st-02] -  国家根域名（其他国家，按洲际分类）         
    #
    # ------------------------------------------------------------------------------
-   #       [第七级] 分流规则 : 国家（GeoIP）            (IP匹配 + DNS解析) 
+   #       [第六级] 分流规则 : 国家、洲际（GeoIP）              ( IP匹配 + DNS解析 ) 
    # ------------------------------------------------------------------------------
    #       
-   # [7st-01] -   GeoIP（VPS所在国家）   
-   #        
-   # [7st-02] -   GeoIP（全球：按洲际分类）        
+   # [6st-01] -   GeoIP       （VPS所在国家）           
+   # [6st-02] -   GeoIP       （全球，按洲际分类）        
    #
    # ------------------------------------------------------------------------------
-   #       [第八级] 分流规则 : CDN                            (IP匹配 + DNS解析) 
+   #       [第七级] 分流规则 : CDN                              ( IP匹配 + DNS解析)  
    # ------------------------------------------------------------------------------
    #
-   # [8st-01] -   CDN      
+   # [7st-01] -   CDN      
+   #
+   # ------------------------------------------------------------------------------
+   #       [第八级] 分流规则 :  （GFWList）                     ( 域名匹配 )
+   # ------------------------------------------------------------------------------
+   # 
+   # [8st-01] -  GFWList                                 ⚠️ # 未启用 
    #
    # ------------------------------------------------------------------------------
    #       [第九级] 分流规则 : 兜底 
@@ -315,6 +322,8 @@
    # ------------------------------------------------------------------------------
    
 
+
+
 ```   
 
 .
@@ -324,188 +333,216 @@
 
 
 ```yaml  
-   # [1st-01] -  DNS \ NTP               
-       '📡.<DNS>—HttpDNS'                                    
-       '📡.<DNS>—GlobalDNS'                                  
-       '📡.<DNS>—ChinaDNS'                                   
-       '📡.<NTP>—GlobalNTP'                                  
-       '📡.<NTP>—ChinaNTP'                                   
 
-   # [1st-05] -  反劫持（Hijacking） 反私有DNS跟踪（HttpDNS）  
-       '⛔️.<Protection>—Hijacking'                           
 
-   # [1st-08]  [1st-09] -  隐私保护（Privacy） 屏蔽广告 
-       '⛔️.<Protection>—Privacy'                             
-       '⛔️.<Protection>—ADblock'                             
+# [1st-01] -  DNS \ NTP               
+ - { name : '📡.<DNS>—HttpDNS'                                         
+ - { name : '📡.<DNS>—GlobalDNS'                                       
+ - { name : '📡.<DNS>—ChinaDNS'                                        
+ - { name : '📡.<NTP>—GlobalNTP'                                       
+ - { name : '📡.<NTP>—ChinaNTP'                         
+                
+# [1st-05] -  反劫持（Hijacking） 反私有DNS跟踪（HttpDNS）  
+ - { name : '⛔️.<Protection>—Hijacking'                  
+               
+# [1st-08]  [1st-09] -  隐私保护（Privacy） 屏蔽广告 
+
+ - { name : '⛔️.<Protection>—Privacy'                                  
+ - { name : '⛔️.<Protection>—ADblock'                                  
+
+# [1st-10] -  UDP 
+#- { name : '🎲.<Protocol>—GlobalUDP'                                  
+#- { name : '🎲.<Protocol>—ChinaUDP'                                   
+
+# [1st-02] -  局域网（Lan）         
+ - { name : '💻.<Lan>'              
+                                    
+# [3st-01] -  智能设备           
+ - { name : '💻.<NAS>—Synology'                                        
+#- { name : '💻.<NAS>—QNAP'                                            
+ - { name : '🔌.<Home>—AqaraGlobal'          
                            
-  
-   # [1st-02] -  局域网（Lan）         
-       '💻.<Lan>'                                            
+# [3st-02] -  公有云：云盘、云存储                                     
+ - { name : '📂.<Drive>—iCloud'                                        
+ - { name : '📂.<Drive>—OneDrive'                                      
+ - { name : '📂.<Drive>—Dropbox'                                       
+ - { name : '📂.<Drive>—GoogleDrive'                                   
+ - { name : '📂.<Drive>—MEGA'                                          
+ - { name : '📂.<Drive>—Imgur'                                         
+ - { name : '📂.<Drive>—InternetArchive'  
+                              
+# [3st-04] -  被GFW阻挡的，其他下载站云盘                              
+ - { name : '⬇️.<P2P>—PT-Server'                                        
+ - { name : '⬇️.<P2P>—eMule-Server'      
+                                
+# [3st-05] -  需加速 才能流畅访问的网站                                
+ - { name : '⬇️.<Download>—MacAppUpgrade'    
+                            
+# [3st-11] -  金 融                                                    
+ - { name : '💰.<Finance>—Paypal'                                      
+ - { name : '💰.<Finance>—Wise'                                        
+ - { name : '₿.<Crypto>—Binance'                                       
+ - { name : '₿.<Crypto>—OKX'                                           
+ - { name : '💳.<Virtual>—Monzo'                                       
+ - { name : '💳.<Virtual>—Revolut'             
+                         
+ [3st-12] -  各国银行                                                  
+ - { name : '🇺🇸.<Bank>—US'                                             
+ - { name : '🇨🇦.<Bank>—CA'                                             
+ - { name : '🇬🇧.<Bank>—UK'                                             
+ - { name : '🇦🇺.<Bank>—AU'                                             
+ - { name : '🇯🇵.<Bank>—JP'                            
+                  
+# [3st-13] -  专属网站（必须要所属国IP才能正常下单的网站，银行除外…）  
+ - { name : '🇺🇸.<HomeIP>—US'                                           
+#- { name : '🇨🇦.<HomeIP>—CA'                                           
+#- { name : '🇬🇧.<HomeIP>—UK'                                           
+#- { name : '🇦🇺.<HomeIP>—AU'                                           
+ - { name : '🇯🇵.<HomeIP>—JP'                              
+              
+# [3st-14] - 不支持VPN的网站（除 银行、HomeIP 分流规则以外的 网站）    
+ - { name : '❌.<UnsupportVPN>'              
+                           
+# [3st-20] -  购物                                                     
+ - { name : '🛒.<Shopping>—eBay'                                       
+ - { name : '🛒.<Shopping>—Patreon'     
+                                
+# [3st-21] -  游戏平台                                                 
+ - { name : '🕹️.<Game>—Xbox'                                           
+ - { name : '🕹️.<Game>—PlayStation'                                    
+ - { name : '🕹️.<Game>—Nintendo'                                       
+ - { name : '🕹️.<Game>—Steam'                                          
+ - { name : '🕹️.<Game>—EPIC'                                           
+ - { name : '🕹️.<Game>—GOG'                                            
+ - { name : '🕹️.<Game>—RockStar'                                       
+ - { name : '🕹️.<Game>—EA.Origin'                                      
+ - { name : '🕹️.<Game>—UbiSoft'   
+                                      
+# [3st-22] -  视频 软件                                                
+ - { name : '📺.<Video>—YouTube'                                       
+ - { name : '📺.<Video>—Netflix'                                       
+ - { name : '📺.<Video>—PrimeVideo'                                    
+ - { name : '📺.<Video>—Disney'                                        
+ - { name : '📺.<Video>—HBO'                                           
+ - { name : '📺.<Video>—FOX'                                           
+ - { name : '📺.<Video>—AppleTV'                                       
+ - { name : '📺.<Video>—Porn'       
+                                    
+# [3st-23] -  短视频                                                   
+ - { name : '🎬.<Short>—TikTok'                                        
+ - { name : '🎬.<Short>—Instagram'                                     
+ - { name : '🎬.<Short>—Snapchat'         
+                              
+# [3st-24] -  直播                                                     
+ - { name : '🎞️.<Live>—Twitch'            
+                              
+# [3st-25] -  音频                                                     
+ - { name : '🎧.<Audio>—Spotify'                                       
+ - { name : '🎧.<Audio>—YouTubeMusic'                                  
+ - { name : '🎧.<Audio>—AppleMusic'       
+                              
+# [3st-26] -  社交                                                     
+ - { name : '💛.<Social>—Facebook'                                     
+ - { name : '💛.<Social>—Twitter'                                      
+ - { name : '💛.<Social>—Reddit'                                       
+ - { name : '💛.<Social>—Telegram'                                     
+ - { name : '💛.<Social>—Whatsapp'                                     
+ - { name : '💛.<Social>—Line'                                         
+ - { name : '💛.<Social>—Discord'                                      
+ - { name : '💛.<Social>—LinkedIn'                                     
+#- { name : '💛.<Social>—Teams'                                        
+ - { name : '💛.<Social>—Clubhouse'                                    
+ - { name : '💛.<Social>—Signal'                                       
+ - { name : '💛.<Social>—Tumblr'                                       
+ - { name : '💛.<Social>—Pixiv'          
+                               
+# [3st-28] -  资讯                                                     
+ - { name : '📰.<News>—Wikipedia'                                      
+ - { name : '📰.<News>—AppleNews'      
+                                 
+# [3st-29] -  AI                 
+ - { name : '💡.<AI>—AppleAI'                                          
+ - { name : '💡.<AI>—OpenAI'                                           
+ - { name : '💡.<AI>—Grok'                                             
+ - { name : '💡.<AI>—Claude'                                           
+ - { name : '💡.<AI>—Gemini'                                           
+ - { name : '💡.<AI>—Copilot'                                          
+ - { name : '💡.<AI>—GlobalAI'     
+ -                                     
+# [3st-30] -  工具                                                     
+ - { name : '🔧.<Tools>—Adobe'                                         
+ - { name : '🔧.<Tools>—Github'                                        
+ - { name : '🔧.<Tools>—Notion'                                        
+ - { name : '🔧.<Tools>—Pinterest'                                     
+ - { name : '🔧.<Tools>—Bing/Edge'                                     
+ - { name : '🖥️.<Remote>—Rustdesk'                                     
+ - { name : '🖥️.<Remote>—Parsec'                                       
 
-   # [2st-01] -  私有云：NAS           
-       '💻.<NAS>—Synology'                                   
-       '💻.<NAS>—QNAP'                                       
+# [4st-01] -  大厂                                                     
+ - { name : '☁️.<Apps>—Google'                                         
+ - { name : '☁️.<Apps>—Microsoft'                                      
+ - { name : '☁️.<Apps>—Apple'                                          
+ - { name : '☁️.<Apps>—Amazon'     
+                                     
+# [7st-01] -  CDN 
+#- { name : '☁️.<CDN>—Cloudflare'                                      
+ - { name : '☁️.<CDN>—Cloudflare'                                      
 
-   # [2st-02] -  公有云：云盘、云存储                                
-       '📂.<Drive>—iCloud'                                   
-       '📂.<Drive>—OneDrive'                                 
-       '📂.<Drive>—Dropbox'                                  
-       '📂.<Drive>—GoogleDrive'                              
-       '📂.<Drive>—MEGA'                                     
-       '📂.<Drive>—Imgur'                                    
-       '📂.<Drive>—InternetArchive'                          
+# [2st-01] -  修改IP归属地   
+ - { name : '🇨🇳.<ShowIP>—BiliBili'                                     
+ - { name : '🇨🇳.<ShowIP>—抖音'                                         
+ - { name : '🇨🇳.<ShowIP>—快手'                                         
+ - { name : '🇨🇳.<ShowIP>—小红书'                                       
+ - { name : '🇨🇳.<ShowIP>—西瓜'                                         
+ - { name : '🇨🇳.<ShowIP>—微博'                                         
+ - { name : '🇨🇳.<ShowIP>—知乎'                                         
+ - { name : '🇨🇳.<ShowIP>—贴吧'                                         
+ - { name : '🇨🇳.<ShowIP>—豆瓣'                                         
+ - { name : '🇨🇳.<ShowIP>—闲鱼'                                         
 
-   # [2st-04] -  被GFW阻挡的，其他下载站云盘                         
-       '⬇️.<P2P>—PT-Server'                                   
-       '⬇️.<P2P>—eMule-Server'                                
+# [2st-02] -  回国 - 网盘  视频  社交  媒体  购物  硬件  大厂  其他    
+#- { name : '🇨🇳.<ReturnCN>—Drive'                                      
+#- { name : '🇨🇳.<ReturnCN>—Video'                                      
+#- { name : '🇨🇳.<ReturnCN>—Social'                                     
+#- { name : '🇨🇳.<ReturnCN>—News'                                       
+#- { name : '🇨🇳.<ReturnCN>—Shopping'                                   
+#- { name : '🇨🇳.<ReturnCN>—Hardware'                                   
+#- { name : '🇨🇳.<ReturnCN>—BAT'                                        
+#- { name : '🇨🇳.<ReturnCN>—Other'                                      
 
-   # [2st-05] -  需加速 才能流畅访问的网站                           
-       '⬇️.<Download>—MacAppUpgrade'                          
+# [2st-05] -  回国
+ - { name : '🇨🇳.<ReturnCN>—Final'                                      
+ - { name : '🇺🇸.<ReturnUS>—Final'                                
+   
+# [6st-01] [7st-01] 
+#- { name : '🇺🇸.<Country>—US'                                          
+#- { name : '🇯🇵.<Country>—JP'                                          
+#- { name : '🇬🇧.<Country>—UK'                                          
+#- { name : '🇦🇺.<Country>—AU'                                          
+#- { name : '🇭🇰.<Country>—HK'                                          
+#- { name : '🇹🇼.<Country>—TW'                                          
+#- { name : '🇸🇬.<Country>—SG'                                          
+#- { name : '🇳🇱.<Country>—NL'                                          
+#- { name : '🇩🇪.<Country>—DE'                                          
+#- { name : '🇫🇷.<Country>—FR'                                          
+#- { name : '🇨🇦.<Country>—CA'                                          
+#- { name : '🇨🇳.<Country>—CN'        
+                                  
+# [6st-02] [7st-02] 
+ - { name : '🌎.<Region>—North.America'                                
+ - { name : '🌎.<Region>—South.America'                                
+ - { name : '🌍.<Region>—Europe'                                       
+ - { name : '🌏.<Region>—Oceania'                                      
+ - { name : '🌏.<Region>—East.Asia'                                    
+ - { name : '🌏.<Region>—West.Asia'                                    
+ - { name : '🌍.<Region>—Africa'                                       
 
-   # [2st-11] -  金 融                                               
-       '💰.<Finance>—Paypal'                                 
-       '💰.<Finance>—Wise'                                   
-       '₿.<Crypto>—Binance'                                  
-       '₿.<Crypto>—OKX'                                      
-       '💳.<Virtual>—Monzo'                                  
-       '💳.<Virtual>—Revolut'                                
+# [8st-01] GFWlist  
+#- { name : '🚧.<GFWList>'                                             
 
-  # [2st-12] -  各国银行                                             
-       '🇺🇸.<Bank>—US'                                        
-       '🇨🇦.<Bank>—CA'                                        
-       '🇬🇧.<Bank>—UK'                                        
-       '🇦🇺.<Bank>—AU'                                        
-       '🇯🇵.<Bank>—JP'                                        
-
-   # [2st-13] -  专属网站（必须要所属国IP才能正常下单的网站，银行除外
-       '🇺🇸.<HomeIP>—US'                                      
-   #   '🇨🇦.<HomeIP>—CA'                                      
-   #   '🇬🇧.<HomeIP>—UK'                                      
-   #   '🇦🇺.<HomeIP>—AU'                                      
-       '🇯🇵.<HomeIP>—JP'                                      
-
-   # [2st-14] - 不支持VPN的网站（除 银行、HomeIP 分流规则以外的 网站
-       '❌.<UnsupportVPN>'                                   
-
-   # [2st-20] -  购物                                                
-       '🛒.<Shopping>—eBay'                                  
-       '🛒.<Shopping>—Patreon'                               
-
-   # [2st-21] -  游戏平台                                            
-       '🕹️.<Game>—Xbox'                                      
-       '🕹️.<Game>—PlayStation'                               
-       '🕹️.<Game>—Nintendo'                                  
-       '🕹️.<Game>—Steam'                                     
-       '🕹️.<Game>—EPIC'                                      
-       '🕹️.<Game>—GOG'                                       
-       '🕹️.<Game>—RockStar'                                  
-       '🕹️.<Game>—EA.Origin'                                 
-       '🕹️.<Game>—UbiSoft'                                   
-
-   # [2st-22] -  视频 软件                                           
-       '📺.<Video>—YouTube'                                  
-       '📺.<Video>—Netflix'                                  
-       '📺.<Video>—PrimeVideo'                               
-       '📺.<Video>—Disney'                                   
-       '📺.<Video>—HBO'                                      
-       '📺.<Video>—FOX'                                      
-       '📺.<Video>—AppleTV'                                  
-       '📺.<Video>—Porn'                                     
-
-   # [2st-23] -  短视频                                              
-       '🎬.<Short>—TikTok'                                   
-       '🎬.<Short>—Instagram'                                
-       '🎬.<Short>—Snapchat'                                 
-       '🎬.<Short>—Triller'                                  
-
-   # [2st-24] -  直播                                                
-       '🎞️.<Live>—Twitch'                                    
-
-   # [2st-25] -  音频                                                
-       '🎧.<Audio>—Spotify'                                  
-       '🎧.<Audio>—YouTubeMusic'                             
-       '🎧.<Audio>—AppleMusic'                               
-
-   # [2st-26] -  社交                                                
-       '💛.<Social>—Facebook'                                
-       '💛.<Social>—Twitter'                                 
-       '💛.<Social>—Telegram'                                
-       '💛.<Social>—Reddit'                                  
-       '💛.<Social>—Whatsapp'                                
-       '💛.<Social>—Line'                                    
-       '💛.<Social>—Discord'                                 
-       '💛.<Social>—LinkedIn'                                
-       '💛.<Social>—Teams'                                   
-       '💛.<Social>—Clubhouse'                               
-       '💛.<Social>—Signal'                                  
-       '💛.<Social>—Tumblr'                                  
-       '💛.<Social>—Pixiv'                                   
-
-   # [2st-28] -  资讯                                                
-       '📰.<News>—Wikipedia'                                 
-       '📰.<News>—AppleNews'                                 
-
-   # [2st-29] -  AI                                                  
-       '💡.<AI>—OpenAI'                                      
-       '💡.<AI>—xAI'                                         
-       '💡.<AI>—Gemini'                                      
-       '💡.<AI>—Claude'                                      
-       '💡.<AI>—Copilot'                                     
-       '💡.<AI>—GlobalAI'                                    
-
-   # [2st-30] -  工具                                                
-       '🔧.<Tools>—Adobe'                                    
-       '🔧.<Tools>—Github'                                   
-       '🔧.<Tools>—Notion'                                   
-       '🔧.<Tools>—Pinterest'                                
-       '🔧.<Tools>—Bing/Edge'                                
-       '🖥️.<Remote>—Rustdesk'                                
-       '🖥️.<Remote>—Parsec'                                  
-
-   # [4st-01] -  大厂                                                
-       '☁️.<Apps>—Google'                                    
-       '☁️.<Apps>—Microsoft'                                 
-       '☁️.<Apps>—Apple'                                     
-       '☁️.<Apps>—Amazon'                                    
-
-   # [7st-01] -  CDN 
-       '☁️.<CDN>—Cloudflare'                                 
-
-   # [5st-01] -  修改IP归属地   
-       '🇨🇳.<ShowIP>—BiliBili'                                
-       '🇨🇳.<ShowIP>—抖音'                                    
-       '🇨🇳.<ShowIP>—快手'                                    
-       '🇨🇳.<ShowIP>—小红书'                                  
-       '🇨🇳.<ShowIP>—西瓜'                                    
-       '🇨🇳.<ShowIP>—微博'                                    
-       '🇨🇳.<ShowIP>—知乎'                                    
-       '🇨🇳.<ShowIP>—贴吧'                                    
-       '🇨🇳.<ShowIP>—豆瓣'                                    
-       '🇨🇳.<ShowIP>—闲鱼'                                    
-
-   # [5st-02] -  回国 中国 - 网盘  视频  社交 媒体  购物 大厂    [ Default
-       '🇨🇳.<ReturnCN>—Drive'                                 
-       '🇨🇳.<ReturnCN>—Video'                                 
-       '🇨🇳.<ReturnCN>—Social'                                
-       '🇨🇳.<ReturnCN>—News'                                  
-       '🇨🇳.<ReturnCN>—Shopping'                              
-       '🇨🇳.<ReturnCN>—Other'                                 
-       '🇨🇳.<ReturnCN>—Final'                                 
-
-   #  回国 美国
-       '🇺🇸.<ReturnUS>—Final'                                 
-
-   #  按目标网站所在国家分流
-       '🌎.<Region>—North.America'                           
-       '🌎.<Region>—South.America'                           
-       '🌍.<Region>—Europe'                                  
-       '🌏.<Region>—Oceania'                                 
-       '🌏.<Region>—East.Asia'                               
-       '🌏.<Region>—West.Asia'                               
-       '🌍.<Region>—Africa'     
-            
-   # 兜底                   
-       'Final'   
+# [9st-01] 兜底  
+ - { name : '♾️.<Final>'                                               
+ - 
            
 ```
 
