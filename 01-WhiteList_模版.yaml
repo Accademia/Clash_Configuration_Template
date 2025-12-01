@@ -62,9 +62,18 @@ sniffer                   :                                                     
     TLS                   : { ports : [ 443 , 8443      ]                                  }   # TLS , 默认如果不配置 ports , 默认嗅探 443
    #QUIC                  : { ports : [ 443 , 8443      ]                                  }
   force-domain            : [ '+.v2ex.com'                                                 ]   # 需要强制嗅探的域名（默认情况下只对IP进行嗅探）
-  skip-domain             : [ 'Mijia Cloud' , 'dlg.io.mi.com' , '+.apple.com' , '+.wechat.com' , '+.qpic.cn' , '+.qq.com' , '+.wechatapp.com' , '+.vivox.com' , '+.oray.com' ,  '+.sunlogin.net'  ]   # 需要跳过嗅探的域名。主要解决部分站点sni字段非域名，导致嗅探结果异常的问题，如：米家设备
-  skip-src-address        : [ '192.168.0.3/32'                                             ]
-  skip-dst-address        : [ '192.168.0.3/32'                                             ]
+  skip-domain             :                                                     # 需要跳过嗅探的域名。主要解决部分站点sni字段非域名，导致嗅探结果异常的问题，如：米家设备
+                            -  'Mijia Cloud' 
+                            -  'dlg.io.mi.com'  
+                            -  '+.apple.com'  
+                            -  '+.icloud.com'  
+                            -  '+.wechat.com'  
+                            -  '+.qpic.cn'  
+                            -  '+.qq.com'  
+                            -  '+.wechatapp.com'  
+                            -  '+.vivox.com'  
+                            -  '+.oray.com'  
+                            -  '+.sunlogin.net'    
 
 
 ntp                       :                                                     # 配置：自动同步时间，以防止时间不准导致无法正常联网    
@@ -160,11 +169,10 @@ dns                       :
 
   # 哪些域名 使用 哪些DNS服务器，进行解析 （⚠️⚠️ 注意；如果 在非中国地区 使用本规则，建议注释掉本段，以便降低DNS泄漏风险）
   nameserver-policy       :     
-                          # 以下规则，是对 GeoSite:CN 的修补 （ 解决：GeoSite:CN中存在大量的境外域名被收录的问题，从而最小化的隐私暴露 ）
-                          # 'rule-set:PreRepairGeositeCN_Global_Domain'   : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 仅Clash Meta支持，但 Stash 3.0 不支持！  
-                          # 'geosite:cn'                                  : [ 'https://dns.alidns.com/dns-query'    , 'https://doh.pub/dns-query'                  ]        # 仅Clash Meta支持，但 Stash 3.0 不支持！
+                          # 'rule-set:PreRepairChina_Domain'              : [ 'https://dns.google/dns-query'        , 'https://cloudflare-dns.com/dns-query'       ]        # 仅Clash Meta支持，但 Stash 3.0 不支持！  
+                          # 'rule-set:China_Domain'                       : [ 'https://dns.alidns.com/dns-query'    , 'https://doh.pub/dns-query'                  ]        # 仅Clash Meta支持，但 Stash 3.0 不支持！
 
-                          # # 以下为'geosite:cn'的展开，主要应对Stash不支持 nameserver-policy : 'geosite:cn'的情况（一旦Stash支持后，请立刻删除以下规则）
+                          # # 以下为'rule-set:China_Domain'的展开，主要应对Stash不支持 上述规则 的情况（一旦Stash支持后，请立刻删除以下规则）
                             '+.cn'                                        : 'https://dns.alidns.com/dns-query'  
                             
                             '+.doubao.com'                                : 'https://dns.alidns.com/dns-query' 
@@ -4068,6 +4076,7 @@ proxy-groups:
 
    # [3st-23] -  短视频                                                               
     - { name : '🎬.<Short>—TikTok'                                        , icon : ''                                                                                           , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'select'       , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [  '🌐🍟.Line—[Global]—US.HomeIP.First'           , '🌐🇺🇸.Line—[Global]—US.First'            , '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , '🔰⬇️.Line—[Relay.VPS]—Max.Traffic'            , '🇺🇸🍟.Line—[US.HomeIP]'         , '🇺🇸.Line—[US]'               , '🇯🇵.Line—[JP]'             , '🇬🇧.Line—[UK]'             , '🇦🇺.Line—[AU]'              , 'DIRECT' , 'REJECT'               ,  'REJECT-DROP'   ] }         #  [3st-23]  [ Default : US          ]      TikTok_Do_Resolve           https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/TikTok                                           
+    - { name : '🎬.<Short>—Kwai'                                          , icon : ''                                                                                           , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'select'       , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [  '🌐🍟.Line—[Global]—US.HomeIP.First'           , '🌐🇺🇸.Line—[Global]—US.First'            , '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , '🔰⬇️.Line—[Relay.VPS]—Max.Traffic'            , '🇺🇸🍟.Line—[US.HomeIP]'         , '🇺🇸.Line—[US]'               , '🇯🇵.Line—[JP]'             , '🇬🇧.Line—[UK]'             , '🇦🇺.Line—[AU]'              , 'DIRECT' , 'REJECT'               ,  'REJECT-DROP'   ] }         #  [3st-23]  [ Default : US          ]      TikTok_Do_Resolve           https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/TikTok                                           
     - { name : '🎬.<Short>—Instagram'                                     , icon : ''                                                                                           , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'select'       , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [  '🌐🍟.Line—[Global]—US.HomeIP.First'           , '🌐🇺🇸.Line—[Global]—US.First'            , '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , '🔰⬇️.Line—[Relay.VPS]—Max.Traffic'            , '🇺🇸🍟.Line—[US.HomeIP]'         , '🇺🇸.Line—[US]'               , '🇯🇵.Line—[JP]'             , '🇬🇧.Line—[UK]'             , '🇦🇺.Line—[AU]'              , 'DIRECT' , 'REJECT'               ,  'REJECT-DROP'   ] }         #  [3st-23]  [ Default : US          ]      Instagram_Do_Resolve        https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Instagram                                        
     - { name : '🎬.<Short>—Snapchat'                                      , icon : ''                                                                                           , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'select'       , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [  '🌐🍟.Line—[Global]—US.HomeIP.First'           , '🌐🇺🇸.Line—[Global]—US.First'            , '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , '🔰⬇️.Line—[Relay.VPS]—Max.Traffic'            , '🇺🇸🍟.Line—[US.HomeIP]'         , '🇺🇸.Line—[US]'               , '🇯🇵.Line—[JP]'             , '🇬🇧.Line—[UK]'             , '🇦🇺.Line—[AU]'              , 'DIRECT' , 'REJECT'               ,  'REJECT-DROP'   ] }         #  [3st-23]  [ Default : US          ]      Snapchat_Do_Resolve         https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Snapchat                                         
 
@@ -4591,13 +4600,15 @@ rules:
 #
 #   - GEOSITE         , qihoo360                                   , 🇨🇳.<ReturnCN>—Other                             #                                        # [2st-02]  [ Default : CN          ]     
 #   - RULE-SET        , 360_Do_Resolve                             , 🇨🇳.<ReturnCN>—Other                             # , no-resolve                           # [2st-02]  [ Default : CN          ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/360                   回国 - 其他 - 360               
-#
-#
+
+
+    - RULE-SET        , Kwai_Domain                                , 🎬.<Short>—Kwai                                # , no-resolve                            # [2st-02]  [ Default : US          ]     https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/Kwai                        短视频 - Kwai (快手国际版)              
+         
 #  # [2st-05] -  GEOSITE + GeoIP（中国）   
 #   - DOMAIN-SUFFIX   , cn                                         , 🇨🇳.<ReturnCN>—Final                                                                      # [2st-05]  [ Default : CN          ]  
     - GEOIP           , cn                                         , 🇨🇳.<ReturnCN>—Final                                                                      # [6st-01]  [ Default : CN          ]                                                                                                  GeoIP - 中国   - 亚洲               
-    - RULE-SET        , PreRepairGeositeCN_Global_Domain           , 🇺🇸.<ReturnUS>—Final                             # , no-resolve                           # [2st-05]  [ Default : CN          ]     https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/PreRepairGeositeCN         
-    - GEOSITE         , cn                                         , 🇨🇳.<ReturnCN>—Final                                                                      # [2st-05]  [ Default : CN          ]  
+    - RULE-SET        , PreRepairChina_Domain                      , 🇺🇸.<ReturnUS>—Final                             # , no-resolve                           # [2st-05]  [ Default : US          ]     https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/PreRepairChina         
+    - RULE-SET        , China_Domain                               , 🇨🇳.<ReturnCN>—Final                             # , no-resolve                           # [2st-05]  [ Default : CN          ]  
 
    #  🔺🔺🔺 结束 （ BlackList ） 🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺  结束 （ BlackList ）
 
@@ -4787,7 +4798,9 @@ rules:
    # [3st-23] -  短视频     
 
     - GEOSITE         , tiktok                                     , 🎬.<Short>—TikTok                               #                                        # [3st-23]  [ Default : US          ]     
-    - RULE-SET        , TikTok_Do_Resolve                          , 🎬.<Short>—TikTok                               # , no-resolve                           # [3st-23]  [ Default : US          ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/TikTok                短视频 - TikTok        # 出现命中错误 ：isnssdk.com 等 抖音域名                                           
+    - RULE-SET        , TikTok_Do_Resolve                          , 🎬.<Short>—TikTok                               # , no-resolve                           # [3st-23]  [ Default : US          ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/TikTok                短视频 - TikTok （抖音国际版）        # 出现命中错误 ：isnssdk.com 等 抖音域名                                           
+
+   #- RULE-SET        , Kwai_Domain                                , 🎬.<Short>—Kwai                                 # , no-resolve                           # [2st-02]  [ Default : US          ]     https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/Kwai                        短视频 - Kwai (快手国际版)            
 
     - GEOSITE         , instagram                                  , 🎬.<Short>—Instagram                            #                                        # [3st-23]  [ Default : US          ]     
     - RULE-SET        , Instagram_Do_Resolve                       , 🎬.<Short>—Instagram                            # , no-resolve                           # [3st-23]  [ Default : US          ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Instagram             短视频 - Instagram                                                                                    
@@ -4954,7 +4967,7 @@ rules:
    # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
    # [5st-01] -  国家根域名（VPS所在国家）      
-    - DOMAIN-SUFFIX   , us                                         , 🇺🇸.<ReturnUS>—Final                             #                                        # [5st-01] [ Default : US-HomeIP    ]                                                                                                  国家根域名 - 美国   - 北美    🇺🇸.Country—[US]     
+    - DOMAIN-SUFFIX   , us                                         , 🇺🇸.<ReturnUS>—Final                             #                                        # [5st-01] [ Default : US-HomeIP    ]                                                                                                  国家根域名 - 美国   - 北美    🇺🇸.<ReturnUS>—Final    
    #- DOMAIN-SUFFIX   , ca                                         , 🇨🇦.<Country>—CA                                 #                                        # [5st-01] [ Default : US-HomeIP    ]                                                                                                  国家根域名 - 加拿大 - 北美     
    #- DOMAIN-SUFFIX   , uk                                         , 🇬🇧.<Country>—UK                                 #                                        # [5st-01] [ Default : UK           ]                                                                                                  国家根域名 - 英国   - 西欧     .gb 域名，几乎不再使用
    #- DOMAIN-SUFFIX   , jp                                         , 🇯🇵.<Country>—JP                                 #                                        # [5st-01] [ Default : JP           ]                                                                                                  国家根域名 - 日本   - 亚洲                              
@@ -4966,9 +4979,9 @@ rules:
    #- DOMAIN-SUFFIX   , de                                         , 🇩🇪.<Country>—DE                                 #                                        # [5st-01] [ Default : DE           ]                                                                                                  国家根域名 - 德国   - 西欧                              
    #- DOMAIN-SUFFIX   , fr                                         , 🇫🇷.<Country>—FR                                 #                                        # [5st-01] [ Default : FR           ]                                                                                                  国家根域名 - 法国   - 西欧      
                         
-    - DOMAIN-SUFFIX   , mil                                        , 🇺🇸.<ReturnUS>—Final                             #                                        # [5st-01] [ Default : US-HomeIP    ]                                                                                                  国家根域名 - 美国   - 北美    🇺🇸.Country—[US]      
-    - DOMAIN-SUFFIX   , gov                                        , 🇺🇸.<ReturnUS>—Final                             #                                        # [5st-01] [ Default : US-HomeIP    ]                                                                                                  国家根域名 - 美国   - 北美    🇺🇸.Country—[US]      
-    - DOMAIN-SUFFIX   , edu                                        , 🇺🇸.<ReturnUS>—Final                             #                                        # [5st-01] [ Default : US-HomeIP    ]                                                                                                  国家根域名 - 美国   - 北美    🇺🇸.Country—[US]  
+    - DOMAIN-SUFFIX   , mil                                        , 🇺🇸.<ReturnUS>—Final                             #                                        # [5st-01] [ Default : US-HomeIP    ]                                                                                                  国家根域名 - 美国   - 北美    🇺🇸.<ReturnUS>—Final     
+    - DOMAIN-SUFFIX   , gov                                        , 🇺🇸.<ReturnUS>—Final                             #                                        # [5st-01] [ Default : US-HomeIP    ]                                                                                                  国家根域名 - 美国   - 北美    🇺🇸.<ReturnUS>—Final     
+    - DOMAIN-SUFFIX   , edu                                        , 🇺🇸.<ReturnUS>—Final                             #                                        # [5st-01] [ Default : US-HomeIP    ]                                                                                                  国家根域名 - 美国   - 北美    🇺🇸.<ReturnUS>—Final 
 
    # [5st-02] -  国家根域名（全球，按洲际分类）    #    
     - RULE-SET        , GeoRouting_America_North_ccTLD_Domain      , 🌎.<Region>—North.America                       #                                        # [5st-02]  [ Default : US          ]    https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/GeoRouting_For_Domain        国家根域名 - 北美   America (North America)              
@@ -4993,7 +5006,7 @@ rules:
    # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
    # [6st-01] -   GeoIP（VPS所在国家）           
-    - GEOIP           , us                                         , 🇺🇸.<ReturnUS>—Final                            #                                         # [6st-01] [ Default : US-HomeIP    ]                                                                                                  GeoIP - 美国   - 北美            🇺🇸.Country—[US]         
+    - GEOIP           , us                                         , 🇺🇸.<ReturnUS>—Final                            #                                         # [6st-01] [ Default : US-HomeIP    ]                                                                                                  GeoIP - 美国   - 北美            🇺🇸.<ReturnUS>—Final        
    #- GEOIP           , ca                                         , 🇨🇦.<Country>—CA                                #                                         # [6st-01] [ Default : US-HomeIP    ]                                                                                                  GeoIP - 加拿大 - 北美                                                     
    #- GEOIP           , uk                                         , 🇬🇧.<Country>—UK                                #                                         # [6st-01] [ Default : UK           ]                                                                                                  GeoIP - 英国   - 欧洲                                                         
    #- GEOIP           , jp                                         , 🇯🇵.<Country>—JP                                #                                         # [6st-01] [ Default : JP           ]                                                                                                  GeoIP - 日本   - 亚洲                                                         
@@ -5160,7 +5173,8 @@ rule-providers:
 #
 #   360_Do_Resolve                            : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@latest/rule/Clash/360/360.yaml'                                                       , path : './ruleset/360.yaml'                                           }            # [2st-02]  [ Default : CN          ]     🇨🇳.<ReturnCN>—BAT               https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/360                   回国 - 其他 - 360                            
 #
-    PreRepairGeositeCN_Global_Domain          : { type : 'http'  , behavior : 'domain'     , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/Accademia/Additional_Rule_For_Clash@latest/PreRepairGeositeCN/PreRepairGeositeCN_Global_Domain.yaml'               , path : './ruleset/PreRepairGeositeCN_Global_Domain.yaml'              }            # [2st-02]  [ Default : CN          ]     🇨🇳.<ReturnCN>—Final             https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/GeoRouting_For_Domain                                      
+    PreRepairChina_Domain                     : { type : 'http'  , behavior : 'domain'     , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/Accademia/Additional_Rule_For_Clash@latest/PreRepairChina/PreRepairChina_Domain.yaml'                              , path : './ruleset/PreRepairChina_Domain.yaml'                         }            # [2st-02]  [ Default : CN          ]     🇺🇸.<ReturnUS>—Final             https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/GeoRouting_For_Domain       回国 - 修复                               
+    China_Domain                              : { type : 'http'  , behavior : 'domain'     , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@latest/rule/Clash/China/China_Domain.yaml'                                            , path : './ruleset/China_Domain.yaml'                                  }            # [2st-02]  [ Default : CN          ]     🇨🇳.<ReturnCN>—Final             https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/China                 回国 - 汇总                                
 
 
    # [3st-00] -  测速
@@ -5249,6 +5263,7 @@ rule-providers:
 
    # [3st-23] -  短视频  
     TikTok_Do_Resolve                         : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@latest/rule/Clash/TikTok/TikTok.yaml'                                                 , path : './ruleset/TikTok.yaml'                                        }            # [3st-23]  [ Default : US          ]     🎬.<Short>—TikTok               https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/TikTok                短视频 - TikTok                              
+    Kwai_Domain                               : { type : 'http'  , behavior : 'domain'     , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/Accademia/Additional_Rule_For_Clash@latest/Kwai/Kwai_Domain.yaml'                                                  , path : './ruleset/Kwai_Domain.yaml'                                   }            # [3st-22]  [ Default : US          ]     🎬.<Short>—Kwai                 https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/Kwai                        短视频 - Kwai                                  
     Instagram_Do_Resolve                      : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@latest/rule/Clash/Instagram/Instagram.yaml'                                           , path : './ruleset/Instagram.yaml'                                     }            # [3st-23]  [ Default : US          ]     🎬.<Short>—Instagram            https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Instagram             短视频 - Instagram                           
     Snapchat_Do_Resolve                       : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@latest/rule/Clash/Snap/Snap.yaml'                                                     , path : './ruleset/Snapchat.yaml'                                      }            # [3st-23]  [ Default : US          ]     🎬.<Short>—Snapchat             https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Snap                  短视频 - Snapchat                            
 
@@ -5433,7 +5448,7 @@ rule-providers:
    # [2st-05] -  GeoIP（中国）    
    #
    # ------------------------------------------------------------------------------
-   #         [第三级] 分流规则 : 外国 APP、网站                     ( IP匹配 + DNS解析 )
+   #         [第三级] 分流规则 : 外国 APP、网站                 ( IP匹配 + DNS解析 )
    # ------------------------------------------------------------------------------
    #
    # [3st-00] -  测速
@@ -5462,7 +5477,7 @@ rule-providers:
    # [3st-80] -  特定软件 (默认路由：不可配置)
    #
    # ------------------------------------------------------------------------------
-   #       [第四级] 分流规则 :  外国 大厂                            ( IP匹配 + DNS解析 )
+   #       [第四级] 分流规则 :  外国 大厂                        ( IP匹配 + DNS解析 )
    # ------------------------------------------------------------------------------
    #  
    # [4st-01] -  大厂          
