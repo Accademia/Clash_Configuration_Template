@@ -159,7 +159,7 @@
        + 这是因为，通过冗余规则，避免因某个规则库停止更新（或更新慢），而导致，使用者频繁手动维护yaml。这样部署，更省心，尽量做到一次书写，后期0维护。
 
    - 本套规则中， 为什么没有使用 Geosite ：CN ？
-       + 因为  Geosite ：CN 里面包含上千条 错误的规则，这些错误规则对应语种，背后指向了境外IP，却被标识成中国域名。最离谱的是，居然把TikTok的所有域名，都标记为了中国域名 🤣🤣🤣 简直是错误大王。
+       + 因为  Geosite ：CN 里面包含上千条 错误的规则。很多境外IP的域名，却被收录成了中国域名。最离谱的是，居然把TikTok，都标记为了中国域名 🤣🤣🤣 简直是错误大王。
        + 实际上他们的维护者，只需要让Chatgpt Agent写一个自动测试域名集合中 每个域名是否GEOIP是中国IP的 脚本，每周跑一次，就能自动化排查所有错误收纳的域名。可是压根没人维护。
        + 而本模版的中国域名，没有使用geosite：cn，而换成了 blackmatrix7/ios_rule_script 中的 China分流规则 （https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/China ）。这个规则集虽然只有3500条，但准确度高，而在配合GEOIP：CN后，完全够用 ！！对于此规则中，错误的域名，我也做了修复规则PreRepairChina （使用ChatGPT Pro Agent 自动排查China规则集中的非中国域名），并已经部署在本模版中，以力求完美。
        + 总之，强烈建议，不要使用 Geosite ：CN 。
