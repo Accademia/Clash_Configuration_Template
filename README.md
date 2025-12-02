@@ -651,7 +651,8 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 - 所以，对于代理DNS解析的VPS，唯一要求，必须要快，比如香港、日本的VPS节点。如果在中国大陆使用，建议使用日本CN2/9929线路的海外VPS。哪怕带宽低都不怕，只要响应延迟低就可以。本配置也会通过每900秒一次的全自动ping，选取你VPS代理池中，延迟最的VPS代理DNS请求。
 
 - 另外，还需要特别注意，geosite:cn 中，存在大量的错误。他们把很多海外域名归类到了中国网站。而且错误高达上千个，很多错误都非常离谱，比如Tiktok都被归类为中国网站。所以 本模版的DNS分流并没有使用geosite:cn ！！！
-- 本模版的DNS分流，使用了https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/China。虽然比geosite:cn 的错误少很多，但是目前已知的错误，也超过了200个。为了修复这些错了，在nameserver-policy中和 回国分流 （PreRepairChina_Domain），这两处，做了特殊处理。
+
+- 本模版的DNS分流中，中国DNS域名的分流规则，使用的是 https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/China  。 规则集的域名包含约3500个（错误域名200多个，已修正）。再对比 geosite:cn 中高达上千个的错误域名（非中国域名，但是被错误包含进Geosite：CN）。已经是优选过的方案了。
     + 最终达到效果：非中国大陆域名，不将域名请求发送给中国的DNS，以便最大化避免DNS泄漏。
 
 .
@@ -659,9 +660,9 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 ## 关于在Stash的缺陷❕   ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️ 
 
-以下 4 个问题，是本模版需要用到，Stash无法兼容的地方 （ 但是 与Clash Meta核心 完美兼容 ）。
+以下 4 个功能，是本模版需要用到，Stash无法提供的 （ 但是 与Clash Meta核心 能提供如下功能的 完美适配 ）。
 
-目前，虽然不影响Stash使用本模版进行翻墙上网，但是像做到完美，就需要Stash开发者补齐这四个短板。
+目前，虽然不影响Stash使用本模版进行翻墙上网，但是像做到完美，就需要Stash开发者补齐这四个功能短板。
 
 
 1. Stash 无法 “批量分流” DNS查询 到 指定的DNS服务器
@@ -691,10 +692,10 @@ If you are not located in China but instead in rogue countries like Russia, Iran
    同样向开发者多次反馈后，开发者压根不回复 不响应 （不知道怎么想的）
 
 
-4. Stash ，无法支持  “远程规则 内的 REJECT、REJECT-DROP”
+4. Stash ，无法支持  “远程规则 内置预设的 REJECT、REJECT-DROP”
 
     所有在远程规则集中，内置的 REJECT、REJECT-DROP ，都会被Stash忽略。这个看起来不大的问题。持续了得有3年了。
-    这会导致 “切换IP归属地” 的规则（ https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/FakeLocation ），出现隐私泄漏的情况。同样这个问题已经跟开发者反馈过很多次，依然石沉大海。而Clash Meta是完美支持的，不会有这个问题。
+    这会导致 “切换IP归属地” 的规则（ https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/FakeLocation  ），出现隐私泄漏的情况。同样这个问题已经跟开发者反馈过很多次，依然石沉大海。而Clash Meta是完美支持的，不会有这个问题。
 
 如果有人能联系上Stash开发者，也请帮助转达。以便于在最小化的核心功能上，能补齐与Clash meta 之间的短板。
 
@@ -718,7 +719,7 @@ If you are not located in China but instead in rogue countries like Russia, Iran
     - 搬瓦工 
    等等，这些大厂中使用CN2、9929、10099线路的节点。
 
-2. 尽量不要选择 ：海外华人、中国人 开设的VPS。坑非常多，例举几点：
+2. 尽量不要选择 ：“海外华人、🇨🇳 中国人” 的云服务公司 。坑非常多，例举几点：
     - 国产厂商，普遍雷军附体。
         - 号称9929线路。还会大字表明 “无限流量”。但小字标明 “峰值50Mb带宽”……，稍微不注意，就被坑了。对比 VPS hosting 这些国外大厂，都是 10G带宽， 瞬时峰值可以拉的非常高。像搬瓦工120美金每年的日本线路，晚高峰带宽可以长时间稳定在40-50MByte/s。而国产厂商，无限流量 但 “峰值50Mb带宽”的线路，往往带宽只能稳定在3～4MByte/s（晚高峰会更慢）。
     - 国产厂商，各种虚标。
