@@ -2,9 +2,12 @@
 
 ## 项目概述
 
-本项目提供一套 同时支持  “ Clash Verge Rev / Clash Meta / Stash ”  的分流策略模版。
+本项目： https://github.com/Accademia/Clash_Configuration_Template
+ 
+ - 提供一套 同时支持  “ Clash Verge Rev / Clash Meta / Stash ”  的分流策略模版。
 
-力求 “ 0 DNS泄漏” + “极致省电” 的情况下，做到针对 所有主流APP “大而全” 的 精细分流。
+ - 力求 “ 0 DNS泄漏” + “极致省电” 的情况下，做到针对 所有主流APP “大而全” 的 精细分流。
+
 
 .
 
