@@ -689,13 +689,16 @@ If you are not located in China but instead in rogue countries like Russia, Iran
     - 在 局域网中 ，无法观看 挂载到Apple Homekit摄像头的实时视频（苹果家庭APP）
    
    上述两者，相互互斥 （ Stash功能缺失是导致其互斥的核心原因 ）。而Clash Meta是完美支持的，不会有这个问题。
-   同样向开发者多次反馈后，开发者压根不回复 不响应 （不知道怎么想的）
+   
+   同样，这个问题，向开发者多次反馈后，开发者压根不回复 不响应 （不知道怎么想的）
 
 
-4. Stash ，无法支持  “远程规则 内置预设的 REJECT、REJECT-DROP”
+4. Stash ，无法支持  “远程规则 内预设的 REJECT、REJECT-DROP”
 
     所有在远程规则集中，内置的 REJECT、REJECT-DROP ，都会被Stash忽略。这个看起来不大的问题。持续了得有3年了。
-    这会导致 “切换IP归属地” 的规则（ https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/FakeLocation  ），出现隐私泄漏的情况。同样这个问题已经跟开发者反馈过很多次，依然石沉大海。而Clash Meta是完美支持的，不会有这个问题。
+    - 这会导致 “切换IP归属地” 的规则（ https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/FakeLocation  ），出现隐私泄漏的情况。
+
+    同样，这个问题 已经跟开发者反馈过很多次，依然石沉大海。而Clash Meta是完美支持的，不会有这个问题。
 
 如果有人能联系上Stash开发者，也请帮助转达。以便于在最小化的核心功能上，能补齐与Clash meta 之间的短板。
 
@@ -704,9 +707,10 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 ## 避坑 ：设备端
 
-请不要使用任何，国产安卓、鸿蒙系统、运营商路由器的非桥接模式，进行 翻墙：
+请不要使用任何，国产安卓、鸿蒙系统、运营商路由器的非桥接模式，国产笔记本预装的windows电脑，进行 翻墙：
 
-- 所有国产系统都内置了反诈插件，会直接导致你的翻墙被实时监控。
+- 所有国产设备，都内置了反诈插件，会直接导致你的翻墙节点，被实时监控。
+- 用iPhone  或者 重装Windows + 避免国产扫盘类的软件（如wps、360等），是唯一的出路。
 
 
 .
