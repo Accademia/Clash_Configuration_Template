@@ -2,7 +2,7 @@
 
 # 项目概述
 
-项目名称：超级省电clash分流模版
+项目名称：超级省电clash分流规则模版
 
 项目链接： https://github.com/Accademia/Clash_Configuration_Template
  
