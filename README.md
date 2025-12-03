@@ -90,20 +90,20 @@
 
 总规则数 =  RuleSet规则数 + GeoSite规则数
 
-。
+<br>
 
 规则 ：01-WhiteList_模版.yaml  
   + 最大特色：
       + 防护方面最全面 = 3万条反广告 + 4万条隐私保护 （ 基于EasyPrivacy ）
       
-.
+<br>
 
 规则 ：02-WhiteList-Min.AntiAD_模版.yaml 
   +  与 规则1 的区别 ： 
      + RuleSet规则中， “反广告 + 隐私保护” ，从7.7万条 精简到 1500 条（ 基于Geosite ）
      + GeoSite规则中，“Porn类网站” 的规则，从 1.3万 精简到 仅十几条（pornhub）
      
-.
+<br>
 
 规则 ：03-WhiteList-Non.AntiAD_模版.yaml 
  + 与 规则2 的区别比 ：
@@ -471,8 +471,7 @@
  - { name : '🇨🇳.<ReturnCN>—Final'                                      
  - { name : '🇺🇸.<ReturnUS>—Final'                                
    
-# [6st-01] [7st-01] 
-#- { name : '🇺🇸.<Country>—US'                                          
+# [6st-01] [7st-01]                                        
 #- { name : '🇯🇵.<Country>—JP'                                          
 #- { name : '🇬🇧.<Country>—UK'                                          
 #- { name : '🇦🇺.<Country>—AU'                                          
@@ -482,8 +481,7 @@
 #- { name : '🇳🇱.<Country>—NL'                                          
 #- { name : '🇩🇪.<Country>—DE'                                          
 #- { name : '🇫🇷.<Country>—FR'                                          
-#- { name : '🇨🇦.<Country>—CA'                                          
-#- { name : '🇨🇳.<Country>—CN'        
+#- { name : '🇨🇦.<Country>—CA'        
                                   
 # [6st-02] [7st-02] 
  - { name : '🌎.<Region>—North.America'                                
