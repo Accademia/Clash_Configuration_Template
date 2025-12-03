@@ -4831,8 +4831,8 @@ dns                       :
                             '+.kuaishouapps.com'                          : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou
                             '+.kuaishoupay.com'                           : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou
                             '+.kuaishouzt.com'                            : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou
-                         #  '+.kwaicdn.com'                               : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou                              # dead
-                         #  '+.kwaizt.com'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou
+                            '+.kwaicdn.com'                               : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou                              # dead
+                            '+.kwaizt.com'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou
                             '+.kwimgs.com'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou
                          #  '+.wsukwai.com'                               : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou                              # dead
                             '+.yximgs.com'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou
