@@ -172,7 +172,6 @@ dns                       :
                           # 'rule-set:GeositeCN_Domain'                   : [ 'https://dns.alidns.com/dns-query'    , 'https://doh.pub/dns-query'                  ]        # 仅Clash Meta支持，但 Stash 3.0 不支持！
 
                           # # 以下为'rule-set:GeositeCN_Domain'的展开，主要应对Stash不支持 上述规则 的情况（一旦Stash支持后，请立刻删除以下规则）
-                            '+.cn'                                        : 'https://dns.alidns.com/dns-query'  
                             '+.115.com'                                   : 'https://dns.alidns.com/dns-query'           # GeoSite:115
                             '+.115cdn.com'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:115
                             '+.115cdn.net'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:115
@@ -629,15 +628,15 @@ dns                       :
                             '+.kunlunwe.com'                              : 'https://dns.alidns.com/dns-query'           # GeoSite:aliyun
                             '+.mxhichina.com'                             : 'https://dns.alidns.com/dns-query'           # GeoSite:aliyun
                             '+.myalicdn.com'                              : 'https://dns.alidns.com/dns-query'           # GeoSite:aliyun
-                            '+.oss-ap-northeast-1.aliyuncs.com'           : 'https://dns.alidns.com/dns-query'           # GeoSite:aliyun
-                            '+.oss-ap-northeast-2.aliyuncs.com'           : 'https://dns.alidns.com/dns-query'           # GeoSite:aliyun
-                            '+.oss-ap-south-1.aliyuncs.com'               : 'https://dns.alidns.com/dns-query'           # GeoSite:aliyun
-                            '+.oss-ap-southeast-1.aliyuncs.com'           : 'https://dns.alidns.com/dns-query'           # GeoSite:aliyun
-                            '+.oss-ap-southeast-2.aliyuncs.com'           : 'https://dns.alidns.com/dns-query'           # GeoSite:aliyun
-                            '+.oss-ap-southeast-3.aliyuncs.com'           : 'https://dns.alidns.com/dns-query'           # GeoSite:aliyun
-                            '+.oss-ap-southeast-5.aliyuncs.com'           : 'https://dns.alidns.com/dns-query'           # GeoSite:aliyun
-                            '+.oss-ap-southeast-6.aliyuncs.com'           : 'https://dns.alidns.com/dns-query'           # GeoSite:aliyun
-                            '+.oss-ap-southeast-7.aliyuncs.com'           : 'https://dns.alidns.com/dns-query'           # GeoSite:aliyun
+                         #  '+.oss-ap-northeast-1.aliyuncs.com'           : 'https://dns.alidns.com/dns-query'           # GeoSite:aliyun
+                         #  '+.oss-ap-northeast-2.aliyuncs.com'           : 'https://dns.alidns.com/dns-query'           # GeoSite:aliyun
+                         #  '+.oss-ap-south-1.aliyuncs.com'               : 'https://dns.alidns.com/dns-query'           # GeoSite:aliyun
+                         #  '+.oss-ap-southeast-1.aliyuncs.com'           : 'https://dns.alidns.com/dns-query'           # GeoSite:aliyun
+                         #  '+.oss-ap-southeast-2.aliyuncs.com'           : 'https://dns.alidns.com/dns-query'           # GeoSite:aliyun
+                         #  '+.oss-ap-southeast-3.aliyuncs.com'           : 'https://dns.alidns.com/dns-query'           # GeoSite:aliyun
+                         #  '+.oss-ap-southeast-5.aliyuncs.com'           : 'https://dns.alidns.com/dns-query'           # GeoSite:aliyun
+                         #  '+.oss-ap-southeast-6.aliyuncs.com'           : 'https://dns.alidns.com/dns-query'           # GeoSite:aliyun
+                         #  '+.oss-ap-southeast-7.aliyuncs.com'           : 'https://dns.alidns.com/dns-query'           # GeoSite:aliyun
                             '+.oss-cn-beijing.aliyuncs.com'               : 'https://dns.alidns.com/dns-query'           # GeoSite:aliyun
                             '+.oss-cn-chengdu.aliyuncs.com'               : 'https://dns.alidns.com/dns-query'           # GeoSite:aliyun
                             '+.oss-cn-guangzhou.aliyuncs.com'             : 'https://dns.alidns.com/dns-query'           # GeoSite:aliyun
@@ -651,11 +650,11 @@ dns                       :
                             '+.oss-cn-shenzhen.aliyuncs.com'              : 'https://dns.alidns.com/dns-query'           # GeoSite:aliyun
                             '+.oss-cn-wulanchabu.aliyuncs.com'            : 'https://dns.alidns.com/dns-query'           # GeoSite:aliyun
                             '+.oss-cn-zhangjiakou.aliyuncs.com'           : 'https://dns.alidns.com/dns-query'           # GeoSite:aliyun
-                            '+.oss-eu-central-1.aliyuncs.com'             : 'https://dns.alidns.com/dns-query'           # GeoSite:aliyun
-                            '+.oss-eu-west-1.aliyuncs.com'                : 'https://dns.alidns.com/dns-query'           # GeoSite:aliyun
-                            '+.oss-me-east-1.aliyuncs.com'                : 'https://dns.alidns.com/dns-query'           # GeoSite:aliyun
-                            '+.oss-us-east-1.aliyuncs.com'                : 'https://dns.alidns.com/dns-query'           # GeoSite:aliyun
-                            '+.oss-us-west-1.aliyuncs.com'                : 'https://dns.alidns.com/dns-query'           # GeoSite:aliyun
+                         #  '+.oss-eu-central-1.aliyuncs.com'             : 'https://dns.alidns.com/dns-query'           # GeoSite:aliyun
+                         #  '+.oss-eu-west-1.aliyuncs.com'                : 'https://dns.alidns.com/dns-query'           # GeoSite:aliyun
+                         #  '+.oss-me-east-1.aliyuncs.com'                : 'https://dns.alidns.com/dns-query'           # GeoSite:aliyun
+                         #  '+.oss-us-east-1.aliyuncs.com'                : 'https://dns.alidns.com/dns-query'           # GeoSite:aliyun
+                         #  '+.oss-us-west-1.aliyuncs.com'                : 'https://dns.alidns.com/dns-query'           # GeoSite:aliyun
                             '+.alicloudccp.com'                           : 'https://dns.alidns.com/dns-query'           # GeoSite:aliyun-drive
                             '+.alipan.com'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:aliyun-drive
                             '+.aliyundrive.cloud'                         : 'https://dns.alidns.com/dns-query'           # GeoSite:aliyun-drive
@@ -1067,7 +1066,7 @@ dns                       :
                          #  '+.bytenewst.com'                             : 'https://dns.alidns.com/dns-query'           # GeoSite:bytedance                             # dead
                          #  '+.byteorg.com'                               : 'https://dns.alidns.com/dns-query'           # GeoSite:bytedance                             # dead
                          #  '+.byteorge.com'                              : 'https://dns.alidns.com/dns-query'           # GeoSite:bytedance                             # dead
-                            '+.byteoversea.net'                           : 'https://dns.alidns.com/dns-query'           # GeoSite:bytedance
+                         #  '+.byteoversea.net'                           : 'https://dns.alidns.com/dns-query'           # GeoSite:bytedance
                          #  '+.byteq5k.com'                               : 'https://dns.alidns.com/dns-query'           # GeoSite:bytedance                             # dead
                          #  '+.byteq8u.net'                               : 'https://dns.alidns.com/dns-query'           # GeoSite:bytedance                             # dead
                             '+.bytescm.com'                               : 'https://dns.alidns.com/dns-query'           # GeoSite:bytedance
@@ -2172,7 +2171,7 @@ dns                       :
                             '+.cloudflareanycast.net'                     : 'https://dns.alidns.com/dns-query'           # GeoSite:cloudflare-cn
                          #  '+.cloudflarechina.cn'                        : 'https://dns.alidns.com/dns-query'           # GeoSite:cloudflare-cn                         # duplicate .cn suffix rule
                             '+.cloudflarecn.net'                          : 'https://dns.alidns.com/dns-query'           # GeoSite:cloudflare-cn
-                            '+.cloudflareglobal.net'                      : 'https://dns.alidns.com/dns-query'           # GeoSite:cloudflare-cn
+                         #  '+.cloudflareglobal.net'                      : 'https://dns.alidns.com/dns-query'           # GeoSite:cloudflare-cn
                          #  '+.cloudflareinsights-cn.com'                 : 'https://dns.alidns.com/dns-query'           # GeoSite:cloudflare-cn                         # dead & foreign-other
                             '+.cloudflareperf.com'                        : 'https://dns.alidns.com/dns-query'           # GeoSite:cloudflare-cn
                          #  '+.cloudflareprod.com'                        : 'https://dns.alidns.com/dns-query'           # GeoSite:cloudflare-cn                         # foreign-other
@@ -4001,29 +4000,29 @@ dns                       :
                          #  '+.aadcloud.cn'                               : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # duplicate .cn suffix rule
                          #  '+.aadcloud.com'                              : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # dead
                          #  '+.acgab.cn'                                  : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # duplicate .cn suffix rule
-                            '+.ae-ad-1.myhuaweicloud.com'                 : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
-                            '+.af-east-201.myhuaweicloud.com'             : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
-                            '+.af-north-1.myhuaweicloud.com'              : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
+                         #  '+.ae-ad-1.myhuaweicloud.com'                 : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
+                         #  '+.af-east-201.myhuaweicloud.com'             : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
+                         #  '+.af-north-1.myhuaweicloud.com'              : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
                          #  '+.af-south-1.myhuaweicloud.com'              : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # foreign & foreign-other
-                            '+.af-west-202.myhuaweicloud.com'             : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
+                         #  '+.af-west-202.myhuaweicloud.com'             : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
                          #  '+.ami-alliance.org.cn'                       : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # duplicate .cn suffix rule
-                            '+.ap-northeast-201.myhuaweicloud.com'        : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
+                         #  '+.ap-northeast-201.myhuaweicloud.com'        : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
                          #  '+.ap-southeast-1.myhuaweicloud.com'          : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # foreign & foreign-other
                          #  '+.ap-southeast-2.myhuaweicloud.com'          : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # foreign & foreign-other
-                            '+.ap-southeast-201.myhuaweicloud.com'        : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
-                            '+.ap-southeast-202.myhuaweicloud.com'        : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
-                            '+.ap-southeast-203.myhuaweicloud.com'        : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
+                         #  '+.ap-southeast-201.myhuaweicloud.com'        : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
+                         #  '+.ap-southeast-202.myhuaweicloud.com'        : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
+                         #  '+.ap-southeast-203.myhuaweicloud.com'        : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
                          #  '+.ap-southeast-3.myhuaweicloud.com'          : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # foreign & foreign-other
-                            '+.ap-southeast-4.myhuaweicloud.com'          : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
-                            '+.ap-southeast-5.myhuaweicloud.com'          : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
-                            '+.as-south-0.myhuaweicloud.com'              : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
-                            '+.as-south-201.myhuaweicloud.com'            : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
-                            '+.as-south-205.myhuaweicloud.com'            : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
-                            '+.as-south-207.myhuaweicloud.com'            : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
+                         #  '+.ap-southeast-4.myhuaweicloud.com'          : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
+                         #  '+.ap-southeast-5.myhuaweicloud.com'          : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
+                         #  '+.as-south-0.myhuaweicloud.com'              : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
+                         #  '+.as-south-201.myhuaweicloud.com'            : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
+                         #  '+.as-south-205.myhuaweicloud.com'            : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
+                         #  '+.as-south-207.myhuaweicloud.com'            : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
                          #  '+.azkr2.cn'                                  : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # duplicate .cn suffix rule
                             '+.b2bgo.com'                                 : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
                          #  '+.buf35.cn'                                  : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # duplicate .cn suffix rule
-                            '+.ca-east-201.myhuaweicloud.com'             : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
+                         #  '+.ca-east-201.myhuaweicloud.com'             : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
                          #  '+.cdnhwc1.cn'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # duplicate .cn suffix rule
                             '+.cdnhwc1.com'                               : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
                          #  '+.cdnhwc10.cn'                               : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # duplicate .cn suffix rule
@@ -4142,13 +4141,13 @@ dns                       :
                          #  '+.cdnhwczxh101.com'                          : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # dead & foreign-other
                          #  '+.cza84.cn'                                  : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # duplicate .cn suffix rule
                             '+.eduapaashwc.com'                           : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
-                            '+.eu-central-201.myhuaweicloud.com'          : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
-                            '+.eu-central-202.myhuaweicloud.com'          : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
-                            '+.eu-north-201.myhuaweicloud.com'            : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
+                         #  '+.eu-central-201.myhuaweicloud.com'          : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
+                         #  '+.eu-central-202.myhuaweicloud.com'          : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
+                         #  '+.eu-north-201.myhuaweicloud.com'            : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
                          #  '+.eu-west-0.myhuaweicloud.com'               : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # foreign-other
-                            '+.eu-west-1.myhuaweicloud.com'               : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
-                            '+.eu-west-101.myhuaweicloud.com'             : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
-                            '+.eu-west-201.myhuaweicloud.com'             : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
+                         #  '+.eu-west-1.myhuaweicloud.com'               : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
+                         #  '+.eu-west-101.myhuaweicloud.com'             : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
+                         #  '+.eu-west-201.myhuaweicloud.com'             : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
                          #  '+.fpxyo.cn'                                  : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # duplicate .cn suffix rule
                          #  '+.functiongraph.run'                         : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # dead
                          #  '+.hc-cdn.cn'                                 : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # duplicate .cn suffix rule
@@ -4223,15 +4222,15 @@ dns                       :
                          #  '+.kmop-cn-east-3.cn'                         : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # duplicate .cn suffix rule
                          #  '+.kmop-cn-north-4.cn'                        : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # duplicate .cn suffix rule
                          #  '+.la-north-2.myhuaweicloud.com'              : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # foreign & foreign-other
-                            '+.la-north-205.myhuaweicloud.com'            : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
+                         #  '+.la-north-205.myhuaweicloud.com'            : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
                          #  '+.la-south-2.myhuaweicloud.com'              : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # foreign & foreign-other
                          #  '+.le5vb.cn'                                  : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # duplicate .cn suffix rule
                          #  '+.livehwc3.cn'                               : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # duplicate .cn suffix rule
                          #  '+.lu1da.cn'                                  : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # duplicate .cn suffix rule
-                            '+.me-east-1.myhuaweicloud.com'               : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
-                            '+.me-east-205.myhuaweicloud.com'             : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
-                            '+.me-east-208.myhuaweicloud.com'             : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
-                            '+.me-east-209.myhuaweicloud.com'             : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
+                         #  '+.me-east-1.myhuaweicloud.com'               : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
+                         #  '+.me-east-205.myhuaweicloud.com'             : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
+                         #  '+.me-east-208.myhuaweicloud.com'             : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
+                         #  '+.me-east-209.myhuaweicloud.com'             : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
                          #  '+.mle5p.cn'                                  : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # duplicate .cn suffix rule
                          #  '+.modelarts-infer.cn'                        : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # duplicate .cn suffix rule
                          #  '+.modelarts-infer.com'                       : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # dead
@@ -4254,7 +4253,7 @@ dns                       :
                             '+.myhwclouds.com'                            : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
                          #  '+.myhwclouds.com.cn'                         : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # duplicate .cn suffix rule
                             '+.myhwclouds.net'                            : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
-                            '+.na-east-0.myhuaweicloud.com'               : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
+                         #  '+.na-east-0.myhuaweicloud.com'               : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
                          #  '+.na-mexico-1.myhuaweicloud.com'             : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # foreign & foreign-other
                          #  '+.ns95c.cn'                                  : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # duplicate .cn suffix rule
                          #  '+.o7mu8.cn'                                  : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # duplicate .cn suffix rule
@@ -4262,16 +4261,16 @@ dns                       :
                          #  '+.pagescube.com'                             : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # dead & foreign-other
                             '+.powerapp.io'                               : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
                          #  '+.r8zc9.cn'                                  : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # duplicate .cn suffix rule
-                            '+.ru-moscow-1.myhuaweicloud.com'             : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
+                         #  '+.ru-moscow-1.myhuaweicloud.com'             : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
                          #  '+.ru-northwest-2.myhuaweicloud.com'          : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # foreign & foreign-other
-                            '+.ru-northwest-201.myhuaweicloud.com'        : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
+                         #  '+.ru-northwest-201.myhuaweicloud.com'        : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
                          #  '+.sa-brazil-1.myhuaweicloud.com'             : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # dead & foreign-other
                          #  '+.tc3bl.cn'                                  : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # duplicate .cn suffix rule
                          #  '+.tm2a8.cn'                                  : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # duplicate .cn suffix rule
                          #  '+.tm7sg.cn'                                  : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # duplicate .cn suffix rule
-                            '+.tr-west-1.myhuaweicloud.com'               : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
+                         #  '+.tr-west-1.myhuaweicloud.com'               : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
                          #  '+.tzygd.cn'                                  : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # duplicate .cn suffix rule
-                            '+.us-east-1.myhuaweicloud.com'               : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
+                         #  '+.us-east-1.myhuaweicloud.com'               : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud
                          #  '+.uwtmy.cn'                                  : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # duplicate .cn suffix rule
                          #  '+.vm45e.cn'                                  : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # duplicate .cn suffix rule
                          #  '+.vo6z2.cn'                                  : 'https://dns.alidns.com/dns-query'           # GeoSite:huaweicloud                           # duplicate .cn suffix rule
@@ -4604,7 +4603,7 @@ dns                       :
                             '+.jdcloudwaf.com'                            : 'https://dns.alidns.com/dns-query'           # GeoSite:jd
                          #  '+.jddapeigou.com'                            : 'https://dns.alidns.com/dns-query'           # GeoSite:jd                                    # dead & foreign-other
                             '+.jddebug.com'                               : 'https://dns.alidns.com/dns-query'           # GeoSite:jd
-                            '+.jddglobal.com'                             : 'https://dns.alidns.com/dns-query'           # GeoSite:jd
+                         #  '+.jddglobal.com'                             : 'https://dns.alidns.com/dns-query'           # GeoSite:jd
                             '+.jdemall.com'                               : 'https://dns.alidns.com/dns-query'           # GeoSite:jd
                             '+.jdfw1.com'                                 : 'https://dns.alidns.com/dns-query'           # GeoSite:jd
                             '+.jdgslb.com'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:jd
@@ -4826,20 +4825,20 @@ dns                       :
                             '+.inkuai.com'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou
                          #  '+.inkwai.com'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou                              # dead
                             '+.ksapisrv.com'                              : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou
-                            '+.kskwai.com'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou
+                         #  '+.kskwai.com'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou
                          #  '+.kuaishou.cn'                               : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou                              # duplicate .cn suffix rule
                             '+.kuaishou.com'                              : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou
                             '+.kuaishouapps.com'                          : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou
                             '+.kuaishoupay.com'                           : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou
                             '+.kuaishouzt.com'                            : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou
                          #  '+.kwaicdn.com'                               : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou                              # dead
-                            '+.kwaizt.com'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou
+                         #  '+.kwaizt.com'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou
                             '+.kwimgs.com'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou
                          #  '+.wsukwai.com'                               : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou                              # dead
                             '+.yximgs.com'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou
-                            '+.adbkwai.com'                               : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou-ads
-                            '+.adkwai.com'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou-ads
-                            '+.adukwai.com'                               : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou-ads
+                         #  '+.adbkwai.com'                               : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou-ads
+                         #  '+.adkwai.com'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou-ads
+                         #  '+.adukwai.com'                               : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou-ads
                          #  '+.e.kuaishou.cn'                             : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou-ads                          # duplicate .cn suffix rule
                             '+.e.kuaishou.com'                            : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou-ads
                             '+.full:log-sdk.gifshow.com'                  : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou-ads
@@ -4922,37 +4921,37 @@ dns                       :
                             '+.okr.com'                                   : 'https://dns.alidns.com/dns-query'           # GeoSite:lark
                          #  '+.okr.com.cn'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:lark                                  # duplicate .cn suffix rule
                          #  '+.vscenevideo.com'                           : 'https://dns.alidns.com/dns-query'           # GeoSite:lark                                  # dead
-                            '+.frontier-lark-lb-v3.lf.bytelb.net'         : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global
+                         #  '+.frontier-lark-lb-v3.lf.bytelb.net'         : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global
                          #  '+.lark-passport-qa-sg.net'                   : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global                           # dead
                          #  '+.lark.cn'                                   : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global                           # duplicate .cn suffix rule
-                            '+.larkcloud.com'                             : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global
-                            '+.larkcloud.net'                             : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global
-                            '+.larkfn.com'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global
+                         #  '+.larkcloud.com'                             : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global
+                         #  '+.larkcloud.net'                             : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global
+                         #  '+.larkfn.com'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global
                          #  '+.larkmeetings.cn'                           : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global                           # duplicate .cn suffix rule
                          #  '+.larkmeetings.com'                          : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global                           # dead
-                            '+.larkoffice.com'                            : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global
+                         #  '+.larkoffice.com'                            : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global
                          #  '+.larkoffice.com.bytedns1.com'               : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global                           # foreign-other
                          #  '+.larkofficeapp-boe.com'                     : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global                           # dead
                          #  '+.larkofficeapp-pre.com'                     : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global                           # dead
                          #  '+.larkofficeapp.com'                         : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global                           # dead
                          #  '+.larkofficeboe.com'                         : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global                           # dead
-                            '+.larkofficecdn.com'                         : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global
+                         #  '+.larkofficecdn.com'                         : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global
                          #  '+.larkofficeimg.com'                         : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global                           # dead
                          #  '+.larkofficepkg.com'                         : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global                           # dead
-                            '+.larkofficepre.com'                         : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global
+                         #  '+.larkofficepre.com'                         : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global
                          #  '+.larkrooms.cn'                              : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global                           # duplicate .cn suffix rule
                          #  '+.larkrooms.com'                             : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global                           # dead
                          #  '+.larksuite-pre.com'                         : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global                           # foreign
-                            '+.larksuite.com'                             : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global
-                            '+.larksuite.com.ttdns1.com'                  : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global
-                            '+.larksuite.com.ttdns2.com'                  : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global
-                            '+.larksuitecdn.com'                          : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global
+                         #  '+.larksuite.com'                             : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global
+                         #  '+.larksuite.com.ttdns1.com'                  : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global
+                         #  '+.larksuite.com.ttdns2.com'                  : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global
+                         #  '+.larksuitecdn.com'                          : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global
                          #  '+.larksuiteimg-boe.com'                      : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global                           # dead
                          #  '+.larksuiteimg-pre.com'                      : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global                           # dead
                          #  '+.larksuiteimg.com'                          : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global                           # dead
                          #  '+.larkvc.com'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global                           # dead
                          #  '+.statuslarkoffice.com'                      : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global                           # dead
-                            '+.thelarkcloud.com'                          : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global
+                         #  '+.thelarkcloud.com'                          : 'https://dns.alidns.com/dns-query'           # GeoSite:lark-global
                             '+.le.com'                                    : 'https://dns.alidns.com/dns-query'           # GeoSite:le
                             '+.leautolink.com'                            : 'https://dns.alidns.com/dns-query'           # GeoSite:le
                             '+.lecloud.com'                               : 'https://dns.alidns.com/dns-query'           # GeoSite:le
@@ -5334,11 +5333,11 @@ dns                       :
                          #  '+.essurl.com'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:qcloud                                # dead & foreign-other
                          #  '+.eu-frankfurt.myqcloud.com'                 : 'https://dns.alidns.com/dns-query'           # GeoSite:qcloud                                # foreign-other
                          #  '+.eu-frankfurt.tencentcos.cn'                : 'https://dns.alidns.com/dns-query'           # GeoSite:qcloud                                # duplicate .cn suffix rule
-                            '+.eu-frankfurt.tencentcos.com'               : 'https://dns.alidns.com/dns-query'           # GeoSite:qcloud
+                         #  '+.eu-frankfurt.tencentcos.com'               : 'https://dns.alidns.com/dns-query'           # GeoSite:qcloud
                          #  '+.eu-frankfurt.tencentcos.com.cn'            : 'https://dns.alidns.com/dns-query'           # GeoSite:qcloud                                # duplicate .cn suffix rule
                          #  '+.eu-moscow.myqcloud.com'                    : 'https://dns.alidns.com/dns-query'           # GeoSite:qcloud                                # foreign-other
                          #  '+.eu-moscow.tencentcos.cn'                   : 'https://dns.alidns.com/dns-query'           # GeoSite:qcloud                                # duplicate .cn suffix rule
-                            '+.eu-moscow.tencentcos.com'                  : 'https://dns.alidns.com/dns-query'           # GeoSite:qcloud
+                         #  '+.eu-moscow.tencentcos.com'                  : 'https://dns.alidns.com/dns-query'           # GeoSite:qcloud
                          #  '+.eu-moscow.tencentcos.com.cn'               : 'https://dns.alidns.com/dns-query'           # GeoSite:qcloud                                # duplicate .cn suffix rule
                             '+.exmailgz.com'                              : 'https://dns.alidns.com/dns-query'           # GeoSite:qcloud
                          #  '+.fsphere.cn'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:qcloud                                # duplicate .cn suffix rule
@@ -5782,11 +5781,11 @@ dns                       :
                          #  '+.baydn.com'                                 : 'https://dns.alidns.com/dns-query'           # GeoSite:shanbay                               # dead & foreign-other
                             '+.shanbay.com'                               : 'https://dns.alidns.com/dns-query'           # GeoSite:shanbay
                          #  '+.97973.com'                                 : 'https://dns.alidns.com/dns-query'           # GeoSite:sina                                  # dead & foreign-other
-                            '+.hk.weibo.com'                              : 'https://dns.alidns.com/dns-query'           # GeoSite:sina
-                            '+.my.weibo.com'                              : 'https://dns.alidns.com/dns-query'           # GeoSite:sina
-                            '+.overseas.weibo.com'                        : 'https://dns.alidns.com/dns-query'           # GeoSite:sina
+                         #  '+.hk.weibo.com'                              : 'https://dns.alidns.com/dns-query'           # GeoSite:sina
+                         #  '+.my.weibo.com'                              : 'https://dns.alidns.com/dns-query'           # GeoSite:sina
+                         #  '+.overseas.weibo.com'                        : 'https://dns.alidns.com/dns-query'           # GeoSite:sina
                          #  '+.picself.cn'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:sina                                  # duplicate .cn suffix rule
-                            '+.sg.weibo.com'                              : 'https://dns.alidns.com/dns-query'           # GeoSite:sina
+                         #  '+.sg.weibo.com'                              : 'https://dns.alidns.com/dns-query'           # GeoSite:sina
                          #  '+.sina.cn'                                   : 'https://dns.alidns.com/dns-query'           # GeoSite:sina                                  # duplicate .cn suffix rule
                             '+.sina.com'                                  : 'https://dns.alidns.com/dns-query'           # GeoSite:sina
                          #  '+.sina.com.cn'                               : 'https://dns.alidns.com/dns-query'           # GeoSite:sina                                  # duplicate .cn suffix rule
@@ -5798,9 +5797,9 @@ dns                       :
                          #  '+.sinajs.cn'                                 : 'https://dns.alidns.com/dns-query'           # GeoSite:sina                                  # duplicate .cn suffix rule
                          #  '+.sinajs.com'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:sina                                  # foreign & foreign-other
                          #  '+.t.cn'                                      : 'https://dns.alidns.com/dns-query'           # GeoSite:sina                                  # duplicate .cn suffix rule
-                            '+.th.weibo.com'                              : 'https://dns.alidns.com/dns-query'           # GeoSite:sina
-                            '+.tw.weibo.com'                              : 'https://dns.alidns.com/dns-query'           # GeoSite:sina
-                            '+.us.weibo.com'                              : 'https://dns.alidns.com/dns-query'           # GeoSite:sina
+                         #  '+.th.weibo.com'                              : 'https://dns.alidns.com/dns-query'           # GeoSite:sina
+                         #  '+.tw.weibo.com'                              : 'https://dns.alidns.com/dns-query'           # GeoSite:sina
+                         #  '+.us.weibo.com'                              : 'https://dns.alidns.com/dns-query'           # GeoSite:sina
                          #  '+.videoself.cn'                              : 'https://dns.alidns.com/dns-query'           # GeoSite:sina                                  # duplicate .cn suffix rule
                          #  '+.wbimg.cn'                                  : 'https://dns.alidns.com/dns-query'           # GeoSite:sina                                  # duplicate .cn suffix rule
                             '+.wbimg.com'                                 : 'https://dns.alidns.com/dns-query'           # GeoSite:sina
@@ -6203,28 +6202,28 @@ dns                       :
                             '+.tiancitycdn.com'                           : 'https://dns.alidns.com/dns-query'           # GeoSite:tiancity
                             '+.jindidata.com'                             : 'https://dns.alidns.com/dns-query'           # GeoSite:tianyancha
                             '+.tianyancha.com'                            : 'https://dns.alidns.com/dns-query'           # GeoSite:tianyancha
-                            '+.byteoversea.com'                           : 'https://dns.alidns.com/dns-query'           # GeoSite:tiktok
-                            '+.full:p16-tiktokcdn-com.akamaized.net'      : 'https://dns.alidns.com/dns-query'           # GeoSite:tiktok
-                            '+.muscdn.com'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:tiktok
-                            '+.musical.ly'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:tiktok
-                            '+.tik-tokapi.com'                            : 'https://dns.alidns.com/dns-query'           # GeoSite:tiktok
-                            '+.tiktok.com'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:tiktok
-                            '+.tiktokcdn-eu.com'                          : 'https://dns.alidns.com/dns-query'           # GeoSite:tiktok
-                            '+.tiktokcdn-us.com'                          : 'https://dns.alidns.com/dns-query'           # GeoSite:tiktok
-                            '+.tiktokcdn.com'                             : 'https://dns.alidns.com/dns-query'           # GeoSite:tiktok
+                         #  '+.byteoversea.com'                           : 'https://dns.alidns.com/dns-query'           # GeoSite:tiktok
+                         #  '+.full:p16-tiktokcdn-com.akamaized.net'      : 'https://dns.alidns.com/dns-query'           # GeoSite:tiktok
+                         #  '+.muscdn.com'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:tiktok
+                         #  '+.musical.ly'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:tiktok
+                         #  '+.tik-tokapi.com'                            : 'https://dns.alidns.com/dns-query'           # GeoSite:tiktok
+                         #  '+.tiktok.com'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:tiktok
+                         #  '+.tiktokcdn-eu.com'                          : 'https://dns.alidns.com/dns-query'           # GeoSite:tiktok
+                         #  '+.tiktokcdn-us.com'                          : 'https://dns.alidns.com/dns-query'           # GeoSite:tiktok
+                         #  '+.tiktokcdn.com'                             : 'https://dns.alidns.com/dns-query'           # GeoSite:tiktok
                          #  '+.tiktokd.net'                               : 'https://dns.alidns.com/dns-query'           # GeoSite:tiktok                                # foreign-other
                          #  '+.tiktokd.org'                               : 'https://dns.alidns.com/dns-query'           # GeoSite:tiktok                                # foreign-other
-                            '+.tiktokeu-cdn.com'                          : 'https://dns.alidns.com/dns-query'           # GeoSite:tiktok
-                            '+.tiktokrow-cdn.com'                         : 'https://dns.alidns.com/dns-query'           # GeoSite:tiktok
-                            '+.tiktokv.com'                               : 'https://dns.alidns.com/dns-query'           # GeoSite:tiktok
-                            '+.tiktokv.eu'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:tiktok
-                            '+.tiktokv.us'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:tiktok
-                            '+.tiktokw.eu'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:tiktok
-                            '+.tiktokw.us'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:tiktok
-                            '+.ttlivecdn.com'                             : 'https://dns.alidns.com/dns-query'           # GeoSite:tiktok
-                            '+.ttoverseaus.net'                           : 'https://dns.alidns.com/dns-query'           # GeoSite:tiktok
-                            '+.ttwstatic.com'                             : 'https://dns.alidns.com/dns-query'           # GeoSite:tiktok
-                         #  '+.cn'                                        : 'https://dns.alidns.com/dns-query'           # GeoSite:tld-cn                                # dead
+                         #  '+.tiktokeu-cdn.com'                          : 'https://dns.alidns.com/dns-query'           # GeoSite:tiktok
+                         #  '+.tiktokrow-cdn.com'                         : 'https://dns.alidns.com/dns-query'           # GeoSite:tiktok
+                         #  '+.tiktokv.com'                               : 'https://dns.alidns.com/dns-query'           # GeoSite:tiktok
+                         #  '+.tiktokv.eu'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:tiktok
+                         #  '+.tiktokv.us'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:tiktok
+                         #  '+.tiktokw.eu'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:tiktok
+                         #  '+.tiktokw.us'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:tiktok
+                         #  '+.ttlivecdn.com'                             : 'https://dns.alidns.com/dns-query'           # GeoSite:tiktok
+                         #  '+.ttoverseaus.net'                           : 'https://dns.alidns.com/dns-query'           # GeoSite:tiktok
+                         #  '+.ttwstatic.com'                             : 'https://dns.alidns.com/dns-query'           # GeoSite:tiktok
+                            '+.cn'                                        : 'https://dns.alidns.com/dns-query'           # GeoSite:tld-cn                                # dead
                          #  '+.xn--1qqw23a'                               : 'https://dns.alidns.com/dns-query'           # GeoSite:tld-cn                                # dead
                          #  '+.xn--3bst00m'                               : 'https://dns.alidns.com/dns-query'           # GeoSite:tld-cn                                # dead
                          #  '+.xn--3ds443g'                               : 'https://dns.alidns.com/dns-query'           # GeoSite:tld-cn                                # dead
@@ -6238,8 +6237,8 @@ dns                       :
                          #  '+.xn--czrs0t'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:tld-cn                                # dead
                          #  '+.xn--czru2d'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:tld-cn                                # dead
                          #  '+.xn--fiq228c5hs'                            : 'https://dns.alidns.com/dns-query'           # GeoSite:tld-cn                                # dead
-                            '+.xn--fiqs8s'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:tld-cn
-                            '+.xn--fiqz9s'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:tld-cn
+                         #  '+.xn--fiqs8s'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:tld-cn
+                         #  '+.xn--fiqz9s'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:tld-cn
                          #  '+.xn--fjq720a'                               : 'https://dns.alidns.com/dns-query'           # GeoSite:tld-cn                                # foreign
                          #  '+.xn--g2xx48c'                               : 'https://dns.alidns.com/dns-query'           # GeoSite:tld-cn                                # dead
                          #  '+.xn--hxt814e'                               : 'https://dns.alidns.com/dns-query'           # GeoSite:tld-cn                                # dead
@@ -6391,7 +6390,7 @@ dns                       :
                          #  '+.vivo.cn'                                   : 'https://dns.alidns.com/dns-query'           # GeoSite:vivo                                  # duplicate .cn suffix rule
                             '+.vivo.com'                                  : 'https://dns.alidns.com/dns-query'           # GeoSite:vivo
                          #  '+.vivo.com.cn'                               : 'https://dns.alidns.com/dns-query'           # GeoSite:vivo                                  # duplicate .cn suffix rule
-                            '+.vivoglobal.com'                            : 'https://dns.alidns.com/dns-query'           # GeoSite:vivo
+                         #  '+.vivoglobal.com'                            : 'https://dns.alidns.com/dns-query'           # GeoSite:vivo
                             '+.vvstc.com'                                 : 'https://dns.alidns.com/dns-query'           # GeoSite:vivo
                          #  '+.aigc-cloud.com'                            : 'https://dns.alidns.com/dns-query'           # GeoSite:volcengine                            # dead
                             '+.bdegnine.com'                              : 'https://dns.alidns.com/dns-query'           # GeoSite:volcengine
@@ -6646,7 +6645,7 @@ dns                       :
                             '+.c.mi.com'                                  : 'https://dns.alidns.com/dns-query'           # GeoSite:xiaomi
                             '+.duokan.com'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:xiaomi
                             '+.duokanbox.com'                             : 'https://dns.alidns.com/dns-query'           # GeoSite:xiaomi
-                            '+.global.market.xiaomi.com'                  : 'https://dns.alidns.com/dns-query'           # GeoSite:xiaomi
+                         #  '+.global.market.xiaomi.com'                  : 'https://dns.alidns.com/dns-query'           # GeoSite:xiaomi
                             '+.mgslb.com'                                 : 'https://dns.alidns.com/dns-query'           # GeoSite:xiaomi
                          #  '+.mi-idc.com'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:xiaomi                                # foreign
                          #  '+.mi-img.com'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:xiaomi                                # dead & foreign-other
@@ -6909,7 +6908,7 @@ dns                       :
                             '+.zto.com'                                   : 'https://dns.alidns.com/dns-query'           # GeoSite:zto-express
                          #  '+.zto.net'                                   : 'https://dns.alidns.com/dns-query'           # GeoSite:zto-express                           # dead
                             '+.ztoapp.com'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:zto-express
-                            '+.ztoglobal.com'                             : 'https://dns.alidns.com/dns-query'           # GeoSite:zto-express
+                         #  '+.ztoglobal.com'                             : 'https://dns.alidns.com/dns-query'           # GeoSite:zto-express
                             '+.ztogroup.com'                              : 'https://dns.alidns.com/dns-query'           # GeoSite:zto-express
                          #  '+.ztoyh.com'                                 : 'https://dns.alidns.com/dns-query'           # GeoSite:zto-express                           # dead
                             '+.zuoyebang.cc'                              : 'https://dns.alidns.com/dns-query'           # GeoSite:zuoyebang
