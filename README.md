@@ -685,10 +685,11 @@
 
 本模版如何解决白名单模式下，中国准确分流的问题？
 
- - blackmatrix7/ios_rule_script/China + GEOIP：CN
+ - 魔改后的GeositeCN规则 + GEOIP：CN
 
-而本模版的中国域名，没有使用geosite：cn，而换成了 blackmatrix7/ios_rule_script 中的 China分流规则 （https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/China ）。这个规则集虽然只有3500条，但准确度高，而在配合GEOIP：CN后，完全够用 ！！对于此规则中，错误的域名，我也做了修复规则PreRepairChina （使用ChatGPT Pro Agent 自动排查China规则集中的非中国域名），并已经部署在本模版中，以力求完美。
+而本模版的中国域名，没有使用geosite：cn，而换成了 我们修复错误后的规则（https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/GeositeCN）。这个规则集只有3800条，准确度高。对于没有被规则集合涵盖的，配合GEOIP：CN 进行补门操作，完全够用 ！
 
+我还是那个观点，规则数量 不是越多越好。NB，体现在做减法。非核心目标的大而全 没有意义。本套模版的最核心目标是 “省电”  。其次是（针对上层网关）隐秘行踪。一次性，堆十几万、二十几万规则，导致每此域名请求都要比对几十万规则，手机续航➗2。没有任何意义。
 
 <br>
 <br>
