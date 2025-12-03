@@ -2,8 +2,12 @@
 
 # 项目概述
 
-本项目： https://github.com/Accademia/Clash_Configuration_Template
+项目名称：超级省电clash分流模版
+
+项目链接： https://github.com/Accademia/Clash_Configuration_Template
  
+项目简述：
+
  - 提供一套 同时支持  “ Clash Verge Rev / Clash Meta / Stash ”  的分流策略模版。
 
  - 力求 ： “极致省电”🔥 + “无DNS泄漏” + "主流APP分流“ + ”0频繁维护“
