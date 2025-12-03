@@ -6045,7 +6045,7 @@ dns                       :
                             '+.tencentmusic.com'                          : 'https://dns.alidns.com/dns-query'           # GeoSite:tencent
                             '+.tenpay.com'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:tencent
                             '+.tfogc.com'                                 : 'https://dns.alidns.com/dns-query'           # GeoSite:tencent
-                         #  '+.wechat.com'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:tencent                               # foreign & foreign-other
+                            '+.wechat.com'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:tencent                               # foreign & foreign-other
                          #  '+.wechatpay.cn'                              : 'https://dns.alidns.com/dns-query'           # GeoSite:tencent                               # duplicate .cn suffix rule
                             '+.wetv.vip'                                  : 'https://dns.alidns.com/dns-query'           # GeoSite:tencent
                          #  '+.wetvinfo.com'                              : 'https://dns.alidns.com/dns-query'           # GeoSite:tencent                               # foreign
