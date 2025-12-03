@@ -831,17 +831,19 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 - 另外，还需要特别注意，geosite:cn 中，存在大量的错误。他们把很多海外域名归类到了中国网站。而且错误高达上千个，很多错误都非常离谱，比如Tiktok都被归类为中国网站。所以 本模版的DNS分流并没有使用geosite:cn ！！！
 
-- 本模版的DNS分流中，中国DNS域名的分流规则，使用的是 https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/China  。 规则集的域名包含约3500个（错误域名200多个，已修正）。再对比 geosite:cn 中高达上千个的错误域名（非中国域名，但是被错误包含进Geosite：CN）。已经是优选过的方案了。
-    + 最终达到效果：非中国大陆域名，不将域名请求发送给中国的DNS，以便最大化避免DNS泄漏。
+- 本模版的DNS分流中，中国DNS域名的分流规则，没有 geosite:cn，因为这个规则集的错误规则，高达3100多条，占其集合内规则总数量的46%都是错的。 为了解决无规则集可用的情况，我临时做了针对geosite:cn修复错误后的规则:
+    - https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/GeositeCN
+    - 上述这个魔改规则集，将原本geosite:cn中6800条规则，进行清洗后，保留了3600条 100% 准确的规则。足够用了。对于不在上述魔改规则内的域名，直接进行DNS解析，然后上 geoip:cn 进行补门操作，达到100%完美 ！ 由于本模版 无DNS泄漏，所以用geoip:cn 无任何压力。
+    - 最终达到效果：非中国大陆域名，不将域名请求发送给中国的DNS，以便最大化避免DNS泄漏。
 
 .
 
 
-## 关于在Stash的缺陷❕   ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️ 
+## 关于 Stash for iOS 的缺陷❕   ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️ 
 
-以下 4 个功能，是本模版需要用到，Stash无法提供的 （ 但是 与Clash Meta核心 能提供如下功能的 完美适配 ）。
+以下 4 个功能，是本模版需要用到，Stash for iOS 无法提供的 （ 但 Clash Meta 完美适配 ）。
 
-目前，虽然**不影响Stash使用本模版** 进行翻墙上网，但是像做到完美，就需要Stash开发者补齐这四个功能短板。
+目前，虽然**不影响Stash使用本模版** 进行日常翻墙上网，但是会在极端情况下，出现无法连接的情况。想做到完美，还需要Stash开发者补齐这四个功能短板。
 
 
 1. Stash **无法 “批量分流” DNS查询** 到 指定的DNS服务器
