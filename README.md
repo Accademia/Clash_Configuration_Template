@@ -896,6 +896,7 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 请不要使用任何，国产安卓、鸿蒙系统、运营商路由器的非桥接模式，国产笔记本预装的windows电脑，进行 翻墙：
 
 - 所有国产设备，都内置了反诈插件，会直接导致你的翻墙节点，被实时监控。
+
 - 用iPhone  或者 重装Windows + 避免国产扫盘类的软件（如wps、360等），是唯一的出路。
 
 
