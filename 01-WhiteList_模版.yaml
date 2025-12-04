@@ -685,8 +685,8 @@ dns                       :
                          #  '+.amazonworkdocs.com.cn'                     : 'https://dns.alidns.com/dns-query'           # GeoSite:aws-cn                                # duplicate .cn suffix rule
                             '+.amzndns-cn.biz'                            : 'https://dns.alidns.com/dns-query'           # GeoSite:aws-cn
                          #  '+.amzndns-cn.cn'                             : 'https://dns.alidns.com/dns-query'           # GeoSite:aws-cn                                # duplicate .cn suffix rule
-                         #  '+.amzndns-cn.com'                            : 'https://dns.alidns.com/dns-query'           # GeoSite:aws-cn                                # foreign
-                         #  '+.amzndns-cn.net'                            : 'https://dns.alidns.com/dns-query'           # GeoSite:aws-cn                                # foreign
+                            '+.amzndns-cn.com'                            : 'https://dns.alidns.com/dns-query'           # GeoSite:aws-cn                                # foreign
+                            '+.amzndns-cn.net'                            : 'https://dns.alidns.com/dns-query'           # GeoSite:aws-cn                                # foreign
                          #  '+.asfiovnxocqpcry.com.cn'                    : 'https://dns.alidns.com/dns-query'           # GeoSite:aws-cn                                # duplicate .cn suffix rule
                          #  '+.aws-border.cn'                             : 'https://dns.alidns.com/dns-query'           # GeoSite:aws-cn                                # duplicate .cn suffix rule
                          #  '+.aws-icp-domain-manager.cn'                 : 'https://dns.alidns.com/dns-query'           # GeoSite:aws-cn                                # duplicate .cn suffix rule
@@ -700,6 +700,10 @@ dns                       :
                          #  '+.nwcdcloud.com.cn'                          : 'https://dns.alidns.com/dns-query'           # GeoSite:aws-cn                                # duplicate .cn suffix rule
                          #  '+.nwcddns.cn'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:aws-cn                                # duplicate .cn suffix rule
                          #  '+.nwcdinfosec.cn'                            : 'https://dns.alidns.com/dns-query'           # GeoSite:aws-cn                                # duplicate .cn suffix rule
+                            '+.awsdns-cn-??.biz'                          : 'https://dns.alidns.com/dns-query'           # GeoSite:aws-cn
+                            '+.awsdns-cn-??.com'                          : 'https://dns.alidns.com/dns-query'           # GeoSite:aws-cn
+                            '+.awsdns-cn-??.net'                          : 'https://dns.alidns.com/dns-query'           # GeoSite:aws-cn
+                            '+.awsdns-cn-??.top'                          : 'https://dns.alidns.com/dns-query'           # GeoSite:aws-cn
                          #  '+.regexp:.+\.awsdns-cn-[0-9][0-9]\.(biz|com|n: 'https://dns.alidns.com/dns-query'           # GeoSite:aws-cn
                          #  '+.regexp:.+\.awsdns-cn-[0-9][a-e0-9]\.cn$'   : 'https://dns.alidns.com/dns-query'           # GeoSite:aws-cn
                          #  '+.route53.cn'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:aws-cn                                # duplicate .cn suffix rule
@@ -4834,7 +4838,8 @@ dns                       :
                             '+.kwaicdn.com'                               : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou                              # dead
                             '+.kwaizt.com'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou
                             '+.kwimgs.com'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou
-                         #  '+.wsukwai.com'                               : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou                              # dead
+                            '+.wsukwai.com'                               : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou                              # dead
+                            '+.wskwai.com'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou                              # dead
                             '+.yximgs.com'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou
                          #  '+.adbkwai.com'                               : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou-ads
                          #  '+.adkwai.com'                                : 'https://dns.alidns.com/dns-query'           # GeoSite:kuaishou-ads
@@ -5088,7 +5093,7 @@ dns                       :
                             '+.mihoyogift.com'                            : 'https://dns.alidns.com/dns-query'           # GeoSite:mihoyo-cn
                          #  '+.mihoyomall.com'                            : 'https://dns.alidns.com/dns-query'           # GeoSite:mihoyo-cn                             # dead & foreign-other
                             '+.miyoushe.com'                              : 'https://dns.alidns.com/dns-query'           # GeoSite:mihoyo-cn
-                            '+.regexp:^.+-mihayo\.akamaized\.net$'        : 'https://dns.alidns.com/dns-query'           # GeoSite:mihoyo-cn
+                            '+.mihayo.akamaized.net'                      : 'https://dns.alidns.com/dns-query'           # GeoSite:mihoyo-cn
                             '+.themisweeps.com'                           : 'https://dns.alidns.com/dns-query'           # GeoSite:mihoyo-cn
                             '+.yuanshen.com'                              : 'https://dns.alidns.com/dns-query'           # GeoSite:mihoyo-cn
                             '+.mogu.com'                                  : 'https://dns.alidns.com/dns-query'           # GeoSite:mogujie
