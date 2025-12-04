@@ -4,7 +4,7 @@
 #     Clash.Meta       ###    https://wiki.metacubex.one/config/          # 
 # *********************************************************************** #
 
-# v.2025.12.03
+# v.2025.12.04
 
 # ⚠️⚠️⚠️ 如果出现，显示不对齐的情况，请使用《 对齐中文字体 + 对齐emoji字体 》❕❕❕❕ 比如 'Inconsolata' 等字体
 
@@ -901,7 +901,7 @@ dns                       :
                            # '+.bilivideo.cn'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:bilibili-cdn                          # duplicate .cn suffix rule
                              '+.bilivideo.com'                                          : 'https://dns.alidns.com/dns-query'          # GeoSite:bilibili-cdn
                              '+.bilivideo.net'                                          : 'https://dns.alidns.com/dns-query'          # GeoSite:bilibili-cdn
-                             '+.upos-hz-mirrorakam.akamaized.net'                       : 'https://dns.alidns.com/dns-query'          # GeoSite:bilibili-cdn
+                           # '+.upos-hz-mirrorakam.akamaized.net'                       : 'https://dns.alidns.com/dns-query'          # GeoSite:bilibili-cdn
                              '+.hdslb.com'                                              : 'https://dns.alidns.com/dns-query'          # GeoSite:bilibili-cdn
                              '+.hdslb.org'                                              : 'https://dns.alidns.com/dns-query'          # GeoSite:bilibili-cdn
                              '+.maoercdn.com'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:bilibili-cdn
@@ -1094,7 +1094,7 @@ dns                       :
                              '+.faceu.com'                                              : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
                              '+.fedlearner.net'                                         : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
                            # '+.feelgood.cn'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance                             # duplicate .cn suffix rule
-                             '+.bytedance.map.fastly.net'                               : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
+                           # '+.bytedance.map.fastly.net'                               : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
                              '+.gogokid.com'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
                            # '+.gogokid.com.cn'                                         : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance                             # duplicate .cn suffix rule
                              '+.gslbdns.com'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
@@ -1110,7 +1110,7 @@ dns                       :
                              '+.ibdxiguavod.com'                                        : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
                              '+.ibytedapm.com'                                          : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
                              '+.ibytedtos.com'                                          : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
-                             '+.ibyteimg.com'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
+                           # '+.ibyteimg.com'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
                            # '+.icphoto.cn'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance                             # duplicate .cn suffix rule
                            # '+.iluckysf.net'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance                             # foreign
                              '+.itmanager.club'                                         : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
@@ -1399,7 +1399,7 @@ dns                       :
                              '+.tower.im'                                               : 'https://dns.alidns.com/dns-query'          # GeoSite:category-collaborate-cn
                              '+.tritoninfo.net'                                         : 'https://dns.alidns.com/dns-query'          # GeoSite:category-collaborate-cn
                            # '+.woodo.cn'                                               : 'https://dns.alidns.com/dns-query'          # GeoSite:category-collaborate-cn               # duplicate .cn suffix rule
-                             '+.xiumi.us'                                               : 'https://dns.alidns.com/dns-query'          # GeoSite:category-collaborate-cn
+                           # '+.xiumi.us'                                               : 'https://dns.alidns.com/dns-query'          # GeoSite:category-collaborate-cn
                              '+.xiumius.com'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:category-collaborate-cn
                              '+.yuque.com'                                              : 'https://dns.alidns.com/dns-query'          # GeoSite:category-collaborate-cn
                              '+.jinrishici.com'                                         : 'https://dns.alidns.com/dns-query'          # GeoSite:category-dev-cn
@@ -2140,7 +2140,7 @@ dns                       :
                            # '+.wo.cn'                                                  : 'https://dns.alidns.com/dns-query'          # GeoSite:chinaunicom                           # duplicate .cn suffix rule
                            # '+.wo.com.cn'                                              : 'https://dns.alidns.com/dns-query'          # GeoSite:chinaunicom                           # duplicate .cn suffix rule
                              '+.wo116114.com'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:chinaunicom
-                             '+.xn--8y0a063a'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:chinaunicom
+                           # '+.xn--8y0a063a'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:chinaunicom
                              '+.chinaz.com'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:chinaz
                              '+.chinaz.net'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:chinaz
                              '+.chinaamc.com'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:citic
@@ -2158,7 +2158,7 @@ dns                       :
                              '+.csc108.com'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:citic
                            # '+.csci.hk'                                                : 'https://dns.alidns.com/dns-query'          # GeoSite:citic                                 # foreign & foreign-other
                              '+.ecitic.com'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:citic
-                             '+.xn--fiq64b'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:citic
+                           # '+.xn--fiq64b'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:citic
                              '+.ciweimao.com'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:ciweimao
                              '+.hbooker.com'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:ciweimao
                              '+.kuangxiangit.com'                                       : 'https://dns.alidns.com/dns-query'          # GeoSite:ciweimao
@@ -2172,12 +2172,12 @@ dns                       :
                              '+.cftest7.com'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:cloudflare-cn
                              '+.cftest8.com'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:cloudflare-cn
                              '+.cloudflare-cn.com'                                      : 'https://dns.alidns.com/dns-query'          # GeoSite:cloudflare-cn
-                             '+.cloudflareanycast.net'                                  : 'https://dns.alidns.com/dns-query'          # GeoSite:cloudflare-cn
+                           # '+.cloudflareanycast.net'                                  : 'https://dns.alidns.com/dns-query'          # GeoSite:cloudflare-cn
                            # '+.cloudflarechina.cn'                                     : 'https://dns.alidns.com/dns-query'          # GeoSite:cloudflare-cn                         # duplicate .cn suffix rule
                              '+.cloudflarecn.net'                                       : 'https://dns.alidns.com/dns-query'          # GeoSite:cloudflare-cn
                            # '+.cloudflareglobal.net'                                   : 'https://dns.alidns.com/dns-query'          # GeoSite:cloudflare-cn
                              '+.cloudflareinsights-cn.com'                              : 'https://dns.alidns.com/dns-query'          # GeoSite:cloudflare-cn
-                             '+.cloudflareperf.com'                                     : 'https://dns.alidns.com/dns-query'          # GeoSite:cloudflare-cn
+                           # '+.cloudflareperf.com'                                     : 'https://dns.alidns.com/dns-query'          # GeoSite:cloudflare-cn
                            # '+.cloudflareprod.com'                                     : 'https://dns.alidns.com/dns-query'          # GeoSite:cloudflare-cn                         # foreign-other
                            # '+.cloudflarestaging.com'                                  : 'https://dns.alidns.com/dns-query'          # GeoSite:cloudflare-cn                         # foreign-other
                            # '+.cloudflarestoragegw.com'                                : 'https://dns.alidns.com/dns-query'          # GeoSite:cloudflare-cn                         # foreign-other
@@ -2244,8 +2244,8 @@ dns                       :
                            # '+.ctexcel.ca'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:ctexcel                               # foreign-other
                            # '+.ctexcel.com'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:ctexcel                               # foreign & foreign-other
                            # '+.ctexcel.com.hk'                                         : 'https://dns.alidns.com/dns-query'          # GeoSite:ctexcel                               # foreign & foreign-other
-                             '+.ctexcel.fr'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:ctexcel
-                             '+.ctexcel.us'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:ctexcel
+                           # '+.ctexcel.fr'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:ctexcel
+                           # '+.ctexcel.us'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:ctexcel
                              '+.ak-p.tripcdn.com'                                       : 'https://dns.alidns.com/dns-query'          # GeoSite:ctrip
                              '+.ak-s-cw.tripcdn.com'                                    : 'https://dns.alidns.com/dns-query'          # GeoSite:ctrip
                              '+.ak-s.tripcdn.com'                                       : 'https://dns.alidns.com/dns-query'          # GeoSite:ctrip
@@ -2258,7 +2258,7 @@ dns                       :
                            # '+.ctrip.cn'                                               : 'https://dns.alidns.com/dns-query'          # GeoSite:ctrip                                 # duplicate .cn suffix rule
                            # '+.ctrip.co.id'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:ctrip                                 # foreign & foreign-other
                            # '+.ctrip.co.kr'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:ctrip                                 # foreign & foreign-other
-                             '+.ctrip.co.th'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:ctrip
+                           # '+.ctrip.co.th'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:ctrip
                              '+.ctrip.com'                                              : 'https://dns.alidns.com/dns-query'          # GeoSite:ctrip
                            # '+.ctrip.com.hk'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:ctrip                                 # foreign-other
                            # '+.ctrip.my'                                               : 'https://dns.alidns.com/dns-query'          # GeoSite:ctrip                                 # foreign-other
@@ -3877,7 +3877,7 @@ dns                       :
                            # '+.zixuntop.com'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:geolocation-cn                        # foreign & foreign-other
                              '+.zmengzhu.com'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:geolocation-cn
                              '+.zongheng.com'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:geolocation-cn
-                             '+.zoom3g.com'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:geolocation-cn
+                           # '+.zoom3g.com'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:geolocation-cn
                            # '+.zoomyou.cn'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:geolocation-cn                        # duplicate .cn suffix rule
                              '+.zpb365.com'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:geolocation-cn
                            # '+.zrblog.net'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:geolocation-cn                        # foreign & foreign-other
@@ -3923,7 +3923,7 @@ dns                       :
                              '+.hnair.com'                                              : 'https://dns.alidns.com/dns-query'          # GeoSite:hainanairlines
                            # '+.fontstar.com.cn'                                        : 'https://dns.alidns.com/dns-query'          # GeoSite:hanyi                                 # duplicate .cn suffix rule
                            # '+.hanyi.com.cn'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:hanyi                                 # duplicate .cn suffix rule
-                             '+.hellofontpreview.oss-cn-beijing.aliyuncs.com'           : 'https://dns.alidns.com/dns-query'       # GeoSite:hellofont
+                             '+.hellofontpreview.oss-cn-beijing.aliyuncs.com'           : 'https://dns.alidns.com/dns-query'          # GeoSite:hellofont
                              '+.hellowebfonts.oss-cn-beijing.aliyuncs.com'              : 'https://dns.alidns.com/dns-query'          # GeoSite:hellofont
                            # '+.hellofont.cn'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:hellofont                             # duplicate .cn suffix rule
                              '+.hellowebfont.com'                                       : 'https://dns.alidns.com/dns-query'          # GeoSite:hellofont
@@ -4629,7 +4629,7 @@ dns                       :
                              '+.jingxi.com'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:jd
                              '+.jkcsjd.com'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:jd
                            # '+.joybuy.com'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:jd                                    # foreign-other
-                             '+.joybuy.es'                                              : 'https://dns.alidns.com/dns-query'          # GeoSite:jd
+                           # '+.joybuy.es'                                              : 'https://dns.alidns.com/dns-query'          # GeoSite:jd
                              '+.linglonglife.com'                                       : 'https://dns.alidns.com/dns-query'          # GeoSite:jd
                              '+.logiseasy.com'                                          : 'https://dns.alidns.com/dns-query'          # GeoSite:jd
                              '+.mayshijia.com'                                          : 'https://dns.alidns.com/dns-query'          # GeoSite:jd
@@ -4750,11 +4750,11 @@ dns                       :
                            # '+.jtfulfillment.cn'                                       : 'https://dns.alidns.com/dns-query'          # GeoSite:jtexpress                             # duplicate .cn suffix rule
                              '+.jtfulfillment.com'                                      : 'https://dns.alidns.com/dns-query'          # GeoSite:jtexpress
                              '+.jtg2g.com'                                              : 'https://dns.alidns.com/dns-query'          # GeoSite:jtexpress
-                             '+.jtjms-ae.com'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:jtexpress
-                             '+.jtjms-br.com'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:jtexpress
-                             '+.jtjms-eg.com'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:jtexpress
-                             '+.jtjms-mx.com'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:jtexpress
-                             '+.jtjms-sa.com'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:jtexpress
+                           # '+.jtjms-ae.com'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:jtexpress
+                           # '+.jtjms-br.com'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:jtexpress
+                           # '+.jtjms-eg.com'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:jtexpress
+                           # '+.jtjms-mx.com'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:jtexpress
+                           # '+.jtjms-sa.com'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:jtexpress
                            # '+.upfos.cn'                                               : 'https://dns.alidns.com/dns-query'          # GeoSite:jtexpress                             # duplicate .cn suffix rule
                              '+.upfos.com'                                              : 'https://dns.alidns.com/dns-query'          # GeoSite:jtexpress
                              '+.yl-scm.com'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:jtexpress
@@ -4986,7 +4986,7 @@ dns                       :
                              '+.lenauth.com'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:lenovo
                            # '+.lenovo.cn'                                              : 'https://dns.alidns.com/dns-query'          # GeoSite:lenovo                                # duplicate .cn suffix rule
                            # '+.lenovo.com'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:lenovo                                # foreign
-                             '+.lenovo.com.cdn.cloudflare.net'                          : 'https://dns.alidns.com/dns-query'          # GeoSite:lenovo
+                           # '+.lenovo.com.cdn.cloudflare.net'                          : 'https://dns.alidns.com/dns-query'          # GeoSite:lenovo
                            # '+.lenovo.com.cn'                                          : 'https://dns.alidns.com/dns-query'          # GeoSite:lenovo                                # duplicate .cn suffix rule
                              '+.lenovo.net'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:lenovo
                            # '+.lenovocare.com.cn'                                      : 'https://dns.alidns.com/dns-query'          # GeoSite:lenovo                                # duplicate .cn suffix rule
@@ -5092,7 +5092,7 @@ dns                       :
                              '+.mihoyogift.com'                                         : 'https://dns.alidns.com/dns-query'          # GeoSite:mihoyo-cn
                              '+.mihoyomall.com'                                         : 'https://dns.alidns.com/dns-query'          # GeoSite:mihoyo-cn
                              '+.miyoushe.com'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:mihoyo-cn
-                             '+.mihayo.akamaized.net'                                   : 'https://dns.alidns.com/dns-query'          # GeoSite:mihoyo-cn
+                           # '+.mihayo.akamaized.net'                                   : 'https://dns.alidns.com/dns-query'          # GeoSite:mihoyo-cn
                              '+.themisweeps.com'                                        : 'https://dns.alidns.com/dns-query'          # GeoSite:mihoyo-cn
                              '+.yuanshen.com'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:mihoyo-cn
                              '+.mogu.com'                                               : 'https://dns.alidns.com/dns-query'          # GeoSite:mogujie
@@ -5395,7 +5395,7 @@ dns                       :
                              '+.pn1waq.com'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:qcloud
                              '+.qcloud-edumall.com'                                     : 'https://dns.alidns.com/dns-query'          # GeoSite:qcloud
                              '+.qcloud.com'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:qcloud
-                             '+.qcloud.la'                                              : 'https://dns.alidns.com/dns-query'          # GeoSite:qcloud
+                           # '+.qcloud.la'                                              : 'https://dns.alidns.com/dns-query'          # GeoSite:qcloud
                              '+.qcloudapps.com'                                         : 'https://dns.alidns.com/dns-query'          # GeoSite:qcloud
                              '+.qcloudcdn.com'                                          : 'https://dns.alidns.com/dns-query'          # GeoSite:qcloud
                            # '+.qcloudcdntest.cn'                                       : 'https://dns.alidns.com/dns-query'          # GeoSite:qcloud                                # duplicate .cn suffix rule
@@ -6033,7 +6033,7 @@ dns                       :
                              '+.qq.com'                                                 : 'https://dns.alidns.com/dns-query'          # GeoSite:tencent
                            # '+.qq.com.cn'                                              : 'https://dns.alidns.com/dns-query'          # GeoSite:tencent                               # duplicate .cn suffix rule
                              '+.qq.wang'                                                : 'https://dns.alidns.com/dns-query'          # GeoSite:tencent
-                             '+.qq.xn--fiqs8s'                                          : 'https://dns.alidns.com/dns-query'          # GeoSite:tencent
+                           # '+.qq.xn--fiqs8s'                                          : 'https://dns.alidns.com/dns-query'          # GeoSite:tencent
                              '+.qqmail.com'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:tencent
                              '+.qzone.com'                                              : 'https://dns.alidns.com/dns-query'          # GeoSite:tencent
                            # '+.rtx.com.cn'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:tencent                               # duplicate .cn suffix rule
@@ -6228,36 +6228,36 @@ dns                       :
                            # '+.ttoverseaus.net'                                        : 'https://dns.alidns.com/dns-query'          # GeoSite:tiktok
                            # '+.ttwstatic.com'                                          : 'https://dns.alidns.com/dns-query'          # GeoSite:tiktok
                              '+.cn'                                                     : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn                                
-                             '+.xn--1qqw23a'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
-                             '+.xn--3bst00m'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
-                             '+.xn--3ds443g'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
-                             '+.xn--55qw42g'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
-                             '+.xn--55qx5d'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
-                             '+.xn--5tzm5g'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
-                             '+.xn--6frz82g'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
-                             '+.xn--6qq986b3xl'                                         : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
-                             '+.xn--9et52u'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
-                             '+.xn--czr694b'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
-                             '+.xn--czrs0t'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
-                             '+.xn--czru2d'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
-                             '+.xn--fiq228c5hs'                                         : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
+                           # '+.xn--1qqw23a'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
+                           # '+.xn--3bst00m'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
+                           # '+.xn--3ds443g'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
+                           # '+.xn--55qw42g'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
+                           # '+.xn--55qx5d'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
+                           # '+.xn--5tzm5g'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
+                           # '+.xn--6frz82g'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
+                           # '+.xn--6qq986b3xl'                                         : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
+                           # '+.xn--9et52u'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
+                           # '+.xn--czr694b'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
+                           # '+.xn--czrs0t'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
+                           # '+.xn--czru2d'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
+                           # '+.xn--fiq228c5hs'                                         : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
                            # '+.xn--fiqs8s'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
                            # '+.xn--fiqz9s'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
                            # '+.xn--fjq720a'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn                                # foreign
-                             '+.xn--g2xx48c'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
-                             '+.xn--hxt814e'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
-                             '+.xn--imr513n'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
+                           # '+.xn--g2xx48c'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
+                           # '+.xn--hxt814e'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
+                           # '+.xn--imr513n'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
                            # '+.xn--io0a7i'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn                                # foreign
-                             '+.xn--kput3i'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
-                             '+.xn--nyqy26a'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
-                             '+.xn--otu796d'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
-                             '+.xn--rhqv96g'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
+                           # '+.xn--kput3i'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
+                           # '+.xn--nyqy26a'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
+                           # '+.xn--otu796d'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
+                           # '+.xn--rhqv96g'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
                            # '+.xn--ses554g'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn                                # foreign
                            # '+.xn--unup4y'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn                                # foreign
-                             '+.xn--vhquv'                                              : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
+                           # '+.xn--vhquv'                                              : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
                            # '+.xn--vuq861b'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn                                # foreign
-                             '+.xn--xhq521b'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
-                             '+.xn--zfr164b'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
+                           # '+.xn--xhq521b'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
+                           # '+.xn--zfr164b'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:tld-cn
                              '+.72whys.com'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:tmtpost
                              '+.chaindd.com'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:tmtpost
                              '+.checkzeit.com'                                          : 'https://dns.alidns.com/dns-query'          # GeoSite:tmtpost
