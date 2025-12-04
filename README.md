@@ -689,7 +689,7 @@
 
 <br>
 
-对于模版文件内，同时内置了两组规则： Ruleset规则 和 Geostie 规则。 如果想进一步省电，请删除其中一套规则（ 并且删除其对应的rule-providers ）。
+对于模版文件内，同时内置了两组规则： Ruleset规则 和 Geosite 规则。 如果想进一步省电，请删除其中一套规则（ 并且删除其对应的rule-providers ）。
 
 - 这样可以将，总规则数量➗2（规则02的规则数量，从2万下降到8000条），同时，几乎不会降低分流能力。从而进步一省电。也就是说，这两者是互为冗余部署的。
 
@@ -697,7 +697,7 @@
     
 <br>
  
-本套规则中，为什么在同一个分流策略上，同时 冗余部署了 Ruleset + Geostie 两套规则 ？
+本套规则中，为什么在同一个分流策略上，同时 冗余部署了 Ruleset + Geosite 两套规则 ？
 
 - 这是因为，通过冗余规则，避免因某个规则库停止更新（或更新慢），而导致，使用者频繁手动维护yaml。这样部署，更省心，尽量做到一次书写，后期0维护。
 
@@ -905,9 +905,9 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 1. Stash **无法 “批量分流” DNS查询** 到 指定的DNS服务器
    
-   Stash 无法按照（RULE-SET、Geostie）分流 🇨🇳 中国域名 的 DNS查询 ，到 🇨🇳 中国大陆的DNS服务器
-        - 由于Stash并不支持在DNS的nameserver-policy:中声明 “RULE-SET:远程规则” （以及 “Geostie:CN” ）。所以导致了，在本模版启用了follow-rule后，所有域名查询，一度只能全走境外DNS查询，从而导致如京东养车等APP会返回海外IP。向开发者多次反馈后，开发者压根不回复 不响应 （不知道怎么想的） 。而Clash Verga rec客户端（Clash Meta核心），不会有这个问题。
-    - 目前这个问题，已经通过手动展开Geostie:CN来解决。但是导致了，本模版多了6800多行。一旦Stash的nameserver-policy支持 “RULE-SET:远程规则” ，本套模版将立刻删除这些手动展开的规则。以确保 模版拥有最低的行数。
+   Stash 无法按照（RULE-SET、Geosite）分流 🇨🇳 中国域名 的 DNS查询 ，到 🇨🇳 中国大陆的DNS服务器
+        - 由于Stash并不支持在DNS的nameserver-policy:中声明 “RULE-SET:远程规则” （以及 “Geosite:CN” ）。所以导致了，在本模版启用了follow-rule后，所有域名查询，一度只能全走境外DNS查询，从而导致如京东养车等APP会返回海外IP。向开发者多次反馈后，开发者压根不回复 不响应 （不知道怎么想的） 。而Clash Verga rec客户端（Clash Meta核心），不会有这个问题。
+    - 目前这个问题，已经通过手动展开Geosite:CN来解决。但是导致了，本模版多了6800多行。一旦Stash的nameserver-policy支持 “RULE-SET:远程规则” ，本套模版将立刻删除这些手动展开的规则。以确保 模版拥有最低的行数。
 
 2. Stash 的 **链式代理 不支持UDP流量**
    
