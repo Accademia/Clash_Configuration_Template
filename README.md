@@ -725,7 +725,7 @@
 <br>
 
 
-#  本模版 是否同时支持  “0 DNS泄漏” + “满血版DNS解析” + “IP地址不绕路” ？
+#  本模版 是否同时满足  “0 DNS泄漏” + “满血版DNS解析” + “IP地址不绕路” ？
 
 <br>
 
@@ -1250,8 +1250,6 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 
 # 效果
-
-<br>
 
 <img width="477" alt="最终效果" src="https://github.com/user-attachments/assets/eb5704bc-450a-400f-b6f8-2e1ee0f3f40c" />
 
