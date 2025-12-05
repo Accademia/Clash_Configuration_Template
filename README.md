@@ -791,7 +791,7 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 |  | 规则数量 | 链接 |
 |---|---|---|
 | geosite:cn  | 6800条 |  https://github.com/v2fly/domain-list-community | 
-| ChinaMax  | 14完条 |  https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Surge/ChinaMax | 
+| ChinaMax  | 14万条 |  https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Surge/ChinaMax | 
  
 上述两个 规则集合 ，本模版 都没用 ！ 核心原因：精度太差 ！
 
