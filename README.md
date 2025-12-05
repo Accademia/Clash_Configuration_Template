@@ -927,7 +927,7 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 <br>
 
 
-本模版对中国分流的规则集合，精准度要求极高（或称 容错率极低），不是缺陷，而是设计目标导致的！
+本模版对中国分流的规则集合，精准度要求极高（或称 容错率极低），不是缺陷，而是设计目标！
 
 本模版 核心目标 只有一个 ：
 
@@ -985,6 +985,8 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 # 关于 Geosite ，给 开发者社区 的建议
 
+<br>
+
 想一劳永逸解决 GeoSite的问题，必须让Clash、Stash、Surge 这样的软件，能够支持，用户能一键导出 自己的 “域名解析记录” （比如过去两年内）。然后，支持用户 一键测试 ：用本国DNS，测试这些域名 是否指向国内IP。测试后，为用户生成 用户自己本地的Geosite:CN。做到完全贴合用户的日常浏览网站 = 0增加无效规则数量 + 又极致省电。
 
 而不是让用户，在VPN上，时时刻刻都挂着 10多万条的ChinaMax规则。使得每一次网络请求，都比对十几万次，才能命中。这纯脆是0价值费电。
@@ -1003,7 +1005,9 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 <br>
 
-## 关于 Stash for iOS 的缺陷❕   ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️ 
+# 关于 Stash for iOS 的缺陷❕   ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️ 
+
+<br>
 
 以下 4 个功能，是本模版需要用到，Stash for iOS 无法提供的 （ 但 Clash Meta 完美适配 ）。
 
@@ -1055,7 +1059,9 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 <br>
 
-## 避坑 ：设备端
+# 避坑 ：设备端
+
+<br>
 
 请不要使用任何，国产安卓、鸿蒙系统、运营商路由器的非桥接模式，国产笔记本预装的windows电脑，进行 翻墙：
 
@@ -1073,6 +1079,8 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 
 #  避坑 ： 购买 海外VPS节点 ，商家的种种套路
+
+<br>
 
 1. 中转节点，优先选择 **“ 外国人运营 + 大厂 ”** 的VPS，如：
     - VPS hosting（ 此为 搬瓦工的上游 ）
@@ -1106,6 +1114,8 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 #  避坑 ： 其他日常问题
 
+<br>
+
 1. **不要将自己的节点借给别人**。 要知道, ”跨异地城市“的多设备 连接境外 “同一个VPS”，会被GFW重点监控。最好只在自己同城家庭内部  分享节点。
     - 节点不外借，就像车不外借一样。你放心，你借出去的节点，被用坏了，要修要处理的人、被麻烦的人，只会是你自己。对方绝对不会给你出一分钱、一份力，而且大概率还会心里埋怨你，为什么你的节点不好用。你是不是故意给弄坏不让人家用的。 🤣🤣🤣🤣
     - 尤其这种电脑小白，其大概率会用windows。在Win上有相当多的盗版软件，其内置电脑病毒，会后台默默发垃圾邮件。一旦接入节点。会立马被VPS厂商关闭你的机器，甚至封停账号。这也就是为什么像联想、华为这样的大厂，一般不给员工笔记本电脑Admin账号的密码，就是不让员工装盗版。不然 用公司官方的IP发垃圾邮件？或者通知Adobe 微软 被盗版了？谁也受不了。
@@ -1122,6 +1132,8 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 <br>
 
 # 答疑 
+
+<br>
 
 我看不懂上文中的 xxx 怎么办？
 
@@ -1140,6 +1152,8 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 <br>
 
 # geosite 规则统计表
+
+<br>
 
 以下表格列出了，当前 Clash 分流模版中，用到的每个 geosite 标签及其对应的规则数量（包括文件中引用的子规则），表格顺序与配置中出现的顺序一致。最后一行给出所有规则的总数。
 
@@ -1221,6 +1235,9 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 <br>
 
 # 许可与声明
+
+<br>
+
 - 本代码使用MIT协议分发
 - 参与编写：OpenAI Chatgpt 5-pro Agent
 
@@ -1233,6 +1250,8 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 
 # 效果
+
+<br>
 
 <img width="477" alt="最终效果" src="https://github.com/user-attachments/assets/eb5704bc-450a-400f-b6f8-2e1ee0f3f40c" />
 
