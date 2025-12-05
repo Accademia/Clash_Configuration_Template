@@ -719,32 +719,17 @@
 
 ------
 
-<br>
-
-# 本套规则中， 中国分流如何做的？为什么没有使用 geosite:cn ？
+#  如何 将自己的节点 添加进 这个模版 ？
 
 <br>
 
-因为  Geosite:CN 里面包含2000条错误规则。接近500多条境外IP的域名，却被收录成了中国域名。最离谱的是，居然把TikTok，都标记为了中国域名 🤣🤣🤣 简直是错误大王。而且，还有超过1300条冗余的.cn域名也被收录。
+⚠️⚠️⚠️⚠️ 建议，使用AI，回答此类问题 ⚠️⚠️⚠️⚠️ 如果你不明白本模版如何使用，请将本模版，扔给AI，让AI给你讲解。我只提供模版，和响应bug修复，不回答一般性问题。 ⚠️⚠️⚠️⚠️ 
 
-这里还没有计算有些域名已经是完全死链接的状态，也应该被剔除的，却还在滥竽充数的。
+ - 将本模版作为附件，扔给AI。强烈建议，使用 ChatGPT 5.1 Pro ，让AI 将 “你的节点、存量规则 。本规则” ，上述三者做融合。 并且，你要给AI讲明白，你想达到什么效果。越细致越好。
 
-总之，目前 Geosite ：CN , 还做不到100%精准。而且还平白无故 多1300多条冗余规则。不是最优选。
+ - 经过对比，在处理模版到实际规则这一块，Grok 4.1 、 Gemini 3 Think ，都远远达不到 ChatGPT 5.1 Pro 的效果（包括 ChatGPT O3 Agent 目前也不行，其处理 有些emoji 会乱码 ）❕❕❕❕❕
 
-
-<br>
-
-本模版如何解决白名单模式下，准确分流 “🇨🇳中国境内流量” 的问题？
-
-为了解决无规则集可用的情况，我临时做了针对geosite:cn修复错误后的规则:
-
- - https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/GeositeCN
-
-上述这个魔改规则集，将原本geosite:cn中6800条规则，进行清洗后，保留了4800条 100% 准确的规则。足够用了。对于不在上述魔改规则内的域名，直接进行DNS解析，然后上 geoip:cn 进行补门操作，达到100%完美 ！ 由于本模版 无DNS泄漏，所以用geoip:cn 无任何压力。
-
-我还是那个观点！⚠️ ⚠️ ⚠️ 规则数量 不是越多越好！！ NB，体现在做减法。在非核心目标上，不断做加法，摊大饼、大而全， 没有意义。本套模版的最核心目标是 “省电”  。其次是（针对上层网关）隐秘行踪。而不是 ，一次性，堆十几万、二十几万规则，导致每此域名请求都要比对十多万规则。这样只会让手机续航➗2。做的都是无用功。
-
-总之！未来，在Geosite官方修正BUG后，我再及时替换回官方的规则集。
+此模版，本人已在Stash、Clash Verge、其他Clash Meta核心的VPN工具上 ，使用了一年多，而且是24小时不关闭，功能上是没有问题的 ！
 
 
 <br>
@@ -754,17 +739,92 @@
 
 <br>
 
-# 关于 Geosite ，给 开发者社区 的建议
 
-想一劳永逸解决 GeoSite的问题，必须让Clash、Stash、Surge 这样的软件，能够支持，用户能一键导出 自己的 “域名解析记录” （比如过去两年内）。然后，支持用户 一键测试 ：用本国DNS，测试这些域名 是否指向国内IP。测试后，为用户生成 用户自己本地的Geosite:CN。做到完全贴合用户的日常浏览网站 = 0增加无效规则数量 + 又极致省电。
-
-而不是让用户，在VPN上，时时刻刻都挂着 10多万条的ChinaMax规则。使得每一次网络请求，都比对十几万次，才能命中。这纯脆是0价值费电。
-
-当然，用户也可以将自己的本地的Geosite:CN规则集合，分享给社区，从而使得社区，可以更低成本的完善 规则集合汇总，可以集腋成裘。极大减轻社区制作规则集的压力❕❕❕ 并且不仅仅对中国的VPN社区极有价值。 对 俄罗斯、朝鲜、伊朗 等其他流氓国家的VPN用户（尤其是 几乎0社区的用户群），一样非常有价值。
+#  推荐的 节点协议 ：
 
 <br>
 
-多说一句。从使用体验上来看， 像geosite:cn 这种基于泛LBS概念的分流规则， 给 ”dns解析请求“ 分流的价值，至少十倍于 给其他类型的网络请求。因为你像哪个DNS请求，就已经决定了你要访问的IP在哪里（国内还是国外），后面在怎么分流 ，也改变不了这个带来的体验差异。
+| 线路 | 推建议协议 | 说明 |
+|---|---|---|
+| 优质线路  | Vless + Reality + Vision + XUDP | 优质线路使用 Hysteria2 ，100%会降速  | 
+|  劣质线路 | Hysteria2 （ 歇斯底里2 ） | 中美的劣质线路（如10美金一年不限流量的线路）使用Hysteria2，往往晚高峰能 10MByte/s，其他协议 0.1 MByte/s  | 
+
+<br>
+<br>
+
+ ------
+
+<br>
+
+
+
+#  我是 俄国、伊朗 等 用户，如何修改模版 ？
+
+<br>
+
+如果你不在中国，而是在俄罗斯、白俄罗斯、伊朗、朝鲜、古巴、中亚五国，等其他**流氓国家**，你 仍旧可以将本模版扔给ChatGPT Pro，让他给你修改。最简单的方法，就是将模版中的 “**第二级**“，从中国改为你所在国。
+
+
+If I am not a user in China—such as in 🇷🇺 Russia, 🇧🇾 Belarus, 🇮🇷 Iran, 🇰🇵 North Korea, 🇨🇺 Cuba, or the 🇰🇿 Central Asian countries—how should I modify the template?
+
+If you are not located in China but instead in rogue countries like Russia, Iran, Belarus, North Korea, Cuba, or the Central Asian states, you can still give this template to ChatGPT Pro and ask it to modify it for you.The simplest method is:
+
+  - In the template, replace the “second-level region（ 2st ）” from China to the country where you actually live.
+
+
+
+ 
+<br>
+<br>
+
+------
+
+
+<br>
+
+# 本套规则中， 🇨🇳中国分流 ，会有遗漏 、会绕路么？
+
+<br>
+
+目前，中国区 纯域名分流 ，主要有两个最具代表性的项目：
+
+|  | 规则数量 | 链接 |
+|---|---|---|
+| geosite:cn  | 6800条 |  https://github.com/v2fly/domain-list-community | 
+| ChinaMax  | 14完条 |  https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Surge/ChinaMax | 
+ 
+两个，本模版 都没有用，原因：
+
+   - geosite:cn ，包含2000条错误规则、冗余规则。接近500多条境外IP的域名，却被收录成了中国域名。最离谱的是，居然把TikTok，都标记为了中国域名 🤣🤣🤣 。而且，还有超过1300条冗余的.cn域名也被收录。这里还没有计算有些域名已经是完全死链接的状态，也应该被剔除的，却还在滥竽充数的。
+   - ChinaMax ，错误规则数量，问题更大，包含上万条规则错误，具体可以看这里 ： https://github.com/blackmatrix7/ios_rule_script/issues/1615
+
+总之，目前 上述两者, 都做不到100%精准。而且，像geosite:cn还平白无故 多1300多条冗余规则。不是最优选。
+
+由于本模版，是白名单模式，并且，中国区分流的匹配，被安排到了的境外流量分流之前（非常靠前，是为了减少命中前的匹配次数，以便于省电）。所以，本模版对于🇨🇳中国区的规则集合，其 容错度极低。必须要求 中国区规则集合 要非常精准才行。而且必须精准到，宁可错漏不能错杀。但目前市面上，没有可用的高精准规则集合。
+
+导致 不得已，只能用自己的方案。这就有了下面的方案。
+
+<br>
+<br>
+
+------
+
+<br>
+
+# 本模版如何解决，白名单模式下，精准分流 “🇨🇳中国境内流量”的 ？
+
+<br>
+
+为了解决 “🇨🇳中国分流” 无 “精准” 规则集可用的情况，我临时做了针对geosite:cn修复错误后的规则:
+
+ - https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/GeositeCN
+
+上述这个魔改规则集，将原本geosite:cn中6800条规则，进行清洗后，保留了4800条 100% 准确的规则。足够用了。对于不在上述魔改规则内的域名，直接进行DNS解析，然后上 geoip:cn 进行补门操作，达到100%完美 ！ 由于本模版 无DNS泄漏，所以用geoip:cn 无任何压力。
+
+我还是那个观点！⚠️ ⚠️ ⚠️ 规则数量 不是越多越好！！ NB，体现在做减法。在非核心目标上，不断做加法，摊大饼、大而全， 没有意义。本套模版的最核心目标是 “省电”  。其次是（针对上层网关）隐秘行踪。而不是 ，一次性，堆十几万、二十几万规则，导致每此域名请求都要比对十多万规则。这样只会让手机续航➗2。做的都是无用功。
+
+总之！未来，在Geosite官方修正BUG后（达到本模版需求的精准级别后），本模版会再及时替换回官方的规则集的。
+
 
 <br>
 <br>
@@ -808,64 +868,21 @@
 
 <br>
 
+# 关于 Geosite ，给 开发者社区 的建议
 
+想一劳永逸解决 GeoSite的问题，必须让Clash、Stash、Surge 这样的软件，能够支持，用户能一键导出 自己的 “域名解析记录” （比如过去两年内）。然后，支持用户 一键测试 ：用本国DNS，测试这些域名 是否指向国内IP。测试后，为用户生成 用户自己本地的Geosite:CN。做到完全贴合用户的日常浏览网站 = 0增加无效规则数量 + 又极致省电。
 
-#  如何 将自己的节点 添加进 这个模版 ？
+而不是让用户，在VPN上，时时刻刻都挂着 10多万条的ChinaMax规则。使得每一次网络请求，都比对十几万次，才能命中。这纯脆是0价值费电。
+
+当然，用户也可以将自己的本地的Geosite:CN规则集合，分享给社区，从而使得社区，可以更低成本的完善 规则集合汇总，可以集腋成裘。极大减轻社区制作规则集的压力❕❕❕ 并且不仅仅对中国的VPN社区极有价值。 对 俄罗斯、朝鲜、伊朗 等其他流氓国家的VPN用户（尤其是 几乎0社区的用户群），一样非常有价值。
 
 <br>
 
-⚠️⚠️⚠️⚠️ 建议，使用AI，回答此类问题 ⚠️⚠️⚠️⚠️ 如果你不明白本模版如何使用，请将本模版，扔给AI，让AI给你讲解。我只提供模版，和响应bug修复，不回答一般性问题。 ⚠️⚠️⚠️⚠️ 
-
- - 将本模版作为附件，扔给AI。强烈建议，使用 ChatGPT 5.1 Pro ，让AI 将 “你的节点、存量规则 。本规则” ，上述三者做融合。 并且，你要给AI讲明白，你想达到什么效果。越细致越好。
-
- - 经过对比，在处理模版到实际规则这一块，Grok 4.1 、 Gemini 3 Think ，都远远达不到 ChatGPT 5.1 Pro 的效果（包括 ChatGPT O3 Agent 目前也不行，其处理 有些emoji 会乱码 ）❕❕❕❕❕
-
-此模版，本人已在Stash、Clash Verge、其他Clash Meta核心的VPN工具上 ，使用了一年多，而且是24小时不关闭，功能上是没有问题的 ！
-
+多说一句。从使用体验上来看， 像geosite:cn 这种基于泛LBS概念的分流规则， 给 ”dns解析请求“ 分流的价值，至少十倍于 给其他类型的网络请求。因为你像哪个DNS请求，就已经决定了你要访问的IP在哪里（国内还是国外），后面在怎么分流 ，也改变不了这个带来的体验差异。
 
 <br>
 <br>
 
-------
-
-<br>
-
-
-#  推荐的 节点协议 ：
-
-<br>
-
-| 线路 | 推建议协议 | 说明 |
-|---|---|---|
-| 优质线路  | Vless + Reality + Vision + XUDP | 优质线路使用 Hysteria2 ，100%会降速  | 
-|  劣质线路 | Hysteria2 （ 歇斯底里2 ） | 中美的劣质线路（如10美金一年不限流量的线路）使用Hysteria2，往往晚高峰能 10MByte/s，其他协议 0.1 MByte/s  | 
-
- 
- 
-<br>
-<br>
-
-------
-
-<br>
-
-
-#  我是 俄国、伊朗 等 用户，如何修改模版 ？
-
-<br>
-
-如果你不在中国，而是在俄罗斯、白俄罗斯、伊朗、朝鲜、古巴、中亚五国，等其他**流氓国家**，你 仍旧可以将本模版扔给ChatGPT Pro，让他给你修改。最简单的方法，就是将模版中的 “**第二级**“，从中国改为你所在国。
-
-
-If I am not a user in China—such as in 🇷🇺 Russia, 🇧🇾 Belarus, 🇮🇷 Iran, 🇰🇵 North Korea, 🇨🇺 Cuba, or the 🇰🇿 Central Asian countries—how should I modify the template?
-
-If you are not located in China but instead in rogue countries like Russia, Iran, Belarus, North Korea, Cuba, or the Central Asian states, you can still give this template to ChatGPT Pro and ask it to modify it for you.The simplest method is:
-
-  - In the template, replace the “second-level region（ 2st ）” from China to the country where you actually live.
-
-
-<br>
-<br>
 
 ------
 
