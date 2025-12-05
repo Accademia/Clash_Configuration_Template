@@ -702,7 +702,7 @@ DNS泄漏会导致 ，GFW 、公司网关、电信运营商的防火墙、校园
 
 为了解决无规则集可用的情况，我临时做了针对geosite:cn修复错误后的规则:
   - https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/GeositeCN
-  - 将原本geosite:cn中6800条规则，进行清洗后，保留了4800条 100% 准确的规则。用于将DNS分流的精准度拉满。最大限度避免绕路和其他错误。
+  - 将原本 geosite:cn 中 6800条规则，进行清洗后，保留了4800条 100% 准确的规则。用于将DNS分流的精准度拉满。最大限度避免绕路和其他错误。
 
 
 <br>
