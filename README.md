@@ -1005,7 +1005,7 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 <br>
 
-# 关于 Stash for iOS 的缺陷❕   ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️ 
+# 避坑 ： 软件端 （ Stash for iOS ）   
 
 <br>
 
@@ -1078,7 +1078,7 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 <br>
 
 
-#  避坑 ： 购买 海外VPS节点 ，商家的种种套路
+#  避坑 ： 节点端 （ VPS商家的套路 ）
 
 <br>
 
