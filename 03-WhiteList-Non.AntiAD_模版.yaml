@@ -580,7 +580,7 @@ dns                       :
                              '+.v6-adashx.ut.cainiao.com'                               : 'https://dns.alidns.com/dns-query'          # GeoSite:alibaba-ads
                              '+.v6-adashx.ut.ele.me'                                    : 'https://dns.alidns.com/dns-query'          # GeoSite:alibaba-ads
                              '+.v6-adashx.ut.taobao.com'                                : 'https://dns.alidns.com/dns-query'          # GeoSite:alibaba-ads
-                             '+.alibabacloud.co.in'                                     : 'https://dns.alidns.com/dns-query'          # GeoSite:alibabacloud
+                           # '+.alibabacloud.co.in'                                     : 'https://dns.alidns.com/dns-query'          # GeoSite:alibabacloud
                            # '+.alibabacloud.com'                                       : 'https://dns.alidns.com/dns-query'          # GeoSite:alibabacloud                          # foreign & foreign-other
                            # '+.alibabacloud.com.au'                                    : 'https://dns.alidns.com/dns-query'          # GeoSite:alibabacloud                          # foreign & foreign-other
                            # '+.alibabacloud.com.hk'                                    : 'https://dns.alidns.com/dns-query'          # GeoSite:alibabacloud                          # foreign & foreign-other
@@ -1108,8 +1108,8 @@ dns                       :
                              '+.ibdxigualive.com'                                       : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
                              '+.ibdxiguastatic.com'                                     : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
                              '+.ibdxiguavod.com'                                        : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
-                             '+.ibytedapm.com'                                          : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
-                             '+.ibytedtos.com'                                          : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
+                           # '+.ibytedapm.com'                                          : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
+                           # '+.ibytedtos.com'                                          : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
                            # '+.ibyteimg.com'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
                            # '+.icphoto.cn'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance                             # duplicate .cn suffix rule
                            # '+.iluckysf.net'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance                             # foreign
@@ -1759,7 +1759,7 @@ dns                       :
                              '+.oi-wiki.com'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:category-olympiad-in-informatics
                            # '+.openjudge.cn'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:category-olympiad-in-informatics      # duplicate .cn suffix rule
                            # '+.rqnoj.cn'                                               : 'https://dns.alidns.com/dns-query'          # GeoSite:category-olympiad-in-informatics      # duplicate .cn suffix rule
-                             '+.uoj.ac'                                                 : 'https://dns.alidns.com/dns-query'          # GeoSite:category-olympiad-in-informatics
+                           # '+.uoj.ac'                                                 : 'https://dns.alidns.com/dns-query'          # GeoSite:category-olympiad-in-informatics
                            # '+.vijos.org'                                              : 'https://dns.alidns.com/dns-query'          # GeoSite:category-olympiad-in-informatics      # foreign & foreign-other
                              '+.mihuashi.com'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:category-outsource-cn
                              '+.51ccd.com'                                              : 'https://dns.alidns.com/dns-query'          # GeoSite:category-scholar-cn
@@ -2359,7 +2359,7 @@ dns                       :
                            # '+.theduapp.cn'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:dewu                                  # duplicate .cn suffix rule
                              '+.theduapp.com'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:dewu
                            # '+.theduapp.com.cn'                                        : 'https://dns.alidns.com/dns-query'          # GeoSite:dewu                                  # duplicate .cn suffix rule
-                             '+.thepoizon.ru'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:dewu
+                           # '+.thepoizon.ru'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:dewu
                            # '+.wodehaodewu.cn'                                         : 'https://dns.alidns.com/dns-query'          # GeoSite:dewu                                  # duplicate .cn suffix rule
                            # '+.womendedw.cn'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:dewu                                  # duplicate .cn suffix rule
                              '+.womendedw.com'                                          : 'https://dns.alidns.com/dns-query'          # GeoSite:dewu
@@ -5779,7 +5779,7 @@ dns                       :
                            # '+.sf-tech.com.cn'                                         : 'https://dns.alidns.com/dns-query'          # GeoSite:sf-express                            # duplicate .cn suffix rule
                            # '+.sf.cn'                                                  : 'https://dns.alidns.com/dns-query'          # GeoSite:sf-express                            # duplicate .cn suffix rule
                              '+.sfbuy.com'                                              : 'https://dns.alidns.com/dns-query'          # GeoSite:sf-express
-                             '+.sfcar.hk'                                               : 'https://dns.alidns.com/dns-query'          # GeoSite:sf-express
+                           # '+.sfcar.hk'                                               : 'https://dns.alidns.com/dns-query'          # GeoSite:sf-express
                            # '+.sffix.cn'                                               : 'https://dns.alidns.com/dns-query'          # GeoSite:sf-express                            # duplicate .cn suffix rule
                              '+.sfgy.org'                                               : 'https://dns.alidns.com/dns-query'          # GeoSite:sf-express
                              '+.baydn.com'                                              : 'https://dns.alidns.com/dns-query'          # GeoSite:shanbay
