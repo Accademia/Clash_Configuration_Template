@@ -638,7 +638,7 @@
 
 白名单模式 -> 黑名单模式 ， 切换方法：
 
- - 在使用过程中，将以下几个 分流选项手选为 Direct
+ - 在使用过程中，将以下几个 分流选项，切换为 Direct
     + 🇺🇸.\<Country>—US 
     + 🌎.\<Region>—North.America
     + 🌎.\<Region>—South.America
