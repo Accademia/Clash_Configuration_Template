@@ -172,6 +172,7 @@ dns                       :
                           # 'rule-set:GeositeCN_Domain'                   : [ 'https://dns.alidns.com/dns-query'    , 'https://doh.pub/dns-query'                  ]        # 仅Clash Meta支持，但 Stash 3.0 不支持！
 
                           # # 以下为'rule-set:GeositeCN_Domain'的展开，主要应对Stash不支持 上述规则 的情况（一旦Stash支持后，请立刻删除以下规则）
+
                              '+.115.com'                                                : 'https://dns.alidns.com/dns-query'          # GeoSite:115
                              '+.115cdn.com'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:115
                              '+.115cdn.net'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:115
@@ -704,7 +705,7 @@ dns                       :
                              '+.awsdns-cn-??.com'                                       : 'https://dns.alidns.com/dns-query'          # GeoSite:aws-cn
                              '+.awsdns-cn-??.net'                                       : 'https://dns.alidns.com/dns-query'          # GeoSite:aws-cn
                              '+.awsdns-cn-??.top'                                       : 'https://dns.alidns.com/dns-query'          # GeoSite:aws-cn
-                           # '+.regexp:.+\.awsdns-cn-[0-9][0-9]\.(biz|com|              : 'https://dns.alidns.com/dns-query'net|top)$'# GeoSite:aws-cn
+                           # '+.regexp:.+\.awsdns-cn-[0-9][0-9]\.(biz|com|              : 'https://dns.alidns.com/dns-query'          # GeoSite:aws-cn
                            # '+.regexp:.+\.awsdns-cn-[0-9][a-e0-9]\.cn$'                : 'https://dns.alidns.com/dns-query'          # GeoSite:aws-cn
                            # '+.route53.cn'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:aws-cn                                # duplicate .cn suffix rule
                            # '+.sagemaker.com.cn'                                       : 'https://dns.alidns.com/dns-query'          # GeoSite:aws-cn                                # duplicate .cn suffix rule
@@ -1015,6 +1016,10 @@ dns                       :
                              '+.byteapi.com'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
                            # '+.bytecdn.cn'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance                             # duplicate .cn suffix rule
                              '+.bytecdn.com'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
+                             '+.bytecdn.com.*'                                          : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
+                             '+.bytecdn.com.*.*'                                        : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
+                             '+.bytecdn.com.*.*.*'                                      : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
+                             '+.bytecdn.com.*.*.*.*'                                    : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
                              '+.bytecdn.net'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
                              '+.bytecdntp.com'                                          : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
                              '+.bytecimg.com'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
@@ -1026,11 +1031,19 @@ dns                       :
                              '+.bytedance-boe.net'                                      : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
                            # '+.bytedance.cn'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance                             # duplicate .cn suffix rule
                              '+.bytedance.com'                                          : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
+                             '+.bytedance.com.*'                                        : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
+                             '+.bytedance.com.*.*'                                      : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
+                             '+.bytedance.com.*.*.*'                                    : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
+                             '+.bytedance.com.*.*.*.*'                                  : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
                              '+.bytedance.net'                                          : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
                              '+.bytedance.org'                                          : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
                              '+.bytedanceapi.com'                                       : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
                              '+.bytedapm.com'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
                              '+.bytedcdn.com'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
+                             '+.bytedcdn.com.*'                                         : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
+                             '+.bytedcdn.com.*.*'                                       : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
+                             '+.bytedcdn.com.*.*.*'                                     : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
+                             '+.bytedcdn.com.*.*.*.*'                                   : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
                              '+.bytedeliver.com'                                        : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
                              '+.bytedgames.com'                                         : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
                              '+.bytedns.com'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
@@ -1059,12 +1072,24 @@ dns                       :
                              '+.byteics.com'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
                              '+.byteics.net'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
                              '+.byteimg.com'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
+                             '+.byteimg.com.*'                                          : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
+                             '+.byteimg.com.*.*'                                        : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
+                             '+.byteimg.com.*.*.*'                                      : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
+                             '+.byteimg.com.*.*.*.*'                                    : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
                              '+.byteimgc.com'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
+                             '+.byteimgc.com.*'                                         : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
+                             '+.byteimgc.com.*.*'                                       : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
+                             '+.byteimgc.com.*.*.*'                                     : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
+                             '+.byteimgc.com.*.*.*.*'                                   : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
                            # '+.byteintl.net'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance                             # foreign & foreign-other
                            # '+.bytelb.com'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance                             # foreign
                              '+.bytelb.net'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
                              '+.bytelb000.net'                                          : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
                              '+.bytemaimg.com'                                          : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
+                             '+.bytemaimg.com.*'                                        : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
+                             '+.bytemaimg.com.*.*'                                      : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
+                             '+.bytemaimg.com.*.*.*'                                    : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
+                             '+.bytemaimg.com.*.*.*.*'                                  : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
                              '+.bytemastatic.com'                                       : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
                              '+.bytemedi.com'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
                              '+.bytenewst.com'                                          : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
@@ -2460,26 +2485,74 @@ dns                       :
                              '+.boxdouyin.com'                                          : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin                                
                              '+.cookicut.com'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
                              '+.douyin.com'                                             : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.douyin.com.*'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.douyin.com.*.*'                                         : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.douyin.com.*.*.*'                                       : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.douyin.com.*.*.*.*'                                     : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
                              '+.douyinact.com'                                          : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
                              '+.douyinact.net'                                          : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
                              '+.douyincdn.com'                                          : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.douyincdn.com.*'                                        : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.douyincdn.com.*.*'                                      : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.douyincdn.com.*.*.*'                                    : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.douyincdn.com.*.*.*.*'                                  : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
                              '+.douyinfe.com'                                           : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
                              '+.douyinliving.com'                                       : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
-                             '+.douyinpic.com'                                          : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin                                 & foreign-other
+                             '+.douyinliving.com.*'                                     : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.douyinliving.com.*.*'                                   : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.douyinliving.com.*.*.*'                                 : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.douyinliving.com.*.*.*.*'                               : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.douyinpic.com'                                          : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.douyinpic.com.*'                                        : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.douyinpic.com.*.*'                                      : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.douyinpic.com.*.*.*'                                    : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.douyinpic.com.*.*.*.*'                                  : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
                              '+.douyinstatic.com'                                       : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.douyinstatic.com.*'                                     : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.douyinstatic.com.*.*'                                   : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.douyinstatic.com.*.*.*'                                 : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.douyinstatic.com.*.*.*.*'                               : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
                              '+.douyinvod.com'                                          : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.douyinvod.com.*'                                        : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.douyinvod.com.*.*'                                      : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.douyinvod.com.*.*.*'                                    : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.douyinvod.com.*.*.*.*'                                  : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
                              '+.duoshan.com'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
                              '+.huoshan.com'                                            : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
-                             '+.huoshancdn.com'                                         : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin                                
-                             '+.huoshangroup.com'                                       : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin                                
+                             '+.huoshan.com.*'                                          : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.huoshan.com.*.*'                                        : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.huoshan.com.*.*.*'                                      : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.huoshan.com.*.*.*.*'                                    : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.huoshancdn.com'                                         : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin  
+                             '+.huoshancdn.com.*'                                       : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin 
+                             '+.huoshancdn.com.*.*'                                     : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin 
+                             '+.huoshancdn.com.*.*.*'                                   : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.huoshancdn.com.*.*.*.*'                                 : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.huoshangroup.com'                                       : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
                              '+.huoshanimg.com'                                         : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.huoshanimg.com.*'                                       : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.huoshanimg.com.*.*'                                     : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.huoshanimg.com.*.*.*'                                   : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.huoshanimg.com.*.*.*.*'                                 : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
                              '+.huoshanlive.com'                                        : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.huoshanlive.com.*'                                      : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.huoshanlive.com.*.*'                                    : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.huoshanlive.com.*.*.*'                                  : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.huoshanlive.com.*.*.*.*'                                : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
                              '+.huoshanparty.com'                                       : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin                                
                              '+.huoshanstatic.com'                                      : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
                              '+.huoshante8.com'                                         : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin                                
-                             '+.huoshanvideo.cn'                                        : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin                                # duplicate .cn suffix rule
-                             '+.huoshanvideo.net'                                       : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin                                
-                             '+.huoshanvod.com'                                         : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin                                
+                           # '+.huoshanvideo.cn'                                        : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin                                # duplicate .cn suffix rule
+                             '+.huoshanvideo.net'                                       : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.huoshanvideo.net.*'                                     : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.huoshanvideo.net.*.*'                                   : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.huoshanvideo.net.*.*.*'                                 : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.huoshanvideo.net.*.*.*.*'                               : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.huoshanvod.com'                                         : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.huoshanvod.com.*'                                       : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.huoshanvod.com.*.*'                                     : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.huoshanvod.com.*.*.*'                                   : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                             '+.huoshanvod.com.*.*.*.*'                                 : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin     
                              '+.huoshanxiaoshipin.cn'                                   : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin                                # duplicate .cn suffix rule
                              '+.huoshanxiaoshipin.net'                                  : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin                                
                            # '+.huoshanzhibo.cn'                                        : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin                                # duplicate .cn suffix rule
@@ -4268,7 +4341,7 @@ dns                       :
                            # '+.ru-moscow-1.myhuaweicloud.com'                          : 'https://dns.alidns.com/dns-query'          # GeoSite:huaweicloud
                            # '+.ru-northwest-2.myhuaweicloud.com'                       : 'https://dns.alidns.com/dns-query'          # GeoSite:huaweicloud                           # foreign & foreign-other
                            # '+.ru-northwest-201.myhuaweicloud.com'                     : 'https://dns.alidns.com/dns-query'          # GeoSite:huaweicloud
-                             '+.sa-brazil-1.myhuaweicloud.com'                          : 'https://dns.alidns.com/dns-query'          # GeoSite:huaweicloud
+                           # '+.sa-brazil-1.myhuaweicloud.com'                          : 'https://dns.alidns.com/dns-query'          # GeoSite:huaweicloud
                            # '+.tc3bl.cn'                                               : 'https://dns.alidns.com/dns-query'          # GeoSite:huaweicloud                           # duplicate .cn suffix rule
                            # '+.tm2a8.cn'                                               : 'https://dns.alidns.com/dns-query'          # GeoSite:huaweicloud                           # duplicate .cn suffix rule
                            # '+.tm7sg.cn'                                               : 'https://dns.alidns.com/dns-query'          # GeoSite:huaweicloud                           # duplicate .cn suffix rule
@@ -7242,13 +7315,13 @@ proxy-groups:
    #- { name : '🌐🇫🇷.Line—[Global]—FR.First'                              , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/Available_1.png'           , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'fallback'     , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [     ] }  
    #- { name : '🌐🇨🇦.Line—[Global]—CA.First'                              , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/Available_1.png'           , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'fallback'     , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [     ] }  
 
-    # 线路：按国家 + 抗（中转点）失联     
-    - { name : '🇺🇸🍟.Line—[US.HomeIP]'                                    , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/Fries.png'                , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'fallback'     , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [                                                            '🇺🇸🍟.Multi.PrxChain—[US.HomeIP]'        ]}                                  
-    - { name : '🇺🇸📍.Line—[US.ShowIP]'                                    , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/Area.png'                 , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'fallback'     , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [                                                            '🇺🇸📍.Multi.PrxChain—[US.ShowIP]'        ]}                            
+   # 线路：按国家 + 抗（中转节点 ）失联
+    - { name : '🇺🇸🍟.Line—[US.HomeIP]'                                    , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/Fries.png'                 , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'select'       , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [  '🇺🇸🍟.Multi.PrxChain—[US.HomeIP]'            	    , '🔰🍟.Line—[Relay.VPS]—US.HomeIP.First'  ]}
+    - { name : '🇺🇸📍.Line—[US.ShowIP]'                                    , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/Area.png'                  , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'fallback'     , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [  '🇺🇸🔰.RT-VPS—[US.ShowIP]—(归属地落地节点信息)'          ,  '🇺🇸📍.Multi.PrxChain—[US.ShowIP]'       ]}                            
     - { name : '🇺🇸.Line—[US]'                                             , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/United_States.png'         , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'fallback'     , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [  '🇺🇸🔰.RT-VPS—[US-Relay]—(美国中转节点信息)'             ,  '🇺🇸.Multi.PrxChain—[US]'                ]}                                 
-    - { name : '🇯🇵.Line—[JP]'                                             , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/Japan.png'                 , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'fallback'     , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [  '🇯🇵🔰.RT-VPS—[JP-Relay]—(日本中转节点信息)'              ,  '🇯🇵.Multi.PrxChain—[JP]'                ]}                                    
-    - { name : '🇬🇧.Line—[UK]'                                             , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/United_Kingdom.png'        , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'fallback'     , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [  '🇬🇧🔰.RT-VPS—[UK-Relay]—(英国中转节点信息)'              ,  '🇬🇧.Multi.PrxChain—[UK]'                ]}                                   
-    - { name : '🇦🇺.Line—[AU]'                                             , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/Australia.png'             , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'fallback'     , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [  '🇦🇺🔰.RT-VPS—[AU-Relay]—(澳洲中转节点信息)'              ,  '🇦🇺.Multi.PrxChain—[AU]'                ]}                                    
+    - { name : '🇯🇵.Line—[JP]'                                             , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/Japan.png'                 , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'fallback'     , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [  '🇯🇵🔰.RT-VPS—[JP-Relay]—(日本中转节点信息)'             ,  '🇯🇵.Multi.PrxChain—[JP]'                ]}                                    
+    - { name : '🇬🇧.Line—[UK]'                                             , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/United_Kingdom.png'        , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'fallback'     , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [  '🇬🇧🔰.RT-VPS—[UK-Relay]—(英国中转节点信息)'             ,  '🇬🇧.Multi.PrxChain—[UK]'                ]}                                   
+    - { name : '🇦🇺.Line—[AU]'                                             , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/Australia.png'             , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'fallback'     , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [  '🇦🇺🔰.RT-VPS—[AU-Relay]—(澳洲中转节点信息)'             ,  '🇦🇺.Multi.PrxChain—[AU]'                ]}                                    
    #- { name : '🇭🇰.Line—[HK]'                                             , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/HongKong.png'              , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'fallback'     , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [  ] }  #      
    #- { name : '🇹🇼.Line—[TW]'                                             , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/TaiWan.png'                , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'fallback'     , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [  ] }  #   
    #- { name : '🇸🇬.Line—[SG]'                                             , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/Singapore.png'             , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'fallback'     , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [  ] }  #   
@@ -7405,7 +7478,7 @@ proxy-groups:
     - { name : '_________________________________________'                                                                                                                                                                                                      , type : 'select'                                                                           , proxies : [  'DIRECT' ]      }           
 
    # 线路：直连 中转节点 
-    - { name : '🌐⚡.Line—[Global]—Low.Latency'                           , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/Auto.png'                  , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'url-test'     , interval :  900 ,    tolerance :  50  , timeout :  5000 , lazy : true  , proxies : [                                                   '🇯🇵.Line—[JP]'                               , '🇦🇺.Line—[AU]'                              , '🇺🇸.Line—[US]'                  , '🇬🇧.Line—[UK]'               ] }         
+    - { name : '🌐⚡.Line—[Relay.VPS]—US.HomeIP.First'                    , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/Auto.png'                  , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'url-test'     , interval :  900 ,    tolerance :  50  , timeout :  5000 , lazy : true  , proxies : [                                                   '🇯🇵.Line—[JP]'                               , '🇦🇺.Line—[AU]'                              , '🇺🇸.Line—[US]'                  , '🇬🇧.Line—[UK]'               ] }         
     - { name : '🔰⚡.Line—[Relay.VPS]—US.First'                           , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/Auto.png'                  , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'fallback'     , interval :  900 , tolerance :  20  , timeout :  5000 , lazy : false , proxies : [  '🇺🇸🔰.RT-VPS—[US-Relay]—(美国中转节点信息)'      , '🔰⚡.Line—[Relay.VPS]—Low.Latency'          ] }  
     - { name : '🔰⚡.Line—[Relay.VPS]—Low.Latency'                        , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/Auto.png'                  , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'url-test'     , interval :  900 ,    tolerance :  20  , timeout :  5000 , lazy : false , proxies : [  '🇯🇵🔰.RT-VPS—[JP-Relay]—(日本中转节点信息)'                                                      , '🇺🇸🔰.RT-VPS—[US-Relay]—(美国中转节点信息)'                                      , '🇬🇧🔰.RT-VPS—[UK-Relay]—(英国中转节点信息)'                  , '🇦🇺🔰.RT-VPS—[AU-Relay]—(澳洲中转节点信息)'               ] }  #  , '🇦🇺.PrxChain—[AU]—(香港中转—>澳洲中转)'              , '🇦🇺.PrxChain—[AU]—(台湾中转—>澳洲中转)'                   , '🇦🇺.PrxChain—[AU]—(新加坡中转—>澳洲中转)'
     - { name : '🔰⬇️.Line—[Relay.VPS]—Max.Traffic'                         , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/Download.png'              , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'fallback'     , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [  '🇦🇺🔰.RT-VPS—[AU-Relay]—(澳洲中转节点信息)'                                                        , '🇬🇧🔰.RT-VPS—[UK-Relay]—(英国中转节点信息)'                                                                                                                                                                  ] }
@@ -7440,6 +7513,8 @@ rules:
    #           [第一级] 分流规则  : 前置 规则          (仅域名匹配)
    # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+
+   ##[1st-00] -  基础协议        
 
 
    #[1st-01] -  DNS \ NTP    
@@ -8199,6 +8274,7 @@ rule-providers:
 #
     GeositeCN_Domain                          : { type : 'http'  , behavior : 'domain'     , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/Accademia/Additional_Rule_For_Clash@latest/GeositeCN/GeositeCN_Domain.yaml'                                        , path : './ruleset/GeositeCN_Domain.yaml'                              }            # [2st-02]  [ Default : CN          ]     🇨🇳.<Country>—CN                 https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/GeoRouting_For_Domain       回国 - geosite:cn                               
 #   China_Domain                              : { type : 'http'  , behavior : 'domain'     , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/Accademia/Additional_Rule_For_Clash@latest/China/China_Domain.yaml'                                               , path : './ruleset/China/_Domain.yaml'                                 }            # [2st-02]  [ Default : CN          ]     🇨🇳.<Country>—CN                 https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/GeoRouting_For_Domain       回国 - china                               
+    CloudflareCN_Do_Resolve                   : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Cloudflarecn/Cloudflarecn.yaml'                                     , path : './ruleset/CloudflareCN.yaml'                                  }            # [2st-02]  [ Default : CN          ]     🇨🇳.<Country>—CN                 https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/CloudflareCN          回国 - CDN - CloudflareCN                              
 
 
    # [3st-00] -  测速
@@ -8449,13 +8525,11 @@ rule-providers:
    # [1st-00] -  基础协议 
    # [1st-01] -  DNS \ NTP 
    # [1st-02] -  局域网 
-   # [1st-03] -  自己的翻墙域名
-   # [1st-04] -  功能补充
-   # [1st-05] -  特定修复
-   # [1st-05] -  屏蔽 “有害软件、有害网站”
+   # [1st-03] -  自己的 VPS 域名 \ IP
+   # [1st-05] -  反劫持（Hijacking） 反私有DNS跟踪（HttpDNS）
    # [1st-08] -  保护隐私
    # [1st-09] -  屏蔽广告
-   # [1st-09] -  VNP软件                      - [默认路由：直连]
+   # [1st-09] -  第三方VNP软件                      - [默认路由：直连]
    #
    # ------------------------------------------------------------------------------
    #       [第二级] 分流规则 :  回国  （如 中国）              ( IP匹配 + DNS解析 )
