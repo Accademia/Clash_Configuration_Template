@@ -647,6 +647,7 @@
     + 🌏.\<Region>—East.Asia    
     + 🌏.\<Region>—West.Asia    
     + 🌍.\<Region>—Africa
+    + ☁️.\<Global>—CDN 
     + ♾️.\<Final>     
 
 <br>
