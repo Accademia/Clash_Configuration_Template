@@ -7211,15 +7211,18 @@ proxy-groups:
     - { name : '🌏.<Region>—West.Asia'                                    , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/Global.png'                , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'select'      , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [  '🌐🇬🇧.Line—[Global]—UK.First'                                                                                                               , 'DIRECT' , 'REJECT'             ,  'REJECT-DROP'   ] } 
     - { name : '🌍.<Region>—Africa'                                       , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/Global.png'                , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'select'      , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [  '🌐🇬🇧.Line—[Global]—UK.First'                                                                                                               , 'DIRECT' , 'REJECT'             ,  'REJECT-DROP'   ] } 
 
+   # [7st-01] -  CDN 
+    - { name : '☁️.<Global>—CDN'                                      , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/Cloudflare.png'            , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'select'       , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [  '🌐🍟.Line—[Global]—US.HomeIP.First'           , '🌐🇺🇸.Line—[Global]—US.First'            , '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , '🔰⬇️.Line—[Relay.VPS]—Max.Traffic'            , '🇺🇸🍟.Line—[US.HomeIP]'         , '🇺🇸.Line—[US]'               , '🇯🇵.Line—[JP]'             , '🇬🇧.Line—[UK]'             , '🇦🇺.Line—[AU]'              , 'DIRECT' , 'REJECT'               ,  'REJECT-DROP'   ] }         #  [3st-20]  [ Default : US         ]       Cloudflare_Do_Resolve        https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Cloudflare                      
+
    # 🔺🔺🔺 结束 （ BlackList ） 🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺  结束 （ BlackList ）               
 
 
     - { name : '___________________________________________________________'                                                                                                                                                                                                    , type : 'select'                                                                            , proxies : [  'DIRECT' ]       }         
 
-   # 🔻🔻🔻 开始（Min.AntiAD） ✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅   开始（Min.AntiAD）     
+   # 🔻🔻🔻 开始（ GFWList ） 🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧   开始（ GFWList ）     
    # [8st-01] GFWlist  
     - { name : '🚧.<GFWList>'                                             , icon : 'https://fastly.jsdelivr.net/gh/Accademia/Additional_Icon_For_Clash@latest/Categ/GFW.png'    , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'select'       , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [  '🌐🇺🇸.Line—[Global]—US.First'                  , '🌐🍟.Line—[Global]—US.HomeIP.First'         , '🇺🇸🍟.Line—[US.HomeIP]'         , '🇺🇸.Line—[US]'               , '🇯🇵.Line—[JP]'             , '🇬🇧.Line—[UK]'             , '🇦🇺.Line—[AU]'              , 'DIRECT' , 'REJECT'               ,  'REJECT-DROP'   ] }   #  🚧.<GFWList>           [ Default : US ]   规则 (订阅) :  GFWList_Domain                 https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Proxy 
-   # 🔻🔻🔻 结束（Min.AntiAD） ✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅   结束（Min.AntiAD）          
+   # 🔻🔻🔻 结束（ GFWList ） 🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧   结束（ GFWList ）          
 
    # 🔻🔻🔻 开始 （ BlackList ） 🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻  开始 （ BlackList ）                     
    # [9st-01] 兜底  
@@ -7624,6 +7627,10 @@ rules:
 #   - RULE-SET        , China_Domain                               , 🇨🇳.<Country>—CN                                 # , no-resolve                           # [2st-05]  [ Default : CN          ]  
     - RULE-SET        , GeositeCN_Domain                           , 🇨🇳.<Country>—CN                                 # , no-resolve                           # [2st-05]  [ Default : US          ]     https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/GeositeCN         
     - GEOIP           , cn                                         , 🇨🇳.<Country>—CN                                                                          # [6st-01]  [ Default : CN          ]                                                                                                  GeoIP - 中国   - 亚洲               
+
+    - GEOSITE         , cloudflare-cn                              , 🇨🇳.<Country>—CN                                 #                                        # [6st-01]  [ Default : US          ]     
+    - RULE-SET        , CloudflareCN_Do_Resolve                    , 🇨🇳.<Country>—CN                                 # , no-resolve                           # [6st-01]  [ Default : US          ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/CloudflareCN              CDN - CloudflareCN
+
 
    #  🔺🔺🔺 结束 （ BlackList ） 🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺  结束 （ BlackList ）
 
@@ -8059,14 +8066,16 @@ rules:
 
    # [7st-01] -  CDN 
 
-    - GEOSITE         , cloudflare-cn                              , 🇨🇳.<Country>—CN                                 #                                        # [6st-01]  [ Default : US          ]     
-    - RULE-SET        , CloudflareCN_Do_Resolve                    , 🇨🇳.<Country>—CN                                 # , no-resolve                           # [6st-01]  [ Default : US          ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/CloudflareCN              CDN - CloudflareCN
 
-    - GEOSITE         , cloudflare                                 , ☁️.<CDN>—Cloudflare                             #                                        # [6st-01]  [ Default : US          ]     
-    - RULE-SET        , Cloudflare_Do_Resolve                      , ☁️.<CDN>—Cloudflare                             # , no-resolve                           # [6st-01]  [ Default : US          ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Cloudflare                CDN - Cloudflare
+    - GEOSITE         , cloudflare                                 , ☁️.<Global>—CDN                                 #                                        # [6st-01]  [ Default : US          ]     
+    - RULE-SET        , Cloudflare_Do_Resolve                      , ☁️.<Global>—CDN                                 # , no-resolve                           # [6st-01]  [ Default : US          ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Cloudflare                CDN - Cloudflare
+    - RULE-SET        , Cloudflare_IPv4_Do_Resolve                 , ☁️.<Global>—CDN                                 # , no-resolve                           # [6st-01]  [ Default : US          ]     https://www.cloudflare.com/ips-v4                                                                CDN - Cloudflare
+    - RULE-SET        , Cloudflare_IPv6_Do_Resolve                 , ☁️.<Global>—CDN                                 # , no-resolve                           # [6st-01]  [ Default : US          ]     https://www.cloudflare.com/ips-v4                                                                CDN - Cloudflare
 
-    - RULE-SET        , Cloudflare_IPv4_Do_Resolve                 , ☁️.<CDN>—Cloudflare                             # , no-resolve                           # [6st-01]  [ Default : US          ]     https://www.cloudflare.com/ips-v4                                                                CDN - Cloudflare
-    - RULE-SET        , Cloudflare_IPv6_Do_Resolve                 , ☁️.<CDN>—Cloudflare                             # , no-resolve                           # [6st-01]  [ Default : US          ]     https://www.cloudflare.com/ips-v4                                                                CDN - Cloudflare
+    - GEOSITE         , akamai                                     , ☁️.<Global>—CDN                                 #                                        # [6st-01]  [ Default : US          ]     
+    - RULE-SET        , AkamaiCloud_Do_Resolve                     , ☁️.<Global>—CDN                                 # , no-resolve                           # [6st-01]  [ Default : US          ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/AkamaiCloud               CDN - AkamaiCloud
+
+    - GEOSITE         , fastly                                     , ☁️.<Global>—CDN                                 #                                        # [6st-01]  [ Default : US          ]     
 
 
    # 🔺🔺🔺 结束 （ BlackList ）🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺  结束 （ BlackList ）
@@ -8381,9 +8390,10 @@ rule-providers:
 
    # [7st-01] -  CDN  
     CloudflareCN_Do_Resolve                   : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Cloudflarecn/Cloudflarecn.yaml'                                     , path : './ruleset/CloudflareCN.yaml'                                  }            # [2st-02]  [ Default : CN          ]     🇨🇳.<Country>—CN                 https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/CloudflareCN          回国 - CDN - CloudflareCN                              
-    Cloudflare_Do_Resolve                     : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@latest/rule/Clash/Cloudflare/Cloudflare.yaml'                                         , path : './ruleset/Cloudflare.yaml'                                    }            # [5st-01]  [ Default : US          ]     ☁️.<CDN>—Cloudflare             https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Cloudflare            CDN - Cloudflare                        
-    Cloudflare_IPv4_Do_Resolve                : { type : 'http'  , behavior : 'ipcidr'     , format : 'text'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://www.cloudflare.com/ips-v4'                                                                                                             , path : './ruleset/Cloudflare-IPv4.list'                               }            # [6st-03]  [ Default : US          ]     ☁️.<CDN>—Cloudflare             https://www.cloudflare.com/ips-v4                                                            CDN - Cloudflare IPv4
-    Cloudflare_IPv6_Do_Resolve                : { type : 'http'  , behavior : 'ipcidr'     , format : 'text'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://www.cloudflare.com/ips-v6'                                                                                                             , path : './ruleset/Cloudflare-IPv6.list'                               }            # [6st-04]  [ Default : US          ]     ☁️.<CDN>—Cloudflare             https://www.cloudflare.com/ips-v6                                                            CDN - Cloudflare IPv6
+    Cloudflare_Do_Resolve                     : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@latest/rule/Clash/Cloudflare/Cloudflare.yaml'                                         , path : './ruleset/Cloudflare.yaml'                                    }            # [5st-01]  [ Default : US          ]     ☁️.<Global>—CDN             https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Cloudflare            CDN - Cloudflare                        
+    Cloudflare_IPv4_Do_Resolve                : { type : 'http'  , behavior : 'ipcidr'     , format : 'text'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://www.cloudflare.com/ips-v4'                                                                                                             , path : './ruleset/Cloudflare-IPv4.list'                               }            # [6st-03]  [ Default : US          ]     ☁️.<Global>—CDN             https://www.cloudflare.com/ips-v4                                                            CDN - Cloudflare IPv4
+    Cloudflare_IPv6_Do_Resolve                : { type : 'http'  , behavior : 'ipcidr'     , format : 'text'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://www.cloudflare.com/ips-v6'                                                                                                             , path : './ruleset/Cloudflare-IPv6.list'                               }            # [6st-04]  [ Default : US          ]     ☁️.<Global>—CDN             https://www.cloudflare.com/ips-v6                                                            CDN - Cloudflare IPv6
+    AkamaiCloud_Do_Resolve                    : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Cloud/AkamaiCloud/AkamaiCloud.yaml'                , path : './ruleset/AkamaiCloud.yaml'                                   }            # [5st-01]  [ Default : US          ]     ☁️.<Global>—CDN           https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/AkamaiCloud           CDN - AkamaiCloud                        
 
     # 🔺🔺🔺 结束 （ BlackList ） 🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺❌❌❌❌❌  结束 （ BlackList ）  
 
@@ -8422,7 +8432,7 @@ rule-providers:
    # -----------------------------------------------------                     
    #      [第六级] 分流规则   :  国家、洲际（ GeoIP ） 🌍 
    # -----------------------------------------------------                 
-   #      [第七级] 分流规则   :  CDN                   🌍    
+   #      [第七级] 分流规则   :  外国 CDN              🌍    
    # -----------------------------------------------------                      
    #      [第八级] 分流规则   :  GFWList               🌍    
    # ----------------------------------------------------- 
@@ -8516,7 +8526,7 @@ rule-providers:
    # [6st-02] -   GeoIP       （全球，按洲际分类）        
    #
    # ------------------------------------------------------------------------------
-   #       [第七级] 分流规则 : CDN                              ( IP匹配 + DNS解析)  
+   #       [第七级] 分流规则 : 外国 CDN                        ( IP匹配 + DNS解析)  
    # ------------------------------------------------------------------------------
    #
    # [7st-01] -   CDN      
