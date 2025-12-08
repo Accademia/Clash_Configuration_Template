@@ -7071,10 +7071,10 @@ proxy-groups:
     - { name : '📡.<NTP>—GlobalNTP'                                       , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/Star.png'                  , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'select'       , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [  'DIRECT'                                          , '🔰🇺🇸.Line—[Relay.VPS]—US.First'  , '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , '🇺🇸.Line—[US]'               , '🇯🇵.Line—[JP]'             , '🇬🇧.Line—[UK]'             , '🇦🇺.Line—[AU]'                                                                                                            ,  'DIRECT' , 'REJECT'               ,  'REJECT-DROP'   ] }          #  [1st-01]  [ Default :  DIRECT     ]    
     - { name : '📡.<NTP>—ChinaNTP'                                        , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/Star.png'                  , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'select'       , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [  'DIRECT'      ,  'REJECT-DROP' ,  'REJECT'     ] }                            # [1st-01]  [ Default :  DIRECT     ]                                                 
 
-   # [1st-01] -  反私有DNS跟踪（HttpDNS）  
+   # [1st-05] -  反私有DNS跟踪（HttpDNS）  
     - { name : '📡.<DNS>—HttpDNS'                                         , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/Reject.png'                , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'select'       , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [  'REJECT-DROP' ,  'REJECT'      , 'DIRECT'      , '🇺🇸📍.Line—[US.ShowIP]'                   , '🇺🇸.Line—[US]'             , '🇯🇵.Line—[JP]'             , '🇬🇧.Line—[UK]'             , '🇦🇺.Line—[AU]'                                                                                                                                       ] }         #  [1st-01]  [ Default :  US         ]     BlockHttpDNS_Do_Resolve                 https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/BlockHttpDNS                       
 
-   # [1st-05] -  反劫持（Hijacking） 
+   # [1st-06] -  反劫持（Hijacking） 
     - { name : '⛔️.<Protection>—Hijacking'                                , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/Reject.png'                , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'select'       , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [  'REJECT-DROP' ,  'REJECT'      , 'DIRECT'      ] }                            # [1st-05]  [ Default : Reject      ]    Hijacking_Do_Resolve、                  https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Hijacking                      
 
    # [1st-08]  [1st-09] -  隐私保护（Privacy） 屏蔽广告 
@@ -7518,13 +7518,7 @@ rules:
    #[1st-00] -  基础协议        
 
 
-   #[1st-01] - 私有DNS HttpDNS   
-
-    - GEOSITE         , category-httpdns-cn                        , 📡.<DNS>—HttpDNS                # , no-track    #                                        # [1st-06]  [ Default : Reject      ]      
-    - RULE-SET        , BlockHttpDNS_Do_Resolve                    , 📡.<DNS>—HttpDNS                # , no-track    # , no-resolve                           # [1st-06]  [ Default : Reject      ]      https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/BlockHttpDNS           反跟踪 - BlockHttpDNS        
-   #- RULE-SET        , BlockHttpDNSPlus_Do_Resolve                , 📡.<DNS>—HttpDNS                # , no-track    # , no-resolve                           # [1st-06]  [ Default : Reject      ]      https://github.com/Accademia/Additional_Rule_For_Clash/tree/master/BlockHttpDNSPlus           反跟踪 - BlockHttpDNSPlus   
-
-   #[1st-02] -  DNS \ NTP   
+   #[1st-01] -  DNS \ NTP   
 
     - AND,((OR,((DST-PORT,53),(DST-PORT,853))),(NOT,((GEOIP,CN)))) , 📡.<DNS>—GlobalDNS                              #                                        # [1st-02]  [ Default : US          ]      Global NTP ：当目标端口为 53 且非中国 IP 时，走 GlobalNDS 代理     
     - RULE-SET        , GlobalDNS_Domain                           , 📡.<DNS>—GlobalDNS                              #                                        # [1st-02]  [ Default : US          ]      https://github.com/Accademia/Additional_Rule_For_Clash                                        安全DNS - GlobalDNS    # 无日志的安全DNS 
@@ -7538,17 +7532,23 @@ rules:
     - AND,((NETWORK,udp),(DST-PORT,123),(NOT,((GEOIP,CN))))        , 📡.<NTP>—GlobalNTP                              #                                        # Global NTP ：仅当目标为 UDP 且目的端口为 123 且非中国 IP 时，走 GlobalNTP 代理     
     - AND,((NETWORK,udp),(DST-PORT,123),(GEOIP,CN))                , 📡.<NTP>—ChinaNTP                               #                                        # China NTP  ：仅当目标为 UDP 且目的端口为 123 且为中国 IP 时，走 ChinaNTP 代理      
 
-   #[1st-03] -  局域网   
+   #[1st-02] -  局域网   
 
     - GEOSITE         , private                                    , 💻.<Lan>                                        #                                        # [1st-01] [ Default : DIRECT       ]     
     - RULE-SET        , Lan_Do_Resolve                             , 💻.<Lan>                                        # , no-resolve                           # [1st-01] [ Default : DIRECT       ]      https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Lan                    私有地址 - Lan                
 
 
-   #[1st-04] -  自己的翻墙域名    
+   #[1st-03] -  自己的翻墙域名    
 
 
-   #[1st-05] -  功能补充
+   #[1st-04] -  功能补充
 
+
+   #[1st-05] - 私有DNS HttpDNS   
+
+    - GEOSITE         , category-httpdns-cn                        , 📡.<DNS>—HttpDNS                # , no-track    #                                        # [1st-06]  [ Default : Reject      ]      
+    - RULE-SET        , BlockHttpDNS_Do_Resolve                    , 📡.<DNS>—HttpDNS                # , no-track    # , no-resolve                           # [1st-06]  [ Default : Reject      ]      https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/BlockHttpDNS           反跟踪 - BlockHttpDNS        
+   #- RULE-SET        , BlockHttpDNSPlus_Do_Resolve                , 📡.<DNS>—HttpDNS                # , no-track    # , no-resolve                           # [1st-06]  [ Default : Reject      ]      https://github.com/Accademia/Additional_Rule_For_Clash/tree/master/BlockHttpDNSPlus           反跟踪 - BlockHttpDNSPlus   
 
    #[1st-06] -  反劫持（Hijacking） 
 
@@ -8196,19 +8196,19 @@ rules:
 
 rule-providers: 
 
-   #[1st-01] -  反私有DNS跟踪（HttpDNS）
-    BlockHttpDNS_Do_Resolve                   : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@latest/rule/Clash/BlockHttpDNS/BlockHttpDNS.yaml'                                     , path : './ruleset/BlockHttpDNS.yaml'                                  }            # [1st-06]  [ Default : Reject      ]     📡.<DNS>—HttpDNS                https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/BlockHttpDNS          反劫持 - BlockHttpDNS           
-   #BlockHttpDNSPlus_Do_Resolve               : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/Accademia/Additional_Rule_For_Clash@latest/BlockHttpDNSPlus/BlockHttpDNSPlus.yaml'                                 , path : './ruleset/BlockHttpDNSPlus.yaml'                              }            # [1st-06]  [ Default : Reject      ]     📡.<DNS>—HttpDNS                https://github.com/Accademia/Additional_Rule_For_Clash/tree/master/BlockHttpDNSPlus          反泄漏 - BlockHttpDNSPlus       
-
-   #[1st-02] -  DNS \ NTP 
+   #[1st-01] -  DNS \ NTP 
     GlobalDNS_Domain                          : { type : 'http'  , behavior : 'domain'     , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/Accademia/Additional_Rule_For_Clash@latest/GlobalDNS/GlobalDNS_Domain.yaml'                                        , path : './ruleset/GlobalDNS_Domain.yaml'                              }            # [1st-02]  [ Default : US          ]     📡.<DNS>—GlobalDNS              https://github.com/Accademia/Additional_Rule_For_Clash                                       全球 安全DNS - GlobalDNS            
     GlobalDNS_IP                              : { type : 'http'  , behavior : 'ipcidr'     , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/Accademia/Additional_Rule_For_Clash@latest/GlobalDNS/GlobalDNS_IP.yaml'                                            , path : './ruleset/GlobalDNS_IP.yaml'                                  }            # [1st-02]  [ Default : US          ]     📡.<DNS>—GlobalDNS              https://github.com/Accademia/Additional_Rule_For_Clash                                       全球 安全DNS - GlobalDNS            
 
     ChinaDNS_Domain                           : { type : 'http'  , behavior : 'domain'     , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/Accademia/Additional_Rule_For_Clash@latest/ChinaDNS/ChinaDNS_Domain.yaml'                                          , path : './ruleset/ChinaDNS_Domain.yaml'                               }            # [1st-06]  [ Default : Reject      ]     📡.<DNS>—ChinaDNS               https://github.com/Accademia/Additional_Rule_For_Clash/tree/master/ChinaDNS                  中国 被污染的 - ChinaDNS       
     ChinaDNS_IP                               : { type : 'http'  , behavior : 'ipcidr'     , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/Accademia/Additional_Rule_For_Clash@latest/ChinaDNS/ChinaDNS_IP.yaml'                                              , path : './ruleset/ChinaDNS_IP.yaml'                                   }            # [1st-06]  [ Default : Reject      ]     📡.<DNS>—ChinaDNS               https://github.com/Accademia/Additional_Rule_For_Clash/tree/master/ChinaDNS                  中国 被污染的 - ChinaDNS       
 
-   #[1st-03] -  局域网 
+   #[1st-02] -  局域网 
     Lan_Do_Resolve                            : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@latest/rule/Clash/Lan/Lan.yaml'                                                       , path : './ruleset/Lan.yaml'                                           }            # [1st-01]  [ Default : DIRECT      ]     💻.<Lan>                        https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Lan                   私有地址 - Lan                 
+
+   #[1st-05] -  反私有DNS跟踪（HttpDNS）
+    BlockHttpDNS_Do_Resolve                   : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@latest/rule/Clash/BlockHttpDNS/BlockHttpDNS.yaml'                                     , path : './ruleset/BlockHttpDNS.yaml'                                  }            # [1st-06]  [ Default : Reject      ]     📡.<DNS>—HttpDNS                https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/BlockHttpDNS          反劫持 - BlockHttpDNS           
+   #BlockHttpDNSPlus_Do_Resolve               : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/Accademia/Additional_Rule_For_Clash@latest/BlockHttpDNSPlus/BlockHttpDNSPlus.yaml'                                 , path : './ruleset/BlockHttpDNSPlus.yaml'                              }            # [1st-06]  [ Default : Reject      ]     📡.<DNS>—HttpDNS                https://github.com/Accademia/Additional_Rule_For_Clash/tree/master/BlockHttpDNSPlus          反泄漏 - BlockHttpDNSPlus       
 
    #[1st-06] -  反劫持（Hijacking） 
     Hijacking_Do_Resolve                      : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@latest/rule/Clash/Hijacking/Hijacking.yaml'                                           , path : './ruleset/Hijacking.yaml'                                     }            # [1st-06]  [ Default : Reject      ]     ⛔️.<Protection>—Hijacking       https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Hijacking             反劫持 - Hijacking              
@@ -8535,10 +8535,10 @@ rule-providers:
    # ------------------------------------------------------------------------------
    #
    # [1st-00] -  基础协议 
-   # [1st-01] -  反私有DNS跟踪（HttpDNS）
-   # [1st-02] -  DNS \ NTP 
-   # [1st-03] -  局域网 
-   # [1st-04] -  自己的 VPS 域名 \ IP
+   # [1st-01] -  DNS \ NTP 
+   # [1st-02] -  局域网 
+   # [1st-03] -  自己的 VPS 域名 \ IP
+   # [1st-05] -  反私有DNS跟踪（HttpDNS）
    # [1st-06] -  反劫持（Hijacking） 反私有DNS跟踪（HttpDNS）
    # [1st-08] -  保护隐私
    # [1st-09] -  屏蔽广告
