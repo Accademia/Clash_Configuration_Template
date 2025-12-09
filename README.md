@@ -879,22 +879,28 @@
 
 <br>
 
-#  如何 将自己的节点 添加进 这个模版 ？
-
+#  如何 使用本模版 ？（如何将本模版导入到VPN软件？）
 <br>
 
 ⚠️⚠️⚠️⚠️ 建议，使用AI，回答此类问题 ⚠️⚠️⚠️⚠️ 
 
 <br>
 
-如果你不明白本模版如何使用，请将本模版，扔给AI，让AI给你讲解。我只提供模版，和响应bug修复，不回答一般性问题。 ⚠️⚠️⚠️⚠️ 
+如果你不明白本模版如何使用，请将本模版，扔给AI，让AI给你讲解。我只提供模版、补充缺失的非常必要功能、以及响应bug修复，不回答一般性问题。 ⚠️⚠️⚠️⚠️ 
 
- - 将本模版作为附件，扔给AI。强烈建议，使用 ChatGPT 5.1 Pro ，让AI 将 “你的节点、存量规则 。本规则” ，上述三者做融合。 并且，你要给AI讲明白，你想达到什么效果。越细致越好。
+ - 1️⃣ 向AI提问的提示词 ：如何 将自己的VPS节点 添加进 这个模版  并导入Clash Verga Rec软件？
 
- - 经过对比，在处理模版到实际规则这一块，Grok 4.1 、 Gemini 3 Think ，都远远达不到 ChatGPT 5.1 Pro 的效果（包括 ChatGPT O3 Agent 目前也不行，其处理 有些emoji 会乱码 ）❕❕❕❕❕
+ - 2️⃣ 然后，将本模版作为附件，扔给AI。强烈建议，使用 ChatGPT 5.1 Pro ，让AI 将 “你的节点、存量规则 。本规则” ，上述三者做融合。 并且，你要给AI讲明白，你想达到什么效果。越细致越好。
+
+ - ⚠️ 注意：经过对比，在处理模版到实际规则这一块，Grok 4.1 、 Gemini 3 Think ，都远远达不到 ChatGPT 5.1 Pro 的效果（包括 ChatGPT O3 Agent 目前也不行，其处理 有些emoji 会乱码 ）❕❕❕❕❕
 
 此模版，本人已在Stash、Clash Verge、其他Clash Meta核心的VPN工具上 ，使用了一年多，而且是24小时不关闭，功能上是没有问题的 ！
 
+再次声明：我只提供模版、补充缺失的非常必要功能、响应bug修复，不回答一般性问题。也不提供入门教程、也不提供一步一步手把手教程。
+
+How to use this template ? (How to import this template into VPN software?)
+
+If you don't understand how to use this template, please throw this template to AI and let AI explain it to you. I only provide templates, supplement missing very necessary functions, and respond to bug fixes, and do not answer general questions.
 
 <br>
 <br>
