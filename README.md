@@ -1155,6 +1155,36 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 <br>
 
 
+
+
+----------
+
+<br>
+
+
+# 本模版的 下一步改进会是什么？
+
+<br>
+
+本模版会等待 Stash 更新，以便 支持 Clash Meta内核 已经支持 的如下两个特性：
+
+ - 在 “DNS分流策略” 中 支持 批量分流
+
+     - 即，在nameserver-policy 可以使用 “RULE-SET:远程规则” 、 “Geosite:XXX” 
+    
+ - 在 ”链式代理“ 中，全面支持UDP
+
+     - 即 ，将代理链 从 relay 迁移到 dialer-proxy （ 前者只支持UOT，而后者支持完整的UDP ） 
+
+<br>
+
+已向Stash多次反馈 🔥 开发者压根不回复🔥。有能联系上开发者的，希望能顺手反馈一下。
+
+
+
+<br>
+<br>
+
 ----------
 
 <br>
