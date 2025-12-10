@@ -1170,11 +1170,11 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
  - 在 “DNS分流策略” 中 支持 批量分流
 
-     - 即，在nameserver-policy 可以使用 “RULE-SET:远程规则” 、 “Geosite:XXX” 
+     - 即，nameserver-policy 可以使用 “RULE-SET:远程规则” 、 “Geosite:XXX” 
     
  - 在 ”链式代理“ 中，全面支持UDP
 
-     - 即 ，将代理链 从 relay 迁移到 dialer-proxy （ 前者只支持UOT，而后者支持完整的UDP ） 
+     - 即 ，将 “代理链” 从 relay 迁移到 dialer-proxy （ 前者只支持UOT，而后者支持完整的UDP ） 
 
 <br>
 
