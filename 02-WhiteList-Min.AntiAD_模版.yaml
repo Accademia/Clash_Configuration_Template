@@ -1311,8 +1311,8 @@ dns                               :
                                      '+.namiso.com'                                     : 'https://dns.alidns.com/dns-query'          # GeoSite:category-ai-cn
                                      '+.qianwen.aliyun.com'                             : 'https://dns.alidns.com/dns-query'          # GeoSite:category-ai-cn
                                      '+.qianwen.com'                                    : 'https://dns.alidns.com/dns-query'          # GeoSite:category-ai-cn
-                                   # '+.qwen.ai'                                        : 'https://dns.alidns.com/dns-query'          # GeoSite:category-ai-cn                        # foreign
-                                   # '+.qwenlm.ai'                                      : 'https://dns.alidns.com/dns-query'          # GeoSite:category-ai-cn                        # foreign
+                                     '+.qwen.ai'                                        : 'https://dns.alidns.com/dns-query'          # GeoSite:category-ai-cn                        # foreign
+                                     '+.qwenlm.ai'                                      : 'https://dns.alidns.com/dns-query'          # GeoSite:category-ai-cn                        # foreign
                                    # '+.rwkv.cn'                                        : 'https://dns.alidns.com/dns-query'          # GeoSite:category-ai-cn                        # duplicate .cn suffix rule
                                      '+.rwkv.com'                                       : 'https://dns.alidns.com/dns-query'          # GeoSite:category-ai-cn
                                    # '+.tiangong.cn'                                    : 'https://dns.alidns.com/dns-query'          # GeoSite:category-ai-cn                        # duplicate .cn suffix rule
@@ -2399,7 +2399,7 @@ dns                               :
                                      '+.dji.com'                                        : 'https://dns.alidns.com/dns-query'          # GeoSite:dji
                                      '+.dji.ink'                                        : 'https://dns.alidns.com/dns-query'          # GeoSite:dji
                                    # '+.dji.net'                                        : 'https://dns.alidns.com/dns-query'          # GeoSite:dji                                   # foreign
-                                   # '+.djicdn.com'                                     : 'https://dns.alidns.com/dns-query'          # GeoSite:dji                                   # foreign
+                                     '+.djicdn.com'                                     : 'https://dns.alidns.com/dns-query'          # GeoSite:dji                                   # foreign
                                    # '+.djiits.com'                                     : 'https://dns.alidns.com/dns-query'          # GeoSite:dji                                   # foreign
                                    # '+.djiops.com'                                     : 'https://dns.alidns.com/dns-query'          # GeoSite:dji                                   # foreign
                                    # '+.djiservice.org'                                 : 'https://dns.alidns.com/dns-query'          # GeoSite:dji                                   # foreign
@@ -3929,7 +3929,7 @@ dns                               :
                                    # '+.zixuntop.com'                                   : 'https://dns.alidns.com/dns-query'          # GeoSite:geolocation-cn                        # foreign & foreign-other
                                      '+.zmengzhu.com'                                   : 'https://dns.alidns.com/dns-query'          # GeoSite:geolocation-cn
                                      '+.zongheng.com'                                   : 'https://dns.alidns.com/dns-query'          # GeoSite:geolocation-cn
-                                   # '+.zoom3g.com'                                     : 'https://dns.alidns.com/dns-query'          # GeoSite:geolocation-cn
+                                     '+.zoom3g.com'                                     : 'https://dns.alidns.com/dns-query'          # GeoSite:geolocation-cn
                                    # '+.zoomyou.cn'                                     : 'https://dns.alidns.com/dns-query'          # GeoSite:geolocation-cn                        # duplicate .cn suffix rule
                                      '+.zpb365.com'                                     : 'https://dns.alidns.com/dns-query'          # GeoSite:geolocation-cn
                                    # '+.zrblog.net'                                     : 'https://dns.alidns.com/dns-query'          # GeoSite:geolocation-cn                        # foreign & foreign-other
@@ -5425,15 +5425,15 @@ dns                               :
                                      '+.myqcloud.com'                                   : 'https://dns.alidns.com/dns-query'          # GeoSite:qcloud
                                    # '+.na-ashburn.myqcloud.com'                        : 'https://dns.alidns.com/dns-query'          # GeoSite:qcloud                                # foreign-other
                                    # '+.na-ashburn.tencentcos.cn'                       : 'https://dns.alidns.com/dns-query'          # GeoSite:qcloud                                # duplicate .cn suffix rule
-                                     '+.na-ashburn.tencentcos.com'                      : 'https://dns.alidns.com/dns-query'          # GeoSite:qcloud
+                                   # '+.na-ashburn.tencentcos.com'                      : 'https://dns.alidns.com/dns-query'          # GeoSite:qcloud
                                    # '+.na-ashburn.tencentcos.com.cn'                   : 'https://dns.alidns.com/dns-query'          # GeoSite:qcloud                                # duplicate .cn suffix rule
                                    # '+.na-siliconvalley.myqcloud.com'                  : 'https://dns.alidns.com/dns-query'          # GeoSite:qcloud                                # foreign-other
                                    # '+.na-siliconvalley.tencentcos.cn'                 : 'https://dns.alidns.com/dns-query'          # GeoSite:qcloud                                # duplicate .cn suffix rule
-                                     '+.na-siliconvalley.tencentcos.com'                : 'https://dns.alidns.com/dns-query'          # GeoSite:qcloud
+                                   # '+.na-siliconvalley.tencentcos.com'                : 'https://dns.alidns.com/dns-query'          # GeoSite:qcloud
                                    # '+.na-siliconvalley.tencentcos.com.cn'             : 'https://dns.alidns.com/dns-query'          # GeoSite:qcloud                                # duplicate .cn suffix rule
                                    # '+.na-toronto.myqcloud.com'                        : 'https://dns.alidns.com/dns-query'          # GeoSite:qcloud                                # foreign-other
                                    # '+.na-toronto.tencentcos.cn'                       : 'https://dns.alidns.com/dns-query'          # GeoSite:qcloud                                # duplicate .cn suffix rule
-                                     '+.na-toronto.tencentcos.com'                      : 'https://dns.alidns.com/dns-query'          # GeoSite:qcloud
+                                   # '+.na-toronto.tencentcos.com'                      : 'https://dns.alidns.com/dns-query'          # GeoSite:qcloud
                                    # '+.na-toronto.tencentcos.com.cn'                   : 'https://dns.alidns.com/dns-query'          # GeoSite:qcloud                                # duplicate .cn suffix rule
                                      '+.onexmail.com'                                   : 'https://dns.alidns.com/dns-query'          # GeoSite:qcloud
                                      '+.openapp.run'                                    : 'https://dns.alidns.com/dns-query'          # GeoSite:qcloud
