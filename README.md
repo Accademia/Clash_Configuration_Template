@@ -1000,8 +1000,11 @@ If you don't understand how to use this template, please throw this template to 
 ```yaml
     - { name : '🔰⚡.Line—[Relay.VPS]—Low.Latency'
 ```
+  
   -  因为 🇭🇰 香港IP ，在很多 🇺🇸 美国APP 中，会与 🇷🇺 俄罗斯、🇧🇾 白俄罗斯、🇮🇷 伊朗 、 🇨🇺古巴 等其他流氓国家的IP 待遇相同，被禁止连接。 
+  
   -  未来，香港IP 在全球，只会越来越受歧视，所以 强烈不建议 购买香港节点，作为 “落地节点” 。 
+  
   -  原则上来说，本项目已经 放弃适配 🇭🇰 香港节点 ⚠️ （ 力求省心 + 0频繁维护 ）
 
 
