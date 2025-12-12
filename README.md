@@ -848,8 +848,12 @@
 # 为什么 “省电” 和 “防止DNS泄漏” 如此重要 ？ 
 
 
+<br>
+
 
 🔥 🔥 🔥  **省电** + **避免DNS泄漏**  ，是本模版的 最优先的目标 ❕❕❕❕ ⚠️⚠️⚠️  
+
+<br>
 
   - 要省电是因为，在iPhone上，往往的VPN软件电量消耗，**占整机电量消耗的20%**（VPN永驻后台不关闭）
 
@@ -911,6 +915,7 @@
 <br>
 
 #  如何 使用本模版 ？（如何将本模版导入到VPN软件？）
+
 <br>
 
 ⚠️⚠️⚠️⚠️ 建议，使用AI，回答此类问题 ⚠️⚠️⚠️⚠️ 
@@ -928,6 +933,8 @@
 此模版，本人已在Stash、Clash Verge、其他Clash Meta核心的VPN工具上 ，使用了一年多，而且是24小时不关闭，功能上是没有问题的 ！
 
 再次声明：我只提供模版、补充必要功能、响应bug修复，不回答一般性问题。也不提供入门教程、也不提供一步一步手把手教程。
+
+<br>
 
 How to use this template ? (How to import this template into VPN software?)
 
@@ -988,6 +995,8 @@ If you don't understand how to use this template, please throw this template to 
 
 如果你不在中国，而是在俄罗斯、白俄罗斯、伊朗、朝鲜、古巴、中亚五国，等其他**流氓国家**，你 仍旧可以将本模版扔给ChatGPT Pro，让他给你修改。最简单的方法，就是将模版中的 “**第二级**“，从中国改为你所在国。
 
+<br>
+
 
 If I am not a user in China—such as in 🇷🇺 Russia, 🇧🇾 Belarus, 🇮🇷 Iran, 🇰🇵 North Korea, 🇨🇺 Cuba, or the 🇰🇿 Central Asian countries—how should I modify the template?
 
@@ -1012,37 +1021,70 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 # 关于在 iPhone / iOS / MacOS上使用本模版
 
+<br>
+
 本模版，在iPhone、MacBook上，完全兼容 Stash 客户端 （ https://stash.wiki/ ），在Mac上也兼容 Clash Verga Rev 客户端。
+
+<br>
 
 如果你要在iPhone手机上使用本模版。并且，你还想手动修改本模版，并且在Stash for iOS中使用，请一定注意以下几点，以免被坑。
 
+<br>
+
 1. 多DNS查询，可能会导致iOS的VPN频繁崩溃.
+
     - 在iOS上，多DNS查询会导致内存爆炸（超过iOS的50MB限制），从而导致VPN崩溃。如果遇到这种情况，请删除一个DNS，只使用 1.1.1.1 。多DNS查询，会成倍增加内存使用。本模版使用了2个DNS 1.1.1.1 、8.8.8.8
 
+<br>
+
 2. 慢速VPS节点，可能会导致iOS的VPN频繁崩溃.
+
     - 在iOS上，如果你的VPS节点过于慢，可能也会导致DNS查询时，内存爆炸（超过iOS的50MB限制），从而导致VPN崩溃。如果遇到这种情况，请将DNS查询指定到更换更快的VPS（哪怕带宽低都不怕，只要速度响应快）。
 
+<br>
+
 3. 以下两个特性要谨慎使用，在移动端会对电池消耗和内存占用导致很大影响
+
     - tcp-concurrent            : false     （不建议ture，因为开启后会导致移动端费电、并且导致iOS内存占用增加30%，而且耗电严重）
+
     - interval                  :  900      （不建议太频繁进行 “心跳测试”，这里设置为 15分钟=900秒 测试一次，否则耗电严重）
 
+<br>
+
 4. 除了以上配置，如果想达到最大省电效果，请在Stash图形界面完成如下配置：
+    
     - 设置 -> 网络设置 -> 启用混合网络 （ ❌关闭 ）
+
     - 设置 -> 网络设置 -> 并发连接  （ ❌关闭 ）    
+    
     - 设置 -> 网络设置 -> 允许外部访问 （ ❌关闭 ）
+    
     - 设置 -> 网络设置 -> 启用外部控制 （ ❌关闭 ）
+    
     - 设置 -> 网络设置 -> 启用Fallback DNS （ ❌关闭 ）
+    
     - 设置 -> 网络设置 -> 虚拟网卡模式 （ iOS = 系统原生 开销最低 ）
+    
+
     - 设置 -> 网络设置 -> 包含所有网络 （ ❌关闭 ）
     
+<br>
+
 5. 对于 “反广告 + 隐私保护” ，（从“省电”角度）优先使用 REJECT-DROP，而非REJECT。因为后者会潜在导致app疯狂重试连接服务器。进一步导致手机发烫、极其费电。尤其是上报用户行为的链接。
+
+<br>
 
 6. 总之，对移动端（iPhone）来说：
     - 关闭并发优化选项
+    
     - 减少DNS服务器数量
+    
     - 减少重复DNS请求 （如 fallback DNS）
+    
     - 避免频繁的延迟检测
+    
     - 避免基于条件判断的复杂规则
+    
     - 减少大而全的反广告规则数量
 
    是 “省电” 的核心手段 
@@ -1069,6 +1111,7 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 | geosite:cn  | 6800条 |  https://github.com/v2fly/domain-list-community | 
 | ChinaMax  | 14万条 |  https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Surge/ChinaMax | 
  
+
 上述两个 规则集合 ，本模版 都没用 ！ 核心原因：精度太差 ！
 
    - geosite:cn ，包含2000条错误规则、冗余规则。接近500多条境外IP的域名，却被收录成了中国域名。最离谱的是，居然把TikTok，都标记为了中国域名 🤣🤣🤣 。而且，还有超过1300条冗余的.cn域名也被收录。这里还没有计算有些域名已经是完全死链接的状态，也应该被剔除的，却还在滥竽充数的。
@@ -1076,6 +1119,8 @@ If you are not located in China but instead in rogue countries like Russia, Iran
    - ChinaMax ，错误规则数量，问题更大，包含上万条规则错误，具体可以看这里 ： https://github.com/blackmatrix7/ios_rule_script/issues/1615
 
 总之，目前 上述两者, 都做不到100%精准。
+
+<br>
 
 由于本模版，是白名单模式，并且，中国区分流的匹配，被安排到了的境外流量分流之前（几乎是分流过程中 第二靠前的位置）。所以，本模版对于🇨🇳中国区的规则集合，其 容错度极低。必须要求 中国区规则集合 要非常精准才行。而且必须精准到，宁可错漏不能错配。但目前市面上，没有可用的高精准规则集合。
 
@@ -1087,7 +1132,11 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 实际上 ，在本模版中，DNS策略 与 分流策略，共用同一套 ，中国区分流的 规则集合。
 
+<br>
+
 我还是那个观点！⚠️ ⚠️ ⚠️ 规则数量 不是越多越好！！ NB，体现在做减法。在非核心目标上，不断做加法，摊大饼、大而全， 没有意义。本套模版的最核心目标是 “省电”  。其次是（针对上层网关）隐秘行踪。而不是 ，一次性，堆十几万、二十几万规则，导致每此域名请求都要比对十多万规则。这样只会让手机续航➗2。做的都是无用功。
+
+<br>
 
 总之！未来，在Geosite官方修正BUG后（达到本模版需求的精准级别后），本模版会再及时替换回官方的规则集的。
 
