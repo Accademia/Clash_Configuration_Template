@@ -1106,6 +1106,30 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 <br>
 
 
+如何 “省电” ，按优先级排序： 
+
+   - 关闭并发优化选项
+   
+   - 减少DNS服务器数量
+   
+   - 减少重复DNS请求 （如 fallback DNS）
+   
+   - 避免频繁的延迟检测
+   
+   - 避免高频命中的规则排在最后（如中国直连，不应该排在最后，应该排在最靠前）
+
+   - 对于反广告，尽量不用REJECT （改用REJECT-DROP）
+   
+   - 减少大而全的反广告规则数量
+   
+   - 避免基于条件判断的复杂规则
+
+<br>
+
+对于上述 排序，进一步解释：
+
+<br>
+
 1. 多DNS查询，可能会导致iOS的VPN频繁崩溃.
 
     - 在iOS上，多DNS查询会导致内存爆炸（超过iOS的50MB限制），从而导致VPN崩溃。如果遇到这种情况，请删除一个DNS，只使用 1.1.1.1 。多DNS查询，会成倍增加内存使用。本模版使用了2个DNS 1.1.1.1 、8.8.8.8
@@ -1130,22 +1154,6 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 
 4. 对于 “反广告 + 隐私保护” ，（从“省电”角度）优先使用 REJECT-DROP，而非REJECT。因为后者会潜在导致app疯狂重试连接服务器。进一步导致手机发烫、极其费电。尤其是上报用户行为的链接。
-
-<br>
-
-5. 总之，对 iPhone ，“省电” 核心，按优先级排序： 
-
-    - 关闭并发优化选项
-    
-    - 减少DNS服务器数量
-    
-    - 减少重复DNS请求 （如 fallback DNS）
-    
-    - 避免频繁的延迟检测
-    
-    - 避免基于条件判断的复杂规则
-    
-    - 减少大而全的反广告规则数量
 
 
 
