@@ -151,11 +151,11 @@ dns                               :
                                   # 中国 DNS分流
                                   # 'RULE-SET:GeositeCN_Domain'                         : [ 'https://dns.alidns.com/dns-query'        , 'https://doh.pub/dns-query'             ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
 
-                                  # 苹果 DNS分流 ⚠️⚠️⚠️（ 尚未验证 ）
+                                  # 苹果 DNS分流 ⚠️⚠️⚠️（ 尚未验证 ） 注意：苹果自己的DNS “只能解析” 苹果公司持有的域名，无法解析第三方域名❕
                                   # 'GEOSITE:apple-intelligence'                        : [ 'https://cloudflare-dns.com/dns-query'    , 'https://dns.google/dns-query'          ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
                                   # 'RULE-SET:AppleAI_Domain'                           : [ 'https://cloudflare-dns.com/dns-query'    , 'https://dns.google/dns-query'          ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
-                                  # 'GEOSITE:apple'                                     :   'system'                                                                                 # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
-                                  # 'RULE-SET:Apple_Domain'                             :   'system'                                                                                 # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
+                                  # 'GEOSITE:apple'                                     :   'https://doh.dns.apple.com/dns-query'                                                    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
+                                  # 'RULE-SET:Apple_Domain'                             :   'https://doh.dns.apple.com/dns-query'                                                    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
 
                                   # 微软 DNS分流 ⚠️⚠️⚠️ （ 尚未验证 ）
                                   # 'GEOSITE:github'                                    : [ 'https://cloudflare-dns.com/dns-query'    , 'https://dns.google/dns-query'          ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
@@ -1779,7 +1779,7 @@ dns                               :
                                      '+.oi-wiki.com'                                    : 'https://dns.alidns.com/dns-query'          # GeoSite:category-olympiad-in-informatics
                                    # '+.openjudge.cn'                                   : 'https://dns.alidns.com/dns-query'          # GeoSite:category-olympiad-in-informatics      # duplicate .cn suffix rule
                                    # '+.rqnoj.cn'                                       : 'https://dns.alidns.com/dns-query'          # GeoSite:category-olympiad-in-informatics      # duplicate .cn suffix rule
-                                   # '+.uoj.ac'                                         : 'https://dns.alidns.com/dns-query'          # GeoSite:category-olympiad-in-informatics
+                                     '+.uoj.ac'                                         : 'https://dns.alidns.com/dns-query'          # GeoSite:category-olympiad-in-informatics
                                    # '+.vijos.org'                                      : 'https://dns.alidns.com/dns-query'          # GeoSite:category-olympiad-in-informatics      # foreign & foreign-other
                                      '+.mihuashi.com'                                   : 'https://dns.alidns.com/dns-query'          # GeoSite:category-outsource-cn
                                      '+.51ccd.com'                                      : 'https://dns.alidns.com/dns-query'          # GeoSite:category-scholar-cn
@@ -6988,8 +6988,8 @@ dns                               :
                                      '+.zybang.com'                                     : 'https://dns.alidns.com/dns-query'          # GeoSite:zuoyebang
 
                                    # 以下规则 ：非 GeositeCN 规则
-                                     '+.cdn-apple.com'                                  : 'system'                                    # 如果使用海外DNS，会导致 苹果系统更新的升级 极慢 # updates.cdn-apple.com  
-                                     '+.itunes.apple.com'                               : 'system'                                    # 如果使用海外DNS，会导致 苹果应用商店的升级 极慢 # iosapps.itunes.apple.com  
+                                     '+.cdn-apple.com'                                  : 'https://doh.dns.apple.com/dns-query'       # 如果使用海外DNS，会导致 苹果系统更新的升级 极慢 # updates.cdn-apple.com  
+                                     '+.itunes.apple.com'                               : 'https://doh.dns.apple.com/dns-query'       # 如果使用海外DNS，会导致 苹果应用商店的升级 极慢 # iosapps.itunes.apple.com  
 
 
 
