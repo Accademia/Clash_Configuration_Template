@@ -224,8 +224,6 @@
 
 ------
 
-<br>
-
 
 # 九级分流策略详解（按如下顺序匹配）
 
@@ -1030,6 +1028,7 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 <br>
 
+
 # 如何魔改本模版，从而做到 进一步省电？
 
 <br>
@@ -1048,9 +1047,6 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 ------
 
-<br>
-
-
 # 为什么 本模版 ，在单一分流规则上，同时冗余部署了 两套 远程规则 ？
 
 <br>
@@ -1063,9 +1059,6 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 <br>
 
 ------
-
-<br>
-
 
 # 为什么 “省电” 和 “防止DNS泄漏” 如此重要 ？ 
 
@@ -1105,7 +1098,6 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 ------
 
-<br>
 
 # 本模版，如何在规则级 ，解决 ”省电“ 问题 + 解决 ”iOS网络内存频繁崩溃” 问题 ？
 
@@ -1171,7 +1163,6 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 ------
 
-<br>
 
 # 本模版，如何解决，白名单模式下，精准分流 “🇨🇳中国境内流量” 不绕路的 ？
 
@@ -1236,7 +1227,6 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 ------
 
-<br>
 
 # 本模版  对 “🇨🇳中国分流” 规则集，容错度极低，是缺陷么？
 
@@ -1262,7 +1252,6 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 ------
 
-<br>
 
 # 本模版内 小而精准的 GeositeCN + geoip:cn 真不能满足 我的场景需求，怎么办？
 
@@ -1299,7 +1288,6 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 ------
 
-<br>
 
 # 关于 Geosite ，给 开发者社区 的建议
 
@@ -1323,7 +1311,6 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 ----------
 
-<br>
 
 
 # 本模版的 下一步改进会是什么？
@@ -1351,7 +1338,6 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 ----------
 
-<br>
 
 # 避坑 ： 软件端 （ Stash for iOS ）   
 
@@ -1422,7 +1408,6 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 ------
 
-<br>
 
 # 避坑 ：设备端
 
@@ -1486,7 +1471,6 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 ------
 
-<br>
 
 
 #  避坑 ： 节点端 （ VPS商家的套路 ）
@@ -1540,8 +1524,6 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 ------
 
-<br>
-
 #  避坑 ： 其他日常问题
 
 <br>
@@ -1561,8 +1543,6 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 ------
 
-<br>
-
 # 答疑 
 
 <br>
@@ -1581,7 +1561,6 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 ------
 
-<br>
 
 # geosite 规则统计表
 
@@ -1664,7 +1643,6 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 ------
 
-<br>
 
 # 许可与声明
 
@@ -1678,7 +1656,6 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 ------
 
-<br>
 
 
 # 效果
