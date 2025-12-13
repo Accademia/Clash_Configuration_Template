@@ -8101,7 +8101,7 @@ rules:
    #  暂未启用 
    #- GEOSITE         , icloud                                     , 📂.<Drive>—iCloud                               #                                        # [3st-01]  [ Default : DIRECT      ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/iCloud                云存储（海外） - iCloud         
    #- RULE-SET        , iCloud_Do_Resolve                          , 📂.<Drive>—iCloud                               # , no-resolve                           # [3st-01]  [ Default : DIRECT      ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/iCloud                云存储（海外） - iCloud         
-    - GEOSITE         , apple                                      , ☁️.<Apps>—Apple                                 #                                        # [4st-01]  [ Default : DIRECT      ]    
+   #- GEOSITE         , apple                                      , ☁️.<Apps>—Apple                                 #                                        # [4st-01]  [ Default : DIRECT      ]    
     - RULE-SET        , Apple_Domain                               , ☁️.<Apps>—Apple                                 #                                        # [4st-01]  [ Default : DIRECT      ]      https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Apple                大厂 - Apple                 
     - RULE-SET        , Apple_IP                                   , ☁️.<Apps>—Apple                                 #                                        # [4st-01]  [ Default : DIRECT      ]      https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Apple                大厂 - Apple                 
 
