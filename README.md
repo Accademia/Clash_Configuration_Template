@@ -884,7 +884,6 @@
   
 ------
 
-<br>
 
 #  如何 使用本模版 ？（如何将本模版导入到VPN软件？）
 
@@ -916,8 +915,6 @@ If you don't understand how to use this template, please throw this template to 
 <br>
 
 ------
-
-<br>
 
 
 #  推荐的 节点协议 ：
@@ -959,10 +956,6 @@ If you don't understand how to use this template, please throw this template to 
 <br>
 
  ------
-
-<br>
-
-
 
 #  我是 俄国、伊朗 等 用户，如何修改模版 ？
 
