@@ -148,27 +148,19 @@ dns                               :
  #fallback-filter                 :                                                     # 设置：哪些IP段 ，强制使用 fallback DNS 进行二次解析，
 
   nameserver-policy               :                                                     # DNS分流规则      
-                                  # 中国 DNS分流
+                                  #  中国 DNS分流
                                   #  'RULE-SET:GeositeCN_Domain'                        : [ 'https://dns.alidns.com/dns-query#🇨🇳.<Country>—CN'                            , 'https://doh.pub/dns-query#🇨🇳.<Country>—CN'                               ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
 
-                                  # 苹果 DNS分流 ⚠️⚠️⚠️（ 尚未验证 ） 注意：苹果自己的DNS “只能解析” 苹果公司持有的部分域名（非全部域名），无法解析第三方域名❕
-                                  #  'token.safebrowsing.apple'                         : [ 'https://cloudflare-dns.com/dns-query#🔰🇺🇸.Line—[Relay.VPS]—US.First'         , 'https://dns.google/dns-query#🔰🇺🇸.Line—[Relay.VPS]—US.First'             ]    # 注意，中国大陆的DNS无法解析 token.safebrowsing.apple ⚠️⚠️⚠️
-                                  #  'GEOSITE:apple-intelligence'                       : [ 'https://cloudflare-dns.com/dns-query#🔰🇺🇸.Line—[Relay.VPS]—US.First'         , 'https://dns.google/dns-query#🔰🇺🇸.Line—[Relay.VPS]—US.First'             ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
-                                  #  'RULE-SET:AppleAI_Domain'                          : [ 'https://cloudflare-dns.com/dns-query#🔰🇺🇸.Line—[Relay.VPS]—US.First'         , 'https://dns.google/dns-query#🔰🇺🇸.Line—[Relay.VPS]—US.First'             ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
-                                  #  'GEOSITE:apple'                                    : [ 'https://dns.alidns.com/dns-query#DIRECT'                                     , 'https://cloudflare-dns.com/dns-query#🔰⚡.Line—[Relay.VPS]—Low.Latency'  ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
+                                  #  苹果 DNS分流                                       #  注意：苹果自己的DNS “只能解析” 苹果公司持有的部分域名（非全部域名），无法解析第三方域名❕
+                                  #  'token.safebrowsing.apple'                         : [ 'https://cloudflare-dns.com/dns-query#🔰⚡.Line—[Relay.VPS]—Low.Latency'      , 'https://dns.google/dns-query#🔰⚡.Line—[Relay.VPS]—Low.Latency'          ]    # 注意，中国大陆的DNS无法解析 token.safebrowsing.apple ⚠️⚠️⚠️
+                                  #  'RULE-SET:AppleAI_Domain'                          : [ 'https://cloudflare-dns.com/dns-query#🔰⚡.Line—[Relay.VPS]—Low.Latency'      , 'https://dns.google/dns-query#🔰⚡.Line—[Relay.VPS]—Low.Latency'          ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
                                   #  'RULE-SET:Apple_Domain'                            : [ 'https://dns.alidns.com/dns-query#DIRECT'                                     , 'https://cloudflare-dns.com/dns-query#🔰⚡.Line—[Relay.VPS]—Low.Latency'  ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
 
-                                  # 微软 DNS分流 ⚠️⚠️⚠️ （ 尚未验证 ）
-                                  #  'GEOSITE:github'                                   : [ 'https://cloudflare-dns.com/dns-query#🔰⚡.Line—[Relay.VPS]—Low.Latency'      , 'https://dns.google/dns-query#🔰⚡.Line—[Relay.VPS]—Low.Latency'          ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
-                                  #  'RULE-SET:GitHub_Do_Resolve'                       : [ 'https://cloudflare-dns.com/dns-query#🔰⚡.Line—[Relay.VPS]—Low.Latency'      , 'https://dns.google/dns-query#🔰⚡.Line—[Relay.VPS]—Low.Latency'          ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
-                                  #  'GEOSITE:bing'                                     : [ 'https://cloudflare-dns.com/dns-query#🔰🇺🇸.Line—[Relay.VPS]—US.First'         , 'https://dns.google/dns-query#🔰🇺🇸.Line—[Relay.VPS]—US.First'             ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
-                                  #  'RULE-SET:Bing_Do_Resolve'                         : [ 'https://cloudflare-dns.com/dns-query#🔰🇺🇸.Line—[Relay.VPS]—US.First'         , 'https://dns.google/dns-query#🔰🇺🇸.Line—[Relay.VPS]—US.First'             ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
-                                  #  'RULE-SET:MicrosoftEdge_Do_Resolve'                : [ 'https://cloudflare-dns.com/dns-query#🔰🇺🇸.Line—[Relay.VPS]—US.First'         , 'https://dns.google/dns-query#🔰🇺🇸.Line—[Relay.VPS]—US.First'             ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
+                                  #  微软 DNS分流 ⚠️⚠️⚠️ （ 尚未在Win11验证 ）
                                   #  'RULE-SET:Copilot_Domain'                          : [ 'https://cloudflare-dns.com/dns-query#🔰🇺🇸.Line—[Relay.VPS]—US.First'         , 'https://dns.google/dns-query#🔰🇺🇸.Line—[Relay.VPS]—US.First'             ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
-                                  #  'GEOSITE:microsoft'                                : [ 'https://dns.alidns.com/dns-query#DIRECT'                                     , 'https://cloudflare-dns.com/dns-query#🔰⚡.Line—[Relay.VPS]—Low.Latency'  ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
-                                  #  'RULE-SET:Microsoft_Do_Resolve'                    : [ 'https://dns.alidns.com/dns-query#DIRECT'                                     , 'https://cloudflare-dns.com/dns-query#🔰⚡.Line—[Relay.VPS]—Low.Latency'  ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
+                                  #  'RULE-SET:MicrosoftAPPs_Domain'                    : [ 'https://dns.alidns.com/dns-query#DIRECT'                                     , 'https://cloudflare-dns.com/dns-query#🔰⚡.Line—[Relay.VPS]—Low.Latency'  ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
 
-        
+
                                   # # 以下为 'RULE-SET:GeositeCN_Domain' 的展开，主要应对 Stash 不支持 RULE-SET 的情况（ 一旦Stash支持后，请立刻删除以下规则 ）
         
                                      '+.115.com'                                        : 'https://dns.alidns.com/dns-query'          # GeoSite:115
@@ -7013,8 +7005,71 @@ dns                               :
                                      '+.edgesuite.net'                                  : 'https://dns.alidns.com/dns-query'          #
                                      '+.apple.co'                                       : 'https://dns.alidns.com/dns-query'          #
 
-
-
+                                   # 以下规则 ：非 GeositeCN 规则 （微软全家桶APP分流规则）                                                    
+                                     '+.microsoft'                                      : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.office'                                         : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.windows'                                        : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.microsoft.com'                                  : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.microsoft365.com'                               : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.windows.com'                                    : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.windows.net'                                    : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.office.com'                                     : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.office365.com'                                  : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.live.com'                                       : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.live.net'                                       : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.msn.com'                                        : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.bing.com'                                       : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.s-microsoft.com'                                : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.outlook.com'                                    : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.hotmail.com'                                    : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.office.net'                                     : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.onedrive.com'                                   : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.1drv.com'                                       : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.1drv.ms'                                        : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.livefilestore.com'                              : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.onenote.com'                                    : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.onenote.net'                                    : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.sharepoint.com'                                 : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.skype.com'                                      : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.skypeassets.com'                                : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.lync.com'                                       : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.microsoftonline.com'                            : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.microsoftonline-p.com'                          : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.microsoftonline-p.net'                          : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.msauth.net'                                     : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.msauthimages.net'                               : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.msftauth.net'                                   : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.msftauthimages.net'                             : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.phonefactor.net'                                : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.msidentity.com'                                 : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.msftidentity.com'                               : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.microsoftazuread-sso.com'                       : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.windowsupdate.com'                              : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.microsoftstore.com'                             : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.onestore.ms'                                    : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.svc.ms'                                         : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.msftconnecttest.com'                            : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.msftncsi.com'                                   : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.aka.ms'                                         : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.sfx.ms'                                         : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.gfx.ms'                                         : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.microsoft.com.edgesuite.net'                    : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.otelrules.azureedge.net'                        : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.mlccdnprod.azureedge.net'                       : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.sharepointonline.com'                           : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.onmicrosoft.com'                                : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.microsoftusercontent.com'                       : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.msedge.net'                                     : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.msecnd.net'                                     : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.msocdn.com'                                     : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.aspnetcdn.com'                                  : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.microsoft-com.akamaized.net'                    : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.msn-com.akamaized.net'                          : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.informationprotection.azure.com'                : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.aadrm.com'                                      : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.virtualearth.net'                               : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.visualstudio.com'                               : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.vsassets.io'                                    : 'https://dns.alidns.com/dns-query'          # 
 
 # ----------------------------------------------------------------------------------------------------------------------
 # DNS模块 
@@ -8102,12 +8157,13 @@ rules:
    #- GEOSITE         , icloud                                     , 📂.<Drive>—iCloud                               #                                        # [3st-01]  [ Default : DIRECT      ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/iCloud                云存储（海外） - iCloud         
    #- RULE-SET        , iCloud_Do_Resolve                          , 📂.<Drive>—iCloud                               # , no-resolve                           # [3st-01]  [ Default : DIRECT      ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/iCloud                云存储（海外） - iCloud         
    #- GEOSITE         , apple                                      , ☁️.<Apps>—Apple                                 #                                        # [4st-01]  [ Default : DIRECT      ]    
-    - RULE-SET        , Apple_Domain                               , ☁️.<Apps>—Apple                                 #                                        # [4st-01]  [ Default : DIRECT      ]      https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Apple                大厂 - Apple                 
-    - RULE-SET        , Apple_IP                                   , ☁️.<Apps>—Apple                                 #                                        # [4st-01]  [ Default : DIRECT      ]      https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Apple                大厂 - Apple                 
+    - RULE-SET        , Apple_Domain                               , ☁️.<Apps>—Apple                                 #                                        # [4st-01]  [ Default : DIRECT      ]     https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/Apple                       大厂 - Apple                 
+    - RULE-SET        , Apple_IP                                   , ☁️.<Apps>—Apple                                 #                                        # [4st-01]  [ Default : DIRECT      ]     https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/Apple                       大厂 - Apple                 
 
 
-    - GEOSITE         , microsoft                                  , ☁️.<Apps>—Microsoft                             #                                        # [4st-01]  [ Default : DIRECT      ]      
-    - RULE-SET        , Microsoft_Do_Resolve                       , ☁️.<Apps>—Microsoft                             # , no-resolve                           # [4st-01]  [ Default : DIRECT      ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Microsoft             大厂 - Microsoft              # 注意：微软的office、Bing、copilot等规则 ，已提前完成分流，请查看规则集  [3st-30]
+   #- GEOSITE         , microsoft                                  , ☁️.<Apps>—Microsoft                             #                                        # [4st-01]  [ Default : DIRECT      ]      
+   #- RULE-SET        , Microsoft_Do_Resolve                       , ☁️.<Apps>—Microsoft                             # , no-resolve                           # [4st-01]  [ Default : DIRECT      ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Microsoft             大厂 - Microsoft              # 注意：微软的office、Bing、copilot等规则 ，已提前完成分流，请查看规则集  [3st-30]
+    - RULE-SET        , MicrosoftAPPs_Domain                       , ☁️.<Apps>—Microsoft                             # , no-resolve                           # [4st-01]  [ Default : DIRECT      ]     https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/MicrosoftApps               大厂 - Microsoft              # 注意：微软的office、Bing、copilot等规则 ，已提前完成分流，请查看规则集  [3st-30]
    # 微软云服务，包含大量第三方公司，不宜启用 
    #- IP-CIDR         , 20.0.0.0/8                                 , ☁️.<Apps>—Microsoft                             # , no-resolve                           # [4st-01]  [ Default : DIRECT      ]     
    #- IP-CIDR         , 40.0.0.0/8                                 , ☁️.<Apps>—Microsoft                             # , no-resolve                           # [4st-01]  [ Default : DIRECT      ]     
@@ -8479,7 +8535,8 @@ rule-providers:
    # [4st-01] -  大厂  
     Google_Do_Resolve                         : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@latest/rule/Clash/Google/Google.yaml'                                                 , path : './ruleset/Google.yaml'                                        }            # [5st-01]  [ Default : US          ]     ☁️.<Apps>—Google                https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Google                大厂 - oogle                  
     Amazon_Do_Resolve                         : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@latest/rule/Clash/Amazon/Amazon.yaml'                                                 , path : './ruleset/Amazon.yaml'                                        }            # [5st-01]  [ Default : US          ]     ☁️.<Apps>—Amazon                https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Amazon                购物 - Amazon                        
-    Microsoft_Do_Resolve                      : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@latest/rule/Clash/Microsoft/Microsoft.yaml'                                           , path : './ruleset/Microsoft.yaml'                                     }            # [5st-01]  [ Default : DIRECT      ]     ☁️.<Apps>—Microsoft             https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Microsoft             大厂 - Microsoft              
+   #Microsoft_Do_Resolve                      : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@latest/rule/Clash/Microsoft/Microsoft.yaml'                                           , path : './ruleset/Microsoft.yaml'                                     }            # [5st-01]  [ Default : DIRECT      ]     ☁️.<Apps>—Microsoft             https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Microsoft             大厂 - Microsoft              
+    MicrosoftAPPs_Domain                      : { type : 'http'  , behavior : 'domain'     , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/Accademia/Additional_Rule_For_Clash@latest/MicrosoftAPPs/MicrosoftAPPs_Domain.yaml'                                , path : './ruleset/MicrosoftAPPs.yaml'                                 }            # [5st-01]  [ Default : DIRECT      ]     ☁️.<Apps>—Microsoft             https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/MicrosoftAPPs               大厂 - Microsoft              
    #Apple_Domain                              : { type : 'http'  , behavior : 'domain'     , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@latest/rule/Clash/Apple/Apple_Domain.yaml'                                            , path : './ruleset/Apple_Domain.yaml'                                  }            # [5st-01]  [ Default : DIRECT      ]     ☁️.<Apps>—Apple                 https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Apple                 大厂 - Apple                  
     Apple_Domain                              : { type : 'http'  , behavior : 'domain'     , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/Accademia/Additional_Rule_For_Clash@latest/Apple/Apple_Domain.yaml'                                                , path : './ruleset/Apple_Domain.yaml'                                  }            # [3st-30]  [ Default : DIRECT      ]     ☁️.<Apps>—Apple                 https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/Apple                       大厂 - Apple                   
     Apple_IP                                  : { type : 'http'  , behavior : 'ipcidr'     , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/Accademia/Additional_Rule_For_Clash@latest/Apple/Apple_IP.yaml'                                                    , path : './ruleset/Apple_IP.yaml'                                      }            # [3st-30]  [ Default : DIRECT      ]     ☁️.<Apps>—Apple                 https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/Apple                       大厂 - Apple                   
