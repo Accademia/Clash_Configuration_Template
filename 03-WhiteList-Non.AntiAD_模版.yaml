@@ -151,21 +151,21 @@ dns                               :
                                   # 中国 DNS分流
                                   # 'RULE-SET:GeositeCN_Domain'                         : [ 'https://dns.alidns.com/dns-query#🇨🇳.<Country>—CN'                            , 'https://doh.pub/dns-query#🇨🇳.<Country>—CN'                               ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
 
-                                  # 苹果 DNS分流 ⚠️⚠️⚠️（ 尚未验证 ） 注意：苹果自己的DNS “只能解析” 苹果公司持有的域名，无法解析第三方域名❕
-                                  # 'GEOSITE:apple-intelligence'                        : [ 'https://cloudflare-dns.com/dns-query#🔰⚡.Line—[Relay.VPS]—Low.Latency'      , 'https://dns.google/dns-query#🔰⚡.Line—[Relay.VPS]—Low.Latency'          ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
-                                  # 'RULE-SET:AppleAI_Domain'                           : [ 'https://cloudflare-dns.com/dns-query#🔰⚡.Line—[Relay.VPS]—Low.Latency'      , 'https://dns.google/dns-query#🔰⚡.Line—[Relay.VPS]—Low.Latency'          ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
-                                  # 'GEOSITE:apple'                                     :   'system'                                                                                                                                                       # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
-                                  # 'RULE-SET:Apple_Domain'                             :   'system'                                                                                                                                                       # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
+                                  # 苹果 DNS分流 ⚠️⚠️⚠️（ 尚未验证 ） 注意：苹果自己的DNS “只能解析” 苹果公司持有的部分域名（非全部域名），无法解析第三方域名❕
+                                  # 'GEOSITE:apple-intelligence'                        : [ 'https://cloudflare-dns.com/dns-query#🔰🇺🇸.Line—[Relay.VPS]—US.First'         , 'https://dns.google/dns-query#🔰🇺🇸.Line—[Relay.VPS]—US.First'             ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
+                                  # 'RULE-SET:AppleAI_Domain'                           : [ 'https://cloudflare-dns.com/dns-query#🔰🇺🇸.Line—[Relay.VPS]—US.First'         , 'https://dns.google/dns-query#🔰🇺🇸.Line—[Relay.VPS]—US.First'             ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
+                                  # 'GEOSITE:apple'                                     : [ 'https://cloudflare-dns.com/dns-query#🔰⚡.Line—[Relay.VPS]—Low.Latency'      , 'https://dns.google/dns-query#🔰⚡.Line—[Relay.VPS]—Low.Latency'          ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
+                                  # 'RULE-SET:Apple_Domain'                             : [ 'https://cloudflare-dns.com/dns-query#🔰⚡.Line—[Relay.VPS]—Low.Latency'      , 'https://dns.google/dns-query#🔰⚡.Line—[Relay.VPS]—Low.Latency'          ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
 
                                   # 微软 DNS分流 ⚠️⚠️⚠️ （ 尚未验证 ）
-                                  # 'GEOSITE:github'                                    : [ 'https://cloudflare-dns.com/dns-query#🔰⚡.Line—[Relay.VPS]—Low.Latency'      , 'https://dns.google/dns-query#🔰⚡.Line—[Relay.VPS]—Low.Latency'          ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
-                                  # 'RULE-SET:GitHub_Do_Resolve'                        : [ 'https://cloudflare-dns.com/dns-query#🔰⚡.Line—[Relay.VPS]—Low.Latency'      , 'https://dns.google/dns-query#🔰⚡.Line—[Relay.VPS]—Low.Latency'          ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
+                                  ##'GEOSITE:github'                                    : [ 'https://cloudflare-dns.com/dns-query#🔰⚡.Line—[Relay.VPS]—Low.Latency'      , 'https://dns.google/dns-query#🔰⚡.Line—[Relay.VPS]—Low.Latency'          ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
+                                  ##'RULE-SET:GitHub_Do_Resolve'                        : [ 'https://cloudflare-dns.com/dns-query#🔰⚡.Line—[Relay.VPS]—Low.Latency'      , 'https://dns.google/dns-query#🔰⚡.Line—[Relay.VPS]—Low.Latency'          ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
                                   # 'GEOSITE:bing'                                      : [ 'https://cloudflare-dns.com/dns-query#🔰🇺🇸.Line—[Relay.VPS]—US.First'         , 'https://dns.google/dns-query#🔰🇺🇸.Line—[Relay.VPS]—US.First'             ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
                                   # 'RULE-SET:Bing_Do_Resolve'                          : [ 'https://cloudflare-dns.com/dns-query#🔰🇺🇸.Line—[Relay.VPS]—US.First'         , 'https://dns.google/dns-query#🔰🇺🇸.Line—[Relay.VPS]—US.First'             ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
                                   # 'RULE-SET:MicrosoftEdge_Do_Resolve'                 : [ 'https://cloudflare-dns.com/dns-query#🔰🇺🇸.Line—[Relay.VPS]—US.First'         , 'https://dns.google/dns-query#🔰🇺🇸.Line—[Relay.VPS]—US.First'             ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
                                   # 'RULE-SET:Copilot_Domain'                           : [ 'https://cloudflare-dns.com/dns-query#🔰🇺🇸.Line—[Relay.VPS]—US.First'         , 'https://dns.google/dns-query#🔰🇺🇸.Line—[Relay.VPS]—US.First'             ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
-                                  # 'GEOSITE:microsoft'                                 :   'system'                                                                                                                                                       # 仅 Clash Meta 支持，但 Stash 3.x 不支持！  
-                                  # 'RULE-SET:Microsoft_Do_Resolve'                     :   'system'                                                                                                                                                       # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
+                                  # 'GEOSITE:microsoft'                                 : [ 'https://cloudflare-dns.com/dns-query#🔰⚡.Line—[Relay.VPS]—Low.Latency'      , 'https://dns.google/dns-query#🔰⚡.Line—[Relay.VPS]—Low.Latency'          ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！  
+                                  # 'RULE-SET:Microsoft_Do_Resolve'                     : [ 'https://cloudflare-dns.com/dns-query#🔰⚡.Line—[Relay.VPS]—Low.Latency'      , 'https://dns.google/dns-query#🔰⚡.Line—[Relay.VPS]—Low.Latency'          ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
         
                                   # # 以下为 'RULE-SET:GeositeCN_Domain' 的展开，主要应对 Stash 不支持 RULE-SET 的情况（ 一旦Stash支持后，请立刻删除以下规则 ）
         
@@ -6988,9 +6988,11 @@ dns                               :
                                      '+.zuoyebang.com'                                  : 'https://dns.alidns.com/dns-query'          # GeoSite:zuoyebang
                                      '+.zybang.com'                                     : 'https://dns.alidns.com/dns-query'          # GeoSite:zuoyebang
 
-                                   # 以下规则 ：非 GeositeCN 规则
+                                   # 以下规则 ：非 GeositeCN 规则                                                                     # 注意：苹果自己的DNS “只能解析” 苹果公司自己持有的部分域名（非全部域名），更是几乎无法解析第三方域名❕ 一定要验证后再使用❕❕❕
                                      '+.cdn-apple.com'                                  : 'https://doh.dns.apple.com/dns-query'       # 如果使用海外DNS，会导致 苹果系统更新的升级 极慢 # updates.cdn-apple.com  
-                                     '+.itunes.apple.com'                               : 'https://doh.dns.apple.com/dns-query'       # 如果使用海外DNS，会导致 苹果应用商店的升级 极慢 # iosapps.itunes.apple.com  
+                                     '+.apple.com'                                      : 'https://doh.dns.apple.com/dns-query'       # 如果使用海外DNS，会导致 苹果应用商店的升级 极慢 # iosapps.itunes.apple.com  
+                                     '+.icloud.com'                                     : 'https://doh.dns.apple.com/dns-query'       # 如果使用海外DNS，会导致 苹果应用商店的升级 极慢 # iosapps.itunes.apple.com  
+
 
 
 
