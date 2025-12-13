@@ -6989,10 +6989,26 @@ dns                               :
                                      '+.zuoyebang.com'                                  : 'https://dns.alidns.com/dns-query'          # GeoSite:zuoyebang
                                      '+.zybang.com'                                     : 'https://dns.alidns.com/dns-query'          # GeoSite:zuoyebang
 
-                                   # 以下规则 ：非 GeositeCN 规则                                                                     # 注意：苹果自己的DNS “只能解析” 苹果公司自己持有的部分域名（非全部域名），更是几乎无法解析第三方域名❕ 一定要验证后再使用❕❕❕
+                                   # 以下规则 ：非 GeositeCN 规则 （苹果分流规则）                                                    # 注意：苹果自己的DNS “只能解析” 苹果公司自己持有的部分域名（非全部域名），更是几乎无法解析第三方域名❕ 一定要验证后再使用❕❕❕
                                      '+.cdn-apple.com'                                  : 'https://dns.alidns.com/dns-query'          # 如果使用海外DNS，会导致 苹果系统更新的升级 极慢 # updates.cdn-apple.com  
                                      '+.apple.com'                                      : 'https://dns.alidns.com/dns-query'          # 如果使用海外DNS，会导致 苹果应用商店的升级 极慢 # iosapps.itunes.apple.com  
-                                     '+.icloud.com'                                     : 'https://dns.alidns.com/dns-query'          # 如果使用海外DNS，会导致 苹果应用商店的升级 极慢 # iosapps.itunes.apple.com  
+                                     '+.icloud.com'                                     : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.itunes.com'                                     : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.apple'                                          : 'https://dns.alidns.com/dns-query'          # proxy.safebrowsing.apple
+                                     '+.icloud-content.com'                             : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.apple-dns.net'                                  : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.mzstatic.com'                                   : 'https://dns.alidns.com/dns-query'          # apps.mzstatic.com
+                                     '+.apple-cloudkit.com'                             : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.aaplimg.com'                                    : 'https://dns.alidns.com/dns-query'          # 地图与图像资源
+                                     '+.apple-mapkit.com'                               : 'https://dns.alidns.com/dns-query'          # 地图服务
+                                     '+.digicert.com'                                   : 'https://dns.alidns.com/dns-query'          #
+                                     '+.entrust.net'                                    : 'https://dns.alidns.com/dns-query'          #
+                                     '+.sectigo.com'                                    : 'https://dns.alidns.com/dns-query'          # 部分旧证书或第三方App证书
+                                     '+.me.com'                                         : 'https://dns.alidns.com/dns-query'          #
+                                     '+.mac.com'                                        : 'https://dns.alidns.com/dns-query'          #
+                                     '+.apple-livephotoskit.com'                        : 'https://dns.alidns.com/dns-query'          #
+                                     '+.edgesuite.net'                                  : 'https://dns.alidns.com/dns-query'          #
+                                     '+.apple.co'                                       : 'https://dns.alidns.com/dns-query'          #
 
 
 
@@ -8084,7 +8100,7 @@ rules:
    #- RULE-SET        , iCloud_Do_Resolve                          , 📂.<Drive>—iCloud                               # , no-resolve                           # [3st-01]  [ Default : DIRECT      ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/iCloud                云存储（海外） - iCloud         
     - GEOSITE         , apple                                      , ☁️.<Apps>—Apple                                 #                                        # [4st-01]  [ Default : DIRECT      ]    
     - RULE-SET        , Apple_Domain                               , ☁️.<Apps>—Apple                                 #                                        # [4st-01]  [ Default : DIRECT      ]      https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Apple                大厂 - Apple                 
-    - IP-CIDR         , 17.0.0.0/8                                 , ☁️.<Apps>—Apple                                 # , no-resolve                           # [4st-01]  [ Default : DIRECT      ]     
+    - RULE-SET        , Apple_IP                                   , ☁️.<Apps>—Apple                                 #                                        # [4st-01]  [ Default : DIRECT      ]      https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Apple                大厂 - Apple                 
 
 
     - GEOSITE         , microsoft                                  , ☁️.<Apps>—Microsoft                             #                                        # [4st-01]  [ Default : DIRECT      ]      
@@ -8092,8 +8108,6 @@ rules:
    # 微软云服务，包含大量第三方公司，不宜启用 
    #- IP-CIDR         , 20.0.0.0/8                                 , ☁️.<Apps>—Microsoft                             # , no-resolve                           # [4st-01]  [ Default : DIRECT      ]     
    #- IP-CIDR         , 40.0.0.0/8                                 , ☁️.<Apps>—Microsoft                             # , no-resolve                           # [4st-01]  [ Default : DIRECT      ]     
-
-
 
 
 
@@ -8461,9 +8475,11 @@ rule-providers:
 
    # [4st-01] -  大厂  
     Google_Do_Resolve                         : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@latest/rule/Clash/Google/Google.yaml'                                                 , path : './ruleset/Google.yaml'                                        }            # [5st-01]  [ Default : US          ]     ☁️.<Apps>—Google                https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Google                大厂 - oogle                  
-    Microsoft_Do_Resolve                      : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@latest/rule/Clash/Microsoft/Microsoft.yaml'                                           , path : './ruleset/Microsoft.yaml'                                     }            # [5st-01]  [ Default : DIRECT      ]     ☁️.<Apps>—Microsoft             https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Microsoft             大厂 - Microsoft              
-    Apple_Domain                              : { type : 'http'  , behavior : 'domain'     , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@latest/rule/Clash/Apple/Apple_Domain.yaml'                                            , path : './ruleset/Apple_Domain.yaml'                                  }            # [5st-01]  [ Default : DIRECT      ]     ☁️.<Apps>—Apple                 https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Apple                 大厂 - Apple                  
     Amazon_Do_Resolve                         : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@latest/rule/Clash/Amazon/Amazon.yaml'                                                 , path : './ruleset/Amazon.yaml'                                        }            # [5st-01]  [ Default : US          ]     ☁️.<Apps>—Amazon                https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Amazon                购物 - Amazon                        
+    Microsoft_Do_Resolve                      : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@latest/rule/Clash/Microsoft/Microsoft.yaml'                                           , path : './ruleset/Microsoft.yaml'                                     }            # [5st-01]  [ Default : DIRECT      ]     ☁️.<Apps>—Microsoft             https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Microsoft             大厂 - Microsoft              
+   #Apple_Domain                              : { type : 'http'  , behavior : 'domain'     , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@latest/rule/Clash/Apple/Apple_Domain.yaml'                                            , path : './ruleset/Apple_Domain.yaml'                                  }            # [5st-01]  [ Default : DIRECT      ]     ☁️.<Apps>—Apple                 https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Apple                 大厂 - Apple                  
+    Apple_Domain                              : { type : 'http'  , behavior : 'domain'     , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/Accademia/Additional_Rule_For_Clash@latest/Apple/Apple_Domain.yaml'                                                , path : './ruleset/Apple_Domain.yaml'                                  }            # [3st-30]  [ Default : DIRECT      ]     ☁️.<Apps>—Apple                 https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/Apple                       大厂 - Apple                   
+    Apple_IP                                  : { type : 'http'  , behavior : 'ipcidr'     , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/Accademia/Additional_Rule_For_Clash@latest/Apple/Apple_IP.yaml'                                                    , path : './ruleset/Apple_IP.yaml'                                      }            # [3st-30]  [ Default : DIRECT      ]     ☁️.<Apps>—Apple                 https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/Apple                       大厂 - Apple                   
 
 
    # 🔻🔻🔻 开始 （ WhiteList ） 🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻  开始 （ WhiteList ）
