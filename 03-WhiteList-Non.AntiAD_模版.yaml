@@ -4,7 +4,7 @@
 #   Clash.Meta                    |     https://wiki.metacubex.one/config/                                             # 
 # --------------------------------+----------------------------------------------------------------------------------- #
 
-# v.2025.12.13
+# v.2025.12.15
 # ⚠️⚠️⚠️ 如果出现，显示不对齐的情况，请使用《 对齐中文字体 + 对齐emoji字体 》❕❕❕❕ 比如 'Inconsolata' 等字体
 
 #---------------------------------+------------------------------------------------------------------------------------+
@@ -7070,6 +7070,139 @@ dns                               :
                                      '+.virtualearth.net'                               : 'https://dns.alidns.com/dns-query'          # 
                                      '+.visualstudio.com'                               : 'https://dns.alidns.com/dns-query'          # 
                                      '+.vsassets.io'                                    : 'https://dns.alidns.com/dns-query'          # 
+                                   # 用于 HTTPDNS定位，匹配选用哪个CDN 
+                                     '+.microsoft.*.*'                                  : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.office.*.*'                                     : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.windows.*.*'                                    : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.microsoft.com.*.*'                              : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.microsoft365.com.*.*'                           : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.windows.com.*.*'                                : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.windows.net.*.*'                                : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.office.com.*.*'                                 : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.office365.com.*.*'                              : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.live.com.*.*'                                   : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.live.net.*.*'                                   : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.msn.com.*.*'                                    : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.bing.com.*.*'                                   : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.s-microsoft.com.*.*'                            : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.outlook.com.*.*'                                : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.hotmail.com.*.*'                                : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.office.net.*.*'                                 : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.onedrive.com.*.*'                               : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.1drv.com.*.*'                                   : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.1drv.ms.*.*'                                    : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.livefilestore.com.*.*'                          : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.onenote.com.*.*'                                : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.onenote.net.*.*'                                : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.sharepoint.com.*.*'                             : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.skype.com.*.*'                                  : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.skypeassets.com.*.*'                            : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.lync.com.*.*'                                   : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.microsoftonline.com.*.*'                        : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.microsoftonline-p.com.*.*'                      : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.microsoftonline-p.net.*.*'                      : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.msauth.net.*.*'                                 : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.msauthimages.net.*.*'                           : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.msftauth.net.*.*'                               : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.msftauthimages.net.*.*'                         : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.phonefactor.net.*.*'                            : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.msidentity.com.*.*'                             : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.msftidentity.com.*.*'                           : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.microsoftazuread-sso.com.*.*'                   : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.windowsupdate.com.*.*'                          : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.microsoftstore.com.*.*'                         : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.onestore.ms.*.*'                                : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.svc.ms.*.*'                                     : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.msftconnecttest.com.*.*'                        : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.msftncsi.com.*.*'                               : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.aka.ms.*.*'                                     : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.sfx.ms.*.*'                                     : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.gfx.ms.*.*'                                     : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.microsoft.com.edgesuite.net.*.*'                : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.otelrules.azureedge.net.*.*'                    : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.mlccdnprod.azureedge.net.*.*'                   : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.sharepointonline.com.*.*'                       : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.onmicrosoft.com.*.*'                            : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.microsoftusercontent.com.*.*'                   : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.msedge.net.*.*'                                 : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.msecnd.net.*.*'                                 : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.msocdn.com.*.*'                                 : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.aspnetcdn.com.*.*'                              : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.microsoft-com.akamaized.net.*.*'                : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.msn-com.akamaized.net.*.*'                      : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.informationprotection.azure.com.*.*'            : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.aadrm.com.*.*'                                  : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.virtualearth.net.*.*'                           : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.visualstudio.com.*.*'                           : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.vsassets.io.*.*'                                : 'https://dns.alidns.com/dns-query'          # 
+                                   # 用于 HTTPDNS定位，匹配选用哪个CDN 
+                                     '+.microsoft.*.*.*'                                : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.office.*.*.*'                                   : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.windows.*.*.*'                                  : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.microsoft.com.*.*.*'                            : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.microsoft365.com.*.*.*'                         : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.windows.com.*.*.*'                              : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.windows.net.*.*.*'                              : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.office.com.*.*.*'                               : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.office365.com.*.*.*'                            : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.live.com.*.*.*'                                 : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.live.net.*.*.*'                                 : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.msn.com.*.*.*'                                  : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.bing.com.*.*.*'                                 : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.s-microsoft.com.*.*.*'                          : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.outlook.com.*.*.*'                              : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.hotmail.com.*.*.*'                              : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.office.net.*.*.*'                               : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.onedrive.com.*.*.*'                             : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.1drv.com.*.*.*'                                 : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.1drv.ms.*.*.*'                                  : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.livefilestore.com.*.*.*'                        : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.onenote.com.*.*.*'                              : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.onenote.net.*.*.*'                              : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.sharepoint.com.*.*.*'                           : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.skype.com.*.*.*'                                : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.skypeassets.com.*.*.*'                          : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.lync.com.*.*.*'                                 : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.microsoftonline.com.*.*.*'                      : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.microsoftonline-p.com.*.*.*'                    : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.microsoftonline-p.net.*.*.*'                    : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.msauth.net.*.*.*'                               : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.msauthimages.net.*.*.*'                         : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.msftauth.net.*.*.*'                             : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.msftauthimages.net.*.*.*'                       : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.phonefactor.net.*.*.*'                          : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.msidentity.com.*.*.*'                           : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.msftidentity.com.*.*.*'                         : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.microsoftazuread-sso.com.*.*.*'                 : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.windowsupdate.com.*.*.*'                        : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.microsoftstore.com.*.*.*'                       : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.onestore.ms.*.*.*'                              : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.svc.ms.*.*.*'                                   : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.msftconnecttest.com.*.*.*'                      : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.msftncsi.com.*.*.*'                             : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.aka.ms.*.*.*'                                   : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.sfx.ms.*.*.*'                                   : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.gfx.ms.*.*.*'                                   : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.microsoft.com.edgesuite.net.*.*.*'              : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.otelrules.azureedge.net.*.*.*'                  : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.mlccdnprod.azureedge.net.*.*.*'                 : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.sharepointonline.com.*.*.*'                     : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.onmicrosoft.com.*.*.*'                          : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.microsoftusercontent.com.*.*.*'                 : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.msedge.net.*.*.*'                               : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.msecnd.net.*.*.*'                               : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.msocdn.com.*.*.*'                               : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.aspnetcdn.com.*.*.*'                            : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.microsoft-com.akamaized.net.*.*.*'              : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.msn-com.akamaized.net.*.*.*'                    : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.informationprotection.azure.com.*.*.*'          : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.aadrm.com.*.*.*'                                : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.virtualearth.net.*.*.*'                         : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.visualstudio.com.*.*.*'                         : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.vsassets.io.*.*.*'                              : 'https://dns.alidns.com/dns-query'          # 
+
+
+
 
 # ----------------------------------------------------------------------------------------------------------------------
 # DNS模块 
@@ -7218,11 +7351,11 @@ proxy-groups:
     - { name : '🇯🇵.<Bank>—JP'                                             , icon : ''                                                                                           , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'select'       , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [                                                                                                                                                                                                                             '🇯🇵.Line—[JP]'                                                          , '🔰🇯🇵.Line—[Relay.VPS]—JP.First'           , 'DIRECT' , 'REJECT'               ,  'REJECT-DROP'   ] }         #  [3st-12]  [ Default : JP          ]      BankJP_Do_Resolve           https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/Bank                        
 
    # [3st-13] -  专属网站（必须要所属国IP才能正常下单的网站，银行除外…）                                              
-    - { name : '🇺🇸.<HomeIP>—US'                                           , icon : ''                                                                                           , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'select'       , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [  '🌐🍟.Line—[Global]—US.HomeIP.First'                                                                                                                                                   , '🇺🇸🍟.Line—[US.HomeIP]'         , '🇺🇸.Line—[US]'            , '🔰🍟.Line—[Relay.VPS]—US.HomeIP.First'     ,'🔰🇺🇸.Line—[Relay.VPS]—US.First'            , 'DIRECT' , 'REJECT'               ,  'REJECT-DROP'   ] }         #  [3st-12]  [ Default : US          ]      BankUS_Do_Resolve           https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/HomeIP                        
-   #- { name : '🇨🇦.<HomeIP>—CA'                                           , icon : ''                                                                                           , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'select'       , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [  '🌐🍟.Line—[Global]—US.HomeIP.First'                                                                                                                                                   , '🇺🇸🍟.Line—[US.HomeIP]'         , '🇺🇸.Line—[US]'            , '🔰🍟.Line—[Relay.VPS]—US.HomeIP.First'     ,'🔰🇺🇸.Line—[Relay.VPS]—US.First'            , 'DIRECT' , 'REJECT'               ,  'REJECT-DROP'   ] }         #  [3st-12]  [ Default : US          ]      BankUS_Do_Resolve           https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/HomeIP                        
-   #- { name : '🇬🇧.<HomeIP>—UK'                                           , icon : ''                                                                                           , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'select'       , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [                                                                                                                                                                                                                                                                                                                                                        '🇬🇧.Line—[UK]'                                                                        , 'DIRECT' , 'REJECT'               ,  'REJECT-DROP'   ] }         #  [3st-12]  [ Default : UK          ]      BankUK_Do_Resolve           https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/HomeIP                        
-   #- { name : '🇦🇺.<HomeIP>—AU'                                           , icon : ''                                                                                           , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'select'       , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [                                                                                                                                                                                                                                                                                                                                                                                     '🇦🇺.Line—[AU]'                                           , 'DIRECT' , 'REJECT'               ,  'REJECT-DROP'   ] }         #  [3st-12]  [ Default : AU          ]      BankAU_Do_Resolve           https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/HomeIP                        
-    - { name : '🇯🇵.<HomeIP>—JP'                                           , icon : ''                                                                                           , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'select'       , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [                                                                                                                                                                                                                                                                                                                         '🇯🇵.Line—[JP]'                                                                                                       , 'DIRECT' , 'REJECT'               ,  'REJECT-DROP'   ] }         #  [3st-12]  [ Default : JP          ]      BankJP_Do_Resolve           https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/HomeIP                        
+    - { name : '🇺🇸.<HomeIP>—US'                                           , icon : ''                                                                                           , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'select'       , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [ '🌐🍟.Line—[Global]—US.HomeIP.First'                                                                                                                                                   , '🇺🇸🍟.Line—[US.HomeIP]'         , '🇺🇸.Line—[US]'            , '🔰🍟.Line—[Relay.VPS]—US.HomeIP.First'     ,'🔰🇺🇸.Line—[Relay.VPS]—US.First'            , 'DIRECT' , 'REJECT'               ,  'REJECT-DROP'   ] }         #  [3st-12]  [ Default : US          ]      BankUS_Do_Resolve           https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/HomeIP                        
+   #- { name : '🇨🇦.<HomeIP>—CA'                                           , icon : ''                                                                                           , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'select'       , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [ '🌐🍟.Line—[Global]—US.HomeIP.First'                                                                                                                                                   , '🇺🇸🍟.Line—[US.HomeIP]'         , '🇺🇸.Line—[US]'            , '🔰🍟.Line—[Relay.VPS]—US.HomeIP.First'     ,'🔰🇺🇸.Line—[Relay.VPS]—US.First'            , 'DIRECT' , 'REJECT'               ,  'REJECT-DROP'   ] }         #  [3st-12]  [ Default : US          ]      BankUS_Do_Resolve           https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/HomeIP                        
+   #- { name : '🇬🇧.<HomeIP>—UK'                                           , icon : ''                                                                                           , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'select'       , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [                                                                                                                                                                                                                                                                                            '🇬🇧.Line—[UK]'                                           , 'DIRECT' , 'REJECT'               ,  'REJECT-DROP'   ] }         #  [3st-12]  [ Default : UK          ]      BankUK_Do_Resolve           https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/HomeIP                        
+   #- { name : '🇦🇺.<HomeIP>—AU'                                           , icon : ''                                                                                           , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'select'       , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [                                                                                                                                                                                                                                                                                                                         '🇦🇺.Line—[AU]'              , 'DIRECT' , 'REJECT'               ,  'REJECT-DROP'   ] }         #  [3st-12]  [ Default : AU          ]      BankAU_Do_Resolve           https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/HomeIP                        
+    - { name : '🇯🇵.<HomeIP>—JP'                                           , icon : ''                                                                                           , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'select'       , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [                                                                                                                                                                                                                                                             '🇯🇵.Line—[JP]'                                                                          , 'DIRECT' , 'REJECT'               ,  'REJECT-DROP'   ] }         #  [3st-12]  [ Default : JP          ]      BankJP_Do_Resolve           https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/HomeIP                        
 
    # [3st-14] - 不支持VPN的网站（除 银行、HomeIP 分流规则以外的 网站）                                            
     - { name : '❌.<UnsupportVPN>'                                        , icon : ''                                                                                           , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'select'       , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [  'DIRECT'                                       , '🔰⬇️.Line—[Relay.VPS]—Max.Traffic'           , '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , '🔰⬇️.Line—[Relay.VPS]—Max.Traffic'            , '🇺🇸🍟.Line—[US.HomeIP]'         , '🇺🇸.Line—[US]'               , '🇯🇵.Line—[JP]'             , '🇬🇧.Line—[UK]'             , '🇦🇺.Line—[AU]'              , 'DIRECT' , 'REJECT'               ,  'REJECT-DROP'   ] }         #  [3st-01]  [ Default : DIRECT      ]      UnsupportVPN_Do_Resolve     https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/UnsupportVPN                  
