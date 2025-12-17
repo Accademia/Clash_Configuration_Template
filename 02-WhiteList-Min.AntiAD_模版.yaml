@@ -149,49 +149,201 @@ dns                               :
 
   nameserver-policy               :                                                     # DNS分流规则      
 
-                                  ### --------------------------------------------------------------------------------------------------
-                                  ### 修改IP归属地显示 DNS分流 ⚠️⚠️⚠️ 
-                                  ### --------------------------------------------------------------------------------------------------
-                                  #  'RULE-SET:FakeLocationBiliBili_Do_Resolve'         : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>—BiliBili'                       , 'https://dns.google/dns-query#🇨🇳.<ShowIP>—BiliBili'                       ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
-                                  #  'RULE-SET:FakeLocationDouYin_Do_Resolve'           : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>—抖音'                           , 'https://dns.google/dns-query#🇨🇳.<ShowIP>—抖音'                           ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
-                                  #  'RULE-SET:FakeLocationKuaiShou_Do_Resolve'         : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>—快手'                           , 'https://dns.google/dns-query#🇨🇳.<ShowIP>—快手'                           ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
-                                  #  'RULE-SET:FakeLocationXiaoHongShu_Do_Resolve'      : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>—小红书'                         , 'https://dns.google/dns-query#🇨🇳.<ShowIP>—小红书'                         ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
-                                  #  'RULE-SET:FakeLocationXiGua_Do_Resolve'            : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>—西瓜'                           , 'https://dns.google/dns-query#🇨🇳.<ShowIP>—西瓜'                           ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
-                                  #  'RULE-SET:FakeLocationWeiBo_Do_Resolve'            : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>—微博'                           , 'https://dns.google/dns-query#🇨🇳.<ShowIP>—微博'                           ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
-                                  #  'RULE-SET:FakeLocationZhiHu_Do_Resolve'            : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>—知乎'                           , 'https://dns.google/dns-query#🇨🇳.<ShowIP>—知乎'                           ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
-                                  #  'RULE-SET:FakeLocationTieBa_Do_Resolve'            : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>—贴吧'                           , 'https://dns.google/dns-query#🇨🇳.<ShowIP>—贴吧'                           ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
-                                  #  'RULE-SET:FakeLocationDouBan_Do_Resolve'           : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>—豆瓣'                           , 'https://dns.google/dns-query#🇨🇳.<ShowIP>—豆瓣'                           ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
-                                  #  'RULE-SET:FakeLocationXianYu_Do_Resolve'           : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>—闲鱼'                           , 'https://dns.google/dns-query#🇨🇳.<ShowIP>—闲鱼'                           ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
+                                  # 以下被注释的原因 ： ⚠️⚠️⚠️⚠️ 仅 Clash Meta 支持，但 Stash 3.x 不支持！ ⚠️⚠️⚠️⚠️  
+                                  
+                                  # 注意：当域名 ，是非泄漏敏感域名时（ = 国内域名 或 默认直连的国外域名），强烈建议，同时使用 “阿里DNS、谷歌DNS” ，以便增强鲁棒性，并获得更最快的DNS响应结果❕
 
                                   ### --------------------------------------------------------------------------------------------------
-                                  ### 中国 DNS分流
+                                  ###  DNS分流 ： 修改IP归属地显示 
                                   ### --------------------------------------------------------------------------------------------------
-                                  #  'RULE-SET:GeositeCN_Domain'                        : [ 'https://dns.alidns.com/dns-query#🇨🇳.<Country>—CN'                            , 'https://dns.google/dns-query#🇨🇳.<Country>—CN'                            ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
+                                  
+                                  #  'RULE-SET:FakeLocationBiliBili_Do_Resolve'         : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>—BiliBili'                       , 'https://dns.google/dns-query#🇨🇳.<ShowIP>—BiliBili'                       ]    # [2st-01]
+                                  #  'RULE-SET:FakeLocationDouYin_Do_Resolve'           : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>—抖音'                           , 'https://dns.google/dns-query#🇨🇳.<ShowIP>—抖音'                           ]    # [2st-01]
+                                  #  'RULE-SET:FakeLocationKuaiShou_Do_Resolve'         : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>—快手'                           , 'https://dns.google/dns-query#🇨🇳.<ShowIP>—快手'                           ]    # [2st-01]
+                                  #  'RULE-SET:FakeLocationXiaoHongShu_Do_Resolve'      : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>—小红书'                         , 'https://dns.google/dns-query#🇨🇳.<ShowIP>—小红书'                         ]    # [2st-01]
+                                  #  'RULE-SET:FakeLocationXiGua_Do_Resolve'            : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>—西瓜'                           , 'https://dns.google/dns-query#🇨🇳.<ShowIP>—西瓜'                           ]    # [2st-01]
+                                  #  'RULE-SET:FakeLocationWeiBo_Do_Resolve'            : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>—微博'                           , 'https://dns.google/dns-query#🇨🇳.<ShowIP>—微博'                           ]    # [2st-01]
+                                  #  'RULE-SET:FakeLocationZhiHu_Do_Resolve'            : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>—知乎'                           , 'https://dns.google/dns-query#🇨🇳.<ShowIP>—知乎'                           ]    # [2st-01]
+                                  #  'RULE-SET:FakeLocationTieBa_Do_Resolve'            : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>—贴吧'                           , 'https://dns.google/dns-query#🇨🇳.<ShowIP>—贴吧'                           ]    # [2st-01]
+                                  #  'RULE-SET:FakeLocationDouBan_Do_Resolve'           : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>—豆瓣'                           , 'https://dns.google/dns-query#🇨🇳.<ShowIP>—豆瓣'                           ]    # [2st-01]
+                                  #  'RULE-SET:FakeLocationXianYu_Do_Resolve'           : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>—闲鱼'                           , 'https://dns.google/dns-query#🇨🇳.<ShowIP>—闲鱼'                           ]    # [2st-01]
+
 
                                   ### --------------------------------------------------------------------------------------------------
-                                  ### 苹果 DNS分流                                       #  注意：请不要使用苹果自己的DNS（ 苹果公司DNS 无法解析第三方域名）❕
+                                  ###  DNS分流 ： 中国 
                                   ### --------------------------------------------------------------------------------------------------
+                                  
+                                  #  'RULE-SET:GeositeCN_Domain'                        : [ 'https://dns.alidns.com/dns-query#🇨🇳.<Country>—CN'                            , 'https://dns.google/dns-query#🇨🇳.<Country>—CN'                            ]    # [2st-05]
+                                  #  'RULE-SET:CloudflareCN_Do_Resolve'                 : [ 'https://dns.alidns.com/dns-query#🇨🇳.<Country>—CN'                            , 'https://dns.google/dns-query#🇨🇳.<Country>—CN'                            ]    # [6st-01]
+                                  #  'GEOSITE:cloudflare-cn'                            : [ 'https://dns.alidns.com/dns-query#🇨🇳.<Country>—CN'                            , 'https://dns.google/dns-query#🇨🇳.<Country>—CN'                            ]    # [6st-01]
+                                  #  'RULE-SET:AmazonCN_Do_Resolve'                     : [ 'https://dns.alidns.com/dns-query#🇨🇳.<Country>—CN'                            , 'https://dns.google/dns-query#🇨🇳.<Country>—CN'                            ]    # [4st-01] 
+                                  #  'GEOSITE:amazon@cn'                                : [ 'https://dns.alidns.com/dns-query#🇨🇳.<Country>—CN'                            , 'https://dns.google/dns-query#🇨🇳.<Country>—CN'                            ]    # [4st-01] 
+
+
+                                  ### --------------------------------------------------------------------------------------------------
+                                  ###  DNS分流 ： 公有云 \ P2P下载 (海外)
+                                  ### --------------------------------------------------------------------------------------------------
+                                  
+                                  #  'GEOSITE:onedrive'                                  : [ 'https://dns.alidns.com/dns-query#📂.<Drive>—OneDrive'                       , 'https://dns.google/dns-query#📂.<Drive>—OneDrive'                        ]    # [3st-01] 
+                                  #  'RULE-SET:OneDrive_Do_Resolve'                      : [ 'https://cloudflare-dns.com/dns-query#📂.<Drive>—OneDrive'                   , 'https://dns.google/dns-query#📂.<Drive>—OneDrive'                        ]    # [3st-01] 
+                                  # #'GEOSITE:icloud'                                    : [ 'https://dns.alidns.com/dns-query#📂.<Drive>—iCloud'                         , 'https://dns.google/dns-query#📂.<Drive>—iCloud'                          ]    # [3st-01] 
+                                  # #'RULE-SET:iCloud_Do_Resolve'                        : [ 'https://cloudflare-dns.com/dns-query#📂.<Drive>—iCloud'                     , 'https://dns.google/dns-query#📂.<Drive>—iCloud'                          ]    # [3st-01] 
+                                  #  'GEOSITE:dropbox'                                   : [ 'https://cloudflare-dns.com/dns-query#📂.<Drive>—Dropbox'                    , 'https://dns.google/dns-query#📂.<Drive>—Dropbox'                         ]    # [3st-01] 
+                                  #  'RULE-SET:Dropbox_Do_Resolve'                       : [ 'https://cloudflare-dns.com/dns-query#📂.<Drive>—Dropbox'                    , 'https://dns.google/dns-query#📂.<Drive>—Dropbox'                         ]    # [3st-01] 
+                                  #  'GEOSITE:mega'                                      : [ 'https://cloudflare-dns.com/dns-query#📂.<Drive>—MEGA'                       , 'https://dns.google/dns-query#📂.<Drive>—MEGA'                            ]    # [3st-01] 
+                                  #  'RULE-SET:MEGA_Do_Resolve'                          : [ 'https://cloudflare-dns.com/dns-query#📂.<Drive>—MEGA'                       , 'https://dns.google/dns-query#📂.<Drive>—MEGA'                            ]    # [3st-01] 
+                                  #  'GEOSITE:imgur'                                     : [ 'https://cloudflare-dns.com/dns-query#📂.<Drive>—Imgur'                      , 'https://dns.google/dns-query#📂.<Drive>—Imgur'                           ]    # [3st-01] 
+                                  #  'RULE-SET:Imgur_Do_Resolve'                         : [ 'https://cloudflare-dns.com/dns-query#📂.<Drive>—Imgur'                      , 'https://dns.google/dns-query#📂.<Drive>—Imgur'                           ]    # [3st-01] 
+                                  #  'RULE-SET:WaybackMachine_Domain'                    : [ 'https://cloudflare-dns.com/dns-query#📂.<Drive>—InternetArchive'            , 'https://dns.google/dns-query#📂.<Drive>—InternetArchive'                 ]    # [3st-04] 
+                                  #  'GEOSITE:category-pt'                               : [ 'https://cloudflare-dns.com/dns-query#⬇️.<P2P>—PT-Server'                     , 'https://dns.google/dns-query#⬇️.<P2P>—PT-Server'                          ]    # [3st-04] 
+                                  #  'RULE-SET:PrivateTracker_Do_Resolve'                : [ 'https://cloudflare-dns.com/dns-query#⬇️.<P2P>—PT-Server'                     , 'https://dns.google/dns-query#⬇️.<P2P>—PT-Server'                          ]    # [3st-04] 
+
+
+                                  ### --------------------------------------------------------------------------------------------------
+                                  ###  DNS分流 ： 金融
+                                  ### --------------------------------------------------------------------------------------------------
+
+                                  #  'GEOSITE:paypal'                                    : [ 'https://cloudflare-dns.com/dns-query#💰.<Finance>—Paypal'                   , 'https://dns.google/dns-query#💰.<Finance>—Paypal'                        ]    # [3st-11]
+                                  #  'RULE-SET:Paypal_Do_Resolve'                        : [ 'https://cloudflare-dns.com/dns-query#💰.<Finance>—Paypal'                   , 'https://dns.google/dns-query#💰.<Finance>—Paypal'                        ]    # [3st-11]
+                                  #  'GEOSITE:wise'                                      : [ 'https://cloudflare-dns.com/dns-query#💰.<Finance>—Wise'                     , 'https://dns.google/dns-query#💰.<Finance>—Wise'                          ]    # [3st-11]
+                                  #  'RULE-SET:Wise_Do_Resolve'                          : [ 'https://cloudflare-dns.com/dns-query#💰.<Finance>—Wise'                     , 'https://dns.google/dns-query#💰.<Finance>—Wise'                          ]    # [3st-11]
+                                  #  'GEOSITE:binance'                                   : [ 'https://cloudflare-dns.com/dns-query#₿.<Crypto>—Binance'                    , 'https://dns.google/dns-query#₿.<Crypto>—Binance'                         ]    # [3st-11]
+                                  #  'RULE-SET:Binance_Do_Resolve'                       : [ 'https://cloudflare-dns.com/dns-query#₿.<Crypto>—Binance'                    , 'https://dns.google/dns-query#₿.<Crypto>—Binance'                         ]    # [3st-11]
+                                  #  'GEOSITE:okx'                                       : [ 'https://cloudflare-dns.com/dns-query#₿.<Crypto>—OKX'                        , 'https://dns.google/dns-query#₿.<Crypto>—OKX'                             ]    # [3st-11]
+                                  #  'RULE-SET:OKX_Do_Resolve'                           : [ 'https://cloudflare-dns.com/dns-query#₿.<Crypto>—OKX'                        , 'https://dns.google/dns-query#₿.<Crypto>—OKX'                             ]    # [3st-11]
+                                  #  'RULE-SET:Monzo_Do_Resolve'                         : [ 'https://cloudflare-dns.com/dns-query#💳.<Virtual>—Monzo'                    , 'https://dns.google/dns-query#💳.<Virtual>—Monzo'                         ]    # [3st-11]
+                                  #  'RULE-SET:Revolut_Do_Resolve'                       : [ 'https://cloudflare-dns.com/dns-query#💳.<Virtual>—Revolut'                  , 'https://dns.google/dns-query#💳.<Virtual>—Revolut'                       ]    # [3st-11]
+
+                                  ### --------------------------------------------------------------------------------------------------
+                                  ###  DNS分流 ： 各国银行 
+                                  ### --------------------------------------------------------------------------------------------------
+
+                                  #  'RULE-SET:BankUS_Domain'                           : [ 'https://cloudflare-dns.com/dns-query#🇺🇸.<Bank>—US                            , 'https://dns.google/dns-query#🇺🇸.<Bank>—US                                ]    # [3st-12]   
+                                  #  'RULE-SET:BankCA_Domain'                           : [ 'https://cloudflare-dns.com/dns-query#🇨🇦.<Bank>—CA                            , 'https://dns.google/dns-query#🇨🇦.<Bank>—CA                                ]    # [3st-12]  
+                                  #  'RULE-SET:BankUK_Domain'                           : [ 'https://cloudflare-dns.com/dns-query#🇬🇧.<Bank>—UK                            , 'https://dns.google/dns-query#🇬🇧.<Bank>—UK                                ]    # [3st-12]  
+                                  #  'RULE-SET:BankAU_Domain'                           : [ 'https://cloudflare-dns.com/dns-query#🇦🇺.<Bank>—AU                            , 'https://dns.google/dns-query#🇦🇺.<Bank>—AU                                ]    # [3st-12]  
+                                  #  'RULE-SET:BankJP_Domain'                           : [ 'https://cloudflare-dns.com/dns-query#🇯🇵.<Bank>—JP                            , 'https://dns.google/dns-query#🇯🇵.<Bank>—JP                                ]    # [3st-12]  
+                                  #  'RULE-SET:BankHK_Domain'                           : [ 'https://cloudflare-dns.com/dns-query#🇭🇰.<Bank>—HK                            , 'https://dns.google/dns-query#🇭🇰.<Bank>—HK                                ]    # [3st-12]  
+                                  #  'RULE-SET:BankSG_Domain'                           : [ 'https://cloudflare-dns.com/dns-query#🇸🇬.<Bank>—SG                            , 'https://dns.google/dns-query#🇸🇬.<Bank>—SG                                ]    # [3st-12]  
+                                  # #'RULE-SET:BankDE_Domain'                           : [ 'https://cloudflare-dns.com/dns-query#🇳🇱.<Bank>—NL                            , 'https://dns.google/dns-query#🇳🇱.<Bank>—NL                                ]    # [3st-12]  
+                                  # #'RULE-SET:BankNL_Domain'                           : [ 'https://cloudflare-dns.com/dns-query#🇩🇪.<Bank>—DE                            , 'https://dns.google/dns-query#🇩🇪.<Bank>—DE                                ]    # [3st-12]  
+                                  # #'RULE-SET:BankFR_Domain'                           : [ 'https://cloudflare-dns.com/dns-query#🇫🇷.<Bank>—FR                            , 'https://dns.google/dns-query#🇫🇷.<Bank>—FR                                ]    # [3st-12]  
+
+
+                                  ### --------------------------------------------------------------------------------------------------
+                                  ###  DNS分流 ： HomeIP 
+                                  ### --------------------------------------------------------------------------------------------------
+                                  
+                                  #  'RULE-SET:HomeIPUS_Do_Resolve'                     : [ 'https://cloudflare-dns.com/dns-query#🇺🇸.<HomeIP>—US                          , 'https://dns.google/dns-query#🇺🇸.<HomeIP>—US                              ]    # [3st-13]   
+                                  #  'RULE-SET:HomeIPJP_Do_Resolve'                     : [ 'https://cloudflare-dns.com/dns-query#🇯🇵.<HomeIP>—JP                          , 'https://dns.google/dns-query#🇯🇵.<HomeIP>—JP                              ]    # [3st-13]   
+                               
+
+                                  ### --------------------------------------------------------------------------------------------------
+                                  ###  DNS分流 ： 游戏 
+                                  ### --------------------------------------------------------------------------------------------------
+                                  
+                                  #  'GEOSITE:xbox'                                     : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—Xbox'                             , 'https://dns.google/dns-query#🕹️.<Game>—Xbox'                             ]    # [3st-21] 
+                                  #  'RULE-SET:Xbox_Do_Resolve'                         : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—Xbox'                             , 'https://dns.google/dns-query#🕹️.<Game>—Xbox'                             ]    # [3st-21] 
+                                  #  'GEOSITET:playstation'                             : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—PlayStation'                      , 'https://dns.google/dns-query#🕹️.<Game>—PlayStation'                      ]    # [3st-21] 
+                                  #  'RULE-SET:PlayStation_Do_Resolve'                  : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—PlayStation'                      , 'https://dns.google/dns-query#🕹️.<Game>—PlayStation'                      ]    # [3st-21] 
+                                  #  'GEOSITE:nintendo'                                 : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—Nintendo'                         , 'https://dns.google/dns-query#🕹️.<Game>—Nintendo'                         ]    # [3st-21] 
+                                  #  'RULE-SET:Nintendo_Do_Resolve'                     : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—Nintendo'                         , 'https://dns.google/dns-query#🕹️.<Game>—Nintendo'                         ]    # [3st-21] 
+
+                                  #  'GEOSITE:steam'                                    : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—Steam'                            , 'https://dns.google/dns-query#🕹️..<Game>—Steam'                           ]    # [3st-21] 
+                                  #  'RULE-SET:Steam_Do_Resolve'                        : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—Steam'                            , 'https://dns.google/dns-query#🕹️..<Game>—Steam'                           ]    # [3st-21] 
+                                  #  'GEOSITE:epicgames'                                : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—EPIC'                             , 'https://dns.google/dns-query#🕹️..<Game>—EPIC'                            ]    # [3st-21] 
+                                  #  'RULE-SET:EPIC_Do_Resolve'                         : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—EPIC'                             , 'https://dns.google/dns-query#🕹️..<Game>—EPIC'                            ]    # [3st-21] 
+                                  #  'GEOSITE:gog'                                      : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—GOG'                              , 'https://dns.google/dns-query#🕹️..<Game>—GOG'                             ]    # [3st-21] 
+                                  #  'RULE-SET:GOG_Do_Resolve'                          : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—GOG'                              , 'https://dns.google/dns-query#🕹️..<Game>—GOG'                             ]    # [3st-21] 
+                                  #  'GEOSITE:rockstar'                                 : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—RockStar'                         , 'https://dns.google/dns-query#🕹️..<Game>—RockStar'                        ]    # [3st-21] 
+                                  #  'RULE-SET:RockStar_Do_Resolve'                     : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—RockStar'                         , 'https://dns.google/dns-query#🕹️..<Game>—RockStar'                        ]    # [3st-21] 
+                                  #  'GEOSITE:ea'                                       : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—EA.Origin'                        , 'https://dns.google/dns-query#🕹️..<Game>—EA.Origin'                       ]    # [3st-21] 
+                                  #  'RULE-SET:EA_Do_Resolve'                           : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—EA.Origin'                        , 'https://dns.google/dns-query#🕹️..<Game>—EA.Origin'                       ]    # [3st-21] 
+                                  #  'GEOSITE:origin'                                   : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—EA.Origin'                        , 'https://dns.google/dns-query#🕹️..<Game>—EA.Origin'                       ]    # [3st-21] 
+                                  #  'RULE-SET:Origin_Do_Resolve'                       : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—EA.Origin'                        , 'https://dns.google/dns-query#🕹️..<Game>—EA.Origin'                       ]    # [3st-21] 
+                                  #  'GEOSITE:ubisoft'                                  : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>——UbiSoft'                         , 'https://dns.google/dns-query#🕹️..<Game>——UbiSoft'                        ]    # [3st-21] 
+                                  #  'RULE-SET:UBI_Do_Resolve'                          : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>——UbiSoft'                         , 'https://dns.google/dns-query#🕹️..<Game>——UbiSoft'                        ]    # [3st-21] 
+                                  #  'RULE-SET:Ubisoft_Do_Resolve'                      : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>——UbiSoft'                         , 'https://dns.google/dns-query#🕹️..<Game>——UbiSoft'                        ]    # [3st-21] 
+
+
+                                  ### --------------------------------------------------------------------------------------------------
+                                  ###  DNS分流 ： 苹果             #  注意：请不要使用苹果自己的DNS（ 苹果公司DNS 无法解析第三方域名）❕
+                                  ### --------------------------------------------------------------------------------------------------
+                                  
                                   #  'token.safebrowsing.apple'                         : [ 'https://cloudflare-dns.com/dns-query#🔰⚡.Line—[Relay.VPS]—Low.Latency'      , 'https://dns.google/dns-query#🔰⚡.Line—[Relay.VPS]—Low.Latency'          ]    # 注意，中国大陆的DNS无法解析 token.safebrowsing.apple ⚠️⚠️⚠️
-                                  #  'RULE-SET:AppleAI_Domain'                          : [ 'https://cloudflare-dns.com/dns-query#🔰⚡.Line—[Relay.VPS]—Low.Latency'      , 'https://dns.google/dns-query#🔰⚡.Line—[Relay.VPS]—Low.Latency'          ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
-                                  #  'RULE-SET:Apple_Domain'                            : [ 'https://dns.alidns.com/dns-query#☁️.<Apps>—Apple'                            , 'https://dns.google/dns-query#☁️.<Apps>—Apple'                            ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
-
-                                  ### --------------------------------------------------------------------------------------------------
-                                  ### 微软 DNS分流 ⚠️⚠️⚠️ （ 尚未在Win11验证 ）
-                                  ### --------------------------------------------------------------------------------------------------
-                                  #  'RULE-SET:Copilot_Domain'                          : [ 'https://cloudflare-dns.com/dns-query#🔰🇺🇸.Line—[Relay.VPS]—US.First'         , 'https://dns.google/dns-query#🔰🇺🇸.Line—[Relay.VPS]—US.First'             ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
-                                  #  'RULE-SET:MicrosoftAPPs_Domain'                    : [ 'https://dns.alidns.com/dns-query#☁️.<Apps>—Microsoft'                        , 'https://dns.google/dns-query#☁️.<Apps>—Microsoft'                        ]    # 仅 Clash Meta 支持，但 Stash 3.x 不支持！
-
-                                  ### --------------------------------------------------------------------------------------------------
-                                  #  'GEOSITE:xbox'                                     : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—Xbox'                             , 'https://dns.google/dns-query#🕹️.<Game>—Xbox'                             ]    ### Xbox         DNS分流 
-                                  #  'RULE-SET:Xbox_Do_Resolve'                         : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—Xbox'                             , 'https://dns.google/dns-query#🕹️.<Game>—Xbox'                             ]    ### Xbox         DNS分流 
-                                  #  'GEOSITET:playstation'                             : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—PlayStation'                      , 'https://dns.google/dns-query#🕹️.<Game>—PlayStation'                      ]    ### PlayStation  DNS分流 
-                                  #  'RULE-SET:PlayStation_Do_Resolve'                  : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—PlayStation'                      , 'https://dns.google/dns-query#🕹️.<Game>—PlayStation'                      ]    ### PlayStation  DNS分流 
-                                  #  'GEOSITE:nintendo'                                 : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—Nintendo'                         , 'https://dns.google/dns-query#🕹️.<Game>—Nintendo'                         ]    ### Nintendo     DNS分流 
-                                  #  'RULE-SET:Nintendo_Do_Resolve'                     : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—Nintendo'                         , 'https://dns.google/dns-query#🕹️.<Game>—Nintendo'                         ]    ### Nintendo     DNS分流 
-                                  ### --------------------------------------------------------------------------------------------------
+                                  #  'RULE-SET:AppleAI_Domain'                          : [ 'https://cloudflare-dns.com/dns-query#🔰⚡.Line—[Relay.VPS]—Low.Latency'      , 'https://dns.google/dns-query#🔰⚡.Line—[Relay.VPS]—Low.Latency'          ]    # [3st-29]
+                                  #  'RULE-SET:Apple_Domain'                            : [ 'https://dns.alidns.com/dns-query#☁️.<Apps>—Apple'                            , 'https://dns.google/dns-query#☁️.<Apps>—Apple'                            ]    # [4st-01]
 
 
-                                  # # 以下为 上述 规则的展开，主要应对 Stash 不支持 RULE-SET 的情况（ 一旦Stash支持后，请立刻删除以下规则 ）
+                                  ### --------------------------------------------------------------------------------------------------
+                                  ###  DNS分流 ： 微软 
+                                  ### --------------------------------------------------------------------------------------------------
+                                  
+                                  #  'RULE-SET:Copilot_Domain'                          : [ 'https://cloudflare-dns.com/dns-query#🔰🇺🇸.Line—[Relay.VPS]—US.First'         , 'https://dns.google/dns-query#🔰🇺🇸.Line—[Relay.VPS]—US.First'             ]    # [3st-29]
+                                  #  'RULE-SET:MicrosoftAPPs_Domain'                    : [ 'https://dns.alidns.com/dns-query#☁️.<Apps>—Microsoft'                        , 'https://dns.google/dns-query#☁️.<Apps>—Microsoft'                        ]    # [4st-01]
+
+
+                                  ### --------------------------------------------------------------------------------------------------
+                                  ###  DNS分流 ： 国家地区 
+                                  ### --------------------------------------------------------------------------------------------------
+                                  
+                                  #  'RULE-SET:GeoRouting_America_North_ccTLD_Domain'   : [ 'https://cloudflare-dns.com/dns-query#🌎.<Region>—North.America               , 'https://dns.google/dns-query#🌎.<Region>—North.America                   ]    # [5st-02]      
+                                  #  'RULE-SET:GeoRouting_America_South_ccTLD_Domain'   : [ 'https://cloudflare-dns.com/dns-query#🌎.<Region>—South.America               , 'https://dns.google/dns-query#🌎.<Region>—South.America                   ]    # [5st-02]      
+                                  #  'RULE-SET:GeoRouting_Europe_West_ccTLD_Domain'     : [ 'https://cloudflare-dns.com/dns-query#🌍.<Region>—Europe                      , 'https://dns.google/dns-query#🌍.<Region>—Europe                          ]    # [5st-02]      
+                                  #  'RULE-SET:GeoRouting_Europe_East_ccTLD_Domain'     : [ 'https://cloudflare-dns.com/dns-query#🌍.<Region>—Europe                      , 'https://dns.google/dns-query#🌍.<Region>—Europe                          ]    # [5st-02]      
+                                  #  'RULE-SET:GeoRouting_Oceania_ccTLD_Domain'         : [ 'https://cloudflare-dns.com/dns-query#🌏.<Region>—Oceania                     , 'https://dns.google/dns-query#🌏.<Region>—Oceania                         ]    # [5st-02]      
+                                  #  'RULE-SET:GeoRouting_Antarctica_ccTLD_Domain'      : [ 'https://cloudflare-dns.com/dns-query#🌏.<Region>—Oceania                     , 'https://dns.google/dns-query#🌏.<Region>—Oceania                         ]    # [5st-02]      
+                                  #  'RULE-SET:GeoRouting_Asia_East_ccTLD_Domain'       : [ 'https://cloudflare-dns.com/dns-query#🌏.<Region>—East.Asia                   , 'https://dns.google/dns-query#🌏.<Region>—East.Asia                       ]    # [5st-02]      
+                                  #  'RULE-SET:GeoRouting_Asia_EastSouth_ccTLD_Domain'  : [ 'https://cloudflare-dns.com/dns-query#🌏.<Region>—East.Asia                   , 'https://dns.google/dns-query#🌏.<Region>—East.Asia                       ]    # [5st-02]      
+                                  #  'RULE-SET:GeoRouting_Asia_South_ccTLD_Domain'      : [ 'https://cloudflare-dns.com/dns-query#🌏.<Region>—East.Asia                   , 'https://dns.google/dns-query#🌏.<Region>—East.Asia                       ]    # [5st-02]      
+                                  #  'RULE-SET:GeoRouting_Asia_Central_ccTLD_Domain'    : [ 'https://cloudflare-dns.com/dns-query#🌏.<Region>—East.Asia                   , 'https://dns.google/dns-query#🌏.<Region>—East.Asia                       ]    # [5st-02]      
+                                  #  'RULE-SET:GeoRouting_Asia_West_ccTLD_Domain'       : [ 'https://cloudflare-dns.com/dns-query#🌏.<Region>—West.Asia                   , 'https://dns.google/dns-query#🌏.<Region>—West.Asia                       ]    # [5st-02]      
+                                  #  'RULE-SET:GeoRouting_Africa_North_ccTLD_Domain'    : [ 'https://cloudflare-dns.com/dns-query#🌍.<Region>—Africa                      , 'https://dns.google/dns-query#🌍.<Region>—Africa                          ]    # [5st-02]      
+                                  #  'RULE-SET:GeoRouting_Africa_South_ccTLD_Domain'    : [ 'https://cloudflare-dns.com/dns-query#🌍.<Region>—Africa                      , 'https://dns.google/dns-query#🌍.<Region>—Africa                          ]    # [5st-02]      
+                                  #  'RULE-SET:GeoRouting_Africa_West_ccTLD_Domain'     : [ 'https://cloudflare-dns.com/dns-query#🌍.<Region>—Africa                      , 'https://dns.google/dns-query#🌍.<Region>—Africa                          ]    # [5st-02]      
+                                  #  'RULE-SET:GeoRouting_Africa_East_ccTLD_Domain'     : [ 'https://cloudflare-dns.com/dns-query#🌍.<Region>—Africa                      , 'https://dns.google/dns-query#🌍.<Region>—Africa                          ]    # [5st-02]      
+                                  #  'RULE-SET:GeoRouting_Africa_Central_ccTLD_Domain'  : [ 'https://cloudflare-dns.com/dns-query#🌍.<Region>—Africa                      , 'https://dns.google/dns-query#🌍.<Region>—Africa                          ]    # [5st-02]      
+
+
+                                  ### --------------------------------------------------------------------------------------------------
+                                  ###  DNS分流 ： 海外CDN
+                                  ### --------------------------------------------------------------------------------------------------
+
+                                  #  'GEOSITE:cloudflare'                                : [ 'https://cloudflare-dns.com/dns-query#☁️.<Global>—CDN'                       , 'https://dns.google/dns-query#☁️.<Global>—CDN'                            ]    # [7st-01] 
+                                  #  'RULE-SET:Cloudflare_Do_Resolve'                    : [ 'https://cloudflare-dns.com/dns-query#☁️.<Global>—CDN'                       , 'https://dns.google/dns-query#☁️.<Global>—CDN'                            ]    # [7st-01] 
+                                  #  'GEOSITE:akamai'                                    : [ 'https://cloudflare-dns.com/dns-query#☁️.<Global>—CDN'                       , 'https://dns.google/dns-query#☁️.<Global>—CDN'                            ]    # [7st-01] 
+                                  #  'RULE-SET:AkamaiCloud_Do_Resolve'                   : [ 'https://cloudflare-dns.com/dns-query#☁️.<Global>—CDN'                       , 'https://dns.google/dns-query#☁️.<Global>—CDN'                            ]    # [7st-01] 
+                                  #  'GEOSITE:fastly'                                    : [ 'https://cloudflare-dns.com/dns-query#☁️.<Global>—CDN'                       , 'https://dns.google/dns-query#☁️.<Global>—CDN'                            ]    # [7st-01] 
+
+
+                                  ### --------------------------------------------------------------------------------------------------
+                                  ###  DNS分流 ：兜底
+                                  ### --------------------------------------------------------------------------------------------------
+
+                                  ### 兜底 ： 🇺🇸 美国中转节点  （默认）
+
+                                  ### 注意：目前Clash、Stash，对于DNS分流规则，都没有专门的兜底写法。目前是通过 如下写法，达到兜底分流的
+                                  ###       1. 启用 : respect-rules \ respect-rules
+                                  ###       2. 默认DNS ：设置为 海外DNS服务器  （ cloudflare DNS \ google DNS ）
+                                  ###       3. 启用海外DNS的分流规则 ：📡.<DNS>—GlobalDNS ，并默认为美国节点。
+
+                                  ### ❕❕❕特别注意 ：上述DNS分流，并没有1:1完全复刻 “分流规则的分流方法”。虽然无修改，但只做 “部分节选” 进行1:1拷贝。原因：主要是为了避免，调用分流规则中的链式代理请求DNS解析。
+                                  ### ❕❕❕特别注意 ：链式代理，会增加延迟。非必要情况下，避免通过链式代理获取DNS解析。
+                                  ### ❕❕❕特别注意 ：只有 “非敏感域名”，才可同时向 “ 🇨🇳DNS 、🌍DNS” 发起解析请求。不然会造成严重的 “DNS泄漏” ！！！！！
+
+
+
+
+
+                                  ################################################################################################################################################
+                                  ### ⚠️⚠️⚠️   以下为 上述 部分规则 的展开，主要应对 Stash 不支持 RULE-SET 的情况  （⚠️⚠️⚠️⚠️ 一旦Stash支持后，请立刻删除以下规则 ⚠️⚠️⚠️⚠️ ）
+                                  ### ⚠️⚠️⚠️   为了避免维护复杂性，只展开了 与 “ 直连（白名单） ” 相关的DNS分流规则，包括
+                                  ### ⚠️⚠️⚠️       -  📍 修改IP归属地显示
+                                  ### ⚠️⚠️⚠️       -  🇨🇳 中国
+                                  ### ⚠️⚠️⚠️       -  🍏 苹果
+                                  ### ⚠️⚠️⚠️       -  💾 微软 
+                                  ### ⚠️⚠️⚠️   注意： 由于Stash在DNS分流规则中，即不支持 “代理组”， 也不支持多DNS服务器。只能使用如下写法 ！ 
+                                  ################################################################################################################################################
 
                                    # --------------------------------------------------------------------------------------------------
                                    # 修改IP归属地显示 规则                                                             
@@ -7811,7 +7963,7 @@ proxy-groups:
     - { name : '_________________________________________'                                                                                                                                                                                                      , type : 'select'                                                                           , proxies : [  'DIRECT' ]      }           
 
    # 线路：直连（节点服务器）VPS
-    - { name : '🔰⚡.Line—[Relay.VPS]—US.HomeIP.First'                    , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/Auto.png'                  , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'url-test'     , interval :  900 , tolerance :  50  , timeout :  5000 , lazy : true  , proxies : [  '🇺🇸🔰.RT-VPS—[US.HomeIP]—(美国住宅节点信息)'     , '🔰⚡.Line—[Relay.VPS]—Low.Latency'          ] }          
+    - { name : '🔰⚡.Line—[Relay.VPS]—US.HomeIP.First'                    , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/Auto.png'                  , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'fallback'     , interval :  900 , tolerance :  50  , timeout :  5000 , lazy : true  , proxies : [  '🇺🇸🔰.RT-VPS—[US.HomeIP]—(美国住宅节点信息)'     , '🔰⚡.Line—[Relay.VPS]—Low.Latency'          ] }          
     - { name : '🔰⚡.Line—[Relay.VPS]—US.First'                           , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/Auto.png'                  , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'fallback'     , interval :  900 , tolerance :  20  , timeout :  5000 , lazy : false , proxies : [  '🇺🇸🔰.RT-VPS—[US-Relay]—(美国中转节点信息)'      , '🔰⚡.Line—[Relay.VPS]—Low.Latency'          ] }  
     - { name : '🔰⚡.Line—[Relay.VPS]—JP.First'                           , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/Auto.png'                  , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'fallback'     , interval :  900 , tolerance :  20  , timeout :  5000 , lazy : false , proxies : [  '🇯🇵🔰.RT-VPS—[JP-Relay]—(日本中转节点信息)'      , '🔰⚡.Line—[Relay.VPS]—Low.Latency'          ] }  
     - { name : '🔰⚡.Line—[Relay.VPS]—UK.First'                           , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/Auto.png'                  , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'fallback'     , interval :  900 , tolerance :  20  , timeout :  5000 , lazy : false , proxies : [  '🇬🇧🔰.RT-VPS—[UK-Relay]—(英国中转节点信息)'      , '🔰⚡.Line—[Relay.VPS]—Low.Latency'          ] }  
@@ -8145,16 +8297,16 @@ rules:
 
    # [3st-13] -  专属网站（必须要所属国IP才能正常下单的网站，银行除外…）                                           
 
-    - RULE-SET        , HomeIPUS_Do_Resolve                        , 🇺🇸.<HomeIP>—US                                  # , no-resolve                           # [3st-10]  [ Default : US          ]     https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/HomeIP                      HomeIPUS      
-   #- RULE-SET        , HomeIPCA_Do_Resolve                        , 🇨🇦.<HomeIP>—CA                                  # , no-resolve                           # [3st-10]  [ Default : US          ]     https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/HomeIP                      HomeIPCA      
-   #- RULE-SET        , HomeIPUK_Do_Resolve                        , 🇬🇧.<HomeIP>—UK                                  # , no-resolve                           # [3st-10]  [ Default : US          ]     https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/HomeIP                      HomeIPUK      
-   #- RULE-SET        , HomeIPAU_Do_Resolve                        , 🇦🇺.<HomeIP>—AU                                  # , no-resolve                           # [3st-10]  [ Default : US          ]     https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/HomeIP                      HomeIPAU      
-    - RULE-SET        , HomeIPJP_Do_Resolve                        , 🇯🇵.<HomeIP>—JP                                  # , no-resolve                           # [3st-10]  [ Default : JP          ]     https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/HomeIP                      HomeIPJP      
+    - RULE-SET        , HomeIPUS_Do_Resolve                        , 🇺🇸.<HomeIP>—US                                  # , no-resolve                           # [3st-13]  [ Default : US          ]     https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/HomeIP                      HomeIPUS      
+   #- RULE-SET        , HomeIPCA_Do_Resolve                        , 🇨🇦.<HomeIP>—CA                                  # , no-resolve                           # [3st-13]  [ Default : US          ]     https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/HomeIP                      HomeIPCA      
+   #- RULE-SET        , HomeIPUK_Do_Resolve                        , 🇬🇧.<HomeIP>—UK                                  # , no-resolve                           # [3st-13]  [ Default : US          ]     https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/HomeIP                      HomeIPUK      
+   #- RULE-SET        , HomeIPAU_Do_Resolve                        , 🇦🇺.<HomeIP>—AU                                  # , no-resolve                           # [3st-13]  [ Default : US          ]     https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/HomeIP                      HomeIPAU      
+    - RULE-SET        , HomeIPJP_Do_Resolve                        , 🇯🇵.<HomeIP>—JP                                  # , no-resolve                           # [3st-13]  [ Default : JP          ]     https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/HomeIP                      HomeIPJP      
 
 
    # [3st-14] -  不支持VPN的网站（除 银行、HomeIP 分流规则以外的 网站）
 
-    - RULE-SET        , UnsupportVPN_Do_Resolve                    , ❌.<UnsupportVPN>                               # , no-resolve                           # [3st-10]  [ Default : US          ]     https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/UnsupportVPN                UnsupportVPN      
+    - RULE-SET        , UnsupportVPN_Do_Resolve                    , ❌.<UnsupportVPN>                               # , no-resolve                           # [3st-14]  [ Default : US          ]     https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/UnsupportVPN                UnsupportVPN      
 
 
    # [3st-20] -  购物    
@@ -8686,14 +8838,14 @@ rule-providers:
    #BankFR_Domain                             : { type : 'http'  , behavior : 'domain'     , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/Accademia/Additional_Rule_For_Clash@latest/Bank/BankFR_Domain.yaml'                                                , path : './ruleset/BankFR_Domain.yaml'                                 }            # [3st-12]  [ Default : FR          ]     🇫🇷.<Bank>—FR                    https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/Bank                        银行 - BankFR_Domain        
 
    # [3st-13] -  专属网站（必须要所属国IP才能正常下单的网站，银行除外…）     
-    HomeIPUS_Do_Resolve                       : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/Accademia/Additional_Rule_For_Clash@latest/HomeIP/HomeIPUS.yaml'                                                   , path : './ruleset/HomeIPUS.yaml'                                      }            # [3st-10]  [ Default : US          ]     🇺🇸.<HomeIP>—US                  https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/HomeIP                      HomeIPUS_Do_Resolve      
-   #HomeIPCA_Do_Resolve                       : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/Accademia/Additional_Rule_For_Clash@latest/HomeIP/HomeIPCA.yaml'                                                   , path : './ruleset/HomeIPCA.yaml'                                      }            # [3st-10]  [ Default : CA          ]     🇨🇦.<HomeIP>—CA                  https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/HomeIP                      HomeIPCA_Do_Resolve      
-   #HomeIPUK_Do_Resolve                       : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/Accademia/Additional_Rule_For_Clash@latest/HomeIP/HomeIPUK.yaml'                                                   , path : './ruleset/HomeIPUK.yaml'                                      }            # [3st-10]  [ Default : UK          ]     🇬🇧.<HomeIP>—UK                  https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/HomeIP                      HomeIPUK_Do_Resolve      
-   #HomeIPAU_Do_Resolve                       : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/Accademia/Additional_Rule_For_Clash@latest/HomeIP/HomeIPAU.yaml'                                                   , path : './ruleset/HomeIPAU.yaml'                                      }            # [3st-10]  [ Default : AU          ]     🇦🇺.<HomeIP>—AU                  https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/HomeIP                      HomeIPAU_Do_Resolve      
-    HomeIPJP_Do_Resolve                       : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/Accademia/Additional_Rule_For_Clash@latest/HomeIP/HomeIPJP.yaml'                                                   , path : './ruleset/HomeIPJP.yaml'                                      }            # [3st-10]  [ Default : JP          ]     🇯🇵.<HomeIP>—JP                  https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/HomeIP                      HomeIPJP_Do_Resolve      
+    HomeIPUS_Do_Resolve                       : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/Accademia/Additional_Rule_For_Clash@latest/HomeIP/HomeIPUS.yaml'                                                   , path : './ruleset/HomeIPUS.yaml'                                      }            # [3st-13]  [ Default : US          ]     🇺🇸.<HomeIP>—US                  https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/HomeIP                      HomeIPUS_Do_Resolve      
+   #HomeIPCA_Do_Resolve                       : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/Accademia/Additional_Rule_For_Clash@latest/HomeIP/HomeIPCA.yaml'                                                   , path : './ruleset/HomeIPCA.yaml'                                      }            # [3st-13]  [ Default : CA          ]     🇨🇦.<HomeIP>—CA                  https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/HomeIP                      HomeIPCA_Do_Resolve      
+   #HomeIPUK_Do_Resolve                       : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/Accademia/Additional_Rule_For_Clash@latest/HomeIP/HomeIPUK.yaml'                                                   , path : './ruleset/HomeIPUK.yaml'                                      }            # [3st-13]  [ Default : UK          ]     🇬🇧.<HomeIP>—UK                  https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/HomeIP                      HomeIPUK_Do_Resolve      
+   #HomeIPAU_Do_Resolve                       : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/Accademia/Additional_Rule_For_Clash@latest/HomeIP/HomeIPAU.yaml'                                                   , path : './ruleset/HomeIPAU.yaml'                                      }            # [3st-13]  [ Default : AU          ]     🇦🇺.<HomeIP>—AU                  https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/HomeIP                      HomeIPAU_Do_Resolve      
+    HomeIPJP_Do_Resolve                       : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/Accademia/Additional_Rule_For_Clash@latest/HomeIP/HomeIPJP.yaml'                                                   , path : './ruleset/HomeIPJP.yaml'                                      }            # [3st-13]  [ Default : JP          ]     🇯🇵.<HomeIP>—JP                  https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/HomeIP                      HomeIPJP_Do_Resolve      
 
    # [3st-14] - 不支持VPN的网站（除 银行、HomeIP 分流规则以外的 网站）
-    UnsupportVPN_Do_Resolve                   : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/Accademia/Additional_Rule_For_Clash@latest/UnsupportVPN/UnsupportVPN.yaml'                                         , path : './ruleset/UnsupportVPN.yaml'                                  }            # [3st-10]  [ Default : US          ]     ❌.<UnsupportVPN>               https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/UnsupportVPN                UnsupportVPN_Do_Resolve      
+    UnsupportVPN_Do_Resolve                   : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/Accademia/Additional_Rule_For_Clash@latest/UnsupportVPN/UnsupportVPN.yaml'                                         , path : './ruleset/UnsupportVPN.yaml'                                  }            # [3st-14]  [ Default : US          ]     ❌.<UnsupportVPN>               https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/UnsupportVPN                UnsupportVPN_Do_Resolve      
 
    # [3st-20] -  购物                    
     eBay_Do_Resolve                           : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@latest/rule/Clash/eBay/eBay.yaml'                                                     , path : './ruleset/eBay.yaml'                                          }            # [3st-20]  [ Default : US          ]     🛒.<Shopping>—eBay              https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/eBay                  购物 - eBay                          
@@ -8926,9 +9078,9 @@ rule-providers:
    # [3st-04] -  P2P下载软件        
    # [3st-05] -  需加速 才能流畅访问的网站      
    #                    
-   # [3st-10] -  专属网站（ 必须HomeIP才能下单的网站 … ）   (默认路由：不可配置)
    # [3st-11] -  金融                
    # [3st-12] -  各国银行    (默认路由：不可配置)
+   # [3st-13] -  专属网站（ 必须HomeIP才能下单的网站 … ）   (默认路由：不可配置)
    #                                                   
    # [3st-20] -  购物                 
    # [3st-21] -  游戏                 
