@@ -758,9 +758,9 @@
 
 <br>
 
-Clash Meta ： 100% 不会❕❕❕
+Clash Meta 内核 客户端 ： 100% 不会❕❕❕
 
-Stash ： 可能会绕路 ！
+Stash for iOS  ： 可能会绕路 ！
 
 <br>
 
