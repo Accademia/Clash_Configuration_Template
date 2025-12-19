@@ -973,7 +973,7 @@ If you don't understand how to use this template, please throw this template to 
  
 <br>
 
-注意： 请不要再如下条目中，加入香港节点 ❕
+注意： 请不要再如下条目中，加入 🇭🇰 香港节点 ❕
 
 
 ```yaml
