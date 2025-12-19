@@ -1430,7 +1430,7 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 2. Stash 的 **链式代理 ：不支持UDP流量**
    
-   而诸如 苹果智能，等AI软件，有大量UDP流量必须调用支持链式代理，因为：
+   而诸如 苹果智能，等AI软件，有大量UDP流量。且这些流量，必须用链式代理，因为：
     
     -  这些AI工具，对IP的合规性要求极高，会间歇性封禁 机房IP！！必须使用home ip的节点，作为落地节点，才能稳定访问这些AI工具。但往往，真HomeIP的节点（双ISP节点）的洲际网速速度都不高，不适合跨境直连。所以，必须使用链式代理功能，通过中转节点去访问这些HomeIP的节点。
     
