@@ -71,6 +71,8 @@
 -  对于 “无” 地理位置的网站，支持 落地节点 **自动选取最近的CDN** 获取网站数据数据 。以便 境外流量 能100%避免，如 “🇺🇸美国节点 访问 🇯🇵日本CDN” 等 “全球绕路” 的情况（ ⚠️注意： Stash 不支持此功能，此功能为Clash Meta 独占 ）
 
 -  **保证IP地址稳定** （ 单一节点被墙，也不会乱跳IP ）
+
+-  内置的节点间链式代理，100% 支持 **UDP、QUIC流量** （ 此为 Clash Meta 独占功能 ）
  
 -  内置 **两组 远程规则集** 互为备份 （ 哪怕任意一个外部规则源 更新慢 、停更，也不怕 ）
 
@@ -1373,9 +1375,11 @@ If you are not located in China but instead in rogue countries like Russia, Iran
             - 'DOH链接#代理集合'  
         ```
  
- - 在 ”链式代理“ 中，全面支持 “UDP”
+ - 在 ”链式代理“ 中，全面支持 “UDP” 
 
      - 目前 Stash 还不能支持UDP、QUIC的链式代理，哪怕使用dialer-proxy声明代理链，依旧无法支持QUIC和UDP流量。      
+     
+     - 注意，本模版应用在Clash Meta上，不存在此问题。这是Stash独有的问题。本模版不需要修改写法，只需要等Stash作者在程序中支持。
 
 <br>
 
