@@ -1406,13 +1406,25 @@ If you are not located in China but instead in rogue countries like Russia, Iran
    
    Stash 无法按照（RULE-SET、Geosite）分流 🇨🇳 中国域名 的 DNS查询 ，到 🇨🇳 中国大陆的DNS服务器
     
-    - 由于Stash并不支持在DNS的nameserver-policy:中声明 ⚠️“RULE-SET:远程规则#代理组”⚠️ （以及 “Geosite:CN” ）。所以导致了，在本模版启用了follow-rule后，所有域名查询，一度只能全走境外DNS查询，从而导致如京东养车等APP会返回海外IP。
-    
-    - 目前这个问题，已经通过手动展开Geosite:CN来部分解决。但是导致了，本模版多了7000多行。一旦Stash的nameserver-policy支持 “RULE-SET:远程规则#代理组” ，本套模版将立刻删除这些手动展开的规则。以确保 模版拥有最低的行数。
-    
-    - 即便手动展开 ⚠️“RULE-SET:远程规则#代理组”⚠️ ，但 Stash无法在一条DNS分流规则中，规则中设置多个DNS，更无法为每一条DNS分流规则设置 “代理组“，最完美的DNS方案，应该是让被分流的节点，去完成DNS解析。这需要在DNS分流支持代理组才能做到这一点。但Stash没有这个功能。我反馈了很多次跟开发组，压根没人理我 ，卧槽 💥💥💥💥
+    - 由于Stash并不支持在DNS的nameserver-policy:中声明 
 
-   上述问题，向开发者多次反馈后，开发者压根不回复 不响应 ❌（不知道怎么想的） 。而Clash Verga rec客户端（Clash Meta核心），而Clash Meta 完美支持 ✅ ，不会有这个问题。
+        ``` yaml
+        “RULE-SET:远程规则” :
+            - 'DOH链接#代理集合'  
+            - 'DOH链接#代理集合'  
+        “Geosite:XXX“ :
+            - 'DOH链接#代理集合'  
+            - 'DOH链接#代理集合'  
+        ```
+        所以导致了，不可接受的核心问题，在Stash上
+        
+        - 在Stash，由于无法实现 “DNS分流策略（nameserver-policy）” 和 “分流规则（rule）” ，两者之间 1:1 互为镜像。所以，使得在Stash中 ，禁用FakeIP功能后，100% 会发生 全球绕路的情况，即，100%会发生 “美国落地节点 去 访问日本CDN” 的情况 ❕ 
+
+        - 在Stash，由于不支持规则集合批量分流，导致必须要手动展开geosite:cn,但是导致了，本模版多了7000多行。
+        
+        一旦Stash的nameserver-policy支持 “RULE-SET:远程规则#代理组” ，本套模版将立刻删除这些手动展开的规则。以确保 模版拥有最低的行数。
+    
+    以上问题，我反馈了很多次给Stash开发组，❌ 压根没人理。 💥💥💥💥 100% 已读不回套餐吃满。而Clash Verga rec客户端（Clash Meta核心），而Clash Meta 完美支持 ✅ ✅ ✅ ，不会有这个问题。
    
 <br>
 
