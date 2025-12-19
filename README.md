@@ -1329,7 +1329,7 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 ------
 
 
-# 关于 Geosite ，给 开发者社区 的建议
+# 关于 Geosite ，给 Clash Verge Rev 、 Stash 开发者社区 的建议
 
 <br>
 
