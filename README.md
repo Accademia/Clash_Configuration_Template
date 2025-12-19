@@ -984,7 +984,7 @@ If you don't understand how to use this template, please throw this template to 
   
   -  未来，香港IP 在全球，只会越来越受歧视，所以 强烈不建议 购买香港节点，作为 “落地节点” 。 
   
-  -  原则上来说，本项目已经 放弃适配 🇭🇰 香港节点 ⚠️ （ 力求省心 + 0频繁维护 ）
+  -  原则上来说，本项目已经 放弃适配 🇭🇰 香港节点 （无论作为中转还是落地）⚠️ （ 力求省心 + 0频繁维护 ）
 
 
 <br>
