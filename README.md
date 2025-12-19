@@ -1428,7 +1428,7 @@ If you are not located in China but instead in rogue countries like Russia, Iran
    
 <br>
 
-2. Stash 的 **链式代理 不支持UDP流量**
+2. Stash 的 **链式代理 ：不支持UDP流量**
    
    而诸如 苹果智能，等AI软件，有大量UDP流量必须调用支持链式代理，因为：
     
@@ -1458,7 +1458,7 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 4. Stash ，**无法支持  “远程规则 内预设的 REJECT、REJECT-DROP”**
 
-   所有在远程规则集中，内置的 REJECT、REJECT-DROP ，都会被Stash忽略。这个看起来不大的问题。持续了得有3年了。
+   所有在远程规则集中，内置的 REJECT、REJECT-DROP ，都会被Stash忽略。这个看起来不大的问题。持续了得有 N年 了。
     
     - 这会导致 “切换IP归属地” 的规则（ https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/FakeLocation  ），出现隐私泄漏的情况。
 
