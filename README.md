@@ -1155,6 +1155,8 @@ If you are not located in China but instead in rogue countries like Russia, Iran
    
    - 减少大而全的反广告规则数量
    
+   - 避免引用classical 规则集合，尤其是，必须🈲禁止引用超过1000条以上的classical规则，一定要改用 domain / ipcidr 的yaml远程规则集合。
+   
    - 避免基于条件判断的复杂规则
 
 <br>
