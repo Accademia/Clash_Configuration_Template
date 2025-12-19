@@ -1418,13 +1418,13 @@ If you are not located in China but instead in rogue countries like Russia, Iran
         ```
         所以导致了，不可接受的核心问题，在Stash上
         
-        - 在Stash，由于无法实现 “DNS分流策略（nameserver-policy）” 和 “分流规则（rule）” ，两者之间 1:1 互为镜像。所以，使得在Stash中 ，禁用FakeIP功能后，100% 会发生 全球绕路的情况，即，100%会发生 “美国落地节点 去 访问日本CDN” 的情况 ❕ 
+        - 在Stash，由于无法实现 “DNS分流策略（nameserver-policy）” 和 “分流规则（rule）” ，两者之间 1:1 互为镜像。所以，使得Stash在禁用FakeIP功能后，100% 会发生 全球绕路的情况 ❌❌❌ ，即，100%会发生 “美国落地节点 去 访问日本CDN” 的情况 ❕ 
 
-        - 在Stash，由于不支持规则集合批量分流，导致必须要手动展开geosite:cn,但是导致了，本模版多了7000多行。
+        - 在Stash，由于不支持规则集合批量分流，导致必须要手动展开geosite:cn,但是导致了，本模版多了7000多行。❌❌❌
         
         一旦Stash的nameserver-policy支持 “RULE-SET:远程规则#代理组” ，本套模版将立刻删除这些手动展开的规则。以确保 模版拥有最低的行数。
     
-    以上问题，我反馈了很多次给Stash开发组，❌ 压根没人理。 💥💥💥💥 100% 已读不回套餐吃满。而Clash Verga rec客户端（Clash Meta核心），而Clash Meta 完美支持 ✅ ✅ ✅ ，不会有这个问题。
+    以上问题，我反馈了很多次给Stash开发组，🤣🤣🤣 压根没人理。 💥💥💥💥 100% 已读不回套餐吃满。而Clash Verga rec客户端（Clash Meta核心），而Clash Meta 完美支持 ✅ ✅ ✅ ，不会有这个问题。
    
 <br>
 
