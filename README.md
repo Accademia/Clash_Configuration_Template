@@ -1358,15 +1358,26 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
  - 在 “DNS分流策略” 中，全面支持 “批量分流”
 
-     - 即，nameserver-policy 可以使用 “RULE-SET:远程规则” 、 “Geosite:XXX” 
+     - 即，nameserver-policy 可以使用 ：
+      
+        ``` yaml
+        “RULE-SET:远程规则” :
+            - 'DOH链接#代理集合'  
+            - 'DOH链接#代理集合'  
+        “Geosite:XXX“ :
+            - 'DOH链接#代理集合'  
+            - 'DOH链接#代理集合'  
+        ```
     
  - 在 ”链式代理“ 中，全面支持 “UDP”
 
-     - 即 ，将 “代理链” 从 relay 迁移到 dialer-proxy （ 前者只支持UOT，而后者支持完整的UDP ） 
+     - 即 ，将 “代理链” 从 relay 迁移到 dialer-proxy （ 前者只支持UOT链式代理，而后者支持 100%完整 的UDP链式代理 ） 
 
 <br>
 
-已向Stash多次反馈 🔥 开发者压根不回复🔥。有能联系上开发者的，希望能顺手反馈一下。
+上述两个改进之后，本模版将初步进入完美状态。
+
+已向Stash多次反馈 🔥🔥🔥 开发者 压根 已读不回 🔥🔥🔥。有能联系上开发者的，希望能顺手反馈一下。大家一起向Stash开发者，饱和式反馈。以便能 “加速” 本模版 快速进入  “完美状态”。
 
 
 
