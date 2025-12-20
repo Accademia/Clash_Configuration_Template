@@ -70,9 +70,9 @@
 
 -  对于 “无” 地理位置的网站，支持 落地节点 **自动选取最近的CDN** 获取网站数据数据 。以便 境外流量 能100%避免，如 “🇺🇸美国节点 访问 🇯🇵日本CDN” 等 “全球绕路” 的情况（ ⚠️注意： Stash 不支持此功能，此功能为Clash Meta 独占 ）
 
--  **保证IP地址稳定** （ 单一节点被墙，也不会乱跳IP ）
+-  **保证IP地址稳定** （ 单一节点被墙，也不会乱跳IP ，此功能为 Clash Meta独占 ）
 
--  内置的 **链式代理** ， 100% 支持 **UDP代理链、QUIC代理链** 
+-  内置的 **链式代理** ， 100% 支持 **UDP代理链、QUIC代理链** （ 此功能为 Clash Meta独占 ）
  
 -  内置 **两组 远程规则集** 互为备份 （ 哪怕任意一个外部规则源 更新慢 、停更，也不怕 ）
 
@@ -128,6 +128,7 @@
 
 - **抗节点失联**：
     - 如单一节点被GFW间歇性封锁，但又需要此节点的IP来访问网站，那么其他任意中转节点，都会自动作为中间节点 转发链式代理。 从而最大限度保证了访问单一网站时IP的稳定性 
+    - 此功能 ： Clash Meta 独占
 
 - **反代理识别软件的检测**：
     - 强制redir-host，避免因返回fakeip，而被软件检测识别出使用了代理。
@@ -1443,7 +1444,7 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 以下 四大功能，是本模版需要用到，Stash for iOS 不兼容的 （ 但 Clash Meta 完美兼容 ）。
 
-目前，虽然**不影响Stash使用本模版** 进行日常翻墙上网，但是会在极端情况下，出现无法连接的情况。想做到完美，还需要Stash开发者补齐这四个功能短板。
+目前，虽然**不影响 本模版 基础分流** 进行日常翻墙上网，但是会使得本模版，缺失很多核心功能。无法做到想做到完美。必须需要Stash开发者补齐这四个功能短板（至少要补齐前三个功能！）
 
 
 <br>
@@ -1474,7 +1475,19 @@ If you are not located in China but instead in rogue countries like Russia, Iran
    
 <br>
 
-2. Stash ，**无法支持  “远程规则 内预设的 REJECT、REJECT-DROP、DIRECT”**
+2. Stash 的 即不支持dialer-proxy链式代理， 也不支持 UDP代理链，更不支持QUIC代理链
+
+    - 而诸如 苹果智能，等AI软件，有大量UDP流量必须调用支持链式代理，因为：
+
+        这些AI工具，对IP的合规性要求极高，会间歇性封禁 机房IP！！必须使用home ip的节点，作为落地节点，才能稳定访问这些AI工具。但往往，真HomeIP的节点（双ISP节点）的洲际网速速度都不高，不适合跨境直连。所以，必须使用链式代理功能，通过中转节点去访问这些HomeIP的节点。
+
+        而且，这些AI工具，还会大量使用UDP流量，所以导致了，支持UDP流量的链式代理，在此场景下是刚需。
+
+    而目前Stash并不能支持 ❌❌❌dialer-proxy链式代理❌❌❌ 。而在 “ Vless + Reality + Vision + XUDP ” 的节点上，更不能支持UDP、QUIC的链式代理。上述问题，已经向开发者多次反馈后，开发者压根不回复 不响应 ❌（不知道怎么想的）。而Clash Meta 完美支持 ✅ ，不会有这个问题。
+
+<br>
+
+3. Stash ，**无法支持  “远程规则 内预设的 REJECT、REJECT-DROP、DIRECT”**
 
    所有在远程规则集中，内置的 REJECT、REJECT-DROP ，都会被Stash忽略。这个看起来不大的问题。持续了得有 N年 了。
     
@@ -1485,7 +1498,7 @@ If you are not located in China but instead in rogue countries like Russia, Iran
    
 <br>
 
-3. Stash ，即**无法 “关闭DNS的IPv6解析”** ，**也无做到 “全透明转发IPv6流量”**。
+4. Stash ，即**无法 “关闭DNS的IPv6解析”** ，**也无做到 “全透明转发IPv6流量”**。
     
    这导致了（在关闭Stash的FakeIP功能后），如果在Stash中 “关闭” IPv6路由，那么如下软件，都会出现出现了连接不上的情况：【因为下述两个软件，只会使用从DNS解析到的IPv6疯狂发起链接（而不尝试IPv4），而IPv6路由又被关闭了。】
     
