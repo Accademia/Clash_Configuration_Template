@@ -1267,7 +1267,7 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 ------
 
 
-# 为什么 原版 geosite 、 原版 chinamax 会有错误？ 精准的标准是什么？
+# 为什么 原版 geosite 、 原版 chinamax 会有错误？ 什么级别的精准，是本模版 对 “精准需求” 的 “及格线” ？
 
 <br>
 
