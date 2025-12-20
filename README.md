@@ -72,7 +72,7 @@
 
 -  **保证IP地址稳定** （ 单一节点被墙，也不会乱跳IP ）
 
--  内置的 **链式代理** 100% 支持 **UDP、QUIC流量** （ 此为 Clash Meta 独占功能。Stash只能支持UDP链式代理 ）
+-  内置的 **链式代理** ， 100% 支持 **UDP代理链、QUIC代理链** 
  
 -  内置 **两组 远程规则集** 互为备份 （ 哪怕任意一个外部规则源 更新慢 、停更，也不怕 ）
 
@@ -1375,12 +1375,6 @@ If you are not located in China but instead in rogue countries like Russia, Iran
             - 'DOH链接#代理集合'  
         ```
  
- - 在 ”链式代理“ 中，全面支持 “QUIC” 
-
-     - 目前 Stash 还不能支持QUIC的链式代理，哪怕使用dialer-proxy声明代理链，依旧无法让QUIC流量支持链式代理（但UDP可以，只要节点协议满足）      
-     
-     - 注意，本模版应用在Clash Meta上，不存在QUIC链式代理的问题。这是Stash独有的问题。本模版不需要修改写法，只需要等Stash作者在程序中支持。
-
 <br>
 
 上述改进之后，本模版将初步进入完美状态。
@@ -1432,15 +1426,17 @@ If you are not located in China but instead in rogue countries like Russia, Iran
    
 <br>
 
-2. Stash 的 **链式代理 ：不支持QUIC流量**
-   
-   而诸如 苹果智能，等AI软件，有大量QUIC流量。且这些流量，必须用链式代理，因为：
-    
-    -  这些AI工具，对IP的合规性要求极高，会间歇性封禁 机房IP！！必须使用home ip的节点，作为落地节点，才能稳定访问这些AI工具。但往往，真HomeIP的节点（双ISP节点）的洲际网速速度都不高，不适合跨境直连。所以，必须使用链式代理功能，通过中转节点去访问这些HomeIP的节点。
-    
-    -  而且，这些AI工具，还会大量使用QUIC流量，所以导致了，支持QUIC流量的链式代理，在此场景下是刚需。
+2. Stash ，**无法支持  “远程规则 内预设的 REJECT、REJECT-DROP、DIRECT”**
 
-   而目前Stash并不能在 “ Vless + Reality + Vision + XUDP ” 的节点上，支持QUIC的链式代理。上述问题，已经向开发者多次反馈后，开发者压根不回复 不响应 ❌（不知道怎么想的）。而Clash Meta 完美支持 ✅ ，不会有这个问题。
+   所有在远程规则集中，内置的 REJECT、REJECT-DROP ，都会被Stash忽略。这个看起来不大的问题。持续了得有 N年 了。
+    
+    - 这会导致 “切换IP归属地” 的规则（ https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/FakeLocation  ），出现隐私泄漏的情况。
+
+   同样，上述问题，已经向开发者多次反馈后，开发者压根不回复 不响应 ❌ （不知道怎么想的）。而Clash Meta完美支持 ✅ ，不会有这个问题。
+
+<br>
+
+总之，如果有人能联系上Stash开发者，请一起转达❕ 饱和式转达❕ 人多力量大❕ 以便于，让 Stash 在核心功能上，补齐与Clash meta 之间的短板。
    
 <br>
 
@@ -1458,19 +1454,6 @@ If you are not located in China but instead in rogue countries like Russia, Iran
    
    上述两者，相互互斥 （ Stash功能缺失是导致其互斥的核心原因 ）。上述问题，已经向开发者多次反馈后，开发者压根不回复 不响应 ❌（不知道怎么想的）。而Clash Meta完美支持 ✅ ，不会有这个问题。
 
-<br>
-
-4. Stash ，**无法支持  “远程规则 内预设的 REJECT、REJECT-DROP”**
-
-   所有在远程规则集中，内置的 REJECT、REJECT-DROP ，都会被Stash忽略。这个看起来不大的问题。持续了得有 N年 了。
-    
-    - 这会导致 “切换IP归属地” 的规则（ https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/FakeLocation  ），出现隐私泄漏的情况。
-
-   同样，上述问题，已经向开发者多次反馈后，开发者压根不回复 不响应 ❌ （不知道怎么想的）。而Clash Meta完美支持 ✅ ，不会有这个问题。
-
-<br>
-
-总之，如果有人能联系上Stash开发者，请一起转达❕ 饱和式转达❕ 人多力量大❕ 以便于，让 Stash 在核心功能上，补齐与Clash meta 之间的短板。
 
 
 <br>
