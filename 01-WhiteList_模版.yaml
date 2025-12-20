@@ -52,7 +52,7 @@ sniffer                           :                                             
   sniff                           :
     HTTP                          : { ports : [ 80  , 8080-8880 ]  ,  override-destination : true  }   # HTTP , 默认如果不配置 ports , 默认嗅探  80
     TLS                           : { ports : [ 443 , 8443      ]                                  }   # TLS , 默认如果不配置 ports , 默认嗅探 443
-   #QUIC                          : { ports : [ 443 , 8443      ]                                  }
+    QUIC                          : { ports : [ 443 , 8443      ]                                  }
   force-domain                    : [ '+.v2ex.com'                                                 ]   # 需要强制嗅探的域名（默认情况下只对IP进行嗅探）
   skip-domain                     :                                                     # 需要跳过嗅探的域名。主要解决部分站点sni字段非域名，导致嗅探结果异常的问题，如：米家设备
                                     -  'Mijia Cloud' 
@@ -119,7 +119,7 @@ hosts                             :                                             
 
 dns                               :
   enable                          : true                                                # 如果配置为关闭，则将仅仅使用系统 DNS
- #prefer-h3                       : true                                                # 设置：是否开启 DOH 的 http/3（加密DNS请求）
+  prefer-h3                       : true                                                # ⚠️ 设置：是否开启 DOH 的 http/3（加密DNS请求）
   ipv6                            : false                                               # 设置：是否启动 基于IPV6的DNS查询
   listen                          : '0.0.0.0:53'                                        # 设置，如何拦截本地所有DNS请求 ： 方法 ，监听本地的53端口 ，如果此选项配置错误，则Clash 的DNS代理分流逻辑将不生效
   use-hosts                       : true                                                # 使用hosts # lookup hosts and return IP record
@@ -7549,10 +7549,13 @@ dns                               :
 
                                    # --------------------------------------------------------------------------------------------------
                                    # 以下规则 ：非 GeositeCN 规则 （ 微软全家桶APP 分流规则 ）                                        # 仅包括 Windows \ Office365 \ Visual Studio 三大组件，不包括 Bing \ Azure \ Xbox \ Github 
-                                   # --------------------------------------------------------------------------------------------------                                              
+                                   # --------------------------------------------------------------------------------------------------      
+                                     'onedrive.live'                                    : 'https://dns.google/dns-query'              # 修补
+                                                                             
                                      '+.microsoft'                                      : 'https://dns.alidns.com/dns-query'          # 
                                      '+.office'                                         : 'https://dns.alidns.com/dns-query'          # 
                                      '+.windows'                                        : 'https://dns.alidns.com/dns-query'          # 
+                                     '+.live'                                           : 'https://dns.alidns.com/dns-query'          # 
                                      '+.microsoft.com'                                  : 'https://dns.alidns.com/dns-query'          # 
                                      '+.microsoft365.com'                               : 'https://dns.alidns.com/dns-query'          # 
                                      '+.windows.com'                                    : 'https://dns.alidns.com/dns-query'          # 
