@@ -52,7 +52,7 @@ sniffer                           :                                             
   sniff                           :
     HTTP                          : { ports : [ 80  , 8080-8880 ]  ,  override-destination : true  }   # HTTP , 默认如果不配置 ports , 默认嗅探  80
     TLS                           : { ports : [ 443 , 8443      ]                                  }   # TLS , 默认如果不配置 ports , 默认嗅探 443
-    QUIC                          : { ports : [ 443 , 8443      ]                                  }
+    QUIC                          : { ports : [ 443 , 8443      ]                                  }   # ⚠️ 需要节点协议支持
   force-domain                    : [ '+.v2ex.com'                                                 ]   # 需要强制嗅探的域名（默认情况下只对IP进行嗅探）
   skip-domain                     :                                                     # 需要跳过嗅探的域名。主要解决部分站点sni字段非域名，导致嗅探结果异常的问题，如：米家设备
                                     -  'Mijia Cloud' 
@@ -119,7 +119,7 @@ hosts                             :                                             
 
 dns                               :
   enable                          : true                                                # 如果配置为关闭，则将仅仅使用系统 DNS
-  prefer-h3                       : true                                                # ⚠️ 设置：是否开启 DOH 的 http/3（加密DNS请求）
+  prefer-h3                       : true                                                # ⚠️ ⚠️ 需要节点协议支持。 设置：是否开启 DOH 的 http/3（加密DNS请求）
   ipv6                            : false                                               # 设置：是否启动 基于IPV6的DNS查询
   listen                          : '0.0.0.0:53'                                        # 设置，如何拦截本地所有DNS请求 ： 方法 ，监听本地的53端口 ，如果此选项配置错误，则Clash 的DNS代理分流逻辑将不生效
   use-hosts                       : true                                                # 使用hosts # lookup hosts and return IP record
@@ -189,27 +189,28 @@ dns                               :
                                   ###  [3st-00]   DNS分流 ： 测速
                                   ### --------------------------------------------------------------------------------------------------
 
-                                  #  'GEOSITE:ookla-speedtest'                          : [ 'https://dns.alidns.com/dns-quer#🎚.<Speedtest>'                              , 'https://dns.google/dns-query#🎚.<Speedtest>'                              ]    # [3st-00]         
-                                  #  'RULE-SET:Speedtest_Do_Resolve'                    : [ 'https://dns.alidns.com/dns-quer#🎚.<Speedtest>'                              , 'https://dns.google/dns-query#🎚.<Speedtest>'                              ]    # [3st-00]         
-                                  #  '+.oca.nflxvideo.net'                              : [ 'https:/dns.alidns.com/dns-query#🎚.<Speedtest>'                              , 'https://dns.google/dns-query#🎚.<Speedtest>'                              ]    # [3st-00]         
+                                  #  'GEOSITE:ookla-speedtest'                          : [ 'https://dns.alidns.com/dns-query#🎚.<Speedtest>'                             , 'https://dns.google/dns-query#🎚.<Speedtest>'                              ]    # [3st-00]         
+                                  #  'RULE-SET:Speedtest_Do_Resolve'                    : [ 'https://dns.alidns.com/dns-query#🎚.<Speedtest>'                             , 'https://dns.google/dns-query#🎚.<Speedtest>'                              ]    # [3st-00]         
+                                  #  '+.oca.nflxvideo.net'                              : [ 'https://dns.alidns.com/dns-query#🎚.<Speedtest>'                             , 'https://dns.google/dns-query#🎚.<Speedtest>'                              ]    # [3st-00]         
 
 
                                   ### --------------------------------------------------------------------------------------------------
                                   ###  [3st-01]   DNS分流 ： 智能设备
                                   ### --------------------------------------------------------------------------------------------------
 
-                                  #  'GEOSITE:synology'                                 : [ 'https://dns.alidns.com/dns-quer#💻.<NAS>—Synology'                           , 'https://dns.google/dns-query#💻.<NAS>—Synology'                          ]    # [1st-01]           
-                                  #  'RULE-SET:Synology_Do_Resolve'                     : [ 'https://dns.alidns.com/dns-quer#💻.<NAS>—Synology'                           , 'https://dns.google/dns-query#💻.<NAS>—Synology'                          ]    # [1st-01]           
+                                  #  'GEOSITE:synology'                                 : [ 'https://dns.alidns.com/dns-query#💻.<NAS>—Synology'                          , 'https://dns.google/dns-query#💻.<NAS>—Synology'                          ]    # [1st-01]           
+                                  #  'RULE-SET:Synology_Do_Resolve'                     : [ 'https://dns.alidns.com/dns-query#💻.<NAS>—Synology'                          , 'https://dns.google/dns-query#💻.<NAS>—Synology'                          ]    # [1st-01]           
                                   #  'RULE-SET:AqaraGlobal_Do_Resolve'                  : [ 'https://cloudflare-dns.com/dns-query#🔌.<Home>—AqaraGlobal'                  , 'https://dns.google/dns-query#🔌.<Home>—AqaraGlobal'                      ]    # [1st-01]           
 
                                   ### --------------------------------------------------------------------------------------------------
                                   ###  [3st-02]  DNS分流 ： 公有云 
                                   ### --------------------------------------------------------------------------------------------------
-                                  
+                                
                                   #  'GEOSITE:onedrive'                                 : [ 'https://dns.alidns.com/dns-query#📂.<Drive>—OneDrive'                        , 'https://dns.google/dns-query#📂.<Drive>—OneDrive'                        ]    # [3st-02] 
                                   #  'RULE-SET:OneDrive_Do_Resolve'                     : [ 'https://cloudflare-dns.com/dns-query#📂.<Drive>—OneDrive'                    , 'https://dns.google/dns-query#📂.<Drive>—OneDrive'                        ]    # [3st-02] 
  
                                   ###暂未启用
+                                  ###已移动到 此位置 # [4st-01] -  大厂   
                                   ###'GEOSITE:icloud'                                   : [ 'https://dns.alidns.com/dns-query#📂.<Drive>—iCloud'                          , 'https://dns.google/dns-query#📂.<Drive>—iCloud'                          ]    # [3st-02] 
                                   ###'RULE-SET:iCloud_Do_Resolve'                       : [ 'https://cloudflare-dns.com/dns-query#📂.<Drive>—iCloud'                      , 'https://dns.google/dns-query#📂.<Drive>—iCloud'                          ]    # [3st-02] 
  
@@ -222,6 +223,9 @@ dns                               :
                                   #  'GEOSITE:imgur'                                    : [ 'https://cloudflare-dns.com/dns-query#📂.<Drive>—Imgur'                       , 'https://dns.google/dns-query#📂.<Drive>—Imgur'                           ]    # [3st-02] 
                                   #  'RULE-SET:Imgur_Do_Resolve'                        : [ 'https://cloudflare-dns.com/dns-query#📂.<Drive>—Imgur'                       , 'https://dns.google/dns-query#📂.<Drive>—Imgur'                           ]    # [3st-02] 
  
+                                  ###已移动到 此位置 # [4st-01] -  大厂   
+                                  ###'RULE-SET:GoogleDrive_Do_Resolve'                  : [ 'https://cloudflare-dns.com/dns-query#📂.<Drive>—GoogleDrive'                 , 'https://dns.google/dns-query#🎧.<Audio>—YouTubeMusic'                    ]    # [3st-25]  
+  
                                   #  'RULE-SET:WaybackMachine_Domain'                   : [ 'https://cloudflare-dns.com/dns-query#📂.<Drive>—InternetArchive'             , 'https://dns.google/dns-query#📂.<Drive>—InternetArchive'                 ]    # [3st-02] 
 
 
@@ -312,7 +316,7 @@ dns                               :
                                   #  'GEOSITE:xbox'                                     : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—Xbox'                             , 'https://dns.google/dns-query#🕹️.<Game>—Xbox'                             ]    # [3st-21] 
                                   #  'RULE-SET:Xbox_Do_Resolve'                         : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—Xbox'                             , 'https://dns.google/dns-query#🕹️.<Game>—Xbox'                             ]    # [3st-21] 
 
-                                  #  'GEOSITET:playstation'                             : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—PlayStation'                      , 'https://dns.google/dns-query#🕹️.<Game>—PlayStation'                      ]    # [3st-21] 
+                                  #  'GEOSITE:playstation'                              : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—PlayStation'                      , 'https://dns.google/dns-query#🕹️.<Game>—PlayStation'                      ]    # [3st-21] 
                                   #  'RULE-SET:PlayStation_Do_Resolve'                  : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—PlayStation'                      , 'https://dns.google/dns-query#🕹️.<Game>—PlayStation'                      ]    # [3st-21] 
                                   
                                   #  'GEOSITE:nintendo'                                 : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—Nintendo'                         , 'https://dns.google/dns-query#🕹️.<Game>—Nintendo'                         ]    # [3st-21] 
@@ -478,6 +482,9 @@ dns                               :
                                   #  'GEOSITE:apple-intelligence'                       : [ 'https://cloudflare-dns.com/dns-query#💡.<AI>—AppleAI'                        , 'https://dns.google/dns-query#💡.<AI>—AppleAI'                            ]    # [3st-29]
                                   #  'RULE-SET:AppleAI_Domain'                          : [ 'https://cloudflare-dns.com/dns-query#💡.<AI>—AppleAI'                        , 'https://dns.google/dns-query#💡.<AI>—AppleAI'                            ]    # [3st-29]
 
+                                  #  'GEOSITE:openai'                                   : [ 'https://cloudflare-dns.com/dns-query#💡.<AI>—OpenAI'                         , 'https://dns.google/dns-query#💡.<AI>—OpenAI'                             ]    # [3st-29]
+                                  #  'RULE-SET:OpenAI_Do_Resolve'                       : [ 'https://cloudflare-dns.com/dns-query#💡.<AI>—OpenAI'                         , 'https://dns.google/dns-query#💡.<AI>—OpenAI'                             ]    # [3st-29]
+      
                                   #  'GEOSITE:xai'                                      : [ 'https://cloudflare-dns.com/dns-query#💡.<AI>—Grok'                           , 'https://dns.google/dns-query#💡.<AI>—Grok'                               ]    # [3st-29]
                                   #  'RULE-SET:Grok_Domain'                             : [ 'https://cloudflare-dns.com/dns-query#💡.<AI>—Grok'                           , 'https://dns.google/dns-query#💡.<AI>—Grok'                               ]    # [3st-29]
 
@@ -521,7 +528,8 @@ dns                               :
                                   ### --------------------------------------------------------------------------------------------------
                                   ###  [4st-01]  DNS分流 ： 国际 大厂                   
                                   ### --------------------------------------------------------------------------------------------------
-                                  
+
+                                  #  'RULE-SET:GoogleDrive_Do_Resolve'                  : [ 'https://cloudflare-dns.com/dns-query#📂.<Drive>—GoogleDrive'                 , 'https://dns.google/dns-query#🎧.<Audio>—YouTubeMusic'                    ]    # [3st-25]  
                                   #  'GEOSITE:youtube'                                  : [ 'https://cloudflare-dns.com/dns-query#📺.<Video>—YouTube'                     , 'https://dns.google/dns-query#📺.<Video>—YouTube'                         ]    # [3st-22]  
                                   #  'RULE-SET:YouTube_Do_Resolve'                      : [ 'https://cloudflare-dns.com/dns-query#📺.<Video>—YouTube'                     , 'https://dns.google/dns-query#📺.<Video>—YouTube'                         ]    # [3st-22]  
                                   #  'RULE-SET:YouTubeMusic_Do_Resolve'                 : [ 'https://cloudflare-dns.com/dns-query#🎧.<Audio>—YouTubeMusic'                , 'https://dns.google/dns-query#🎧.<Audio>—YouTubeMusic'                    ]    # [3st-25]  
@@ -583,7 +591,7 @@ dns                               :
 
 
                                   ### --------------------------------------------------------------------------------------------------
-                                  ###  [9st-01  DNS分流 ：兜底
+                                  ###  [9st-01]  DNS分流 ：兜底
                                   ### --------------------------------------------------------------------------------------------------
                                   
                                   #  '+.*'                                              : [ 'https://cloudflare-dns.com/dns-query#♾️.<Final>'                             , 'https://dns.google/dns-query#♾️.<Final>'                                 ]    # [9st-01] 
@@ -1759,6 +1767,10 @@ dns                               :
                                      '+.zjbyte.com'                                     : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
                                      '+.zjbyte.net'                                     : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
                                      '+.zjcdn.com'                                      : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
+                                     '+.zjcdn.com.*'                                    : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
+                                     '+.zjcdn.com.*.*'                                  : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
+                                     '+.zjcdn.com.*.*.*'                                : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
+                                     '+.zjcdn.com.*.*.*.*'                              : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
                                      '+.zjfcdn.com'                                     : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
                                      '+.zjgslb.com'                                     : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance
                                      '+.bds.snssdk.com'                                 : 'https://dns.alidns.com/dns-query'          # GeoSite:bytedance-ads
