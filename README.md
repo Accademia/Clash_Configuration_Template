@@ -1464,13 +1464,13 @@ If you are not located in China but instead in rogue countries like Russia, Iran
         ```
         所以导致了，不可接受的核心问题，在Stash上
         
-        - 在Stash，由于无法实现 “DNS分流策略（nameserver-policy）” 和 “分流规则（rule）” ，两者之间 1:1 互为镜像。所以，使得Stash在禁用FakeIP功能后，100% 会发生 全球绕路的情况 ❌❌❌ ，即，100%会发生 “美国落地节点 去 访问日本CDN” 的情况 ❕ 
+        - 在Stash，由于无法实现 “DNS分流策略（nameserver-policy）” 和 “分流规则（rule）” ，两者之间 1:1 互为镜像。所以，使得Stash在禁用FakeIP功能后，100% 会发生 全球绕路的情况 ❌❌❌ ，即，100%会发生 “美国落地节点 去 访问日本CDN” 的情况 ❕ 我认为，这是基础功能中的基础功能。❌❌❌❌❌❌❌ 这种功能缺失，这是100%不可接受的。要知道，DNS策略分流，比普通的分流规格重要10倍以上。因为当你去用哪个VPS对应的DNS解析的时候，IP所在国家就已经确定了，你后面再怎么写rule分流规则，都改变不了这个IP的地理位置。DNS的策略分流功能 弱于 Rule 分流规则功能，完全就是本末倒置❕❕❕❕❕❕ ❌❌❌❌❌❌❌ 并且。这还强行拉高了VPS节点的性能，必须买哪些跨国性能极好的VPS（如每年120美金的的搬瓦工PlanV2）才能避免瓶颈。
 
         - 在Stash，由于不支持规则集合批量分流，导致必须要手动展开geosite:cn,但是导致了，本模版多了7000多行。❌❌❌
         
         一旦Stash的nameserver-policy支持 “RULE-SET:远程规则#代理组” ，本套模版将立刻删除这些手动展开的规则。以确保 模版拥有最低的行数。
     
-    以上问题，我反馈了很多次给Stash开发组，🤣🤣🤣 压根没人理。 💥💥💥💥 100% 已读不回套餐吃满。而Clash Verga rec客户端（Clash Meta核心），而Clash Meta 完美支持 ✅ ✅ ✅ ，不会有这个问题。
+    以上问题，我反馈了很多次给Stash开发组，🤣🤣🤣 压根没人理。 💥💥💥💥 100% 已读不回套餐吃满了算是。而Clash Verga rec客户端（Clash Meta核心），而Clash Meta 完美支持 ✅ ✅ ✅ ，不会有这个问题。
    
 <br>
 
@@ -1482,9 +1482,6 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
    同样，上述问题，已经向开发者多次反馈后，开发者压根不回复 不响应 ❌ （不知道怎么想的）。而Clash Meta完美支持 ✅ ，不会有这个问题。
 
-<br>
-
-总之，如果有人能联系上Stash开发者，请一起转达❕ 饱和式转达❕ 人多力量大❕ 以便于，让 Stash 在核心功能上，补齐与Clash meta 之间的短板。
    
 <br>
 
@@ -1501,7 +1498,9 @@ If you are not located in China but instead in rogue countries like Russia, Iran
     - 在 局域网中 ，无法观看 挂载到Apple Homekit摄像头的实时视频（苹果家庭APP）
    
    上述两者，相互互斥 （ Stash功能缺失是导致其互斥的核心原因 ）。上述问题，已经向开发者多次反馈后，开发者压根不回复 不响应 ❌（不知道怎么想的）。而Clash Meta完美支持 ✅ ，不会有这个问题。
+<br>
 
+总之，面对以上功能缺失。如果有人能联系上Stash开发者，请一起转达❕ 饱和式转达❕ 人多力量大❕ 以便于，让 Stash 在核心功能上，补齐与Clash meta 之间的短板。
 
 
 <br>
