@@ -1402,7 +1402,7 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 ------
 
 
-# 为什么本模版 100% 禁用了，官方推荐的 Fake IP + Fallback DNS + no-resolve 的组合？
+# 为什么本模版 完全禁用 了，官方推荐的 “ Fake IP + Fallback DNS + no-resolve ” 的组合？
 
 <br>
 
@@ -1410,11 +1410,11 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
  1. ❌ Fake IP 的 VPN特征明显
     
-    APP 内置的反VPN SDK，可以通过识别Fake IP，识别到使用了VPN，从而强制退出APP
+    APP 内置的 “商业级 反VPN SDK” ，会通过识别Fake IP，识别到使用了VPN，从而强制退出APP（如，某些银行类APP）
  
  2. ❌ Fake IP 极不省心 、干扰正常使用
     
-    Fake IP 还会造成 大量的兼容性问题，为了解决兼容性问题，还需要给它设置过滤列表（添加各种例外，尤其是在路由器上部署时），需要频繁手动维护，不胜其烦 
+    Fake IP 还会造成 大量的兼容性问题，为了解决兼容性问题，还需要给它设置过滤列表（添加各种例外，尤其是在路由器上部署时），需要频繁手动维护，不胜其烦 ❕❕❕
 
  3. ❌ Fallback DNS 会造成DNS泄漏
     
