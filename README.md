@@ -1487,7 +1487,7 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
  - 在代理声明中，全面支持 “dialer-proxy链式代理”
     
-    - 最新的 Clash Meta内核，已经完全删除了 Relay 链式代理 。而 Stash 又只能支持Relay链式代理。这两者 100%互斥 ❌ 在这里。
+    - 最新的 Clash Meta内核，已经完全删除了 Relay 链式代理 。而 Stash 又只能支持Relay链式代理。这两者 100%互斥 ❌ 在 链式代理 功能上。
     
     - 这导致，目前本模版，在链式代理上，使用了非常、非常、非常垃圾的 🤮🤮🤮🤮 折中写法 🤮🤮🤮🤮 ，以便让两者都能“不报错”（在Stash上 只能做到不报错，不等于有完整功能。在Clash上 目前可以完整功能）。
     
