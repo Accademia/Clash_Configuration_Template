@@ -1414,7 +1414,7 @@ If you are not located in China but instead in rogue countries like Russia, Iran
  
  2. ❌ Fake IP 极不省心 、干扰正常使用
     
-    Fake IP 还会造成 大量的兼容性问题，为了解决兼容性问题，还需要给它设置过滤列表，需要频繁手动维护，不胜其烦 
+    Fake IP 还会造成 大量的兼容性问题，为了解决兼容性问题，还需要给它设置过滤列表（添加各种例外，尤其是在路由器上部署时），需要频繁手动维护，不胜其烦 
 
  3. ❌ Fallback DNS 会造成DNS泄漏
     
@@ -1422,7 +1422,7 @@ If you are not located in China but instead in rogue countries like Russia, Iran
     
  4. ❌ no-resolve 阉割DNS解析能力
     
-    官方指导中，还推荐给分流域名都添加 no-resolve约束（禁止DNS解析），那意味着 不能调用IP（GeoIP）进行分流 。🤣 这等于，100%阉割了，基于IP地理位置的分流（ 如 geoip:cn ）的分流 ❕❕❕ 这么大限制 ，喜提纯种大韭菜❕❕❕
+    官方指导中，还推荐给分流域名都添加 no-resolve约束（禁止DNS解析），那意味着 不能调用IP（GeoIP）进行分流 。🤣 这等于，100%阉割了，基于IP地理位置的分流（ 如 geoip:cn ）的分流 ❕❕❕ 喜提纯种大韭菜❕❕❕
 
 以上，别说四大缺陷了，上述 任何一个缺陷，都 = 0 接受度 🤣   。 
 
@@ -1438,7 +1438,7 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 其次，有没有其他方案，达成上述目标？
 
-必须有。在 DNS分流策略（nameserver-policy）中，1:1镜像， 分流规则（Rule）中的分流策略（不要镜像，Reject相关的规则和IP分流规则）。就完全可以满足上述需求了。等于说， “让每一笔DNS请求的走向， 都100%被 手写规则 显示可控”  ，才是 ”防DNS泄漏 + 防绕路“ 的最佳方案。
+必须有。在 DNS分流策略（nameserver-policy）中，1:1镜像， 分流规则（Rule）中的分流策略。就完全可以满足上述需求了。等于说， “让每一笔DNS请求的走向， 都100%被 手写规则 显示可控”  ，才是 ”防DNS泄漏 + 防绕路“ 的最佳方案。
 
 并且，同时解决了，上述所有缺点：
 
@@ -1452,7 +1452,7 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 而，继续无脑用Clash Premium官方指导的 “ Fake IP + Fallback DNS + no-resolve “ 方案 ？  100%喜提 上述四大缺点  🤣🤣🤣🤣
  
-
+（提示：不要镜像，Reject相关的规则和IP分流规则，只镜像 “可以到达VPN节点” 的 “域名分流规则” ）
 
 <br>
 <br>
