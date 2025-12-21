@@ -1395,6 +1395,65 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 多说一句。从使用体验上来看， 像geosite:cn 这种基于泛LBS概念的分流规则， 给 ”dns解析请求“ 分流的价值，至少十倍于 给其他类型的网络请求。因为你像哪个DNS请求，就已经决定了你要访问的IP在哪里（国内还是国外），后面在怎么分流 ，也改变不了这个带来的体验差异。
 
+
+<br>
+<br>
+
+------
+
+
+# 为什么本模版 100% 禁用了，官方推荐的 Fake IP + Fallback DNS + no-resolve 的组合？
+
+<br>
+
+被普遍使用的 “Fake IP + Fallback DNS + no-resolve” 的组合。是从 已经停更的 Clash Premium 官方指导中，继承下来的。其核心目的只有一个，就是 “防DNS泄漏 + 防DNS污染”。但是，此组合，带来如下诸多缺陷：
+
+ 1. ❌ Fake IP 的 VPN特征明显
+    
+    APP 内置的反VPN SDK，可以通过识别Fake IP，识别到使用了VPN，从而强制退出APP
+ 
+ 2. ❌ Fake IP 极不省心 、干扰正常使用
+    
+    Fake IP 还会造成 大量的兼容性问题，为了解决兼容性问题，还需要给它设置过滤列表，需要频繁手动维护，不胜其烦 
+
+ 3. ❌ Fallback DNS 会造成DNS泄漏
+    
+    Fallback模式下的DNS请求，会先去国内DNS请求，然后再去海外DNS验证。这种机制 100%会造成DNS泄漏。
+    
+ 4. ❌ no-resolve 阉割DNS解析能力
+    
+    官方指导中，还推荐给分流域名都添加 no-resolve约束（禁止DNS解析），那意味着 不能调用IP（GeoIP）进行分流 。🤣 这等于，100%阉割了，基于IP地理位置的分流（ 如 geoip:cn ）的分流 ❕❕❕ 这么大限制 ，喜提纯种大韭菜❕❕❕
+
+以上，别说四大缺陷了，上述 任何一个缺陷，都 = 0 接受度 🤣   。 
+
+<br>
+
+那么，如何解决？
+
+首先，“防DNS泄漏 + 防DNS污染” ，其 核心目标 是 什么 ？ 
+ 
+ - 核心目标 1 ：国外流量的 DNS解析，去被分流的境外VPN节点去解析（不发国内，也不发给 其他节点）
+ 
+ - 核心目标 2 ：国内流量的 DNS解析，直连国内DNS解析
+
+其次，有没有其他方案，达成上述目标？
+
+必须有。在 DNS分流策略（nameserver-policy）中，1:1镜像， 分流规则（Rule）中的分流策略（不要镜像，Reject相关的规则和IP分流规则）。就完全可以满足上述需求了。等于说， “让每一笔DNS请求的走向， 都100%被 手写规则 显示可控”  ，才是 ”防DNS泄漏 + 防绕路“ 的最佳方案。
+
+并且，同时解决了，上述所有缺点：
+
+  - ✅ 0 FakeIP 的VPN特征
+  - ✅ 0 FakeIP 干扰正常流量
+  - ✅ 0 DNS泄漏 
+  - ✅ “满血版DNS解析” 
+
+
+这也就是为什么 Clahs Meta内核，会大力增强DNS分流策略（nameserver-policy）的分流能力，使其分流能力，能够1:1镜像 分流规则（Rule）中的几乎所有规则。
+
+而，继续无脑用Clash Premium官方指导的 “ Fake IP + Fallback DNS + no-resolve “ 方案 ？  100%喜提 上述四大缺点  🤣🤣🤣🤣
+ 
+
+
 <br>
 <br>
 
