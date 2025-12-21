@@ -1406,7 +1406,7 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 <br>
 
-被普遍使用的 “Fake IP + Fallback DNS + no-resolve” 的组合。是从 已经停更的 Clash Premium 官方指导中，继承下来的。其核心目的只有一个，就是 “防DNS泄漏 + 防DNS污染”。但是，此组合，带来如下诸多缺陷：
+被普遍使用的 “Fake IP + Fallback DNS + no-resolve” 的组合。是从 已经停更的 Clash Premium 官方指导中，继承下来的。其核心目的只有一个，就是 “防DNS污染”。但是，此组合，带来如下诸多缺陷：
 
  1. ❌ Fake IP 的 VPN特征明显
     
