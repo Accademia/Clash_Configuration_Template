@@ -1499,6 +1499,8 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 已向Stash多次反馈 🔥🔥🔥 开发者 压根 已读不回 🔥🔥🔥。有能联系上开发者的，希望能顺手反馈一下。大家一起向Stash开发者，饱和式反馈。以便能 “加速” 本模版 快速进入  “完美状态”。
 
+<br>
+
 PS：如果Stash已经兼容上述功能，而本模版尚未改进，希望也能在本项目中发 issue，以便我能知道。本人没有加加任何群聊，无精力实时关注动向。
 
 <br>
