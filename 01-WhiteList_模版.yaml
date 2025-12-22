@@ -411,7 +411,8 @@ dns                               :
                                   #  'RULE-SET:Spotify_Do_Resolve'                      : [ 'https://cloudflare-dns.com/dns-query#🎧.<Audio>—Spotify'                     , 'https://dns.google/dns-query#🎧.<Audio>—Spotify'                         ]    # [3st-25]                     
                                   #  
                                   ###已移动到 此位置 # [4st-01] - 大厂
-                                  ###'RULE-SET:YouTubeMusic_Do_Resolve'                 : [ 'https://cloudflare-dns.com/dns-query#🎧.<Audio>—YouTubeMusic'                , 'https://dns.google/dns-query#🎧.<Audio>—YouTubeMusic'                    ]    # [3st-25]                     
+                                  ###'RULE-SET:YouTubeMusic_Do_Resolve'                 : [ 'https://cloudflare-dns.com/dns-query#🎧.<Audio>—YouTubeMusic'                , 'https://dns.google/dns-query#🎧.<Audio>—YouTubeMusic'                    ]    # [3st-25]     
+                                  ###已移动到 此位置 # [4st-01] - 大厂                
                                   ###'RULE-SET:AppleMusic_Do_Resolve'                   : [ 'https://cloudflare-dns.com/dns-query#🎧.<Audio>—AppleMusic'                  , 'https://dns.google/dns-query#🎧.<Audio>—AppleMusic'                      ]    # [3st-25]                     
                                   #  
                                   #  
@@ -473,7 +474,7 @@ dns                               :
                                   #  
                                   #  'RULE-SET:Wikipedia_Do_Resolve'                    : [ 'https://cloudflare-dns.com/dns-query#📰.<News>—Wikipedia'                    , 'https://dns.google/dns-query#📰.<News>—Wikipedia'                        ]    # [3st-28]  
                                   #  
-                                  ###暂未启用
+                                  ###已移动到 此位置 # [4st-01] - 大厂
                                   ###'RULE-SET:AppleNews_Domain'                        : [ 'https://cloudflare-dns.com/dns-query#📰.<News>—AppleNews'                    , 'https://dns.google/dns-query#📰.<News>—AppleNews'                        ]    # [3st-28]  
                                   #  
                                   #  
@@ -538,6 +539,10 @@ dns                               :
                                   #  'GEOSITE:google'                                   : [ 'https://cloudflare-dns.com/dns-query#☁️.<Apps>—Google'                       , 'https://dns.google/dns-query#☁️.<Apps>—Google'                           ]    # [4st-01]  
                                   #  'RULE-SET:Google_Do_Resolve'                       : [ 'https://cloudflare-dns.com/dns-query#☁️.<Apps>—Google'                       , 'https://dns.google/dns-query#☁️.<Apps>—Google'                           ]    # [4st-01]  
                                   #  
+                                  ###暂未启用
+                                  ###'RULE-SET:AppleMusic_Do_Resolve'                   : [ 'https://dns.alidns.com/dns-query#🎧.<Audio>—AppleMusic '                     , 'https://dns.google/dns-query#🎧.<Audio>—AppleMusic '                     ]    # [3st-25]     #
+                                  ###暂未启用 
+                                  ###'RULE-SET:AppleNews_Domain'                        : [ 'https://dns.alidns.com/dns-query#📰.<News>—AppleNews'                        , 'https://dns.google/dns-query#📰.<News>—AppleNews'                        ]    # [3st-28]     #
                                   #  'token.safebrowsing.apple'                         : [ 'https://cloudflare-dns.com/dns-query#💡.<AI>—AppleAI'                        , 'https://dns.google/dns-query#💡.<AI>—AppleAI'                            ]    # 注意，中国大陆的DNS无法解析 token.safebrowsing.apple ⚠️⚠️⚠️
                                   #  'RULE-SET:Apple_Domain'                            : [ 'https://dns.alidns.com/dns-query#☁️.<Apps>—Apple'                            , 'https://dns.google/dns-query#☁️.<Apps>—Apple'                            ]    # [4st-01]     #  ❕❕❕❕❕ 注意：请不要使用苹果自己的DNS（ 苹果公司DNS 无法解析全自己的域名，更无法解析第三方域名）❕❕❕❕❕
                                   #  
