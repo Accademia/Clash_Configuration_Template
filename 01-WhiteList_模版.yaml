@@ -119,19 +119,21 @@ hosts                             :                                             
 
 dns                               :
   enable                          : true                                                # 如果配置为关闭，则将仅仅使用系统 DNS
-  prefer-h3                       : true                                                # ⚠️ ⚠️ 需要节点协议支持。 设置：是否开启 DOH 的 http/3（加密DNS请求）
+  prefer-h3                       : false                                               # ⚠️ ⚠️ 需要节点协议支持。 设置：是否开启 DOH 的 http/3（加密DNS请求）
   ipv6                            : false                                               # 设置：是否启动 基于IPV6的DNS查询
   listen                          : '0.0.0.0:53'                                        # 设置，如何拦截本地所有DNS请求 ： 方法 ，监听本地的53端口 ，如果此选项配置错误，则Clash 的DNS代理分流逻辑将不生效
   use-hosts                       : true                                                # 使用hosts # lookup hosts and return IP record
   use-system-hosts                : true                                                # 
   skip-cert-verify                : false                                               # TLS 握手时是否忽略证书验证    （ 如果设置为 true ，即，跳过证书验证，用来解决部分兼容性问题 ）
  
- #direct-nameserver               : [ system ]     # 仅用于，直连请求  的 域名解析
-  proxy-server-nameserver         : [ system ]     # 仅用于，代理节点  的 域名解析 
-  default-nameserver              : [ system ]     # 仅用于，DNS服务器 的 域名解析
+  proxy-server-nameserver         : [ system ]                                          # 仅用于，代理节点  的 域名解析 
+  default-nameserver              : [ system ]                                          # 仅用于，DNS服务器 的 域名解析
+  direct-nameserver               :                                                     # 仅用于，直连请求  的 域名解析 (同时请求境内外，通过respect-rules进行分流，以便于同时适配于，肉身出国、肉身回国)
+                                    - 'https://dns.alidns.com/dns-query'
+                                    - 'https://dns.google/dns-query'      
   nameserver                      :                                                     # 注意：⚠️ iOS（Stash） 对 DNS 数量非常敏感，不建议超过2个（否则会导致：网络内存占用上升超过50MB限制、iOS网络模块频繁崩溃）  ⚠️⚠️⚠️ 注意：follow-rule开启后，域名链接的DNS、DOH ，必须配合GlobalDNS分流策略  ⚠️⚠️⚠️
-                                    - 'https://dns.google/dns-query'                    # Google DNS       # 8.8.8.8             8.8.4.4
                                     - 'https://cloudflare-dns.com/dns-query'            # Cloudflare DNS   # 1.1.1.1             1.0.0.1
+                                    - 'https://dns.google/dns-query'                    # Google DNS       # 8.8.8.8             8.8.4.4
                                   # - 'https://dns.quad9.net/dns-query'                 # IBM Quad9        # 9.9.9.11            149.112.112.11     
                                   # - 'https://doh.opendns.com/dns-query'               # OpenDNS          # 208.67.220.220      208.67.222.222
                                   # - 'https://doh.dns.sb/dns-query'                    # DNS.SB           # 185.222.222.222     45.11.45.11
@@ -149,15 +151,15 @@ dns                               :
   nameserver-policy               :                                                     # DNS分流规则      
 
                                   ### 🔻🔻🔻 开始 （ ClashMeta_Only ） 🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻  开始 （ ClashMeta_Only ）    
-
+                                  #  
                                   ### 以下被注释的原因 ： ⚠️⚠️⚠️⚠️ 仅 Clash Meta 支持，但 Stash 3.x 不支持！ ⚠️⚠️⚠️⚠️  
-                                  
+                                  #  
                                   ### 注意：当域名 ，是非泄漏敏感域名时（ = 国内域名 或 默认直连的国外域名），强烈建议，同时使用 “阿里DNS、谷歌DNS” ，以便增强鲁棒性，并获得更最快的DNS响应结果❕
-
+                                  #  
                                   ### --------------------------------------------------------------------------------------------------
                                   ###  [2st-01]  DNS分流 ： 修改IP归属地显示 
                                   ### --------------------------------------------------------------------------------------------------
-                                  
+                                  #  
                                   #  'RULE-SET:FakeLocationBiliBili_Do_Resolve'         : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>—BiliBili'                       , 'https://dns.google/dns-query#🇨🇳.<ShowIP>—BiliBili'                       ]    # [2st-01]   
                                   #  'RULE-SET:FakeLocationDouYin_Do_Resolve'           : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>—抖音'                           , 'https://dns.google/dns-query#🇨🇳.<ShowIP>—抖音'                           ]    # [2st-01]   
                                   #  'RULE-SET:FakeLocationKuaiShou_Do_Resolve'         : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>—快手'                           , 'https://dns.google/dns-query#🇨🇳.<ShowIP>—快手'                           ]    # [2st-01]   
@@ -168,107 +170,107 @@ dns                               :
                                   #  'RULE-SET:FakeLocationTieBa_Do_Resolve'            : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>—贴吧'                           , 'https://dns.google/dns-query#🇨🇳.<ShowIP>—贴吧'                           ]    # [2st-01]   
                                   #  'RULE-SET:FakeLocationDouBan_Do_Resolve'           : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>—豆瓣'                           , 'https://dns.google/dns-query#🇨🇳.<ShowIP>—豆瓣'                           ]    # [2st-01]   
                                   #  'RULE-SET:FakeLocationXianYu_Do_Resolve'           : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>—闲鱼'                           , 'https://dns.google/dns-query#🇨🇳.<ShowIP>—闲鱼'                           ]    # [2st-01]   
-
-
+                                  #  
+                                  #  
                                   ### --------------------------------------------------------------------------------------------------
                                   ###  [2st-05]   DNS分流 ： 回国 
                                   ### --------------------------------------------------------------------------------------------------
-                                  
+                                  #  
                                   #  'RULE-SET:Kwai_Domain'                             : [ 'https://cloudflare-dns.com/dns-query#🎬.<Short>—Kwai'                        , 'https://dns.google/dns-query#🎬.<Short>—Kwai'                            ]    # [3st-23]  
-
+                                  #  
                                   #  'RULE-SET:GeositeCN_Domain'                        : [ 'https://dns.alidns.com/dns-query#🇨🇳.<Country>—CN'                            , 'https://dns.google/dns-query#🇨🇳.<Country>—CN'                            ]    # [2st-05]
-
+                                  #  
                                   #  'RULE-SET:CloudflareCN_Do_Resolve'                 : [ 'https://dns.alidns.com/dns-query#🇨🇳.<Country>—CN'                            , 'https://dns.google/dns-query#🇨🇳.<Country>—CN'                            ]    # [6st-01]
                                   #  'GEOSITE:cloudflare-cn'                            : [ 'https://dns.alidns.com/dns-query#🇨🇳.<Country>—CN'                            , 'https://dns.google/dns-query#🇨🇳.<Country>—CN'                            ]    # [6st-01]
-
+                                  #  
                                   #  'RULE-SET:AmazonCN_Do_Resolve'                     : [ 'https://dns.alidns.com/dns-query#🇨🇳.<Country>—CN'                            , 'https://dns.google/dns-query#🇨🇳.<Country>—CN'                            ]    # [4st-01] 
                                   #  'GEOSITE:amazon@cn'                                : [ 'https://dns.alidns.com/dns-query#🇨🇳.<Country>—CN'                            , 'https://dns.google/dns-query#🇨🇳.<Country>—CN'                            ]    # [4st-01] 
-
-
+                                  #  
+                                  #  
                                   ### --------------------------------------------------------------------------------------------------
                                   ###  [3st-00]   DNS分流 ： 测速
                                   ### --------------------------------------------------------------------------------------------------
-
+                                  #  
                                   #  'GEOSITE:ookla-speedtest'                          : [ 'https://dns.alidns.com/dns-query#🎚.<Speedtest>'                             , 'https://dns.google/dns-query#🎚.<Speedtest>'                              ]    # [3st-00]         
                                   #  'RULE-SET:Speedtest_Do_Resolve'                    : [ 'https://dns.alidns.com/dns-query#🎚.<Speedtest>'                             , 'https://dns.google/dns-query#🎚.<Speedtest>'                              ]    # [3st-00]         
                                   #  '+.oca.nflxvideo.net'                              : [ 'https://dns.alidns.com/dns-query#🎚.<Speedtest>'                             , 'https://dns.google/dns-query#🎚.<Speedtest>'                              ]    # [3st-00]         
-
-
+                                  #  
+                                  #  
                                   ### --------------------------------------------------------------------------------------------------
                                   ###  [3st-01]   DNS分流 ： 智能设备
                                   ### --------------------------------------------------------------------------------------------------
-
+                                  #  
                                   #  'GEOSITE:synology'                                 : [ 'https://dns.alidns.com/dns-query#💻.<NAS>—Synology'                          , 'https://dns.google/dns-query#💻.<NAS>—Synology'                          ]    # [1st-01]           
                                   #  'RULE-SET:Synology_Do_Resolve'                     : [ 'https://dns.alidns.com/dns-query#💻.<NAS>—Synology'                          , 'https://dns.google/dns-query#💻.<NAS>—Synology'                          ]    # [1st-01]           
                                   #  'RULE-SET:AqaraGlobal_Do_Resolve'                  : [ 'https://cloudflare-dns.com/dns-query#🔌.<Home>—AqaraGlobal'                  , 'https://dns.google/dns-query#🔌.<Home>—AqaraGlobal'                      ]    # [1st-01]           
-
+                                  #  
                                   ### --------------------------------------------------------------------------------------------------
                                   ###  [3st-02]  DNS分流 ： 公有云 
                                   ### --------------------------------------------------------------------------------------------------
-                                
+                                  #  
                                   #  'GEOSITE:onedrive'                                 : [ 'https://dns.alidns.com/dns-query#📂.<Drive>—OneDrive'                        , 'https://dns.google/dns-query#📂.<Drive>—OneDrive'                        ]    # [3st-02] 
                                   #  'RULE-SET:OneDrive_Do_Resolve'                     : [ 'https://cloudflare-dns.com/dns-query#📂.<Drive>—OneDrive'                    , 'https://dns.google/dns-query#📂.<Drive>—OneDrive'                        ]    # [3st-02] 
- 
+                                  #   
                                   ###暂未启用
                                   ###已移动到 此位置 # [4st-01] -  大厂   
                                   ###'GEOSITE:icloud'                                   : [ 'https://dns.alidns.com/dns-query#📂.<Drive>—iCloud'                          , 'https://dns.google/dns-query#📂.<Drive>—iCloud'                          ]    # [3st-02] 
                                   ###'RULE-SET:iCloud_Do_Resolve'                       : [ 'https://cloudflare-dns.com/dns-query#📂.<Drive>—iCloud'                      , 'https://dns.google/dns-query#📂.<Drive>—iCloud'                          ]    # [3st-02] 
- 
+                                  #   
                                   #  'GEOSITE:dropbox'                                  : [ 'https://cloudflare-dns.com/dns-query#📂.<Drive>—Dropbox'                     , 'https://dns.google/dns-query#📂.<Drive>—Dropbox'                         ]    # [3st-02] 
                                   #  'RULE-SET:Dropbox_Do_Resolve'                      : [ 'https://cloudflare-dns.com/dns-query#📂.<Drive>—Dropbox'                     , 'https://dns.google/dns-query#📂.<Drive>—Dropbox'                         ]    # [3st-02] 
- 
+                                  #   
                                   #  'GEOSITE:mega'                                     : [ 'https://cloudflare-dns.com/dns-query#📂.<Drive>—MEGA'                        , 'https://dns.google/dns-query#📂.<Drive>—MEGA'                            ]    # [3st-02] 
                                   #  'RULE-SET:MEGA_Do_Resolve'                         : [ 'https://cloudflare-dns.com/dns-query#📂.<Drive>—MEGA'                        , 'https://dns.google/dns-query#📂.<Drive>—MEGA'                            ]    # [3st-02] 
- 
+                                  #   
                                   #  'GEOSITE:imgur'                                    : [ 'https://cloudflare-dns.com/dns-query#📂.<Drive>—Imgur'                       , 'https://dns.google/dns-query#📂.<Drive>—Imgur'                           ]    # [3st-02] 
                                   #  'RULE-SET:Imgur_Do_Resolve'                        : [ 'https://cloudflare-dns.com/dns-query#📂.<Drive>—Imgur'                       , 'https://dns.google/dns-query#📂.<Drive>—Imgur'                           ]    # [3st-02] 
- 
+                                  #   
                                   ###已移动到 此位置 # [4st-01] -  大厂   
                                   ###'RULE-SET:GoogleDrive_Do_Resolve'                  : [ 'https://cloudflare-dns.com/dns-query#📂.<Drive>—GoogleDrive'                 , 'https://dns.google/dns-query#🎧.<Audio>—YouTubeMusic'                    ]    # [3st-25]  
-  
+                                  #    
                                   #  'RULE-SET:WaybackMachine_Domain'                   : [ 'https://cloudflare-dns.com/dns-query#📂.<Drive>—InternetArchive'             , 'https://dns.google/dns-query#📂.<Drive>—InternetArchive'                 ]    # [3st-02] 
-
-
+                                  #  
+                                  #  
                                   ### --------------------------------------------------------------------------------------------------
                                   ###  [3st-04]  DNS分流 ： P2P下载 (海外)
                                   ### --------------------------------------------------------------------------------------------------
-                                  
+                                  #  
                                   #  'GEOSITE:category-pt'                              : [ 'https://cloudflare-dns.com/dns-query#⬇️.<P2P>—PT-Server'                      , 'https://dns.google/dns-query#⬇️.<P2P>—PT-Server'                          ]    # [3st-04] 
                                   #  'RULE-SET:PrivateTracker_Do_Resolve'               : [ 'https://cloudflare-dns.com/dns-query#⬇️.<P2P>—PT-Server'                      , 'https://dns.google/dns-query#⬇️.<P2P>—PT-Server'                          ]    # [3st-04] 
-
-
+                                  #  
+                                  #  
                                   ### --------------------------------------------------------------------------------------------------
                                   ###  [3st-05]  DNS分流 ： P2P下载 (海外)
                                   ### --------------------------------------------------------------------------------------------------
-
+                                  #  
                                   ###已移动到 此位置 # [3st-30] - 工具
                                   ###'RULE-SET:MacAppUpgrade_Domain'                   : [ 'https://cloudflare-dns.com/dns-query#⬇️.<Download>—MacAppUpgrade'             , 'https://dns.google/dns-query#⬇️.<Download>—MacAppUpgrade'                 ]    # [3st-05] 
-
-
+                                  #  
+                                  #  
                                   ### --------------------------------------------------------------------------------------------------
                                   ###  [3st-11]  DNS分流 ： 金融
                                   ### --------------------------------------------------------------------------------------------------
-
+                                  #  
                                   #  'GEOSITE:paypal'                                   : [ 'https://cloudflare-dns.com/dns-query#💰.<Finance>—Paypal'                    , 'https://dns.google/dns-query#💰.<Finance>—Paypal'                        ]    # [3st-11]
                                   #  'RULE-SET:Paypal_Do_Resolve'                       : [ 'https://cloudflare-dns.com/dns-query#💰.<Finance>—Paypal'                    , 'https://dns.google/dns-query#💰.<Finance>—Paypal'                        ]    # [3st-11]
-
+                                  #  
                                   #  'GEOSITE:wise'                                     : [ 'https://cloudflare-dns.com/dns-query#💰.<Finance>—Wise'                      , 'https://dns.google/dns-query#💰.<Finance>—Wise'                          ]    # [3st-11]
                                   #  'RULE-SET:Wise_Do_Resolve'                         : [ 'https://cloudflare-dns.com/dns-query#💰.<Finance>—Wise'                      , 'https://dns.google/dns-query#💰.<Finance>—Wise'                          ]    # [3st-11]
-
+                                  #  
                                   #  'GEOSITE:binance'                                  : [ 'https://cloudflare-dns.com/dns-query#₿.<Crypto>—Binance'                     , 'https://dns.google/dns-query#₿.<Crypto>—Binance'                         ]    # [3st-11]
                                   #  'RULE-SET:Binance_Do_Resolve'                      : [ 'https://cloudflare-dns.com/dns-query#₿.<Crypto>—Binance'                     , 'https://dns.google/dns-query#₿.<Crypto>—Binance'                         ]    # [3st-11]
-
+                                  #  
                                   #  'GEOSITE:okx'                                      : [ 'https://cloudflare-dns.com/dns-query#₿.<Crypto>—OKX'                         , 'https://dns.google/dns-query#₿.<Crypto>—OKX'                             ]    # [3st-11]
                                   #  'RULE-SET:OKX_Do_Resolve'                          : [ 'https://cloudflare-dns.com/dns-query#₿.<Crypto>—OKX'                         , 'https://dns.google/dns-query#₿.<Crypto>—OKX'                             ]    # [3st-11]
-
+                                  #  
                                   #  'RULE-SET:Monzo_Do_Resolve'                        : [ 'https://cloudflare-dns.com/dns-query#💳.<Virtual>—Monzo'                     , 'https://dns.google/dns-query#💳.<Virtual>—Monzo'                         ]    # [3st-11]
                                   #  'RULE-SET:Revolut_Do_Resolve'                      : [ 'https://cloudflare-dns.com/dns-query#💳.<Virtual>—Revolut'                   , 'https://dns.google/dns-query#💳.<Virtual>—Revolut'                       ]    # [3st-11]
-
-
+                                  #  
+                                  #  
                                   ### --------------------------------------------------------------------------------------------------
                                   ###  [3st-12]  DNS分流 ： 各国银行 
                                   ### --------------------------------------------------------------------------------------------------
-
+                                  #  
                                   #  'RULE-SET:BankUS_Domain'                           : [ 'https://cloudflare-dns.com/dns-query#🇺🇸.<Bank>—US'                           , 'https://dns.google/dns-query#🇺🇸.<Bank>—US'                               ]    # [3st-12]   
                                   #  'RULE-SET:BankCA_Domain'                           : [ 'https://cloudflare-dns.com/dns-query#🇨🇦.<Bank>—CA'                           , 'https://dns.google/dns-query#🇨🇦.<Bank>—CA'                               ]    # [3st-12]  
                                   #  'RULE-SET:BankUK_Domain'                           : [ 'https://cloudflare-dns.com/dns-query#🇬🇧.<Bank>—UK'                           , 'https://dns.google/dns-query#🇬🇧.<Bank>—UK'                               ]    # [3st-12]  
@@ -279,278 +281,278 @@ dns                               :
                                   ###'RULE-SET:BankDE_Domain'                           : [ 'https://cloudflare-dns.com/dns-query#🇳🇱.<Bank>—NL'                           , 'https://dns.google/dns-query#🇳🇱.<Bank>—NL'                               ]    # [3st-12]  
                                   ###'RULE-SET:BankNL_Domain'                           : [ 'https://cloudflare-dns.com/dns-query#🇩🇪.<Bank>—DE'                           , 'https://dns.google/dns-query#🇩🇪.<Bank>—DE'                               ]    # [3st-12]  
                                   ###'RULE-SET:BankFR_Domain'                           : [ 'https://cloudflare-dns.com/dns-query#🇫🇷.<Bank>—FR'                           , 'https://dns.google/dns-query#🇫🇷.<Bank>—FR'                               ]    # [3st-12]  
-
-
+                                  #  
+                                  #  
                                   ### --------------------------------------------------------------------------------------------------
                                   ###  [3st-13] ： HomeIP 
                                   ### --------------------------------------------------------------------------------------------------
-                                             
+                                  #  
                                   #  'RULE-SET:HomeIPUS_Do_Resolve'                     : [ 'https://cloudflare-dns.com/dns-query#🇺🇸.<HomeIP>—US'                         , 'https://dns.google/dns-query#🇺🇸.<HomeIP>—US'                             ]    # [3st-13]                 
                                   ###'RULE-SET:HomeIPCA_Do_Resolve'                     : [ 'https://cloudflare-dns.com/dns-query#🇨🇦.<HomeIP>—CA'                         , 'https://dns.google/dns-query#🇨🇦.<HomeIP>—CA'                             ]    # [3st-13]                 
                                   ###'RULE-SET:HomeIPUK_Do_Resolve'                     : [ 'https://cloudflare-dns.com/dns-query#🇬🇧.<HomeIP>—UK'                         , 'https://dns.google/dns-query#🇬🇧.<HomeIP>—UK'                             ]    # [3st-13]                 
                                   ###'RULE-SET:HomeIPAU_Do_Resolve'                     : [ 'https://cloudflare-dns.com/dns-query#🇦🇺.<HomeIP>—AU'                         , 'https://dns.google/dns-query#🇦🇺.<HomeIP>—AU'                             ]    # [3st-13]                 
                                   #  'RULE-SET:HomeIPJP_Do_Resolve'                     : [ 'https://cloudflare-dns.com/dns-query#🇯🇵.<HomeIP>—JP'                         , 'https://dns.google/dns-query#🇯🇵.<HomeIP>—JP'                             ]    # [3st-13]                 
-
+                                  #  
                                   ### --------------------------------------------------------------------------------------------------
                                   ###  [3st-14]  DNS分流 ：  不支持VPN的网站（除 银行、HomeIP 分流规则以外的 网站）
                                   ### --------------------------------------------------------------------------------------------------
-
+                                  #  
                                   #  'RULE-SET:UnsupportVPN_Do_Resolve'                 : [ 'https://cloudflare-dns.com/dns-query#❌.<UnsupportVPN>'                      , 'https://dns.google/dns-query#❌.<UnsupportVPN>'                          ]    # [3st-14]         
-
-
+                                  #  
+                                  #  
                                   ### --------------------------------------------------------------------------------------------------
                                   ###  [3st-20]  DNS分流 ： 购物
                                   ### --------------------------------------------------------------------------------------------------
-
+                                  #  
                                   #  'GEOSITE:ebay'                                     : [ 'https://cloudflare-dns.com/dns-query#🛒.<Shopping>—eBay'                     , 'https://dns.google/dns-query#🛒.<Shopping>—eBay'                         ]    # [3st-20]         
                                   #  'RULE-SET:eBay_Do_Resolve'                         : [ 'https://cloudflare-dns.com/dns-query#🛒.<Shopping>—eBay'                     , 'https://dns.google/dns-query#🛒.<Shopping>—eBay'                         ]    # [3st-20]         
-
+                                  #  
                                   #  'GEOSITE:patreon'                                  : [ 'https://cloudflare-dns.com/dns-query#🛒.<Shopping>—Patreon'                  , 'https://dns.google/dns-query#🛒.<Shopping>—Patreon'                      ]    # [3st-20]         
                                   #  'RULE-SET:Patreon_Do_Resolve'                      : [ 'https://cloudflare-dns.com/dns-query#🛒.<Shopping>—Patreon'                  , 'https://dns.google/dns-query#🛒.<Shopping>—Patreon'                      ]    # [3st-20]         
-
-
+                                  #  
+                                  #  
                                   ### --------------------------------------------------------------------------------------------------
                                   ###  [3st-21]  DNS分流 ： 游戏 
                                   ### --------------------------------------------------------------------------------------------------
-                                  
+                                  #    
                                   #  'GEOSITE:xbox'                                     : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—Xbox'                             , 'https://dns.google/dns-query#🕹️.<Game>—Xbox'                             ]    # [3st-21] 
                                   #  'RULE-SET:Xbox_Do_Resolve'                         : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—Xbox'                             , 'https://dns.google/dns-query#🕹️.<Game>—Xbox'                             ]    # [3st-21] 
-
+                                  #  
                                   #  'GEOSITE:playstation'                              : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—PlayStation'                      , 'https://dns.google/dns-query#🕹️.<Game>—PlayStation'                      ]    # [3st-21] 
                                   #  'RULE-SET:PlayStation_Do_Resolve'                  : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—PlayStation'                      , 'https://dns.google/dns-query#🕹️.<Game>—PlayStation'                      ]    # [3st-21] 
-                                  
+                                  #
                                   #  'GEOSITE:nintendo'                                 : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—Nintendo'                         , 'https://dns.google/dns-query#🕹️.<Game>—Nintendo'                         ]    # [3st-21] 
                                   #  'RULE-SET:Nintendo_Do_Resolve'                     : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—Nintendo'                         , 'https://dns.google/dns-query#🕹️.<Game>—Nintendo'                         ]    # [3st-21] 
-
+                                  #  
                                   #  'GEOSITE:steam'                                    : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—Steam'                            , 'https://dns.google/dns-query#🕹️.<Game>—Steam'                            ]    # [3st-21] 
                                   #  'RULE-SET:Steam_Do_Resolve'                        : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—Steam'                            , 'https://dns.google/dns-query#🕹️.<Game>—Steam'                            ]    # [3st-21] 
-
+                                  #  
                                   #  'GEOSITE:epicgames'                                : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—EPIC'                             , 'https://dns.google/dns-query#🕹️.<Game>—EPIC'                             ]    # [3st-21] 
                                   #  'RULE-SET:EPIC_Do_Resolve'                         : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—EPIC'                             , 'https://dns.google/dns-query#🕹️.<Game>—EPIC'                             ]    # [3st-21] 
-
+                                  #  
                                   #  'GEOSITE:gog'                                      : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—GOG'                              , 'https://dns.google/dns-query#🕹️.<Game>—GOG'                              ]    # [3st-21] 
                                   #  'RULE-SET:GOG_Do_Resolve'                          : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—GOG'                              , 'https://dns.google/dns-query#🕹️.<Game>—GOG'                              ]    # [3st-21] 
-
+                                  #  
                                   #  'GEOSITE:rockstar'                                 : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—RockStar'                         , 'https://dns.google/dns-query#🕹️.<Game>—RockStar'                         ]    # [3st-21] 
                                   #  'RULE-SET:RockStar_Do_Resolve'                     : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—RockStar'                         , 'https://dns.google/dns-query#🕹️.<Game>—RockStar'                         ]    # [3st-21] 
-
+                                  #  
                                   #  'GEOSITE:ea'                                       : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—EA.Origin'                        , 'https://dns.google/dns-query#🕹️.<Game>—EA.Origin'                        ]    # [3st-21] 
                                   #  'RULE-SET:EA_Do_Resolve'                           : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—EA.Origin'                        , 'https://dns.google/dns-query#🕹️.<Game>—EA.Origin'                        ]    # [3st-21] 
                                   #  'GEOSITE:origin'                                   : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—EA.Origin'                        , 'https://dns.google/dns-query#🕹️.<Game>—EA.Origin'                        ]    # [3st-21] 
                                   #  'RULE-SET:Origin_Do_Resolve'                       : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—EA.Origin'                        , 'https://dns.google/dns-query#🕹️.<Game>—EA.Origin'                        ]    # [3st-21] 
-
+                                  #  
                                   #  'GEOSITE:ubisoft'                                  : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—UbiSoft'                          , 'https://dns.google/dns-query#🕹️.<Game>—UbiSoft'                          ]    # [3st-21] 
                                   #  'RULE-SET:UBI_Do_Resolve'                          : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—UbiSoft'                          , 'https://dns.google/dns-query#🕹️.<Game>—UbiSoft'                          ]    # [3st-21] 
                                   #  'RULE-SET:Ubisoft_Do_Resolve'                      : [ 'https://dns.alidns.com/dns-query#🕹️.<Game>—UbiSoft'                          , 'https://dns.google/dns-query#🕹️.<Game>—UbiSoft'                          ]    # [3st-21] 
-
-
+                                  #  
+                                  #  
                                   ### --------------------------------------------------------------------------------------------------
                                   ###  [3st-22]  DNS分流 ： 视频             
                                   ### --------------------------------------------------------------------------------------------------
-
+                                  #  
                                   ###已移动到 此位置 # [4st-01] - 大厂
                                   ###'GEOSITE:youtube'                                  : [ 'https://cloudflare-dns.com/dns-query#📺.<Video>—YouTube'                     , 'https://dns.google/dns-query#📺.<Video>—YouTube'                         ]    # [3st-22]                       
                                   ###'RULE-SET:YouTube_Do_Resolve'                      : [ 'https://cloudflare-dns.com/dns-query#📺.<Video>—YouTube'                     , 'https://dns.google/dns-query#📺.<Video>—YouTube'                         ]    # [3st-22]                       
-
+                                  #  
                                   #  'GEOSITE:netflix'                                  : [ 'https://cloudflare-dns.com/dns-query#📺.<Video>—Netflix'                     , 'https://dns.google/dns-query#📺.<Video>—Netflix'                         ]    # [3st-22]                       
                                   #  'RULE-SET:Netflix_Do_Resolve'                      : [ 'https://cloudflare-dns.com/dns-query#📺.<Video>—Netflix'                     , 'https://dns.google/dns-query#📺.<Video>—Netflix'                         ]    # [3st-22]                       
-
+                                  #  
                                   #  'GEOSITE:disney'                                   : [ 'https://cloudflare-dns.com/dns-query#📺.<Video>—Disney'                      , 'https://dns.google/dns-query#📺.<Video>—Disney'                          ]    # [3st-22]                       
                                   #  'RULE-SET:Disney_Do_Resolve'                       : [ 'https://cloudflare-dns.com/dns-query#📺.<Video>—Disney'                      , 'https://dns.google/dns-query#📺.<Video>—Disney'                          ]    # [3st-22]                       
-
+                                  #  
                                   #  'GEOSITE:primevideo'                               : [ 'https://cloudflare-dns.com/dns-query#📺.<Video>—PrimeVideo'                  , 'https://dns.google/dns-query#📺.<Video>—PrimeVideo'                      ]    # [3st-22]                      
                                   #  'RULE-SET:PrimeVideo_Do_Resolve'                   : [ 'https://cloudflare-dns.com/dns-query#📺.<Video>—PrimeVideo'                  , 'https://dns.google/dns-query#📺.<Video>—PrimeVideo'                      ]    # [3st-22]                       
-
+                                  #  
                                   #  'GEOSITE:hbo'                                      : [ 'https://cloudflare-dns.com/dns-query#📺.<Video>—HBO'                         , 'https://dns.google/dns-query#📺.<Video>—HBO'                             ]    # [3st-22]                       
                                   #  'RULE-SET:HBO_Do_Resolve'                          : [ 'https://cloudflare-dns.com/dns-query#📺.<Video>—HBO'                         , 'https://dns.google/dns-query#📺.<Video>—HBO'                             ]    # [3st-22]                       
-
+                                  #  
                                   #  'GEOSITE:fox'                                      : [ 'https://cloudflare-dns.com/dns-query#📺.<Video>—FOX'                         , 'https://dns.google/dns-query#📺.<Video>—FOX'                             ]    # [3st-22]                       
                                   #  'RULE-SET:FOXPlus_Do_Resolve'                      : [ 'https://cloudflare-dns.com/dns-query#📺.<Video>—FOX'                         , 'https://dns.google/dns-query#📺.<Video>—FOX'                             ]    # [3st-22]                       
                                   #  'RULE-SET:FOXNOW_Do_Resolve'                       : [ 'https://cloudflare-dns.com/dns-query#📺.<Video>—FOX'                         , 'https://dns.google/dns-query#📺.<Video>—FOX'                             ]    # [3st-22]                       
-
+                                  #  
                                   #  'GEOSITE:apple-tvplus'                             : [ 'https://cloudflare-dns.com/dns-query#📺.<Video>—AppleTV'                     , 'https://dns.google/dns-query#📺.<Video>—AppleTV'                         ]    # [3st-22]                      
                                   #  'RULE-SET:AppleTV_Do_Resolve'                      : [ 'https://cloudflare-dns.com/dns-query#📺.<Video>—AppleTV'                     , 'https://dns.google/dns-query#📺.<Video>—AppleTV'                         ]    # [3st-22]                       
-
+                                  #  
                                   ###🔻🔻🔻 开始（ Min.AntiAD ）✅
                                   #  'GEOSITE:category-porn'                            : [ 'https://cloudflare-dns.com/dns-query#📺.<Video>—Porn'                        , 'https://dns.google/dns-query#📺.<Video>—Porn'                            ]    # [3st-22]                      
                                   ###🔺🔺🔺 结束（ Min.AntiAD ）✅
-
+                                  #  
                                   #  'GEOSITE:pornhub'                                  : [ 'https://cloudflare-dns.com/dns-query#📺.<Video>—Porn'                        , 'https://dns.google/dns-query#📺.<Video>—Porn'                            ]    # [3st-22]                       
                                   #  'RULE-SET:Pornhub_Domain'                          : [ 'https://cloudflare-dns.com/dns-query#📺.<Video>—Porn'                        , 'https://dns.google/dns-query#📺.<Video>—Porn'                            ]    # [3st-22]                       
-
-
+                                  #  
+                                  #  
                                   ### --------------------------------------------------------------------------------------------------
                                   ###  [3st-23]  DNS分流 ： 短视频             
                                   ### --------------------------------------------------------------------------------------------------
-
+                                  #  
                                   #  'GEOSITE:tiktok'                                   : [ 'https://cloudflare-dns.com/dns-query#🎬.<Short>—TikTok'                      , 'https://dns.google/dns-query#🎬.<Short>—TikTok'                          ]    # [3st-23]                     
                                   #  'RULE-SET:TikTok_Do_Resolve'                       : [ 'https://cloudflare-dns.com/dns-query#🎬.<Short>—TikTok'                      , 'https://dns.google/dns-query#🎬.<Short>—TikTok'                          ]    # [3st-23]                     
-
+                                  #  
                                   ###已移动到 此位置 # [2st-02] - 回国
                                   ###'RULE-SET:Kwai_Domain'                             : [ 'https://cloudflare-dns.com/dns-query#🎬.<Short>—Kwai'                        , 'https://dns.google/dns-query#🎬.<Short>—Kwai'                            ]    # [3st-23]                       
-
+                                  #  
                                   #  'GEOSITE:instagram'                                : [ 'https://cloudflare-dns.com/dns-query#🎬.<Short>—Instagram'                   , 'https://dns.google/dns-query#🎬.<Short>—Instagram'                       ]    # [3st-23]                     
                                   #  'RULE-SET:Instagram_Do_Resolve'                    : [ 'https://cloudflare-dns.com/dns-query#🎬.<Short>—Instagram'                   , 'https://dns.google/dns-query#🎬.<Short>—Instagram'                       ]    # [3st-23]    
-
-
+                                  #  
+                                  #  
                                   ### --------------------------------------------------------------------------------------------------
                                   ###  [3st-24]  DNS分流 ： 直播             
                                   ### --------------------------------------------------------------------------------------------------
-                 
+                                  #  
                                   #  'GEOSITE:twitch'                                   : [ 'https://cloudflare-dns.com/dns-query#🎞️.<Live>—Twitch'                       , 'https://dns.google/dns-query#🎞️.<Live>—Twitch'                            ]    # [3st-24]                       
                                   #  'RULE-SET:Twitch_Do_Resolve'                       : [ 'https://cloudflare-dns.com/dns-query#🎞️.<Live>—Twitch'                       , 'https://dns.google/dns-query#🎞️.<Live>—Twitch'                            ]    # [3st-24]                       
-
-
+                                  #  
+                                  #  
                                   ### --------------------------------------------------------------------------------------------------
                                   ###  [3st-25]  DNS分流 ： 音频             
                                   ### --------------------------------------------------------------------------------------------------
-
+                                  #  
                                   #  'GEOSITE:spotify'                                  : [ 'https://cloudflare-dns.com/dns-query#🎧.<Audio>—Spotify'                     , 'https://dns.google/dns-query#🎧.<Audio>—Spotify'                         ]    # [3st-25]                     
                                   #  'RULE-SET:Spotify_Do_Resolve'                      : [ 'https://cloudflare-dns.com/dns-query#🎧.<Audio>—Spotify'                     , 'https://dns.google/dns-query#🎧.<Audio>—Spotify'                         ]    # [3st-25]                     
-
+                                  #  
                                   ###已移动到 此位置 # [4st-01] - 大厂
                                   ###'RULE-SET:YouTubeMusic_Do_Resolve'                 : [ 'https://cloudflare-dns.com/dns-query#🎧.<Audio>—YouTubeMusic'                , 'https://dns.google/dns-query#🎧.<Audio>—YouTubeMusic'                    ]    # [3st-25]                     
                                   ###'RULE-SET:AppleMusic_Do_Resolve'                   : [ 'https://cloudflare-dns.com/dns-query#🎧.<Audio>—AppleMusic'                  , 'https://dns.google/dns-query#🎧.<Audio>—AppleMusic'                      ]    # [3st-25]                     
-
-
+                                  #  
+                                  #  
                                   ### --------------------------------------------------------------------------------------------------
                                   ###  [3st-26]  DNS分流 ： 社交             
                                   ### --------------------------------------------------------------------------------------------------
-                                  
+                                  #  
                                   #  'GEOSITE:facebook'                                 : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>—Facebook'                   , 'https://dns.google/dns-query#💛.<Social>—Facebook'                       ]    # [3st-26]         
                                   #  'RULE-SET:Facebook_Do_Resolve'                     : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>—Facebook'                   , 'https://dns.google/dns-query#💛.<Social>—Facebook'                       ]    # [3st-26]         
-
+                                  #  
                                   ###已移动到 此位置  # [3st-29] - AI（注意：Twitter 规则 与 Grok 规则交叉，前者为后者超集）
                                   ###'GEOSITE:twitter'                                  : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>—Twitter'                    , 'https://dns.google/dns-query#💛.<Social>—Twitter'                        ]    # [3st-26]         
                                   ###'RULE-SET:Twitter_Do_Resolve'                      : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>—Twitter'                    , 'https://dns.google/dns-query#💛.<Social>—Twitter'                        ]    # [3st-26]         
-
+                                  #  
                                   #  'GEOSITE:reddit'                                   : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>—Reddit'                     , 'https://dns.google/dns-query#💛.<Social>—Reddit'                         ]    # [3st-26]         
                                   #  'RULE-SET:Reddit_Do_Resolve'                       : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>—Reddit'                     , 'https://dns.google/dns-query#💛.<Social>—Reddit'                         ]    # [3st-26]         
-
+                                  #  
                                   #  'GEOSITE:telegram'                                 : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>—Telegram'                   , 'https://dns.google/dns-query#💛.<Social>—Telegram'                       ]    # [3st-26]         
                                   #  'RULE-SET:Telegram_Do_Resolve'                     : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>—Telegram'                   , 'https://dns.google/dns-query#💛.<Social>—Telegram'                       ]    # [3st-26]         
-
+                                  #  
                                   #  'GEOSITE:whatsapp'                                 : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>—Whatsapp'                   , 'https://dns.google/dns-query#💛.<Social>—Whatsapp'                       ]    # [3st-26]         
                                   #  'RULE-SET:Whatsapp_Do_Resolve'                     : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>—Whatsapp'                   , 'https://dns.google/dns-query#💛.<Social>—Whatsapp'                       ]    # [3st-26]         
-
+                                  #  
                                   #  'GEOSITE:line'                                     : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>—Line'                       , 'https://dns.google/dns-query#💛.<Social>—Line'                           ]    # [3st-26]         
                                   #  'RULE-SET:Line_Do_Resolve'                         : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>—Line'                       , 'https://dns.google/dns-query#💛.<Social>—Line'                           ]    # [3st-26]         
-
+                                  #  
                                   #  'GEOSITE:discord'                                  : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>—Discord'                    , 'https://dns.google/dns-query#💛.<Social>—Discord'                        ]    # [3st-26]         
                                   #  'RULE-SET:Discord_Do_Resolve'                      : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>—Discord'                    , 'https://dns.google/dns-query#💛.<Social>—Discord'                        ]    # [3st-26]         
-
+                                  #  
                                   #  'GEOSITE:linkedin'                                 : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>—LinkedIn'                   , 'https://dns.google/dns-query#💛.<Social>—LinkedIn'                       ]    # [3st-26]         
                                   #  'RULE-SET:LinkedIn_Do_Resolve'                     : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>—LinkedIn'                   , 'https://dns.google/dns-query#💛.<Social>—LinkedIn'                       ]    # [3st-26]         
-
+                                  #  
                                   #  'GEOSITE:clubhouse'                                : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>—Clubhouse'                  , 'https://dns.google/dns-query#💛.<Social>—Clubhouse'                      ]    # [3st-26]         
                                   #  'RULE-SET:Clubhouse_Do_Resolve'                    : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>—Clubhouse'                  , 'https://dns.google/dns-query#💛.<Social>—Clubhouse'                      ]    # [3st-26]         
                                   #  'RULE-SET:ClubhouseIP_Do_Resolve'                  : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>—Clubhouse'                  , 'https://dns.google/dns-query#💛.<Social>—Clubhouse'                      ]    # [3st-26]         
-
+                                  #  
                                   #  'GEOSITE:signal'                                   : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>—Signal'                     , 'https://dns.google/dns-query#💛.<Social>—Signal'                         ]    # [3st-26]         
                                   #  'RULE-SET:Signal_Domain'                           : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>—Signal'                     , 'https://dns.google/dns-query#💛.<Social>—Signal'                         ]    # [3st-26]         
-
+                                  #  
                                   ###暂未启用
                                   ###'GEOSITE:snap'                                     : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>—Snapchat'                   , 'https://dns.google/dns-query#💛.<Social>—Snapchat'                       ]    # [3st-26]         
                                   ###'RULE-SET:Snapchat_Do_Resolve'                     : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>—Snapchat'                   , 'https://dns.google/dns-query#💛.<Social>—Snapchat'                       ]    # [3st-26]  
-
+                                  #  
                                   ###暂未启用
                                   ###'RULE-SET:Teams_Do_Resolve'                        : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>—Teams'                      , 'https://dns.google/dns-query#💛.<Social>—Teams'                          ]    # [3st-26]  
-                                         
+                                  #  
                                   ###暂未启用
                                   ###'GEOSITE:tumblr'                                   : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>—Tumblr'                     , 'https://dns.google/dns-query#💛.<Social>—Tumblr'                         ]    # [3st-26]         
                                   ###'RULE-SET:Tumblr_Do_Resolve'                       : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>—Tumblr'                     , 'https://dns.google/dns-query#💛.<Social>—Tumblr'                         ]    # [3st-26]  
-
+                                  #  
                                   ###暂未启用
                                   ###'GEOSITE:pixiv'                                    : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>—Pixiv'                      , 'https://dns.google/dns-query#💛.<Social>—Pixiv'                          ]    # [3st-26]         
                                   ###'RULE-SET:Pixiv_Do_Resolve'                        : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>—Pixiv'                      , 'https://dns.google/dns-query#💛.<Social>—Pixiv'                          ]    # [3st-26]         
-
-
+                                  #  
+                                  #  
                                   ### --------------------------------------------------------------------------------------------------
                                   ###  [3st-28]  DNS分流 ： 资讯             
                                   ### --------------------------------------------------------------------------------------------------
-
+                                  #  
                                   #  'RULE-SET:Wikipedia_Do_Resolve'                    : [ 'https://cloudflare-dns.com/dns-query#📰.<News>—Wikipedia'                    , 'https://dns.google/dns-query#📰.<News>—Wikipedia'                        ]    # [3st-28]  
-
+                                  #  
                                   ###暂未启用
                                   ###'RULE-SET:AppleNews_Domain'                        : [ 'https://cloudflare-dns.com/dns-query#📰.<News>—AppleNews'                    , 'https://dns.google/dns-query#📰.<News>—AppleNews'                        ]    # [3st-28]  
-
-
+                                  #  
+                                  #  
                                   ### --------------------------------------------------------------------------------------------------
                                   ###  [3st-29]  DNS分流 ： AI             
                                   ### --------------------------------------------------------------------------------------------------
-
+                                  #  
                                   #  'GEOSITE:apple-intelligence'                       : [ 'https://cloudflare-dns.com/dns-query#💡.<AI>—AppleAI'                        , 'https://dns.google/dns-query#💡.<AI>—AppleAI'                            ]    # [3st-29]
                                   #  'RULE-SET:AppleAI_Domain'                          : [ 'https://cloudflare-dns.com/dns-query#💡.<AI>—AppleAI'                        , 'https://dns.google/dns-query#💡.<AI>—AppleAI'                            ]    # [3st-29]
-
+                                  #  
                                   #  'GEOSITE:openai'                                   : [ 'https://cloudflare-dns.com/dns-query#💡.<AI>—OpenAI'                         , 'https://dns.google/dns-query#💡.<AI>—OpenAI'                             ]    # [3st-29]
                                   #  'RULE-SET:OpenAI_Do_Resolve'                       : [ 'https://cloudflare-dns.com/dns-query#💡.<AI>—OpenAI'                         , 'https://dns.google/dns-query#💡.<AI>—OpenAI'                             ]    # [3st-29]
-      
+                                  #        
                                   #  'GEOSITE:xai'                                      : [ 'https://cloudflare-dns.com/dns-query#💡.<AI>—Grok'                           , 'https://dns.google/dns-query#💡.<AI>—Grok'                               ]    # [3st-29]
                                   #  'RULE-SET:Grok_Domain'                             : [ 'https://cloudflare-dns.com/dns-query#💡.<AI>—Grok'                           , 'https://dns.google/dns-query#💡.<AI>—Grok'                               ]    # [3st-29]
-
+                                  #  
                                   #  'GEOSITE:twitter'                                  : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>—Twitter'                    , 'https://dns.google/dns-query#💛.<Social>—Twitter'                        ]    # [3st-29]
                                   #  'RULE-SET:Twitter_Do_Resolve'                      : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>—Twitter'                    , 'https://dns.google/dns-query#💛.<Social>—Twitter'                        ]    # [3st-29]
-
+                                  #  
                                   #  'GEOSITE:anthropic'                                : [ 'https://cloudflare-dns.com/dns-query#💡.<AI>—Claude'                         , 'https://dns.google/dns-query#💡.<AI>—Claude'                             ]    # [3st-29]
                                   #  'RULE-SET:Claude_Do_Resolve'                       : [ 'https://cloudflare-dns.com/dns-query#💡.<AI>—Claude'                         , 'https://dns.google/dns-query#💡.<AI>—Claude'                             ]    # [3st-29]
-
+                                  #  
                                   #  'GEOSITE:google-gemini'                            : [ 'https://cloudflare-dns.com/dns-query#💡.<AI>—Gemini'                         , 'https://dns.google/dns-query#💡.<AI>—Gemini'                             ]    # [3st-29]
                                   #  'RULE-SET:Gemini_Domain'                           : [ 'https://cloudflare-dns.com/dns-query#💡.<AI>—Gemini'                         , 'https://dns.google/dns-query#💡.<AI>—Gemini'                             ]    # [3st-29]
-
+                                  #  
                                   #  'RULE-SET:Copilot_Domain'                          : [ 'https://cloudflare-dns.com/dns-query#💡.<AI>—Copilot'                        , 'https://dns.google/dns-query#💡.<AI>—Copilot'                            ]    # [3st-29]
                                   #  'GEOSITE:category-ai-!cn'                          : [ 'https://cloudflare-dns.com/dns-query#💡.<AI>—GlobalAI'                       , 'https://dns.google/dns-query#💡.<AI>—GlobalAI'                           ]    # [3st-29]
- 
-
+                                  #   
+                                  #  
                                   ### --------------------------------------------------------------------------------------------------
                                   ###  [3st-30]  DNS分流 ： 工具            
                                   ### --------------------------------------------------------------------------------------------------
-
+                                  #  
                                   #  'GEOSITE:adobe'                                    : [ 'https://cloudflare-dns.com/dns-query#🔧.<Tools>—Adobe'                       , 'https://dns.google/dns-query#🔧.<Tools>—Adobe'                           ]    # [3st-30]   
                                   #  'RULE-SET:Adobe_Do_Resolve'                        : [ 'https://cloudflare-dns.com/dns-query#🔧.<Tools>—Adobe'                       , 'https://dns.google/dns-query#🔧.<Tools>—Adobe'                           ]    # [3st-30]  
-
+                                  #  
                                   #  'GEOSITE:github'                                   : [ 'https://cloudflare-dns.com/dns-query#🔧.<Tools>—GitHub'                      , 'https://dns.google/dns-query#🔧.<Tools>—GitHub'                          ]    # [3st-30]   
                                   #  'RULE-SET:GitHub_Do_Resolve'                       : [ 'https://cloudflare-dns.com/dns-query#🔧.<Tools>—GitHub'                      , 'https://dns.google/dns-query#🔧.<Tools>—GitHub'                          ]    # [3st-30]  
-
+                                  #  
                                   #  'GEOSITE:bing'                                     : [ 'https://cloudflare-dns.com/dns-query#🔧.<Tools>—Bing/Edge'                   , 'https://dns.google/dns-query#🔧.<Tools>—Bing/Edge'                       ]    # [3st-30]   
                                   #  'RULE-SET:Bing_Do_Resolve'                         : [ 'https://cloudflare-dns.com/dns-query#🔧.<Tools>—Bing/Edge'                   , 'https://dns.google/dns-query#🔧.<Tools>—Bing/Edge'                       ]    # [3st-30]   
                                   #  'RULE-SET:MicrosoftEdge_Do_Resolve'                : [ 'https://cloudflare-dns.com/dns-query#🔧.<Tools>—Bing/Edge'                   , 'https://dns.google/dns-query#🔧.<Tools>—Bing/Edge'                       ]    # [3st-30]  
-
+                                  #  
                                   #  'GEOSITE:notion'                                   : [ 'https://cloudflare-dns.com/dns-query#🔧.<Tools>—Notion'                      , 'https://dns.google/dns-query#🔧.<Tools>—Notion'                          ]    # [3st-30]   
                                   #  'RULE-SET:Notion_Do_Resolve'                       : [ 'https://cloudflare-dns.com/dns-query#🔧.<Tools>—Notion'                      , 'https://dns.google/dns-query#🔧.<Tools>—Notion'                          ]    # [3st-30]  
-
+                                  #  
                                   #  'GEOSITE:pinterest'                                : [ 'https://cloudflare-dns.com/dns-query#🔧.<Tools>—Pinterest'                   , 'https://dns.google/dns-query#🔧.<Tools>—Pinterest'                       ]    # [3st-30]   
                                   #  'RULE-SET:Pinterest_Do_Resolve'                    : [ 'https://cloudflare-dns.com/dns-query#🔧.<Tools>—Pinterest'                   , 'https://dns.google/dns-query#🔧.<Tools>—Pinterest'                       ]    # [3st-30]   
-
+                                  #  
                                   #  'RULE-SET:RustDesk_Domain'                         : [ 'https://cloudflare-dns.com/dns-query#🖥️.<Remote>—RustDesk'                   , 'https://dns.google/dns-query#🖥️.<Remote>—RustDesk'                       ]    # [3st-30]   
                                   #  'RULE-SET:Parsec_Domain'                           : [ 'https://cloudflare-dns.com/dns-query#🖥️.<Remote>—Parsec'                     , 'https://dns.google/dns-query#🖥️.<Remote>—Parsec'                         ]    # [3st-30]   
-
-
+                                  #  
+                                  #  
                                   ### --------------------------------------------------------------------------------------------------
                                   ###  [4st-01]  DNS分流 ： 国际 大厂                   
                                   ### --------------------------------------------------------------------------------------------------
-
+                                  #  
                                   #  'RULE-SET:GoogleDrive_Do_Resolve'                  : [ 'https://cloudflare-dns.com/dns-query#📂.<Drive>—GoogleDrive'                 , 'https://dns.google/dns-query#🎧.<Audio>—YouTubeMusic'                    ]    # [3st-25]  
                                   #  'GEOSITE:youtube'                                  : [ 'https://cloudflare-dns.com/dns-query#📺.<Video>—YouTube'                     , 'https://dns.google/dns-query#📺.<Video>—YouTube'                         ]    # [3st-22]  
                                   #  'RULE-SET:YouTube_Do_Resolve'                      : [ 'https://cloudflare-dns.com/dns-query#📺.<Video>—YouTube'                     , 'https://dns.google/dns-query#📺.<Video>—YouTube'                         ]    # [3st-22]  
                                   #  'RULE-SET:YouTubeMusic_Do_Resolve'                 : [ 'https://cloudflare-dns.com/dns-query#🎧.<Audio>—YouTubeMusic'                , 'https://dns.google/dns-query#🎧.<Audio>—YouTubeMusic'                    ]    # [3st-25]  
                                   #  'GEOSITE:google'                                   : [ 'https://cloudflare-dns.com/dns-query#☁️.<Apps>—Google'                       , 'https://dns.google/dns-query#☁️.<Apps>—Google'                           ]    # [4st-01]  
                                   #  'RULE-SET:Google_Do_Resolve'                       : [ 'https://cloudflare-dns.com/dns-query#☁️.<Apps>—Google'                       , 'https://dns.google/dns-query#☁️.<Apps>—Google'                           ]    # [4st-01]  
-
+                                  #  
                                   #  'token.safebrowsing.apple'                         : [ 'https://cloudflare-dns.com/dns-query#💡.<AI>—AppleAI'                        , 'https://dns.google/dns-query#💡.<AI>—AppleAI'                            ]    # 注意，中国大陆的DNS无法解析 token.safebrowsing.apple ⚠️⚠️⚠️
                                   #  'RULE-SET:Apple_Domain'                            : [ 'https://dns.alidns.com/dns-query#☁️.<Apps>—Apple'                            , 'https://dns.google/dns-query#☁️.<Apps>—Apple'                            ]    # [4st-01]     #  ❕❕❕❕❕ 注意：请不要使用苹果自己的DNS（ 苹果公司DNS 无法解析全自己的域名，更无法解析第三方域名）❕❕❕❕❕
-
+                                  #  
                                   #  'RULE-SET:MicrosoftAPPs_Domain'                    : [ 'https://dns.alidns.com/dns-query#☁️.<Apps>—Microsoft'                        , 'https://dns.google/dns-query#☁️.<Apps>—Microsoft'                        ]    # [4st-01]
-
+                                  #  
                                   #  'GEOSITE:amazon'                                   : [ 'https://cloudflare-dns.com/dns-query#☁️.<Apps>—Amazon'                       , 'https://dns.google/dns-query#☁️.<Apps>—Amazon'                           ]    # [4st-01]  
                                   #  'RULE-SET:Amazon_Do_Resolve'                       : [ 'https://cloudflare-dns.com/dns-query#☁️.<Apps>—Amazon'                       , 'https://dns.google/dns-query#☁️.<Apps>—Amazon'                           ]    # [4st-01]  
-
+                                  #  
                                   #  'RULE-SET:MacAppUpgrade_Domain'                    : [ 'https://cloudflare-dns.com/dns-query#⬇️.<Download>—MacAppUpgrade'             , 'https://dns.google/dns-query#⬇️.<Download>—MacAppUpgrade'                 ]    # [3st-05]  
-
-
+                                  #  
+                                  #  
                                   ### --------------------------------------------------------------------------------------------------
                                   ###  [6st-02]  DNS分流 ： 国家地区 
                                   ### --------------------------------------------------------------------------------------------------
-                                  
+                                  #  
                                   #  'RULE-SET:GeoRouting_America_North_ccTLD_Domain'   : [ 'https://cloudflare-dns.com/dns-query#🌎.<Region>—North.America'              , 'https://dns.google/dns-query#🌎.<Region>—North.America'                  ]    # [5st-02]      
                                   #  'RULE-SET:GeoRouting_America_South_ccTLD_Domain'   : [ 'https://cloudflare-dns.com/dns-query#🌎.<Region>—South.America'              , 'https://dns.google/dns-query#🌎.<Region>—South.America'                  ]    # [5st-02]      
                                   #  'RULE-SET:GeoRouting_Europe_West_ccTLD_Domain'     : [ 'https://cloudflare-dns.com/dns-query#🌍.<Region>—Europe'                     , 'https://dns.google/dns-query#🌍.<Region>—Europe'                         ]    # [5st-02]      
@@ -567,35 +569,35 @@ dns                               :
                                   #  'RULE-SET:GeoRouting_Africa_West_ccTLD_Domain'     : [ 'https://cloudflare-dns.com/dns-query#🌍.<Region>—Africa'                     , 'https://dns.google/dns-query#🌍.<Region>—Africa'                         ]    # [5st-02]      
                                   #  'RULE-SET:GeoRouting_Africa_East_ccTLD_Domain'     : [ 'https://cloudflare-dns.com/dns-query#🌍.<Region>—Africa'                     , 'https://dns.google/dns-query#🌍.<Region>—Africa'                         ]    # [5st-02]      
                                   #  'RULE-SET:GeoRouting_Africa_Central_ccTLD_Domain'  : [ 'https://cloudflare-dns.com/dns-query#🌍.<Region>—Africa'                     , 'https://dns.google/dns-query#🌍.<Region>—Africa'                         ]    # [5st-02]      
-
-
+                                  #  
+                                  #  
                                   ### --------------------------------------------------------------------------------------------------
                                   ###  [7st-01]  DNS分流 ： 海外CDN
                                   ### --------------------------------------------------------------------------------------------------
-
+                                  #  
                                   #  'GEOSITE:cloudflare'                               : [ 'https://cloudflare-dns.com/dns-query#☁️.<Global>—CDN'                        , 'https://dns.google/dns-query#☁️.<Global>—CDN'                            ]    # [7st-01] 
                                   #  'RULE-SET:Cloudflare_Do_Resolve'                   : [ 'https://cloudflare-dns.com/dns-query#☁️.<Global>—CDN'                        , 'https://dns.google/dns-query#☁️.<Global>—CDN'                            ]    # [7st-01] 
- 
+                                  #   
                                   #  'GEOSITE:akamai'                                   : [ 'https://cloudflare-dns.com/dns-query#☁️.<Global>—CDN'                        , 'https://dns.google/dns-query#☁️.<Global>—CDN'                            ]    # [7st-01] 
                                   #  'RULE-SET:AkamaiCloud_Do_Resolve'                  : [ 'https://cloudflare-dns.com/dns-query#☁️.<Global>—CDN'                        , 'https://dns.google/dns-query#☁️.<Global>—CDN'                            ]    # [7st-01] 
-                                   
+                                  #  
                                   #  'GEOSITE:fastly'                                   : [ 'https://cloudflare-dns.com/dns-query#☁️.<Global>—CDN'                        , 'https://dns.google/dns-query#☁️.<Global>—CDN'                            ]    # [7st-01] 
-
-
+                                  #  
+                                  #  
                                   ### 🔻🔻🔻 开始（ GFWList ） 🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧
                                   ### --------------------------------------------------------------------------------------------------
                                   ###  [8st-01]  DNS分流 ： GFW                          # 白名单模式下，无需启用 ❕❕❕
                                   ### --------------------------------------------------------------------------------------------------
                                   ###'RULE-SET:GFWList_Domain'                           : [ 'https://cloudflare-dns.com/dns-query#🚧.<GFWList>'                          , 'https://dns.google/dns-query#🚧.<GFWList>'                               ]    # [8st-01] 
                                   ### 🔺🔺🔺 结束（ GFWList ） 🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧
-
-
+                                  #  
+                                  #  
                                   ### --------------------------------------------------------------------------------------------------
                                   ###  [9st-01]  DNS分流 ：兜底
                                   ### --------------------------------------------------------------------------------------------------
-                                  
+                                  #  
                                   #  '+.*'                                              : [ 'https://cloudflare-dns.com/dns-query#♾️.<Final>'                             , 'https://dns.google/dns-query#♾️.<Final>'                                 ]    # [9st-01] 
-                 
+                                  #  
                                   ### 🔺🔺🔺 结束 （ ClashMeta_Only ） 🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺  结束 （ ClashMeta_Only ）
 
 
@@ -604,7 +606,7 @@ dns                               :
                                   ### ❕❕❕特别注意 ：链式代理，可能会导致上述分流规则出现问题，要特别注意！
                                   ###                     - 链式代理，会增加延迟
                                   ###                     - 链式代理，对于http3、UDP支持不好，也会导致http3的DNS请求出现问题（请关闭HTTP3的DNS请求）
-                                  
+                                  ###
                                   ### ❕❕❕特别注意 ：只有 “非敏感域名”，才可以 “同时” 向 “ 🇨🇳DNS服务器 、🌍DNS服务器” 发起解析请求。不然会造成严重的 “DNS泄漏” 给 🇨🇳GFW ！！！！！
 
 
@@ -8734,7 +8736,9 @@ rules:
     - GEOSITE         , imgur                                      , 📂.<Drive>—Imgur                                #                                        # [3st-02]  [ Default : MaxTraffic  ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Imgur                 云存储（海外） - Imgur         
     - RULE-SET        , Imgur_Do_Resolve                           , 📂.<Drive>—Imgur                                # , no-resolve                           # [3st-02]  [ Default : MaxTraffic  ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Imgur                 云存储（海外） - Imgur         
  
+   #  已移动到 此位置 # [4st-01] -  大厂   
    #- RULE-SET        , GoogleDrive_Do_Resolve                     , 📂.<Drive>—GoogleDrive                          # , no-resolve                           # [3st-02]  [ Default : MaxTraffic  ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/GoogleDrive           云存储（海外） - GoogleDrive   
+
     - RULE-SET        , WaybackMachine_Domain                      , 📂.<Drive>—InternetArchive                                                               # [3st-02]  [ Default : MaxTraffic  ]     https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/WaybackMachine              云存储（海外） - WaybackMachine 网页时光机 - InternetArchive 互联网档案馆
     - RULE-SET        , WaybackMachine_IP                          , 📂.<Drive>—InternetArchive                      # , no-resolve                           # [3st-02]  [ Default : MaxTraffic  ]     https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/WaybackMachine              云存储（海外） - WaybackMachine 网页时光机 - InternetArchive 互联网档案馆
 
