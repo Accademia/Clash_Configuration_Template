@@ -1437,9 +1437,9 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 首先，“防DNS泄漏 + 防DNS污染” ，其 核心目标 是 什么 ？ 
  
- - 核心目标 1 ：国外流量的 DNS解析，去被分流的境外VPN节点去解析（不发国内，也不发给 其他节点）
+ - 核心目标 1 ：🌍 国外流量的 DNS解析，使用 “被分流规则（rule）指向” 的 🌍 境外VPN节点，进行解析（不发国内，也不发给 其他VPN节点）
  
- - 核心目标 2 ：国内流量的 DNS解析，直连国内DNS解析
+ - 核心目标 2 ：🇨🇳 国内流量 的 DNS解析，直连 🇨🇳 国内DNS解析
 
 其次，有没有其他方案，达成上述目标？
 
