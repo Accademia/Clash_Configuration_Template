@@ -1455,7 +1455,7 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 这也就是为什么 Clahs Meta内核，会大力增强DNS分流策略（nameserver-policy）的分流能力，使其分流能力，能够1:1镜像 分流规则（Rule）中的几乎所有规则。
 
-而，继续无脑用Clash Premium官方指导的 “ Fake IP + Fallback DNS + no-resolve “ 方案 ？  100%喜提 上述四大缺点  🤣🤣🤣🤣
+而，继续无脑用Clash Premium官方指导的 “ Fake IP + Fallback DNS + no-resolve “ 方案 ？  100%喜提 上述四大缺点  🤣🤣🤣🤣 这个技术，100% 压根就不应该被开发出来，唯一的好处，可能就是对垃圾线路的延迟有一点点帮助，除此以外，浑身BUG。
  
 （提示：不要镜像，Reject相关的规则和IP分流规则，只镜像 “可以到达VPN节点” 的 “域名分流规则” ）
 
