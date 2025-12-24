@@ -4,7 +4,7 @@
 #   Clash.Meta                    |     https://wiki.metacubex.one/config/                                             # 
 # --------------------------------+----------------------------------------------------------------------------------- #
 
-# v.2025.12.19
+# v.2025.12.22
 # ⚠️⚠️⚠️ 如果出现，显示不对齐的情况，请使用《 对齐中文字体 + 对齐emoji字体 》❕❕❕❕ 比如 'Inconsolata' 等字体
 
 #---------------------------------+------------------------------------------------------------------------------------+
@@ -150,7 +150,7 @@ dns                               :
 
   nameserver-policy               :                                                     # DNS分流规则      
 
-                                  ### 🔻🔻🔻 开始 （ ClashMeta_Only ）   🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻  开始 （ ClashMeta_Only ）    
+                                  ### 🔻🔻🔻 开始 （ ClashMeta_Only ） 🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻  开始 （ ClashMeta_Only ）    
                                   #  
                                   ### 以下被注释的原因 ： ⚠️⚠️⚠️⚠️ 仅 Clash Meta 支持，但 Stash 3.x 不支持！ ⚠️⚠️⚠️⚠️  
                                   #  
@@ -169,7 +169,7 @@ dns                               :
                                   ### --------------------------------------------------------------------------------------------------
                                   # 
                                   #   
-                                  #  
+                                  #   
                                   ### --------------------------------------------------------------------------------------------------
                                   ###  [2st-01]  DNS分流 ： 修改IP归属地显示 
                                   ### --------------------------------------------------------------------------------------------------
@@ -258,7 +258,7 @@ dns                               :
                                   ### --------------------------------------------------------------------------------------------------
                                   #  
                                   ###已移动到 此位置 # [3st-30] - 工具
-                                  ###'RULE-SET:MacAppUpgrade_Domain'                   : [ 'https://cloudflare-dns.com/dns-query#⬇️.<Download>—MacAppUpgrade'             , 'https://dns.google/dns-query#⬇️.<Download>—MacAppUpgrade'                 ]    # [3st-05] 
+                                  ###'RULE-SET:MacAppUpgrade_Domain'                    : [ 'https://cloudflare-dns.com/dns-query#⬇️.<Download>—MacAppUpgrade'             , 'https://dns.google/dns-query#⬇️.<Download>—MacAppUpgrade'                 ]    # [3st-05] 
                                   #  
                                   #  
                                   ### --------------------------------------------------------------------------------------------------
@@ -611,13 +611,19 @@ dns                               :
                                   ### 🔺🔺🔺 结束（ GFWList ） 🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧
                                   #  
                                   #  
+                                  #
+                                  ###（可选）补充中国分流规则 （此规则接近10万条，非必要不开启）
+                                  ###'RULE-SET:ChinaMAX_Domain'                         : [ 'https://dns.alidns.com/dns-query#🇨🇳.<Country>—CN'                            , 'https://dns.google/dns-query#🇨🇳.<Country>—CN'                            ]    # [2st-02] 
+                                  #
+                                  #
+                                  #
                                   ### --------------------------------------------------------------------------------------------------
                                   ###  [9st-01]  DNS分流 ：兜底
                                   ### --------------------------------------------------------------------------------------------------
                                   #  
                                   #  '+.*'                                              : [ 'https://cloudflare-dns.com/dns-query#♾️.<Final>'                             , 'https://dns.google/dns-query#♾️.<Final>'                                 ]    # [9st-01] 
                                   #  
-                                  ### 🔺🔺🔺 结束 （ ClashMeta_Only ）   🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺  结束 （ ClashMeta_Only ）
+                                  ### 🔺🔺🔺 结束 （ ClashMeta_Only ） 🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺  结束 （ ClashMeta_Only ）
 
 
 
@@ -8840,7 +8846,6 @@ rules:
     - RULE-SET        , Kwai_Domain                                , 🎬.<Short>—Kwai                                # , no-resolve                            # [3st-23]  [ Default : US          ]     https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/Kwai                        短视频 - Kwai (快手国际版)              
          
 #  # [2st-05] -  GEOSITE + GeoIP（中国）                           # 注意， China_Domain / GeositeCN_Domain  ，两者二选一 ❕❕❕
-#   - RULE-SET        , China_Domain                               , 🇨🇳.<Country>—CN                                 # , no-resolve                           # [2st-05]  [ Default : CN          ]     https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/China                       回国 - 中国 - China  
     - RULE-SET        , GeositeCN_Domain                           , 🇨🇳.<Country>—CN                                 # , no-resolve                           # [2st-05]  [ Default : US          ]     https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/GeositeCN                   回国 - 中国 - GeoSite  
     - GEOIP           , cn                                         , 🇨🇳.<Country>—CN                                                                          # [6st-01]  [ Default : CN          ]                                                                                                  回国 - 中国 - GeoIP                   
 
@@ -9339,12 +9344,17 @@ rules:
 
 
 
+#### （可选）补充中国分流规则 （此规则接近10万条，非必要不开启）
+####- RULE-SET        , ChinaMAX_Domain                            , 🇨🇳.<Country>—CN                                 # , no-resolve                           # [2st-02]  [ Default : CN          ]     https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/China                       回国 - 中国 - China  
+
+
+
    # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
    ##        [第九级] 分流规则 :  兜底 
    # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
    # 🔻🔻🔻 开始 （ WhiteList ） 🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻  开始 （ WhiteList ）                     
-    - MATCH                                                        , ♾️.<Final>                                                                                # [6st   ]  [ Default : US          ]          
+    - MATCH                                                        , ♾️.<Final>                                                                                # [9st-01]  [ Default : US          ]          
    # 🔺🔺🔺 结束 （ WhiteList ）🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺  结束 （ WhiteList ）
 
 
@@ -9654,7 +9664,8 @@ rule-providers:
   
    # 🔺🔺🔺 结束（ GFWList ） 🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧   结束（ GFWList ）          
 
-
+#### （可选）补充中国分流规则 （此规则接近10万条，非必要不开启）
+####ChinaMax_Domain                           : { type : 'http'  , behavior : 'domain'     , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/Accademia/Additional_Rule_For_Clash@latest/ChinaMax/ChinaMax_Domain.yaml'                                          , path : './ruleset/ChinaMax/ChinaMax_Domain.yaml'                      }            # [2st-02]  [ Default : CN          ]     🇨🇳.<Country>—CN                 https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/ChinaMax                   回国 - china                               
 
 
    # -----------------------------------------------------------------------------------------------------------------------------------------
