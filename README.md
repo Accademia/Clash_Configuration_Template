@@ -420,15 +420,20 @@
  - { name : '🇨🇦.<Bank>—CA'                                             
  - { name : '🇬🇧.<Bank>—UK'                                             
  - { name : '🇦🇺.<Bank>—AU'                                             
- - { name : '🇯🇵.<Bank>—JP'                            
+ - { name : '🇯🇵.<Bank>—JP'                              
+ - { name : '🇭🇰.<Bank>—HK'  
+ - { name : '🇸🇬.<Bank>—SG'  
+#- { name : '🇳🇱.<Bank>—NL'  
+#- { name : '🇩🇪.<Bank>—DE'  
+#- { name : '🇫🇷.<Bank>—FR'                         
                   
 # [3st-13] -  专属网站（必须要所属国IP才能正常下单的网站，银行除外…）  
  - { name : '🇺🇸.<HomeIP>—US'                                           
 #- { name : '🇨🇦.<HomeIP>—CA'                                           
 #- { name : '🇬🇧.<HomeIP>—UK'                                           
 #- { name : '🇦🇺.<HomeIP>—AU'                                           
- - { name : '🇯🇵.<HomeIP>—JP'                              
-              
+ - { name : '🇯🇵.<HomeIP>—JP'     
+                 
 # [3st-14] - 不支持VPN的网站（除 银行、HomeIP 分流规则以外的 网站）    
  - { name : '❌.<UnsupportVPN>'              
                            
