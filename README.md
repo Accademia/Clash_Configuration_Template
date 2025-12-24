@@ -1391,7 +1391,7 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 |  | 规则数量 | 链接 |
 |---|---|---|
 | geosite:cn  | 6800条 |  https://github.com/v2fly/domain-list-community | 
-| ChinaMax  | 14万条 |  https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Surge/ChinaMax | 
+| ChinaMax  | 12万条 |  https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Surge/ChinaMax | 
  
 
 上述两个 规则集合 ，本模版 都没用 ！ 核心原因：精度太差 ！
@@ -1510,15 +1510,15 @@ If you are not located in China but instead in rogue countries like Russia, Iran
  |--|--|方法|优缺点|
  |--|--|--|--|
  | 方案 1 |   仅图形界面操作 | 将你认为绕路的🇨🇳中国APP，添加进旁路  | 只有安卓的客户端，支持此功能 |
-| 方案 2  | 修改模版  | 将 “回国分流” ，从第二级（序号：2st），搬移到 兜底规则之前 | 分流🇨🇳 中国分流规则的容错度 最高，效果 = 随便错 都不怕 🔥🔥🔥 但 最费电 ❕ |
+| 方案 2  | 修改模版  |  兜底规则之前，添加ChinaMax分流规则，进行二次排查 | 分流🇨🇳 中国分流规则的容错度 最高，效果 = 随便错 都不怕 🔥🔥🔥 但 最费电 ❕ |
   
 <br>
 
-也就是说，如果你日常工作需求中，必须要使用大而全（14万条规则）的 ChinaMax （ https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Surge/ChinaMax ）给中国网站分流。不然会对工作生活产生很大干扰。 那你可以 按上述，手动修改模版 。
+也就是说，如果你日常工作需求中，必须要使用大而全（12万条规则）的 ChinaMax （ https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Surge/ChinaMax ）给中国网站分流。不然会对工作生活产生很大干扰。 那你可以 按上述，手动修改模版 。
 
 总结：方案2，对中国规则集合的容错度更高。可以说，几乎是随便错😂 都不怕。
 
-因为对于方案2来说，相当于，当所有的境外流量全部分走之后，在白名单兜底分流发挥作用前，最后试一把有没有中国IP、中国域名在内。如果匹配上就直连。
+因为对于方案2来说，相当于，当所有的境外流量全部分走之后，在白名单兜底分流发挥作用前，最后试一把 有没有 中国域名 。如果匹配上使用中国DNS进行解析，并且直连。
 
 <br>
 
@@ -1528,11 +1528,11 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 <br>
 
-我手笨 不会修改 怎么办？
+如何启用此功能？
 
-  - 把需求描述和模版，扔给AI（ChatGPT 5.1 Pro）。
+  - 在本模版的配置文件中搜索 ChinaMax ，并启用 ✅（被注释掉的三处代码）
 
-  - 尤其记得让AI自己验证后，并将验证步骤和验证结果二次确认后，再将结果发给你。不然AI可能会偷懒，压根不验证，胡改一通 直接发给你。
+原则上来说，不建议启用此功能，会使得本模版的 模版02，从（关闭GFWlist后的）1.2万条规则，扩展为12万条。增长了接近10倍规则。而且都是极低频的中国域名，估计里面90%的域名，是你这辈子都用不上的中国域名。纯属你的iphone 拉低性能 + 纯暖手宝模式。
 
 <br>
 <br>
