@@ -1505,12 +1505,12 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 <br>
 
-有3种 修改方案：
+有2种 修改方案：
  
  |--|--|方法|优缺点|
  |--|--|--|--|
  | 方案 1 |   仅图形界面操作 | 将你认为绕路的🇨🇳中国APP，添加进旁路  | 只有安卓的客户端，支持此功能 |
-| 方案 2  | 修改模版  |  兜底规则之前，添加ChinaMax分流规则，进行二次排查 | 分流🇨🇳 中国分流规则的容错度 最高，效果 = 随便错 都不怕 🔥🔥🔥 但 最费电 ❕ |
+| 方案 2  | 修改模版  |  兜底规则上方 添加ChinaMax分流规则，从而进行二次排查 | 分流🇨🇳 中国分流规则的容错度 最高，效果 = 随便错 都不怕 🔥🔥🔥 但 最费电 ❕ |
   
 <br>
 
@@ -1528,7 +1528,7 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 <br>
 
-如何启用此功能？
+如何启用 本模版中的 此功能？
 
   - 在本模版的配置文件中搜索 ChinaMax ，并启用 ✅（被注释掉的三处代码）
 
