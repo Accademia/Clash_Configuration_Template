@@ -1550,7 +1550,7 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 清洗后的 ChinaMax 项目地址如下：
   - https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/ChinaMax
 
-像ChinaMax 这种 ，100%草台级 散装规则。真的是垃圾。看了一下， 想覆盖的 覆盖不到（主流APP 依旧不能100%覆盖），99%的人 压根用不上的网站（如各种抽奖类网站、2345流氓网站、营销网站） 占据巨大容量 滥竽充数。以后最好能让AI 定期 在虚拟机、沙盒中 模拟人真 使用国产APP，然后定期 自动为每个国产APP更新规则集，从而汇总 国产APP规则，进行分流，比ChinaMax这种收集一堆野鸡 个人网、抽奖站、营销战、广告站的规则 强100倍。
+像ChinaMax 这种 ，100%草台级 散装规则。真的是垃圾。看了一下， 想覆盖的 覆盖不到（主流APP 依旧不能100%覆盖），99%的人 压根用不上的网站（如各种抽奖类网站、2345流氓网站、营销网站） 占据巨大容量 滥竽充数。以后最好能让AI 定期 在虚拟机、沙盒中 模拟人真 使用国产APP，然后定期 自动为每个国产APP更新规则集，从而汇总 国产APP规则，进行分流，比ChinaMax这种收集一堆 野鸡个人站、抽奖站、营销战、广告站的规则 强100倍。
 
 <br>
 <br>
