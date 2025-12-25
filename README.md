@@ -176,6 +176,7 @@
 规则 ：02-WhiteList-Min.AntiAD_模版.yaml 
   +  与 规则1 的区别 ： 
      + RuleSet规则中， “反广告 + 隐私保护” ，从7.7万条 精简到 1500 条（ 基于Geosite ）
+     + RuleSet规则中， “GFWlist” ，从0.7万条 精简到 0 条 (为默认的白名单分流，极致精简)
      + GeoSite规则中，“Porn类网站” 的规则，从 1.3万 精简到 仅十几条（pornhub）
      
 <br>
