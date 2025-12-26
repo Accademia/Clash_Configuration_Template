@@ -254,7 +254,7 @@
    # [1st-02] -  局域网 
    # [1st-03] -  自己的 VPS  ：域名 \ IP
    # [1st-05] -  反私有DNS跟踪（HttpDNS）                            ⛔️        
-   # [1st-06] -  反劫持（Hijacking） 反私有DNS跟踪（HttpDNS）        ⛔️    
+   # [1st-06] -  反劫持（Hijacking）                                ⛔️    
    # [1st-08] -  保护隐私                                            ⛔️        
    # [1st-09] -  屏蔽广告                                            ⛔️              
    # [1st-09] -  第三方VNP软件                      
@@ -574,13 +574,13 @@
 # [7st-01] -  CDN                                     
  - { name : '☁️.<Global>—CDN'                                       
 
-# [8st-01] GFW黑名单            
+# [8st-01] - GFW黑名单            
 #- { name : '🚧.<GFWList>'                                             
 
-# [9st-01] 中国兜底 - ChinaMax  
+# [9st-01]  - 中国兜底 （ ChinaMax ）  
 # 与[2st-05]的 '🇨🇳.<Country>—CN' 相同
  
-# [10st-01] 兜底  
+# [10st-01] - 全球兜底  
  - { name : '♾️.<Final>'                                               
 
            
