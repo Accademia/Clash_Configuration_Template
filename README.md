@@ -1639,7 +1639,7 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 其次，有没有其他方案，达成上述目标？
 
-当然有。在 DNS分流策略（nameserver-policy）中，1:1镜像， 分流规则（Rule）中的分流策略。就完全可以满足上述需求了。等于说， “让每一笔DNS请求的走向， 都100%被 手写规则 显示可控”  ，才是 ”防DNS泄漏 + 防绕路“ 的最佳方案。
+当然有。在 DNS策略分流（nameserver-policy）中，1:1镜像， 分流规则（Rule）中的分流策略。就完全可以满足上述需求了。等于说， “让每一笔DNS请求的走向， 都100%被 手写规则 显示可控”  ，才是 ”防DNS泄漏 + 防绕路“ 的最佳方案。
 
 并且，同时解决了，上述所有缺点，从而达到：
 
@@ -1651,9 +1651,11 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 这也就是为什么 Clahs Meta内核，会大力增强DNS分流策略（nameserver-policy）的分流能力，使其分流能力，能够1:1镜像 分流规则（Rule）中的几乎所有规则。
 
-而，继续无脑用Clash Premium官方指导的 “ Fake IP + Fallback DNS + no-resolve “ 方案 ？  100%喜提 上述四大缺点  🤣🤣🤣🤣 这个技术，100% 压根就不应该被开发出来，唯一的好处，可能就是对垃圾线路的延迟有一点点帮助，除此以外，浑身BUG。
+而，继续无脑用Clash Premium官方指导的 “ Fake IP + Fallback DNS + no-resolve ” 方案 ？  100%喜提 上述四大缺点  🤣🤣🤣🤣 这个技术，100% 压根就不应该被开发出来，唯一的好处，可能就是对垃圾线路的延迟有一点点帮助，除此以外，浑身BUG。（提示：不要镜像，Reject相关的规则和IP分流规则，只镜像 “可以到达VPN节点” 的 “域名分流规则” ）
+
+而且，居然到了2025年12月份，全网99%的 将翻墙的 youtuber ，还在推荐  “ Fake IP + Fallback DNS + no-resolve ” 方案 ？还说 这是最完美的组合？就这水平，趁早还是把频道关了吧  🤣🤣🤣  完全误人子弟。 也正是因为，有这些垃圾youtuber，才会让 Stash 作者觉得，自己软件的 Fallback模式 神功护体 宇宙无敌 🤣🤣🤣 拒绝让 Stash 的 DNS策略分流（nameserver-policy） 拉平到与 Clahs Meta同样的水平，继续抱着 “ Fake IP + Fallback DNS + no-resolve ” 当传家宝 。100%是无力吐槽。
  
-（提示：不要镜像，Reject相关的规则和IP分流规则，只镜像 “可以到达VPN节点” 的 “域名分流规则” ）
+
 
 <br>
 <br>
