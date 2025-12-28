@@ -1639,14 +1639,14 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 其次，有没有其他方案，达成上述目标？
 
-必须有。在 DNS分流策略（nameserver-policy）中，1:1镜像， 分流规则（Rule）中的分流策略。就完全可以满足上述需求了。等于说， “让每一笔DNS请求的走向， 都100%被 手写规则 显示可控”  ，才是 ”防DNS泄漏 + 防绕路“ 的最佳方案。
+当然有。在 DNS分流策略（nameserver-policy）中，1:1镜像， 分流规则（Rule）中的分流策略。就完全可以满足上述需求了。等于说， “让每一笔DNS请求的走向， 都100%被 手写规则 显示可控”  ，才是 ”防DNS泄漏 + 防绕路“ 的最佳方案。
 
 并且，同时解决了，上述所有缺点，从而达到：
 
-  - ✅ 0 FakeIP 的VPN特征
-  - ✅ 0 FakeIP 干扰正常流量
+  - ✅ 消除 FakeIP 引发的一切 VPN特征
+  - ✅ 消除 FakeIP 引发的一切 兼容性问题
   - ✅ 0 DNS泄漏 
-  - ✅ “满血版DNS解析” 
+  - ✅ 满血版 DNS解析
 
 
 这也就是为什么 Clahs Meta内核，会大力增强DNS分流策略（nameserver-policy）的分流能力，使其分流能力，能够1:1镜像 分流规则（Rule）中的几乎所有规则。
