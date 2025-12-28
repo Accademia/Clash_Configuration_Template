@@ -1631,7 +1631,7 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 那么，如何解决？
 
-首先，“防DNS泄漏 + 防DNS污染” ，其 核心目标 是 什么 ？ 
+首先，“防DNS泄漏 + 防DNS污染” ，必须做到 什么 ？ 
  
  - 核心目标 1 ：🌍 国外流量的 DNS解析，使用 🌍 境外VPN节点 转发（不发国内，也不发给 其他VPN节点）
  
