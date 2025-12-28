@@ -1603,7 +1603,7 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 ------
 
 
-# 为什么本模版 完全禁用 了，官方推荐的 “ Fake IP + Fallback DNS + no-resolve ” 的组合？
+# ‼️‼️ 为什么 必须完全禁用 ，官方推荐的 “ Fake IP + Fallback DNS + no-resolve ” 组合？
 
 <br>
 
@@ -1641,7 +1641,7 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 必须有。在 DNS分流策略（nameserver-policy）中，1:1镜像， 分流规则（Rule）中的分流策略。就完全可以满足上述需求了。等于说， “让每一笔DNS请求的走向， 都100%被 手写规则 显示可控”  ，才是 ”防DNS泄漏 + 防绕路“ 的最佳方案。
 
-并且，同时解决了，上述所有缺点：
+并且，同时解决了，上述所有缺点，从而达到：
 
   - ✅ 0 FakeIP 的VPN特征
   - ✅ 0 FakeIP 干扰正常流量
