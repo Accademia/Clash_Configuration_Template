@@ -1681,7 +1681,7 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 经过上述对比，是不是：不怕不识货，就怕货比货？ 继续无脑用Clash Premium官方指导的 “ Fake IP + Fallback DNS + no-resolve ” 方案 ？  100%喜提 上述四大缺点  🤣🤣🤣🤣 这套技术，不但老旧过时 + 浑身BUG ！而且，在geostie:cn被长期使用的情况下， 上述机制 100% 压根就不应该被开发出来！唯一的好处，可能就是对握手延迟有一点点帮助。
 
 关于如何写一个 最小实现？
-  - [《 Redir-Host + Nameserver-Policy DNS 》](https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/GeositeCN#-%E6%9C%80%E4%BD%B3%E4%BD%BF%E7%94%A8%E5%BB%BA%E8%AE%AE)
+  - [《 Redir-Host + Nameserver-Policy DNS 最小化实现 》](https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/GeositeCN#-%E6%9C%80%E4%BD%B3%E4%BD%BF%E7%94%A8%E5%BB%BA%E8%AE%AE)
 
 <br>
 
