@@ -1613,9 +1613,9 @@ If you are not located in China but instead in rogue countries like Russia, Iran
   
   - ✅ Redir-Host + Nameserver-Policy DNS
 
-> “Fake IP + Fallback DNS + no-resolve” （不推荐使用） 是 上一代 防DNS污染 技术 ：其同时向 “国内 国外 DNS” 发起域名解析，然后让国外DNS 给结果纠错，从而避免DNS污染。 
+> “Fake IP + Fallback DNS + no-resolve” （不推荐使用）。这是 上一代 防DNS污染 技术 ：其同时向 “国内 国外 DNS” 发起域名解析，然后让国外DNS 给结果纠错，从而避免DNS污染。 
 
-> “Redir-Host + Nameserver-Policy DNS” （推荐使用） 是 最新一代 防DNS污染 技术 ：其通过 域名黑名单（如 geosite:cn）控制，只有中国域名才会请求中国DNS，非名单内的域名，一律当作海外域名请求海外DNS解析 。从而避免DNS污染。
+> “Redir-Host + Nameserver-Policy DNS” （推荐使用）。 这是 最新一代 防DNS污染 技术 ：其通过 域名黑名单（如 geosite:cn）控制，只有中国域名才会请求中国DNS，非名单内的域名，一律当作海外域名请求海外DNS解析 。从而避免DNS污染。
 
 <br>
 
@@ -1678,7 +1678,7 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 <br>
 
-总之，继续无脑用Clash Premium官方指导的 “ Fake IP + Fallback DNS + no-resolve ” 方案 ？  100%喜提 上述四大缺点  🤣🤣🤣🤣 这套技术，不但老旧过时 + 浑身BUG ！而且 100% 压根就不应该被开发出来！唯一的好处，可能就是对握手延迟有一点点帮助。
+总之，继续无脑用Clash Premium官方指导的 “ Fake IP + Fallback DNS + no-resolve ” 方案 ？  100%喜提 上述四大缺点  🤣🤣🤣🤣 这套技术，不但老旧过时 + 浑身BUG ！而且，在geostie:cn被长期使用的情况下， 上述机制 100% 压根就不应该被开发出来！唯一的好处，可能就是对握手延迟有一点点帮助。
 
 <br>
 
