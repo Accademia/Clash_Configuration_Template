@@ -1680,7 +1680,7 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 经过上述对比，可以看到。业界 从 “FakeIP + Fallback DNS + no-resolve” 技术方案， 过渡到 “Redir-Host + Nameserver-Policy DNS” 技术方案 ，其最大驱动力，就是 像 geosite:cn 这样的 “基于地理位置的域名名单” 逐渐成熟。如果没有一个 精准+高频 的 🇨🇳中国域名规则集合， “Redir-Host + Nameserver-Policy DNS” 技术方案 将无从谈起。这个方案严重依赖 “精准 域名名单” 进行显示分流。 而上一代 防DNS污染技术方案  “FakeIP + Fallback DNS + no-resolve” ，恰恰不依靠 精准 🇨🇳中国域名名单 ，只需要同时调用 国内和国外DNS ，并用海外DNS结果做修正即可。但，这造成了上述四大缺陷！
 
-目前，“FakeIP + Fallback DNS + no-resolve” 技术方案，已经老旧过时了 ！其唯一的好处，可能就是对握手延迟有一点点帮助。当然，对于俄国、朝鲜、伊朗那些流氓国家的用户，老方案，即 “FakeIP + Fallback DNS + no-resolve” 方案，可能依然好用，毕竟 在那些流氓国家 ，几乎统统0规模社区，没有geosite:cn这样的项目。压根上不了  “Redir-Host + Nameserver-Policy DNS” 技术方案。
+目前，“FakeIP + Fallback DNS + no-resolve” 技术方案，已经老旧过时了 ！其唯一的好处，可能就是对握手延迟有一点点帮助。当然，对于俄国、朝鲜、伊朗那些流氓国家的用户，老方案，即 “FakeIP + Fallback DNS + no-resolve” 方案，可能还有一些过渡性价值，毕竟 在那些流氓国家 ，其类似geosite:cn这样的项目，并不足够完善。还不能完全达到  “Redir-Host + Nameserver-Policy DNS” 技术方案 对 所在国 的 域名合集中 “精准度”的要求。
 
 如何写一个  “Redir-Host + Nameserver-Policy DNS”  最小实现？
   - [《 Redir-Host + Nameserver-Policy DNS 最小化实现 》](https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/GeositeCN#-%E6%9C%80%E4%BD%B3%E4%BD%BF%E7%94%A8%E5%BB%BA%E8%AE%AE)
