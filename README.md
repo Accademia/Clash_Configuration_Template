@@ -1653,10 +1653,13 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 而，继续无脑用Clash Premium官方指导的 “ Fake IP + Fallback DNS + no-resolve ” 方案 ？  100%喜提 上述四大缺点  🤣🤣🤣🤣 这个技术，100% 压根就不应该被开发出来，唯一的好处，可能就是对垃圾线路的延迟有一点点帮助，除此以外，浑身BUG。
 
- 总之，两种模式，二选一 ：
+ 总之，上述两种模式，二选一，千万别选旧技术 ：
 
-  - ❌ FakeIP + Fallback DNS + no-resolve （ 100% 垃圾 ）
+  - ❌ FakeIP + Fallback DNS + no-resolve 
+  
   - ✅ Redir-Host + Nameserver-Policy DNS
+
+<br>
 
 此处不得不吐槽一下。都到了2025年12月份，居然 全网 “讲如何翻墙” 的 youtuber 中 90% 的频道， 还在推荐  “ Fake IP + Fallback DNS + no-resolve ” 方案 ？还说 这是最完美的组合？我都笑傻了。 🤮🤮🤮 就这水平，趁早还是把频道关了吧  🤣🤣🤣  完全误人子弟。 正是因为，有这些 垃圾youtuber 以讹传讹，才会让 诸如 Stash 这样的作者，觉得 自己软件的 Fallback模式 神功护体 宇宙无敌 🤣🤣🤣 拒绝让 Stash 的 DNS策略分流（nameserver-policy） 拉平到与 Clahs Meta同样的水平，继续抱着 “ Fake IP + Fallback DNS + no-resolve ” 当传家之宝 。绝对是 100%不可接受！
  
