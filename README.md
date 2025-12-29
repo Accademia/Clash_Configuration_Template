@@ -1607,60 +1607,78 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 <br>
 
-被普遍使用的 “Fake IP + Fallback DNS + no-resolve” 的组合。是从 已经停更的 Clash Premium 官方指导中，继承下来的。其核心目的只有一个，就是 “防DNS污染”。但是，此组合，带来如下诸多缺陷：
-
- 1. ❌ Fake IP 的 VPN特征明显
-    
-    APP 内置的 “商业级 反VPN SDK” ，会通过识别Fake IP，识别到使用了VPN，从而强制退出APP（如，某些银行类APP）
- 
- 2. ❌ Fake IP 极不省心 、干扰正常使用
-    
-    Fake IP 还会造成 大量的兼容性问题，为了解决兼容性问题，还需要给它设置过滤列表（添加各种例外，尤其是在路由器上部署时），需要频繁手动维护，不胜其烦 ❕❕❕
-
- 3. ❌ Fallback DNS 会造成DNS泄漏
-    
-    Fallback模式下的DNS请求，会先去国内DNS请求，然后再去海外DNS验证。这种机制 100%会造成DNS泄漏。
-    
- 4. ❌ no-resolve 阉割DNS解析能力
-    
-    官方指导中，还推荐给分流域名都添加 no-resolve约束（禁止DNS解析），那意味着 不能调用IP（GeoIP）进行分流 。🤣 这等于，100%阉割了，基于IP地理位置的分流（ 如 geoip:cn ）的分流 ❕❕❕ 喜提纯种大韭菜❕❕❕
-
-以上，别说四大缺陷了，上述 任何一个缺陷，都 = 0 接受度 🤣   。 
-
-<br>
-
-那么，如何解决？
-
-首先，“防DNS泄漏 + 防DNS污染” ，必须做到 什么 ？ 
- 
- - 核心目标 1 ：🌍 国外网站 的 DNS解析，使用 🌍 境外VPN节点 转发（不发国内，也不发给 其他VPN节点）
- 
- - 核心目标 2 ：🇨🇳 国内网站 的 DNS解析，直连 🇨🇳 国内DNS解析
-
-其次，有没有其他方案，达成上述目标？
-
-当然有。在 DNS策略分流（nameserver-policy）中，1:1镜像， 分流规则（Rule）中的分流策略。就完全可以满足上述需求了。等于说， “让每一笔DNS请求的走向， 都100%被 手写规则 显示可控”  ，才是 ”防DNS泄漏 + 防绕路“ 的最佳方案。
-
-并且，同时解决了，上述所有缺点，从而达到：
-
-  - ✅ 消除 FakeIP 引发的一切 VPN特征
-  
-  - ✅ 消除 FakeIP 引发的一切 兼容性问题
-  
-  - ✅ 0 DNS泄漏 
-  
-  - ✅ 满血版 DNS解析
-
-
-这也就是为什么 Clahs Meta内核，会大力增强DNS分流策略（nameserver-policy）的分流能力，使其分流能力，能够1:1镜像 分流规则（Rule）中的几乎所有规则。（提示：不要镜像，Reject相关的规则和IP分流规则，只镜像 “可以到达VPN节点” 的 “域名分流规则” ）
-
-而，继续无脑用Clash Premium官方指导的 “ Fake IP + Fallback DNS + no-resolve ” 方案 ？  100%喜提 上述四大缺点  🤣🤣🤣🤣 这个技术，100% 压根就不应该被开发出来，唯一的好处，可能就是对垃圾线路的延迟有一点点帮助，除此以外，浑身BUG。
-
- 总之，上述两种模式，二选一，千万别选旧技术 ：
+防DNS污染，目前，有两种方案（二选一）：
 
   - ❌ FakeIP + Fallback DNS + no-resolve 
   
   - ✅ Redir-Host + Nameserver-Policy DNS
+
+> “Fake IP + Fallback DNS + no-resolve” （不推荐使用） 是 上一代 防DNS污染 技术 ：其同时向 “国内 国外 DNS” 发起域名解析，然后让国外DNS 给结果纠错，从而避免DNS污染。 
+
+> “Redir-Host + Nameserver-Policy DNS” （推荐使用） 是 最新一代 防DNS污染 技术 ：其通过 域名黑名单（如 geosite:cn）控制，只有中国域名才会请求中国DNS，非名单内的域名，一律当作海外域名请求海外DNS解析 。从而避免DNS污染。
+
+<br>
+
+### 🆚 “Fake IP + Fallback DNS + no-resolve” 的优缺点
+
+ 1. 缺点 ❌ ： Fake IP 的 VPN特征明显
+    
+     APP 内置的 “商业级 反VPN SDK” ，会通过识别Fake IP，识别到使用了VPN，从而强制退出APP（如，某些银行类APP）
+ 
+ 2. 缺点 ❌ ：Fake IP 极不省心 、干扰正常使用
+    
+    Fake IP 还会造成 大量的兼容性问题，为了解决兼容性问题，还需要给它设置过滤列表（添加各种例外，尤其是在路由器上部署时），需要频繁手动维护，不胜其烦 ❕❕❕
+
+ 3. 缺点 ❌ ：Fallback DNS 会造成DNS泄漏
+    
+    Fallback模式下的DNS请求，会先去国内DNS请求，然后再去海外DNS验证。这种机制 100%会造成DNS泄漏。
+    
+ 4. 缺点 ❌ ：no-resolve 阉割DNS解析能力
+    
+    官方指导中，还推荐给分流域名都添加 no-resolve约束（禁止DNS解析），那意味着 不能调用IP（GeoIP）进行分流 。🤣 这等于，100%阉割了，基于IP地理位置的分流（ 如 geoip:cn ）的分流 ❕❕❕ 喜提纯种大韭菜❕❕❕
+
+
+ 5. 优点 ✅ ：FakeIP 模式 延迟耕地
+
+    由于能秒返回 假IP，所以可以隐藏一些 握手延迟。得到性能上的及少许优化（对普通线路，几乎0优化，只有延迟极低的优质的线路才能看到区别）
+
+<br>
+
+总之，以上，别说四大缺陷了，上述 任何一个缺陷，都 = 0 接受度 🤣   。 
+
+<br>
+
+### 🆚 “Redir-Host + Nameserver-Policy DNS” 的优缺点
+
+  1. 优点 ✅ ：消除 FakeIP 引发的一切 VPN特征
+     
+     Redir-Host 返回的是真实IP，不会触发APP内部 反VPN SDK的安全机制
+  
+  2. 优点 ✅ ：消除 FakeIP 引发的一切 兼容性问题
+     
+     Redir-Host 兼容性 100% ，尤其对于UDP P2P等游戏场景、其他低延迟UDP场景。在FakeIP下必须逐一手工维护排除列表。而在Redir-Host模式下，0维护 = 100% 省心 ！
+
+  3. 优点✅ ： 0 DNS泄漏 + 0 全球绕路
+     
+     在新一代的技术方案中，Clahs Meta内核，通过大力增强DNS分流策略（nameserver-policy）的分流能力，使其分流能力，能够1:1镜像 分流规则（Rule）中的几乎所有规则。（提示：不要镜像，Reject相关的规则和IP分流规则，只镜像 “可以到达VPN节点” 的 “域名分流规则” ），以便，达到如下效果：
+       
+       - 🌍 国外网站 的 DNS解析，之使用 🌍 境外VPN节点 转发（不发国内，也不发给 其他VPN节点）
+       
+       - 🇨🇳 国内网站 的 DNS解析，直连 🇨🇳 国内DNS解析
+      
+      从而 ，避免了 DNS 泄漏，同时，也不会出现 全齐绕路的情况（ 不会出现  🇺🇸美国VPN节点 访问 🇯🇵日本CDN服务器 的情况）
+
+  4. 优点 ✅ ：满血版 DNS解析
+      
+      全程无需调用 no-resolve ，通过 geoip:cn , 将分流的精准度拉满。将漏网之鱼降到个位数以下（需配合nameserver-policy + 中国域名名单）
+
+  5. 缺点 ⚠️ ：Redir-Host 握手延迟无法隐藏 （感官上 可忽略不计）
+      
+      需要等待 国外DNS返回真实IP后，才能进行后面的请求。无法隐藏握手延迟。
+
+<br>
+
+总之，继续无脑用Clash Premium官方指导的 “ Fake IP + Fallback DNS + no-resolve ” 方案 ？  100%喜提 上述四大缺点  🤣🤣🤣🤣 这套技术，不但老旧过时 + 浑身BUG ！而且 100% 压根就不应该被开发出来！唯一的好处，可能就是对握手延迟有一点点帮助。
 
 <br>
 
