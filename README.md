@@ -768,7 +768,12 @@
  
 - 冷门域名，发生了绕路，怎么办？
      
-     -  通过将🇨🇳 国内域名，加入到本模版的DNS分流策略中：即，在“ nameserver-policy ” 字段中 加入新域名。可秒修复 绕路问题 
+     -  方案 1 : 通过将🇨🇳 国内域名，加入到本模版的DNS分流策略中：即，在“ nameserver-policy ” 字段中 加入新域名。可秒修复 绕路问题 
+     
+     -  方案 2 : 在模版中，的搜索ChinaMax，并且启用其包裹着的源代码 ，注意，只启用以下两处的ChinaMax即可（ 相关原理，在 [如下章节](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#%E6%9C%AC%E6%A8%A1%E7%89%88%E5%86%85-%E5%B0%8F%E8%80%8C%E7%B2%BE%E5%87%86%E7%9A%84-geositecn--geoipcn-%E7%9C%9F%E4%B8%8D%E8%83%BD%E6%BB%A1%E8%B6%B3-%E6%88%91%E7%9A%84%E5%9C%BA%E6%99%AF%E9%9C%80%E6%B1%82%E6%80%8E%E4%B9%88%E5%8A%9E)有讲解 ）
+         -  启用 nameserver-policy 中的 Chinamax（ 620行 左右 ）
+         -  启用 rule-providers 中的 Chinamax （ 9680行 左右）
+         -  强烈建议 ：❌ 不要启用 rule 中的 Chinamax
 
 <br>
 <br>
@@ -1553,8 +1558,11 @@ If you are not located in China but instead in rogue countries like Russia, Iran
   - 高频使用的 “直连国内🇨🇳” （ GeositeCN ）。 已经在 境外分流前的第一次排查中 被命中 （ 第二级规则 ）。🔥 已经大大降低了耗电❕❕❕
   
   - 低频使用的 “直连国内🇨🇳” （ ChinaMax ）。 只在兜底规则发挥作用前，做二次排查 （ 第九级规则 ）。此时，精度低 也不怕，可以说 ，几乎能随便错。
+  
+  - 等于说，那 GeositeCN 做一级高速缓存 （高频 + 高精准度），那 ChinaMax 做二级缓存 （低频 + 精准度稍低），并且，特别注意 ⚠️ 上述两者，仅仅在 Nameserver-Policy DNS 中启用 ⚠️（指向中国DNS），而，通过Nameserver-Policy DNS后，只有返回的是中国IP，才会驱动geoip:cn直连。最大化的清洗掉ChinaMax中的错误数据（本模版引用的ChinaMax已经做过一次离线数据清理，删除掉了1.9万条没有任何中国IP的域名）
 
-  - 虽然避免了功耗爆炸，但是内存爆炸无法避免。由于iphone只有 50MB vpn网络内存。在移动端，依旧不建议开启。桌面端可以尝试。
+  - 虽然，上述的两级缓存机制，避免了功耗爆炸，但是内存爆炸无法避免。由于iphone只有 50MB vpn网络内存。在移动端，依旧不建议开启。桌面端可以尝试。
+  
 
 <br>
 
