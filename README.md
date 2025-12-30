@@ -770,10 +770,10 @@
      
      -  方案 1 : 通过将🇨🇳 国内域名，加入到本模版的DNS分流策略中：即，在“ nameserver-policy ” 字段中 加入新域名。可秒修复 绕路问题 
      
-     -  方案 2 : 在模版中，的搜索ChinaMax，并且启用其包裹着的源代码 ，注意，只启用以下两处的ChinaMax即可（ 相关原理，在 [如下章节](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#%E6%9C%AC%E6%A8%A1%E7%89%88%E5%86%85-%E5%B0%8F%E8%80%8C%E7%B2%BE%E5%87%86%E7%9A%84-geositecn--geoipcn-%E7%9C%9F%E4%B8%8D%E8%83%BD%E6%BB%A1%E8%B6%B3-%E6%88%91%E7%9A%84%E5%9C%BA%E6%99%AF%E9%9C%80%E6%B1%82%E6%80%8E%E4%B9%88%E5%8A%9E)有讲解 ）
-         -  启用 nameserver-policy 中的 Chinamax（ 620行 左右 ）
-         -  启用 rule-providers 中的 Chinamax （ 9680行 左右）
-         -  强烈建议 ：❌ 不要启用 rule 中的 Chinamax
+     -  方案 2 : 在模版中，搜索 ChinaMax ，并且启用其包裹着的源代码 ，注意，只启用以下两处的ChinaMax即可（ 相关原理，在 [如下章节](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#%E6%9C%AC%E6%A8%A1%E7%89%88%E5%86%85-%E5%B0%8F%E8%80%8C%E7%B2%BE%E5%87%86%E7%9A%84-geositecn--geoipcn-%E7%9C%9F%E4%B8%8D%E8%83%BD%E6%BB%A1%E8%B6%B3-%E6%88%91%E7%9A%84%E5%9C%BA%E6%99%AF%E9%9C%80%E6%B1%82%E6%80%8E%E4%B9%88%E5%8A%9E)有讲解 ）
+         -  启用 nameserver-policy 中的 ChinaMax（ 620行 左右 ）
+         -  启用 rule-providers 中的 ChinaMax （ 9680行 左右）
+         -  强烈建议 ：❌ 不要启用 rule 中的 ChinaMax
 
 <br>
 <br>
@@ -1063,10 +1063,11 @@
           
           - ChinaMax 包裹住的代码，启用 ✅
           
-          - 在 上述启用 的过程中，建议 “不必启用” 如下规则  （原因会在后续的原理介绍中解释）        
+          - 在 上述启用 的过程中，建议 “不必启用” 如下规则     
             ``` yaml
              - RULE-SET        , GFWList_Domain                             , 🚧.<GFWList>
              - RULE-SET        , ChinaMax_Domain                            , 🇨🇳.<Country>—CN  
+             # 原因 ：默认白名单下，上述这些规则都是冗余规则。如果启用了，不会起到效果，反而可能会出错
             ```
           
       
@@ -1078,13 +1079,39 @@
   
       - 启用方法，在源代码中查找：
           
-          - GFWList 包裹着的代码 ，启用 ✅
+          - GFWList 包裹着的代码 ，启用 ✅ 
           
           - WhiteList 包裹着的代码 ，关闭 ❌
           
           - 上述配置后，模版将不在支持白名单模式（即，切换后 = 没有分流选项的全部走直连）
 
-以上步骤 + 本模版，只适配了 自建线路（自购VPS）的情况。注意：以上搜索过程，请使用 “大小写敏感”模式。
+        （ ⚠️ 注意 ： 第五步不建议启用的 GFWList_Domain代码，在这里要启用，因为黑名单模式下，需要GFWlist做兜底 ）
+        
+        （ ⚠️ 注意 ： 只在黑名单模式下，才必须启用GFWList。在白名单模式下， 100% 无需启用 ❌ 任何GFWList规则 ）
+
+      - 在上述验证后，将DNS分流也切换到 黑名单模式，以便达到 完美状态。在源代码中查找
+
+         ```yaml
+             '+.*'                                              : [ 'https://cloudflare-dns.com/dns-query#♾️.<Final>'                             , 'https://dns.google/dns-query#♾️.<Final>'                                 ]    # [10st-01] 
+         ```
+
+        替换为：
+
+         ```yaml
+             '+.*'                                              : [ 'https://dns.alidns.com/dns-query#♾️.<Final>'                                  , 'https://dns.google/dns-query#♾️.<Final>'                                ]    # [10st-01] 
+         ```
+
+        即，兜底规则，添加 🇨🇳 中国DNS ！如果你没有出国需求 或者 你没有将 回国直连 临时切换 成代理VPN（以便临时修改更多网站的IP归属地）的需求，可以将上述 dns.google 替换成 doh.pub
+        
+        记住，只有纯黑名单模式，建议使用此修改，因为此修改必然会导致一些不在敏感域名列表中的域名会DNS泄漏，所有的黑名单模式，都会导致DNS泄漏
+
+<br>
+
+注意：以上搜索过程，请使用 “大小写敏感”模式。
+
+注意，以上流程中， 第五步和第六步中，有些修改，仅针对Clash meta内核才有效，如果你是Stash的iPhone用户，由于有些特性Stash无法支持，所以无法修改的，请略过 也能凑合用 （但强烈建议，去Stash作者那里，发起反馈，然他知道他的软件急需修改）。
+
+最后，以上步骤 + 本模版，只适配了 自建线路（自购VPS）的情况。
 
 <br>
 <br>
@@ -1463,7 +1490,7 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 ------
 
 
-# 为什么 原版 geosite 、 原版 chinamax 会不精准？ 什么级别的精准，是本模版 对 “精准需求” 的 “及格线” ？
+# 为什么 原版 geosite 、 原版 ChinaMax 会不精准？ 什么级别的精准，是本模版 对 “精准需求” 的 “及格线” ？
 
 <br>
 
@@ -1488,7 +1515,7 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 - 原版 geosite:cn = 类别 3
 
-- 原版 chinamax = 类别 1
+- 原版 ChinaMax = 类别 1
 
 但以上就是全部标准么？
 
