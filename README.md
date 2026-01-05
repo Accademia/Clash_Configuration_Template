@@ -1320,9 +1320,9 @@ If you don't understand how to use this template, please throw this template to 
 
 总之！ 必须以 “分层” 的方式，部署VPN ！才能，达到 最省心（0维护）的效果。 如下：
 
- - 路由器上，只使用GFWlist黑名单 + 1-2个节点。以便能实现基础的外网访问功能。 
+ - 第一层：路由器上，只使用GFWlist黑名单 + 1-2个节点。以便能实现基础的外网访问功能。 
  
- - 手机上，使用 节点全集 + 分流全集。
+ - 第二层：手机上，使用 节点全集 + 分流全集。
  
 
 
