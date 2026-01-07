@@ -60,10 +60,14 @@
 -----
 
 
-⚠️⚠️ 不看完 本说明自述，尤其不看完如下 两个章节 [ 《 规格说明 》 ](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#%E8%A7%84%E6%A0%BC%E8%AF%B4%E6%98%8E) +  [《 如何将 VPN节点，加入到本模版，并导入VPN软件 》](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#%E5%A6%82%E4%BD%95-%E4%BD%BF%E7%94%A8%E6%9C%AC%E6%A8%A1%E7%89%88-%E5%A6%82%E4%BD%95%E5%B0%86-vpn%E8%8A%82%E7%82%B9%E5%8A%A0%E5%85%A5%E5%88%B0%E6%9C%AC%E6%A8%A1%E7%89%88%E5%B9%B6%E5%AF%BC%E5%85%A5vpn%E8%BD%AF%E4%BB%B6) ，就想指挥别人当保姆的 、就说本模版有BUG的。🤣 直接 0 社交 关闭issue⚠️⚠️
+⚠️⚠️⚠️⚠️  不看完 本说明自述，尤其不看完如下 两个章节 ，就想指挥别人当保姆的 、就说本模版有BUG的。🤣 直接 0 社交 关闭issue
+
+  >  🚫 [ 《 规格说明 》 ](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#%E8%A7%84%E6%A0%BC%E8%AF%B4%E6%98%8E)  
+  >
+  >  🚫 [《 如何将 VPN节点，加入到本模版，并导入VPN软件 》](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#%E5%A6%82%E4%BD%95-%E4%BD%BF%E7%94%A8%E6%9C%AC%E6%A8%A1%E7%89%88-%E5%A6%82%E4%BD%95%E5%B0%86-vpn%E8%8A%82%E7%82%B9%E5%8A%A0%E5%85%A5%E5%88%B0%E6%9C%AC%E6%A8%A1%E7%89%88%E5%B9%B6%E5%AF%BC%E5%85%A5vpn%E8%BD%AF%E4%BB%B6) 
 
 
-本模版 = 7x24挂机 高强度 自用级验证， 实锤 = 100% 可用，如果你分流失败，建议多照照自己的原因，实在不行 问ai。但肯定不是本模版有bug。（千万别问 免费AI、国产AI ！至少 Gemini 3 Pro + GhatGPT Think 多个 顶级付费AI 相互印证）
+特别声明：本模版 = 7x24挂机 高强度 自用级验证， 实锤 = 100% 可用，如果你分流失败，建议多照照自己的原因，实在不行 问ai。但肯定不是本模版有bug。（千万别问 免费AI、国产AI ！至少 Gemini 3 Pro + GhatGPT Think 多个 顶级付费AI 相互印证）
 
 特别提示：本模版必须下载后，手工填入你自己的节点，才可使用！把本模版 当无脑订阅用的 100%报错。
 
