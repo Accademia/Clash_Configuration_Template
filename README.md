@@ -748,33 +748,33 @@
 
 | 规则 | 总规则数 | RuleSet规则数 | GeoSite规则数 |
 |---|---|---|---|
-| [桌面端模版]-[ClashMeta]-01-WhiteList.yaml  | 23 万条 |  20.3 万条 | 2.7 万条 | 
-| [桌面端模版]-[ClashMeta]-02-WhiteList-Min.AntiAD.yaml | 12.4 万条  | 11.7 万条 | 0.7 万条 | 
-| [桌面端模版]-[ClashMeta]-03-WhiteList-Non.AntiAD.yaml | 12.2 万条 | 11.7 万条 | 0.5 万条|
+| [ClashMeta模版]-[桌面端]-01-WhiteList.yaml  | 23 万条 |  20.3 万条 | 2.7 万条 | 
+| [ClashMeta模版]-[桌面端]-02-WhiteList-Min.AntiAD.yaml | 12.4 万条  | 11.7 万条 | 0.7 万条 | 
+| [ClashMeta模版]-[桌面端]-03-WhiteList-Non.AntiAD.yaml | 12.2 万条 | 11.7 万条 | 0.5 万条|
 
 
 | 规则 | 总规则数 | RuleSet规则数 | GeoSite规则数 |
 |---|---|---|---|
-| [移动端模版]-[ClashMeta]-01-WhiteList.yaml  | 12.5 万条 |  9.8 万条 | 2.7 万条 | 
-| [移动端模版]-[ClashMeta]-02-WhiteList-Min.AntiAD.yaml | 1.9 万条  | 1.2 万条 | 0.7 万条 | 
-| [移动端模版]-[ClashMeta]-03-WhiteList-Non.AntiAD.yaml | 1.7 万条 | 1.2 万条 | 0.5 万条|
+| [ClashMeta模版]-[移动端]-01-WhiteList.yaml  | 12.5 万条 |  9.8 万条 | 2.7 万条 | 
+| [ClashMeta模版]-[移动端]-02-WhiteList-Min.AntiAD.yaml | 1.9 万条  | 1.2 万条 | 0.7 万条 | 
+| [ClashMeta模版]-[移动端]-03-WhiteList-Non.AntiAD.yaml | 1.7 万条 | 1.2 万条 | 0.5 万条|
 
 
 <br>
 
 ### 三套表格 之间 ， 什么区别？
 
- 三个表格中，对应位置的模版之间， “ 规则+配置” 一模一样 ， 只是适配的客户端不同 ！
+[通用模版]、[ClashMeta模版] ，两者的区别， 只是为了适配的 不同的客户端 ！[通用模版] 额外支持 Stash客户端
 
  - #### [通用模版] ： 同时适配 Stash / Clash 
    
    > 不仅要填入节点，还需必须要 按照 [《 如何将 VPN节点，加入到本模版，并导入VPN软件 》](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#%E5%A6%82%E4%BD%95-%E4%BD%BF%E7%94%A8%E6%9C%AC%E6%A8%A1%E7%89%88-%E5%A6%82%E4%BD%95%E5%B0%86-vpn%E8%8A%82%E7%82%B9%E5%8A%A0%E5%85%A5%E5%88%B0%E6%9C%AC%E6%A8%A1%E7%89%88%E5%B9%B6%E5%AF%BC%E5%85%A5vpn%E8%BD%AF%E4%BB%B6) 进行 五个步骤的 手工配置，才能使用。 
 
- - #### [移动端模版]-[ClashMeta] ： 同时适配 Stash / Clash 
+ - #### [ClashMeta模版]-[移动端] ： 同时适配 Stash / Clash 
    
    > 只需 填入节点 ，即可使用
 
- - #### [桌面端模版]-[ClashMeta] ： 同时适配 Stash / Clash 
+ - #### [ClashMeta模版]-[桌面端] ： 同时适配 Stash / Clash 
    
    > 只需 填入节点 ，即可使用 
 
@@ -782,7 +782,7 @@
 
 ### 每个表格中，三套子模版 之间 ，选哪一个？
 
- - #### 【手机、平板、路由器】 ： 首选 ✅ [移动端模版]-[ClashMeta]-02 ✅
+ - #### 【手机、平板、路由器】 ： 首选 ✅ [ClashMeta模版]-[移动端]-02 ✅
  
     > 对比：规则1虽然更全面，但是在移动端会极大消耗电力，续航➗2。
     
@@ -793,7 +793,7 @@
     特别提示：如果你是 Stash 客户端，选 “ [通用模版]-02 ”
 <br>
 
- - #### 【个人电脑】 ：  首选 ✅ [桌面端模版]-[ClashMeta]-03 ✅  +  Adguard 客户端
+ - #### 【个人电脑】 ：  首选 ✅ [ClashMeta模版]-[桌面端]-03 ✅  +  Adguard 客户端
  
      > 如此组合 意义是什么 ？
      >    + 将 “翻墙分流” 交给 Clash
