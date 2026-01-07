@@ -2,7 +2,7 @@
 
 # 项目概述
 
-项目名称：超级省电clash分流规则模版
+项目名称：超级省电clash配置模版
 
 项目链接： https://github.com/Accademia/Clash_Configuration_Template
  
@@ -59,7 +59,11 @@
 
 -----
 
+<<<<<<< Updated upstream
 ⚠️⚠️ 不看完 本说明自述，尤其不看完如下章节 [《如何将 VPN节点，加入到本模版，并导入VPN软件》](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#%E5%A6%82%E4%BD%95-%E4%BD%BF%E7%94%A8%E6%9C%AC%E6%A8%A1%E7%89%88-%E5%A6%82%E4%BD%95%E5%B0%86-vpn%E8%8A%82%E7%82%B9%E5%8A%A0%E5%85%A5%E5%88%B0%E6%9C%AC%E6%A8%A1%E7%89%88%E5%B9%B6%E5%AF%BC%E5%85%A5vpn%E8%BD%AF%E4%BB%B6) )，就想指挥别人当保姆的 、就说本模版有BUG的。🤣 直接 0 社交 关闭issue⚠️⚠️
+=======
+⚠️⚠️ 不看完 本说明自述，尤其不看完如下章节  《 规格说明 》  、  [《 如何将 VPN节点，加入到本模版，并导入VPN软件 》](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#%E5%A6%82%E4%BD%95-%E4%BD%BF%E7%94%A8%E6%9C%AC%E6%A8%A1%E7%89%88-%E5%A6%82%E4%BD%95%E5%B0%86-vpn%E8%8A%82%E7%82%B9%E5%8A%A0%E5%85%A5%E5%88%B0%E6%9C%AC%E6%A8%A1%E7%89%88%E5%B9%B6%E5%AF%BC%E5%85%A5vpn%E8%BD%AF%E4%BB%B6) ，就想指挥别人当保姆的 、就说本模版有BUG的。🤣 直接 0 社交 关闭issue⚠️⚠️
+>>>>>>> Stashed changes
 
 本模版 = 7x24挂机 高强度 自用级验证， 实锤 = 100% 可用，如果你分流失败，建议多照照自己的原因，实在不行 问ai。但肯定不是本模版有bug。（千万别问 免费AI、国产AI ！至少 Gemini 3 Pro + GhatGPT Think 多个 顶级付费AI 相互印证）
 
@@ -244,21 +248,21 @@
 
 | 规则 | 总规则数 | RuleSet规则数 | GeoSite规则数 |
 |---|---|---|---|
-| 01-WhiteList_模版.yaml  | 12.5 万条 |  9.8 万条 | 2.7 万条 | 
-| 02-WhiteList-Min.AntiAD_模版.yaml | 1.9 万条  | 1.2 万条 | 0.7 万条 | 
-| 03-WhiteList-Non.AntiAD_模版.yaml | 1.7 万条 | 1.2 万条 | 0.5 万条| 
+| [通用模版]-01-WhiteList.yaml  | 12.5 万条 |  9.8 万条 | 2.7 万条 | 
+| [通用模版]-02-WhiteList-Min.AntiAD.yaml | 1.9 万条  | 1.2 万条 | 0.7 万条 | 
+| [通用模版]-03-WhiteList-Non.AntiAD.yaml | 1.7 万条 | 1.2 万条 | 0.5 万条| 
 
 总规则数 =  RuleSet规则数 + GeoSite规则数
 
 <br>
 
-### 规则 ：01-WhiteList_模版.yaml  
+### 规则 ：[通用模版]-01-WhiteList.yaml  
   > 最大特色：
   >  - 防护方面最全面 = 3万条反广告 + 4万条隐私保护 （ 基于EasyPrivacy ）
       
 <br>
 
-### 规则 ：02-WhiteList-Min.AntiAD_模版.yaml 
+### 规则 ：[通用模版]-02-WhiteList-Min.AntiAD.yaml 
   > 与 规则1 的区别 ： 
   >    + RuleSet规则中， “反广告 + 隐私保护” ，从7.7万条 精简到 1500 条（ 基于Geosite ）
   > 
@@ -268,7 +272,7 @@
      
 <br>
 
-### 规则 ：03-WhiteList-Non.AntiAD_模版.yaml 
+### 规则 ：[通用模版]-03-WhiteList-Non.AntiAD.yaml 
  > 与 规则2 的区别比 ：
  >    + 在 RuleSet、GeoSite规则中，删除了所有的 “反广告 + 隐私保护” 
 
@@ -728,21 +732,53 @@
 ------
 
 
-# 使用建议
+# 规格说明
 
 <br>
+
 
 | 规则 | 总规则数 | RuleSet规则数 | GeoSite规则数 |
 |---|---|---|---|
-| 01-WhiteList_模版.yaml  | 12.5 万条 |  9.8 万条 | 2.7 万条 | 
-| 02-WhiteList-Min.AntiAD_模版.yaml | 1.9 万条  | 1.2 万条 | 0.7 万条 | 
-| 03-WhiteList-Non.AntiAD_模版.yaml | 1.7 万条 | 1.2 万条 | 0.5 万条|
+| [通用模版]-01-WhiteList.yaml  | 12.5 万条 |  10.5 万条 | 2.7 万条 | 
+| [通用模版]-02-WhiteList-Min.AntiAD.yaml | 2.6 万条  | 1.9 万条 | 0.7 万条 | 
+| [通用模版]-03-WhiteList-Non.AntiAD.yaml | 2.4 万条 | 1.9 万条 | 0.5 万条|
+
+
+| 规则 | 总规则数 | RuleSet规则数 | GeoSite规则数 |
+|---|---|---|---|
+| [桌面端模版]-[ClashMeta]-01-WhiteList.yaml  | 23 万条 |  20.3 万条 | 2.7 万条 | 
+| [桌面端模版]-[ClashMeta]-02-WhiteList-Min.AntiAD.yaml | 12.4 万条  | 11.7 万条 | 0.7 万条 | 
+| [桌面端模版]-[ClashMeta]-03-WhiteList-Non.AntiAD.yaml | 12.2 万条 | 11.7 万条 | 0.5 万条|
+
+
+| 规则 | 总规则数 | RuleSet规则数 | GeoSite规则数 |
+|---|---|---|---|
+| [移动端模版]-[ClashMeta]-01-WhiteList.yaml  | 12.5 万条 |  9.8 万条 | 2.7 万条 | 
+| [移动端模版]-[ClashMeta]-02-WhiteList-Min.AntiAD.yaml | 1.9 万条  | 1.2 万条 | 0.7 万条 | 
+| [移动端模版]-[ClashMeta]-03-WhiteList-Non.AntiAD.yaml | 1.7 万条 | 1.2 万条 | 0.5 万条|
+
 
 <br>
 
-三套模版 选哪一个？
+### 三套表格 神别区别？
 
- - ### 【移动端】 ： 首选 规则 02 ✅
+ - ### [通用模版] ： 同时适配 Stash / Clash 
+   
+   > 不仅要填入节点，还需必须要 按照 [《 如何将 VPN节点，加入到本模版，并导入VPN软件 》](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#%E5%A6%82%E4%BD%95-%E4%BD%BF%E7%94%A8%E6%9C%AC%E6%A8%A1%E7%89%88-%E5%A6%82%E4%BD%95%E5%B0%86-vpn%E8%8A%82%E7%82%B9%E5%8A%A0%E5%85%A5%E5%88%B0%E6%9C%AC%E6%A8%A1%E7%89%88%E5%B9%B6%E5%AF%BC%E5%85%A5vpn%E8%BD%AF%E4%BB%B6) 进行 五个步骤的 手工配置，才能使用。 
+
+ - ### [移动端模版]-[ClashMeta] ： 同时适配 Stash / Clash 
+   
+   > 只需 填入节点 ，即可使用
+
+ - ### [桌面端模版]-[ClashMeta] ： 同时适配 Stash / Clash 
+   
+   > 只需 填入节点 ，即可使用 
+
+
+
+### 每个表格中，三套子模版 ，选哪一个？
+
+ - ### 【手机、平板、路由器】 ： 首选 ✅ 移动端模版 + 02 ✅
  
     > 对比：规则1虽然更全面，但是在移动端会极大消耗电力，续航➗2。
     
@@ -752,7 +788,7 @@
     
 <br>
 
- - ### 【桌面端】 ：  首选 规则03  +  Adguard 客户端 ✅
+ - ### 【个人电脑】 ：  首选 ✅ 桌面端模版 + 03 ✅  +  Adguard 客户端
  
      > 如此组合 意义是什么 ？
      >    + 将 “翻墙分流” 交给 Clash
