@@ -266,33 +266,32 @@
 
 总规则数 =  RuleSet规则数 + GeoSite规则数
 
-<br>
 
-### 模版 01 ：[通用模版]-01-WhiteList.yaml  
-  > 最大特色：
-  >  - 防护方面最全面 = 3万条反广告 + 4万条隐私保护 （ 基于EasyPrivacy ）
+  - #### 模版 01 ：[通用模版]-01-WhiteList.yaml  
+    > 最大特色：
+    >  - 防护方面最全面 = 3万条反广告 + 4万条隐私保护 （ 基于EasyPrivacy ）
       
 <br>
 
-### 模版 02 ：[通用模版]-02-WhiteList-Min.AntiAD.yaml 
-  > 与 规则1 的区别 ： 
-  >    + RuleSet规则中， “反广告 + 隐私保护” ，从7.7万条 精简到 1500 条（ 基于Geosite ）
-  > 
-  >    + RuleSet规则中， “GFWlist” ，从0.7万条 精简到 0 条 (为 "默认的" 白名单分流 极致精简)
-  > 
-  >    + GeoSite规则中，“成人类网站” 的规则，从 1.3万 精简到 仅十几条（pornhub）
+  - #### 模版 02 ：[通用模版]-02-WhiteList-Min.AntiAD.yaml 
+    > 与 规则1 的区别 ： 
+    >    + RuleSet规则中， “反广告 + 隐私保护” ，从7.7万条 精简到 1500 条（ 基于Geosite ）
+    > 
+    >    + RuleSet规则中， “GFWlist” ，从0.7万条 精简到 0 条 (为 "默认的" 白名单分流 极致精简)
+    > 
+    >    + GeoSite规则中，“成人类网站” 的规则，从 1.3万 精简到 仅十几条（pornhub）
      
+  <br>
+
+   - #### 模版 03 ：[通用模版]-03-WhiteList-Non.AntiAD.yaml 
+     > 与 规则2 的区别比 ：
+     >    + 在 RuleSet、GeoSite规则中，删除了所有的 “反广告 + 隐私保护” 
+
+
+<br>
 <br>
 
-### 模版 03 ：[通用模版]-03-WhiteList-Non.AntiAD.yaml 
- > 与 规则2 的区别比 ：
- >    + 在 RuleSet、GeoSite规则中，删除了所有的 “反广告 + 隐私保护” 
-
-
-<br>
-<br>
-
-## 以下两组规则，是在上述 [通用模版] 基础上，删除了 “Stash兼容” 后的配置模版
+### 以下两组规则，是在上述 [通用模版] 基础上，删除了 “Stash兼容” 后的配置模版
 
 <br>
 
@@ -311,11 +310,10 @@
 | [ClashMeta模版]-[移动端]-02-WhiteList-Min.AntiAD.yaml | 1.9 万条  | 1.2 万条 | 0.7 万条 | 
 | [ClashMeta模版]-[移动端]-03-WhiteList-Non.AntiAD.yaml | 1.7 万条 | 1.2 万条 | 0.5 万条|
 
-<br>
 
-### 《桌面端模版》vs 《移动端模版》
+#### 以上两个表格：《桌面端模版》vs 《移动端模版》
 
-两者唯一区别，就是是否启用了 ChinaMax 和 GFWlist 。 
+- 两者唯一区别，就是是否启用了 ChinaMax 和 GFWlist 。 
 
    > 移动端 , 关闭了 这两个规则。这两个规则启用后，会导致规则数量 增长10倍 ❕ 从1.2万条 增长到 12万条 ❕ 功耗爆炸，移动端续航 直接 ➗ 2
 
