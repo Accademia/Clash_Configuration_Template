@@ -702,6 +702,8 @@
 
 # 规格说明
 
+以下所有模版，统统为 默认 = “白名单模版”（ 即，WhiteList 模式 ） ！！！
+
 <br>
 
 ### [通用模版] ：同时兼容 Stash \ Clash Meta
@@ -717,35 +719,9 @@
 <br>
 
 
-<br>
-
-### [ClashMeta模版] ：以下两组模版，是在上述 [通用模版] 基础上，删除了 “Stash兼容” 
-
-<br>
-
-| 💻  适配桌面端    | 总规则数 | RuleSet规则数 | GeoSite规则数 |
-|---|---|---|---|
-| [ClashMeta模版]-[桌面端]-01-WhiteList.yaml  | 23 万条 |  20.3 万条 | 2.7 万条 | 
-| [ClashMeta模版]-[桌面端]-02-WhiteList-Min.AntiAD.yaml | 12.4 万条  | 11.7 万条 | 0.7 万条 | 
-| [ClashMeta模版]-[桌面端]-03-WhiteList-Non.AntiAD.yaml | 12.2 万条 | 11.7 万条 | 0.5 万条|
-
-<br>
-
-| 📱 适配移动端  | 总规则数 | RuleSet规则数 | GeoSite规则数 |
-|---|---|---|---|
-| [ClashMeta模版]-[移动端]-01-WhiteList.yaml  | 12.5 万条 |  9.8 万条 | 2.7 万条 | 
-| [ClashMeta模版]-[移动端]-02-WhiteList-Min.AntiAD.yaml | 1.9 万条  | 1.2 万条 | 0.7 万条 | 
-| [ClashMeta模版]-[移动端]-03-WhiteList-Non.AntiAD.yaml | 1.7 万条 | 1.2 万条 | 0.5 万条|
-
-
-<br>
-
-
 ### 配置描述 （通用模版）
 
 <br>
-
- 注意：其他模版都是，通过对《通用模版》进行裁剪，从而得到的。其他模版 = 0新代码添加。所以，通用模版作为基础模版，重点说明一下 其三个子模版之间的差异。
 
 
   - #### 模版 01 ：[通用模版]-01-WhiteList.yaml  
@@ -775,22 +751,49 @@
      >    + 缩减 GeoSite 规则 ：删除了所有的 “反广告 + 隐私保护” 
 
 
+<br>
+
+### [ClashMeta模版] ：删除了 “Stash兼容”  
+
+注意：以下所有模版，都是，通过对《通用模版》进行裁剪，从而得到的。其他模版 = 0新代码添加。
 
 <br>
 
-### 三套表格 之间 ， 什么区别？
+| 💻  适配桌面端    | 总规则数 | RuleSet规则数 | GeoSite规则数 |
+|---|---|---|---|
+| [ClashMeta模版]-[桌面端]-01-WhiteList.yaml  | 23 万条 |  20.3 万条 | 2.7 万条 | 
+| [ClashMeta模版]-[桌面端]-02-WhiteList-Min.AntiAD.yaml | 12.4 万条  | 11.7 万条 | 0.7 万条 | 
+| [ClashMeta模版]-[桌面端]-03-WhiteList-Non.AntiAD.yaml | 12.2 万条 | 11.7 万条 | 0.5 万条|
 
-[通用模版]、[ClashMeta模版] ，两者的区别， 只是为了适配的 不同的客户端 ！[通用模版] 额外支持 Stash客户端
+<br>
 
- - #### [通用模版] ： 同时适配 Stash / Clash 
+  #### 注意：以下模版，在上述 “适配桌面端” 模版 基础上，又又再次阉割（ 0新代码添加 ）。额外阉割了 “实时切换黑名单模式” 功能 ， 和 其他冗余规则 （用以优化功耗）
+
+| 📱 适配移动端  | 总规则数 | RuleSet规则数 | GeoSite规则数 |
+|---|---|---|---|
+| [ClashMeta模版]-[移动端]-01-WhiteList.yaml  | 12.5 万条 |  9.8 万条 | 2.7 万条 | 
+| [ClashMeta模版]-[移动端]-02-WhiteList-Min.AntiAD.yaml | 1.9 万条  | 1.2 万条 | 0.7 万条 | 
+| [ClashMeta模版]-[移动端]-03-WhiteList-Non.AntiAD.yaml | 1.7 万条 | 1.2 万条 | 0.5 万条|
+
+
+<br>
+<br>
+
+### 专属的Clash模版  ，与 通用模版 什么区别？
+
+[通用模版]、[ClashMeta模版] ，两者的区别， 只是为了适配的 不同的客户端 ！[通用模版] 额外支持 Stash客户端。
+
+所以，[通用模版] 配置过程会更长，代码容量会更大。
+
+ - #### [通用模版] ： 同时适配 Stash / Clash Meta
    
    > 不仅要填入节点，还需必须要 按照 [《 如何将 VPN节点，加入到本模版，并导入VPN软件 》](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#%E5%A6%82%E4%BD%95-%E4%BD%BF%E7%94%A8%E6%9C%AC%E6%A8%A1%E7%89%88-%E5%A6%82%E4%BD%95%E5%B0%86-vpn%E8%8A%82%E7%82%B9%E5%8A%A0%E5%85%A5%E5%88%B0%E6%9C%AC%E6%A8%A1%E7%89%88%E5%B9%B6%E5%AF%BC%E5%85%A5vpn%E8%BD%AF%E4%BB%B6) 进行 五个步骤的 手工配置，才能使用。 
 
- - #### [ClashMeta模版] ： 同时适配 Stash / Clash 
+ - #### [ClashMeta模版] 
 
    - #### [ClashMeta模版]-[桌面端]
    
-     > 只需 填入节点 ，即可使用
+     > 只需 填入节点 ，即可使用 （ [配置教程](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#%E5%A6%82%E4%BD%95-%E4%BD%BF%E7%94%A8%E6%9C%AC%E6%A8%A1%E7%89%88-%E5%A6%82%E4%BD%95%E5%B0%86-vpn%E8%8A%82%E7%82%B9%E5%8A%A0%E5%85%A5%E5%88%B0%E6%9C%AC%E6%A8%A1%E7%89%88%E5%B9%B6%E5%AF%BC%E5%85%A5vpn%E8%BD%AF%E4%BB%B6) ）
      >
      > 为桌面设备优化
      >
@@ -800,9 +803,9 @@
 
    - #### [ClashMeta模版]-[移动端] 
    
-     > 只需 填入节点 ，即可使用 
+     > 只需 填入节点 ，即可使用 （ [配置教程](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#%E5%A6%82%E4%BD%95-%E4%BD%BF%E7%94%A8%E6%9C%AC%E6%A8%A1%E7%89%88-%E5%A6%82%E4%BD%95%E5%B0%86-vpn%E8%8A%82%E7%82%B9%E5%8A%A0%E5%85%A5%E5%88%B0%E6%9C%AC%E6%A8%A1%E7%89%88%E5%B9%B6%E5%AF%BC%E5%85%A5vpn%E8%BD%AF%E4%BB%B6) ）
      >
-     > 为移动设备优化，通过关闭冗余规则，达到 “极致省电” 的目的
+     > 为移动设备优化，通过关闭 “桌面端模版” 的 冗余规则，达到 “极致省电” 的目的
      > 
      >   - 关闭了 ChinaMax + GFWlist 规则（ 让规则数量 减少10万条，降低功耗 ）
      >
@@ -1225,6 +1228,9 @@
   - ### 第三步，根据自己的节点位置 整理命名
     
     > 如果前两步 已经验证通过，再根据你的节点信息，对 “ 节点名称 + 中转线路名称 ” 做 批量改名（只改name字段，不改其他配置）。
+    
+    > 如果你下载的是 [ClashMeta模版] ，到这一步就结束了 。
+    > 如果你下载的是 [通用模版] ，请继续完成后面的步骤。
   
     <br> 
     
