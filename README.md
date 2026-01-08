@@ -260,9 +260,9 @@
 
 | 规则 | 总规则数 | RuleSet规则数 | GeoSite规则数 |
 |---|---|---|---|
-| [通用模版]-01-WhiteList.yaml  | 12.5 万条 |  9.8 万条 | 2.7 万条 | 
-| [通用模版]-02-WhiteList-Min.AntiAD.yaml | 1.9 万条  | 1.2 万条 | 0.7 万条 | 
-| [通用模版]-03-WhiteList-Non.AntiAD.yaml | 1.7 万条 | 1.2 万条 | 0.5 万条| 
+| [通用模版]-01-WhiteList.yaml  | 13.2 万条 |  10.5 万条 | 2.7 万条 | 
+| [通用模版]-02-WhiteList-Min.AntiAD.yaml | 2.6 万条  | 1.9 万条 | 0.7 万条 | 
+| [通用模版]-03-WhiteList-Non.AntiAD.yaml | 2.4 万条 | 1.9 万条 | 0.5 万条| 
 
 总规则数 =  RuleSet规则数 + GeoSite规则数
 
@@ -782,7 +782,7 @@
 
 | 规则 | 总规则数 | RuleSet规则数 | GeoSite规则数 |
 |---|---|---|---|
-| [通用模版]-01-WhiteList.yaml  | 12.5 万条 |  10.5 万条 | 2.7 万条 | 
+| [通用模版]-01-WhiteList.yaml  | 13.2 万条 |  10.5 万条 | 2.7 万条 | 
 | [通用模版]-02-WhiteList-Min.AntiAD.yaml | 2.6 万条  | 1.9 万条 | 0.7 万条 | 
 | [通用模版]-03-WhiteList-Non.AntiAD.yaml | 2.4 万条 | 1.9 万条 | 0.5 万条|
 
