@@ -73,11 +73,6 @@
 
 -----
 
-### 对于如何将本模版 迁移到 覆写脚本 ？ 以便于 0手工修改源代码 就可 无脑导入？ 
-  
-  > 看这里 ：https://github.com/Accademia/Clash_Configuration_Template/issues/8
-
------
 
 <br>
 <br>
