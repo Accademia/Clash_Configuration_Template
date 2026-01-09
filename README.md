@@ -716,9 +716,9 @@
 
 | ⚠️ 基础模版 | 总规则数 | RuleSet规则数 | GeoSite规则数 |
 |---|---|---|---|
-| [通用模版]-WhiteList-01.yaml  | 13.2 万条 |  10.5 万条 | 2.7 万条 | 
-| [通用模版]-WhiteList-02-Min.AntiAD.yaml | 2.6 万条  | 1.9 万条 | 0.7 万条 | 
-| [通用模版]-WhiteList-03-Non.AntiAD.yaml | 2.4 万条 | 1.9 万条 | 0.5 万条|
+| [通用模版]-WhiteList-01.yaml  | 12.5 万条 |  9.8 万条 | 2.7 万条 | 
+| [通用模版]-WhiteList-02-Min.AntiAD.yaml | 1.9 万条  | 1.2 万条 | 0.7 万条 | 
+| [通用模版]-WhiteList-03-Non.AntiAD.yaml | 1.7 万条 | 1.2 万条 | 0.5 万条|
 
 <br>
 
@@ -771,9 +771,9 @@
 
 | 💻  适配桌面端    | 总规则数 | RuleSet规则数 | GeoSite规则数 |
 |---|---|---|---|
-| [ClashMeta模版]-[桌面端]-WhiteList-01.yaml  | 23 万条 |  20.3 万条 | 2.7 万条 | 
-| [ClashMeta模版]-[桌面端]-WhiteList-02-Min.AntiAD.yaml | 12.4 万条  | 11.7 万条 | 0.7 万条 | 
-| [ClashMeta模版]-[桌面端]-WhiteList-03-Non.AntiAD.yaml 👌 | 12.2 万条 | 11.7 万条 | 0.5 万条|
+| [ClashMeta模版]-[桌面端]-WhiteList-01.yaml  | 22.3 万条 |  19.6 万条 | 2.7 万条 | 
+| [ClashMeta模版]-[桌面端]-WhiteList-02-Min.AntiAD.yaml | 11.7 万条  | 11 万条 | 0.7 万条 | 
+| [ClashMeta模版]-[桌面端]-WhiteList-03-Non.AntiAD.yaml 👌 | 11.5 万条 | 11 万条 | 0.5 万条|
 
 <br>
 
@@ -896,47 +896,7 @@
 
  - BlackList : 只支持 黑名单模式 ❕
 
- - 通用模版 ：默认 白名单模式 、可切换至 黑名单模式❕
-
-<br>
-
-### 如何 "实时切换"  黑\白名单模式 ？
-
-在使用过程中，将以下几个 分流选项，切换为 Direct
-
-> 🇺🇸.\<Country>—US 
-    
-> 🌎.\<Region>—North.America
-    
-> 🌎.\<Region>—South.America
-    
-> 🌍.\<Region>—Europe       
-    
-> 🌏.\<Region>—Oceania      
-    
-> 🌏.\<Region>—East.Asia    
-    
-> 🌏.\<Region>—West.Asia    
-    
-> 🌍.\<Region>—Africa
-    
-> ☁️.\<Global>—CDN
-
-> ♾️.\<Final>     
-
-<br>
-
-### 切换后效果：
-
- 无 “分流选项” 的流量 =  直连
-
-<br>
-
-
-### 如果 从来 不切换到 黑名单模式 ：
-
-强烈建议，注释掉gfwlist相关的规则，从而使得 规则数量 再降低 7000条（ 🔥🔥🔥 我自己使用时，100%会注释掉，以便进一步省电 🔥🔥🔥 ）
-
+ - 通用模版 ：只支持 白名单模式 ❕
 
 
 <br>

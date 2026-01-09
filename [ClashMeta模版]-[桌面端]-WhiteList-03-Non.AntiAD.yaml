@@ -680,9 +680,9 @@ dns                               :
                                     ###  [8st-01]  DNS分流 ： GFW                          # 白名单模式下，无需启用 ❕❕❕
                                     ### --------------------------------------------------------------------------------------------------
                                    
-                                   #### 🔻🔻🔻 开始（ GFWList ） 🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧 开始（ GFWList ）
-                                     'RULE-SET:GFWList_Domain'                           : [ 'https://cloudflare-dns.com/dns-query#🚧.<GFWList>'                          , 'https://dns.google/dns-query#🚧.<GFWList>'                               ]   ### [8st-01] 
-                                   #### 🔺🔺🔺 结束（ GFWList ） 🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧 结束（ GFWList ）
+                                  ##### 🔻🔻🔻 开始（ GFWList ） 🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧 开始（ GFWList ）
+                                  #  'RULE-SET:GFWList_Domain'                           : [ 'https://cloudflare-dns.com/dns-query#🚧.<GFWList>'                          , 'https://dns.google/dns-query#🚧.<GFWList>'                               ]   ### [8st-01] 
+                                  ##### 🔺🔺🔺 结束（ GFWList ） 🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧 结束（ GFWList ）
                                      
                                      
                                    
@@ -1243,10 +1243,10 @@ proxy-groups:
 
     - { name : '___________________________________________________________'                                                                                                                                                                                                    , type : 'select'                                                                            , proxies : [  'DIRECT' ]       }         
 
- ##### 🔻🔻🔻 开始（ GFWList ） 🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧   开始（ GFWList ）     
-   ### [8st-01] GFWlist  
-    - { name : '🚧.<GFWList>'                                             , icon : 'https://fastly.jsdelivr.net/gh/Accademia/Additional_Icon_For_Clash@latest/Categ/GFW.png'    , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'select'       , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [  '🌐🇺🇸.Line—[Global]—US.First'                  , '🌐🍟.Line—[Global]—US.HomeIP.First'         , '🇺🇸🍟.Line—[US.HomeIP]'         , '🇺🇸.Line—[US]'               , '🇯🇵.Line—[JP]'             , '🇬🇧.Line—[UK]'             , '🇦🇺.Line—[AU]'              , 'DIRECT' , 'REJECT'               ,  'REJECT-DROP'   ] }   #  🚧.<GFWList>           [ Default : US ]   规则 (订阅) :  GFWList_Domain                 https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Proxy 
- ##### 🔺🔺🔺 结束（ GFWList ） 🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧   结束（ GFWList ）          
+###### 🔻🔻🔻 开始（ GFWList ） 🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧   开始（ GFWList ）     
+#  ### [8st-01] GFWlist  
+#   - { name : '🚧.<GFWList>'                                             , icon : 'https://fastly.jsdelivr.net/gh/Accademia/Additional_Icon_For_Clash@latest/Categ/GFW.png'    , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'select'       , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [  '🌐🇺🇸.Line—[Global]—US.First'                  , '🌐🍟.Line—[Global]—US.HomeIP.First'         , '🇺🇸🍟.Line—[US.HomeIP]'         , '🇺🇸.Line—[US]'               , '🇯🇵.Line—[JP]'             , '🇬🇧.Line—[UK]'             , '🇦🇺.Line—[AU]'              , 'DIRECT' , 'REJECT'               ,  'REJECT-DROP'   ] }   #  🚧.<GFWList>           [ Default : US ]   规则 (订阅) :  GFWList_Domain                 https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Proxy 
+###### 🔺🔺🔺 结束（ GFWList ） 🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧   结束（ GFWList ）          
 
  ##### 🔻🔻🔻 开始 （ WhiteList ） 🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻  开始 （ WhiteList ）                     
    ### [10st-01] 兜底  
@@ -2144,11 +2144,11 @@ rules:
    ###      [第八级] 分流规则   :     GfwList        (仅域名匹配)
    ### ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-  #### 🔻🔻🔻 开始（ GFWList ） 🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧   开始（ GFWList ）     
-   ### [8st-01]  分流 - GFWList 
-   #- GEOSITE         , gfw                                        , 🚧.<GFWList>                                    #                                        ### [8st-01]  [ Default : US          ]     ⚠️⚠️⚠️⚠️⚠️   Clash、Stash 的 GeoSite，可能并没有内置这个参数 ！！！会报错 ❌ ❌ ❌      
-    - RULE-SET        , GFWList_Domain                             , 🚧.<GFWList>                                    #, no-resolve                            ### [8st-01]  [ Default : US          ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Proxy                 长城防火墙 - GFWList   
-  #### 🔺🔺🔺 结束（ GFWList ） 🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧   结束（ GFWList ）          
+ ##### 🔻🔻🔻 开始（ GFWList ） 🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧   开始（ GFWList ）     
+ # ### [8st-01]  分流 - GFWList 
+ # #- GEOSITE         , gfw                                        , 🚧.<GFWList>                                    #                                        ### [8st-01]  [ Default : US          ]     ⚠️⚠️⚠️⚠️⚠️   Clash、Stash 的 GeoSite，可能并没有内置这个参数 ！！！会报错 ❌ ❌ ❌      
+ #  - RULE-SET        , GFWList_Domain                             , 🚧.<GFWList>                                    #, no-resolve                            ### [8st-01]  [ Default : US          ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Proxy                 长城防火墙 - GFWList   
+ ##### 🔺🔺🔺 结束（ GFWList ） 🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧   结束（ GFWList ）          
 
 
 
@@ -2468,10 +2468,10 @@ rule-providers:
 
 
 
-  #### 🔻🔻🔻 开始（ GFWList ） 🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧   开始（ GFWList ）     
-   ### [8st-01] -  GFWList
-    GFWList_Domain                            : { type : 'http'  , behavior : 'domain'     , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@latest/rule/Clash/Proxy/Proxy_Domain.yaml'                                            , path : './ruleset/GFWList_Domain.yaml'                                }           ### [8st-01]  [ Default : US          ]      🚧.<GFWList>                    https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Proxy               长城防火墙 - GFWList                             
-  #### 🔺🔺🔺 结束（ GFWList ） 🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧   结束（ GFWList ）          
+ ##### 🔻🔻🔻 开始（ GFWList ） 🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧   开始（ GFWList ）     
+ # ### [8st-01] -  GFWList
+ #  GFWList_Domain                            : { type : 'http'  , behavior : 'domain'     , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line—[Relay.VPS]—Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@latest/rule/Clash/Proxy/Proxy_Domain.yaml'                                            , path : './ruleset/GFWList_Domain.yaml'                                }           ### [8st-01]  [ Default : US          ]      🚧.<GFWList>                    https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Proxy               长城防火墙 - GFWList                             
+ ##### 🔺🔺🔺 结束（ GFWList ） 🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧   结束（ GFWList ）          
 
 
 
