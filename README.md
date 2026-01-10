@@ -800,26 +800,24 @@
    
    > 不仅要填入节点，还需必须要 按照 [《 如何将 VPN节点，加入到本模版，并导入VPN软件 》](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#%E5%A6%82%E4%BD%95-%E4%BD%BF%E7%94%A8%E6%9C%AC%E6%A8%A1%E7%89%88-%E5%A6%82%E4%BD%95%E5%B0%86-vpn%E8%8A%82%E7%82%B9%E5%8A%A0%E5%85%A5%E5%88%B0%E6%9C%AC%E6%A8%A1%E7%89%88%E5%B9%B6%E5%AF%BC%E5%85%A5vpn%E8%BD%AF%E4%BB%B6) 进行 五个步骤的 手工配置，才能使用。 
 
- - ####  纯 Clash Meta 模版
-
-   - #### \[电脑\] = \[DeskTop\
+ - #### \[电脑\] = \[Desktop\] : 纯 Clash Meta 模版
    
-     > 只需 填入节点 ，即可使用 （ [配置教程](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#%E5%A6%82%E4%BD%95-%E4%BD%BF%E7%94%A8%E6%9C%AC%E6%A8%A1%E7%89%88-%E5%A6%82%E4%BD%95%E5%B0%86-vpn%E8%8A%82%E7%82%B9%E5%8A%A0%E5%85%A5%E5%88%B0%E6%9C%AC%E6%A8%A1%E7%89%88%E5%B9%B6%E5%AF%BC%E5%85%A5vpn%E8%BD%AF%E4%BB%B6) ）
-     >
-     > 为电脑设备优化
-     >
-     >   - 启用了 ： ChinaMax 规则  - 用于 更充分的分流 “中国直连“ （ 启用后， 中国分流 准确度 会提升2-5% ）
-     >
+   > 只需 填入节点 ，即可使用 （ [配置教程](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#%E5%A6%82%E4%BD%95-%E4%BD%BF%E7%94%A8%E6%9C%AC%E6%A8%A1%E7%89%88-%E5%A6%82%E4%BD%95%E5%B0%86-vpn%E8%8A%82%E7%82%B9%E5%8A%A0%E5%85%A5%E5%88%B0%E6%9C%AC%E6%A8%A1%E7%89%88%E5%B9%B6%E5%AF%BC%E5%85%A5vpn%E8%BD%AF%E4%BB%B6) ）
+   >
+   > 为电脑设备优化
+   >
+   >   - 启用了 ： ChinaMax 规则  - 用于 更充分的分流 “中国直连“ （ 启用后， 中国分流 准确度 会提升2-5% ）
+   >
 
-   - #### \[手机\] = \[Mobile\]
+  - #### \[手机\] = \[Mobile\] : 纯 Clash Meta 模版
    
-     > 只需 填入节点 ，即可使用 （ [配置教程](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#%E5%A6%82%E4%BD%95-%E4%BD%BF%E7%94%A8%E6%9C%AC%E6%A8%A1%E7%89%88-%E5%A6%82%E4%BD%95%E5%B0%86-vpn%E8%8A%82%E7%82%B9%E5%8A%A0%E5%85%A5%E5%88%B0%E6%9C%AC%E6%A8%A1%E7%89%88%E5%B9%B6%E5%AF%BC%E5%85%A5vpn%E8%BD%AF%E4%BB%B6) ）
-     >
-     > 为手机设备优化，通过关闭 “电脑模版” 的 冗余规则，达到 “极致省电” 的目的
-     > 
-     >   - 关闭了 ChinaMax 规则（ 让规则数量 减少10万条，降低功耗 ）
-     >
-     >   - 效果：只使用 电脑 10% 的规则数量，达到了电脑 98% 的分流效果。
+   > 只需 填入节点 ，即可使用 （ [配置教程](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#%E5%A6%82%E4%BD%95-%E4%BD%BF%E7%94%A8%E6%9C%AC%E6%A8%A1%E7%89%88-%E5%A6%82%E4%BD%95%E5%B0%86-vpn%E8%8A%82%E7%82%B9%E5%8A%A0%E5%85%A5%E5%88%B0%E6%9C%AC%E6%A8%A1%E7%89%88%E5%B9%B6%E5%AF%BC%E5%85%A5vpn%E8%BD%AF%E4%BB%B6) ）
+   >
+   > 为手机设备优化，通过关闭 “电脑模版” 的 冗余规则，达到 “极致省电” 的目的
+   > 
+   >   - 关闭了 ChinaMax 规则（ 让规则数量 减少10万条，降低功耗 ）
+   >
+   >   - 效果：只使用 电脑 10% 的规则数量，达到了电脑 98% 的分流效果。
    
 <br>
 
