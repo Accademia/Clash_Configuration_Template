@@ -800,7 +800,7 @@
    
    > 不仅要填入节点，还需必须要 按照 [《 如何将 VPN节点，加入到本模版，并导入VPN软件 》](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#%E5%A6%82%E4%BD%95-%E4%BD%BF%E7%94%A8%E6%9C%AC%E6%A8%A1%E7%89%88-%E5%A6%82%E4%BD%95%E5%B0%86-vpn%E8%8A%82%E7%82%B9%E5%8A%A0%E5%85%A5%E5%88%B0%E6%9C%AC%E6%A8%A1%E7%89%88%E5%B9%B6%E5%AF%BC%E5%85%A5vpn%E8%BD%AF%E4%BB%B6) 进行 五个步骤的 手工配置，才能使用。 
 
- - #### \[电脑\] = \[Desktop\] : 纯 Clash Meta 模版
+ - #### \[Desktop\] : 纯 Clash Meta 模版 ，给 “桌面端” 使用
    
    > 只需 填入节点 ，即可使用 （ [配置教程](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#%E5%A6%82%E4%BD%95-%E4%BD%BF%E7%94%A8%E6%9C%AC%E6%A8%A1%E7%89%88-%E5%A6%82%E4%BD%95%E5%B0%86-vpn%E8%8A%82%E7%82%B9%E5%8A%A0%E5%85%A5%E5%88%B0%E6%9C%AC%E6%A8%A1%E7%89%88%E5%B9%B6%E5%AF%BC%E5%85%A5vpn%E8%BD%AF%E4%BB%B6) ）
    >
@@ -809,7 +809,7 @@
    >   - 启用了 ： ChinaMax 规则  - 用于 更充分的分流 “中国直连“ （ 启用后， 中国分流 准确度 会提升2-5% ）
    >
 
-  - #### \[手机\] = \[Mobile\] : 纯 Clash Meta 模版
+  - #### \[Mobile\] : 纯 Clash Meta 模版 ， 给 “移动端、路由器” 使用 （低负载）
    
    > 只需 填入节点 ，即可使用 （ [配置教程](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#%E5%A6%82%E4%BD%95-%E4%BD%BF%E7%94%A8%E6%9C%AC%E6%A8%A1%E7%89%88-%E5%A6%82%E4%BD%95%E5%B0%86-vpn%E8%8A%82%E7%82%B9%E5%8A%A0%E5%85%A5%E5%88%B0%E6%9C%AC%E6%A8%A1%E7%89%88%E5%B9%B6%E5%AF%BC%E5%85%A5vpn%E8%BD%AF%E4%BB%B6) ）
    >
