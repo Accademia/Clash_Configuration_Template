@@ -776,8 +776,8 @@
 |  适配手机 📱 📱 📱（白名单）  | 总规则数 | RuleSet规则数 | GeoSite规则数 |
 |---|---|---|---|
 | [[Mobile]-WhiteList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-01.yaml)  | 12.5 万条 |  9.8 万条 | 2.7 万条 | 
-| [[Mobile]-WhiteList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-02-Min.AntiAD.yaml) 🔥🔥🔥  （推荐） | 1.9 万条  | 1.2 万条 | 0.7 万条 | 
-| [[Mobile]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-03-Non.AntiAD.yaml) 🔥🔥🔥  （推荐） | 1.7 万条 | 1.2 万条 | 0.5 万条 |
+| [[Mobile]-WhiteList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-02-Min.AntiAD.yaml) 🔥🔥🔥   | 1.9 万条  | 1.2 万条 | 0.7 万条 | 
+| [[Mobile]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-03-Non.AntiAD.yaml) 🔥🔥🔥   | 1.7 万条 | 1.2 万条 | 0.5 万条 |
 
 
 |  适配手机 📱 📱 📱 （黑名单） | 总规则数 | RuleSet规则数 | GeoSite规则数 |
