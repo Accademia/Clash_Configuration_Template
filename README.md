@@ -766,9 +766,9 @@
 
 | 💻  适配电脑    | 总规则数 | RuleSet规则数 | GeoSite规则数 |
 |---|---|---|---|
-| [电脑]-WhiteList-01.yaml  | 23万条 |  20.4 万条 | 2.7 万条 | 
-| [电脑]-WhiteList-02-Min.AntiAD.yaml | 12.4 万条  | 11.7 万条 | 0.7 万条 | 
-| [电脑]-WhiteList-03-Non.AntiAD.yaml 👌 | 12.2 万条 | 11.7 万条 | 0.5 万条|
+| [[Desktop]-WhiteList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-01.yaml)  | 23万条 |  20.4 万条 | 2.7 万条 | 
+| [[Desktop]-WhiteList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-02-Min.AntiAD.yaml) | 12.4 万条  | 11.7 万条 | 0.7 万条 | 
+| [[Desktop]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-03-Non.AntiAD.yaml) 👌 | 12.2 万条 | 11.7 万条 | 0.5 万条|
 
 <br>
 
@@ -776,9 +776,9 @@
 
 | 📱 适配手机  | 总规则数 | RuleSet规则数 | GeoSite规则数 |
 |---|---|---|---|
-| [手机]-WhiteList-01.yaml  | 12.5 万条 |  9.8 万条 | 2.7 万条 | 
-| [手机]-WhiteList-02-Min.AntiAD.yaml 🔥🔥🔥  | 1.9 万条  | 1.2 万条 | 0.7 万条 | 
-| [手机]-WhiteList-03-Non.AntiAD.yaml | 1.7 万条 | 1.2 万条 | 0.5 万条|
+| [[Mobile]-WhiteList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-01.yaml)  | 12.5 万条 |  9.8 万条 | 2.7 万条 | 
+| [[Mobile]-WhiteList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-02-Min.AntiAD.yaml) 🔥🔥🔥  | 1.9 万条  | 1.2 万条 | 0.7 万条 | 
+| [[Mobile]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-03-Non.AntiAD.yaml) | 1.7 万条 | 1.2 万条 | 0.5 万条|
 
 
 <br>
@@ -827,9 +827,9 @@
 
 <br>
 
- - ### 📱 手机、平板、路由器  
+### 📱 手机、平板、路由器  
  
-   - #### 首选 :  ✅ [手机]-02 ✅
+   - #### 首选 :  ✅ [\[手机\]-WhiteList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-02-Min.AntiAD.yaml) ✅
      
      > 规则数量 ：1.2 万条
      > 
@@ -848,15 +848,15 @@
 
 <br>
 
- - ###  💻个人电脑  
+###  💻个人电脑  
  
-   - #### 首选 :  ✅ [电脑]-03 ✅  +  Adguard 客户端
+   - #### 首选 :  ✅ [\[电脑\]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-02-Min.AntiAD.yaml) ✅  +  Adguard 客户端
      
      > 规则数量 ：12 万条
      >
      > 入选理由 ：无 （ 中国分流规则 额外增加10万条 ）
  
-   - #### 次选 :  ✅ [手机]-03 ✅  +  Adguard 客户端
+   - #### 次选 :  ✅  [\[手机\]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-03-Non.AntiAD.yaml)  ✅  +  Adguard 客户端
      
      > 规则数量 ：1.2 万条
      >
