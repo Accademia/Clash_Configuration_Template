@@ -833,7 +833,7 @@
 
 <br>
 
-### 📱 手机、平板、路由器  
+### 设备 ： 📱 手机、平板、路由器、智能电视 （ = 低算力负载 设备 ） 
  
    - #### 首选 :  ✅ [\[手机\]-WhiteList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-02-Min.AntiAD.yaml) ✅
      
@@ -854,7 +854,7 @@
 
 <br>
 
-###  💻个人电脑  
+###  设备 ： 💻 个人电脑  
  
    - #### 首选 :  ✅ [\[电脑\]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-02-Min.AntiAD.yaml) ✅  +  Adguard 客户端
      
