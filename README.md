@@ -704,14 +704,12 @@
 
 # 规格说明
 
-以下所有模版，统统为 默认 = “白名单翻墙”（ 即，WhiteList 模式 ） ！！！
 
-<br>
 
 ### [通用模版] ：同时兼容 Stash \ Clash Meta
 
 
-| ⚠️ 基础模版 | 总规则数 | RuleSet规则数 | GeoSite规则数 |
+|  基础模版 ⚠️ 🏳️ 白名单  | 总规则数 | RuleSet规则数 | GeoSite规则数 |
 |---|---|---|---|
 | [[通用模版]-WhiteList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[通用模版]-WhiteList-01.yaml)  | 12.5 万条 |  9.8 万条 | 2.7 万条 | 
 | [[通用模版]-WhiteList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[通用模版]-WhiteList-02-Min.AntiAD.yaml) | 1.9 万条  | 1.2 万条 | 0.7 万条 | 
@@ -757,14 +755,14 @@
 
 <br>
 
-|  适配电脑 💻 💻 💻（白名单）   | 总规则数 | RuleSet规则数 | GeoSite规则数 |
+|  适配电脑 💻 💻 💻  🏳️ 白名单   | 总规则数 | RuleSet规则数 | GeoSite规则数 |
 |---|---|---|---|
 | [[Desktop]-WhiteList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-01.yaml)  | 23万条 |  20.3 万条 | 2.7 万条 | 
 | [[Desktop]-WhiteList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-02-Min.AntiAD.yaml) | 12.4 万条  | 11.7 万条 | 0.7 万条 | 
 | [[Desktop]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-03-Non.AntiAD.yaml) 👌 | 12.2 万条 | 11.7 万条 | 0.5 万条 |
 
 
-|   适配电脑 💻 💻 💻（黑名单）   | 总规则数 | RuleSet规则数 | GeoSite规则数 |
+|   适配电脑 💻 💻 💻 🏴 黑名单    | 总规则数 | RuleSet规则数 | GeoSite规则数 |
 |---|---|---|---|
 | [[Desktop]-BlackList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-BlackList-01.yaml)  | 13.2万条 |  10.5 万条 | 2.7 万条 | 
 | [[Desktop]-BlackList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-BlackList-02-Min.AntiAD.yaml) | 2.6 万条  | 1.9 万条 | 0.7 万条 | 
@@ -776,14 +774,14 @@
 
   #### 注意：以下模版，在上述 “电脑端 模版” 基础上，又又再次裁剪、阉割（ 0添加 新代码 ）。进一步 额外阉割了 “10万条的ChinaMax分流规则” （以便 适配 “移动端” ：优化功耗。极致省电 🔥 ）
 
-|  适配手机 📱 📱 📱（白名单）  | 总规则数 | RuleSet规则数 | GeoSite规则数 |
+|  适配手机 📱 📱 📱 🏳️ 白名单  | 总规则数 | RuleSet规则数 | GeoSite规则数 |
 |---|---|---|---|
 | [[Mobile]-WhiteList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-01.yaml)  | 12.5 万条 |  9.8 万条 | 2.7 万条 | 
 | [[Mobile]-WhiteList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-02-Min.AntiAD.yaml) 🔥🔥🔥   | 1.9 万条  | 1.2 万条 | 0.7 万条 | 
 | [[Mobile]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-03-Non.AntiAD.yaml) 🔥🔥🔥   | 1.7 万条 | 1.2 万条 | 0.5 万条 |
 
 
-|  适配手机 📱 📱 📱 （黑名单） | 总规则数 | RuleSet规则数 | GeoSite规则数 |
+|  适配手机 📱 📱 📱 🏴 黑名单 | 总规则数 | RuleSet规则数 | GeoSite规则数 |
 |---|---|---|---|
 | [[Mobile]-BlackList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-BlackList-01.yaml)  | 13.2 万条 |  10.5 万条 | 2.7 万条 | 
 | [[Mobile]-BlackList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-BlackList-02-Min.AntiAD.yaml)  | 2.6 万条  | 1.9 万条 | 0.7 万条 | 
