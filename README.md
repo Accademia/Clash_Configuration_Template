@@ -710,7 +710,6 @@
 
 ### [通用模版] ：同时兼容 Stash \ Clash Meta
 
-<br>
 
 | ⚠️ 基础模版 | 总规则数 | RuleSet规则数 | GeoSite规则数 |
 |---|---|---|---|
@@ -718,13 +717,8 @@
 | [[通用模版]-WhiteList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[通用模版]-WhiteList-02-Min.AntiAD.yaml) | 1.9 万条  | 1.2 万条 | 0.7 万条 | 
 | [[通用模版]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[通用模版]-WhiteList-03-Non.AntiAD.yaml) | 1.7 万条 | 1.2 万条 | 0.5 万条|
 
-<br>
-
 
 ### 配置描述 （通用模版）
-
-<br>
-
 
   - #### 模版 01 ：[通用模版]-WhiteList-01.yaml  
     
@@ -733,7 +727,6 @@
     >  - 防护方面最全面 = 3万条反广告 + 4万条隐私保护 （ 基于EasyPrivacy ）
     >
       
-<br>
 
   - #### 模版 02 ：[通用模版]-WhiteList-02-Min.AntiAD.yaml 
     
@@ -745,7 +738,6 @@
      > 
      >    + 0添加 代码 （ 只从 “模版 01” 中 阉割规则 ）
      
-  <br>
 
    - #### 模版 03 ：[通用模版]-WhiteList-03-Non.AntiAD.yaml 
      
@@ -764,21 +756,35 @@
 
 <br>
 
-| 💻 💻 💻  适配电脑    | 总规则数 | RuleSet规则数 | GeoSite规则数 |
+|  适配电脑 💻 💻 💻（白名单）   | 总规则数 | RuleSet规则数 | GeoSite规则数 |
 |---|---|---|---|
-| [[Desktop]-WhiteList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-01.yaml)  | 23万条 |  20.4 万条 | 2.7 万条 | 
+| [[Desktop]-WhiteList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-01.yaml)  | 23万条 |  20.3 万条 | 2.7 万条 | 
 | [[Desktop]-WhiteList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-02-Min.AntiAD.yaml) | 12.4 万条  | 11.7 万条 | 0.7 万条 | 
-| [[Desktop]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-03-Non.AntiAD.yaml) 👌 | 12.2 万条 | 11.7 万条 | 0.5 万条|
+| [[Desktop]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-03-Non.AntiAD.yaml) 👌 | 12.2 万条 | 11.7 万条 | 0.5 万条 |
+
+
+|   适配电脑 💻 💻 💻（黑名单）   | 总规则数 | RuleSet规则数 | GeoSite规则数 |
+|---|---|---|---|
+| [[Desktop]-BlackList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-BlackList-01.yaml)  | 13.2万条 |  10.5 万条 | 2.7 万条 | 
+| [[Desktop]-BlackList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-BlackList-02-Min.AntiAD.yaml) | 2.6 万条  | 1.9 万条 | 0.7 万条 | 
+| [[Desktop]-BlackList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-BlackList-03-Non.AntiAD.yaml)  | 2.4 万条 | 1.9 万条 | 0.5 万条 |
 
 <br>
 
   #### 注意：以下模版，在上述 “适配电脑 的 模版” 基础上，又又再次裁剪、阉割（ 0添加 新代码 ）。进一步 额外阉割了 “10万条的ChinaMax分流规则” （以便 优化功耗。极致省电 🔥 ）
 
-| 📱 📱 📱 适配手机  | 总规则数 | RuleSet规则数 | GeoSite规则数 |
+|  适配手机 📱 📱 📱（白名单）  | 总规则数 | RuleSet规则数 | GeoSite规则数 |
 |---|---|---|---|
 | [[Mobile]-WhiteList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-01.yaml)  | 12.5 万条 |  9.8 万条 | 2.7 万条 | 
-| [[Mobile]-WhiteList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-02-Min.AntiAD.yaml) 🔥🔥🔥  | 1.9 万条  | 1.2 万条 | 0.7 万条 | 
-| [[Mobile]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-03-Non.AntiAD.yaml) | 1.7 万条 | 1.2 万条 | 0.5 万条|
+| [[Mobile]-WhiteList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-02-Min.AntiAD.yaml) 🔥🔥🔥  （推荐） | 1.9 万条  | 1.2 万条 | 0.7 万条 | 
+| [[Mobile]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-03-Non.AntiAD.yaml) 🔥🔥🔥  （推荐） | 1.7 万条 | 1.2 万条 | 0.5 万条 |
+
+
+|  适配手机 📱 📱 📱 （黑名单） | 总规则数 | RuleSet规则数 | GeoSite规则数 |
+|---|---|---|---|
+| [[Mobile]-BlackList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-BlackList-01.yaml)  | 13.2 万条 |  10.5 万条 | 2.7 万条 | 
+| [[Mobile]-BlackList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-BlackList-02-Min.AntiAD.yaml)  | 2.6 万条  | 1.9 万条 | 0.7 万条 | 
+| [[Mobile]-BlackList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-BlackList-03-Non.AntiAD.yaml) | 2.4 万条 | 1.9 万条 | 0.5 万条 |
 
 
 <br>
@@ -786,17 +792,17 @@
 
 ### 专属的Clash模版  ，与 通用模版 什么区别？
 
-[通用模版] vs [Desktop]\[Mobile] ，两者的区别， 只是为了适配的 不同的客户端 ！[通用模版] 额外支持 Stash客户端。
+[通用模版] vs [Desktop] \ [Mobile] ，两者的区别， 只是为了适配的 不同的客户端 ！\[通用模版\] 额外支持 Stash客户端。
 
 所以，你下载 [通用模版] 后，你需要更多步骤 的 手工配置才能用起来（可配置性更全面）。所以，其代码容量更大。
 
- - #### [通用模版] ： 同时适配 Stash / Clash Meta
+ - #### \[通用模版\] ： 同时适配 Stash / Clash Meta
    
    > 不仅要填入节点，还需必须要 按照 [《 如何将 VPN节点，加入到本模版，并导入VPN软件 》](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#%E5%A6%82%E4%BD%95-%E4%BD%BF%E7%94%A8%E6%9C%AC%E6%A8%A1%E7%89%88-%E5%A6%82%E4%BD%95%E5%B0%86-vpn%E8%8A%82%E7%82%B9%E5%8A%A0%E5%85%A5%E5%88%B0%E6%9C%AC%E6%A8%A1%E7%89%88%E5%B9%B6%E5%AF%BC%E5%85%A5vpn%E8%BD%AF%E4%BB%B6) 进行 五个步骤的 手工配置，才能使用。 
 
  - ####  纯 Clash Meta 模版
 
-   - #### [电脑] = [DeskTop]
+   - #### \[电脑\] = \[DeskTop\
    
      > 只需 填入节点 ，即可使用 （ [配置教程](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#%E5%A6%82%E4%BD%95-%E4%BD%BF%E7%94%A8%E6%9C%AC%E6%A8%A1%E7%89%88-%E5%A6%82%E4%BD%95%E5%B0%86-vpn%E8%8A%82%E7%82%B9%E5%8A%A0%E5%85%A5%E5%88%B0%E6%9C%AC%E6%A8%A1%E7%89%88%E5%B9%B6%E5%AF%BC%E5%85%A5vpn%E8%BD%AF%E4%BB%B6) ）
      >
@@ -805,7 +811,7 @@
      >   - 启用了 ： ChinaMax 规则  - 用于 更充分的分流 “中国直连“ （ 启用后， 中国分流 准确度 会提升2-5% ）
      >
 
-   - #### [手机] = [Mobile]
+   - #### \[手机\] = \[Mobile\]
    
      > 只需 填入节点 ，即可使用 （ [配置教程](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#%E5%A6%82%E4%BD%95-%E4%BD%BF%E7%94%A8%E6%9C%AC%E6%A8%A1%E7%89%88-%E5%A6%82%E4%BD%95%E5%B0%86-vpn%E8%8A%82%E7%82%B9%E5%8A%A0%E5%85%A5%E5%88%B0%E6%9C%AC%E6%A8%A1%E7%89%88%E5%B9%B6%E5%AF%BC%E5%85%A5vpn%E8%BD%AF%E4%BB%B6) ）
      >
