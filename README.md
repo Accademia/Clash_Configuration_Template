@@ -670,6 +670,10 @@
 
 > 🇦🇺 澳洲 “中转” 节点
 
+> 🇹🇼 台湾 “中转” 节点
+
+> 🇸🇬 新加坡 “中转” 节点
+
 > 🇺🇸 美国 住宅节点（ 落地节点 ）
 
 > 🇺🇸 美国 显示IP归属地（ 落地节点 ）
@@ -944,14 +948,7 @@
  
 - ### 冷门域名，发生了绕路，怎么办？
      
-     - 方案 1 : 通过将🇨🇳 国内域名，加入到本模版的DNS分流策略中：即，在“ nameserver-policy ” 字段中 加入新域名。可秒修复 绕路问题 
-     
-     - 方案 2 : 在模版中，搜索 ChinaMax ，并且启用其包裹着的源代码 ，注意，只启用以下两处的ChinaMax即可（ 相关原理，在 [如下章节](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#%E6%9C%AC%E6%A8%A1%E7%89%88%E5%86%85-%E5%B0%8F%E8%80%8C%E7%B2%BE%E5%87%86%E7%9A%84-geositecn--geoipcn-%E7%9C%9F%E4%B8%8D%E8%83%BD%E6%BB%A1%E8%B6%B3-%E6%88%91%E7%9A%84%E5%9C%BA%E6%99%AF%E9%9C%80%E6%B1%82%E6%80%8E%E4%B9%88%E5%8A%9E)有讲解 ）
-        >   -  启用 nameserver-policy 中的 ChinaMax（ 620行 左右 ）
-        >
-        >   -  启用 rule-providers 中的 ChinaMax （ 9680行 左右）
-        >
-        >   -  强烈建议 ：❌ 不要启用 rule 中的 ChinaMax
+     - 请跳至文章末尾的 [如下章节](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#%E6%9C%AC%E6%A8%A1%E7%89%88%E5%86%85-%E5%B0%8F%E8%80%8C%E7%B2%BE%E5%87%86%E7%9A%84-geositecn--geoipcn-%E7%9C%9F%E4%B8%8D%E8%83%BD%E6%BB%A1%E8%B6%B3-%E6%88%91%E7%9A%84%E5%9C%BA%E6%99%AF%E9%9C%80%E6%B1%82%E6%80%8E%E4%B9%88%E5%8A%9E) 
 
 <br>
 <br>
@@ -975,19 +972,9 @@
 
 由于，本模版的 “DNS分流策略（nameserver-policy）”  和  “分流规则（rule）” ，两者是 1:1 互为镜像的。使得本模版，可以100%避免，如 “美国落地节点 去 访问日本CDN” 的情况 ❕ （⚠️注意，此功能为Clash Meta内核独占功能）
 
-在 [Desktop]\[Mobile]模版中，此功能默认启用，但是，在 [通用模版] 中，为了保证本模版在iOS、Android、Win、Mac之间的通用性，所以，此功能默认关闭。
+在 [Desktop] \ [Mobile] \ BleckList 模版中，此功能默认启用，但是，在 [通用模版] 中，为了保证本模版在iOS、Android、Win、Mac之间的通用性，所以，此功能默认关闭。
 
-在 [通用模版] 中，手动激活方法（搜索如下关键词）：
-   
-   - 第一步：在模版中寻找 “ ClashMeta_Only ” 包裹的住的代码，激活源代码（取消其注释）
-   
-   - 第二步：在模版中寻找 “ Stash_Compatible “ 包裹的住的代码，关闭源代码（删除或注释掉源代码）
-   
-   - 上述两步完成后，此功能便激活。
-
-💥💥💥💥 强烈建议，使用 [通用模版] 的 纯Clash meta用户，激活此功能 💥💥💥💥。 从而彻底解决 海外节点 ”跨国绕路“ 的问题。
-
-而 Stash for iOS 用户，需要等Stash客户端在DNS分流策略中支持 “Rule-Set” 和 “代理集合” 这两个功能后，才能支持。 本人已经向 Stash开发组 提交过多次反馈。而针对此问题，开发组压根 0反馈 、0回复。🤣🤣🤣 100% 纯血版 已读不回 ～
+Stash for iOS 用户，需要等Stash客户端在DNS分流策略中支持 “Rule-Set” 和 “代理集合” 这两个功能后，才能支持。 本人已经向 Stash开发组 提交过多次反馈。而针对此问题，开发组压根 0反馈 、0回复。🤣🤣🤣 100% 纯血版 已读不回 ～
 
 <br>
 <br>
