@@ -786,7 +786,7 @@
 
 ### 专属的Clash模版  ，与 通用模版 什么区别？
 
-[通用模版]、[ClashMeta模版] ，两者的区别， 只是为了适配的 不同的客户端 ！[通用模版] 额外支持 Stash客户端。
+[通用模版] vs [Desktop]\[Mobile] ，两者的区别， 只是为了适配的 不同的客户端 ！[通用模版] 额外支持 Stash客户端。
 
 所以，你下载 [通用模版] 后，你需要更多步骤 的 手工配置才能用起来（可配置性更全面）。所以，其代码容量更大。
 
@@ -794,9 +794,9 @@
    
    > 不仅要填入节点，还需必须要 按照 [《 如何将 VPN节点，加入到本模版，并导入VPN软件 》](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#%E5%A6%82%E4%BD%95-%E4%BD%BF%E7%94%A8%E6%9C%AC%E6%A8%A1%E7%89%88-%E5%A6%82%E4%BD%95%E5%B0%86-vpn%E8%8A%82%E7%82%B9%E5%8A%A0%E5%85%A5%E5%88%B0%E6%9C%AC%E6%A8%A1%E7%89%88%E5%B9%B6%E5%AF%BC%E5%85%A5vpn%E8%BD%AF%E4%BB%B6) 进行 五个步骤的 手工配置，才能使用。 
 
- - #### [ClashMeta模版] 
+ - ####  纯 Clash Meta 模版
 
-   - #### [电脑]
+   - #### [电脑] = [DeskTop]
    
      > 只需 填入节点 ，即可使用 （ [配置教程](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#%E5%A6%82%E4%BD%95-%E4%BD%BF%E7%94%A8%E6%9C%AC%E6%A8%A1%E7%89%88-%E5%A6%82%E4%BD%95%E5%B0%86-vpn%E8%8A%82%E7%82%B9%E5%8A%A0%E5%85%A5%E5%88%B0%E6%9C%AC%E6%A8%A1%E7%89%88%E5%B9%B6%E5%AF%BC%E5%85%A5vpn%E8%BD%AF%E4%BB%B6) ）
      >
@@ -805,7 +805,7 @@
      >   - 启用了 ： ChinaMax 规则  - 用于 更充分的分流 “中国直连“ （ 启用后， 中国分流 准确度 会提升2-5% ）
      >
 
-   - #### [手机] 
+   - #### [手机] = [Mobile]
    
      > 只需 填入节点 ，即可使用 （ [配置教程](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#%E5%A6%82%E4%BD%95-%E4%BD%BF%E7%94%A8%E6%9C%AC%E6%A8%A1%E7%89%88-%E5%A6%82%E4%BD%95%E5%B0%86-vpn%E8%8A%82%E7%82%B9%E5%8A%A0%E5%85%A5%E5%88%B0%E6%9C%AC%E6%A8%A1%E7%89%88%E5%B9%B6%E5%AF%BC%E5%85%A5vpn%E8%BD%AF%E4%BB%B6) ）
      >
@@ -1206,7 +1206,7 @@
     
     > 如果前两步 已经验证通过，再根据你的节点信息，对 “ 节点名称 + 中转线路名称 ” 做 批量改名（只改name字段，不改其他配置）。
     
-    > 如果你下载的是 [ClashMeta模版] ，到这一步就结束了 。
+    > 如果你下载的是 “纯ClashMeta模版” 即 [Desktop]/[Mobile] 模版 ，到这一步就结束了 。
     > 如果你下载的是 [通用模版] ，请继续完成后面的步骤。
   
     <br> 
