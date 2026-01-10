@@ -854,7 +854,7 @@
 
 <br>
 
-###  设备 ： 💻 个人电脑  
+###  设备 ： 💻 个人电脑  （ = 高算力负载 设备 ）
  
    - #### 首选 :  ✅ [\[电脑\]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-02-Min.AntiAD.yaml) ✅  +  Adguard 客户端
      
