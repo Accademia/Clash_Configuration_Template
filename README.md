@@ -758,13 +758,13 @@
 
 <br>
 
-### [ClashMeta模版] ：删除了 “Stash兼容”  
+### [Desktop] \ [Mobile] ：删除了 “Stash兼容”  
 
-注意：以下所有模版，都是，通过对 上述《通用模版》进行进一步 裁剪、阉割，从而得到的 （ = 0添加 新代码 ）
+注意：以下所有模版，都是，通过对 上述《通用模版》进行进一步 裁剪、阉割，从而得到的 （ = 0添加 新代码 ）。只适配Clash Meta内核 在移动端 [Mobile]  和 桌面电脑 [Desktop] 的客户端
 
 <br>
 
-| 💻  适配电脑    | 总规则数 | RuleSet规则数 | GeoSite规则数 |
+| 💻 💻 💻  适配电脑    | 总规则数 | RuleSet规则数 | GeoSite规则数 |
 |---|---|---|---|
 | [[Desktop]-WhiteList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-01.yaml)  | 23万条 |  20.4 万条 | 2.7 万条 | 
 | [[Desktop]-WhiteList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-02-Min.AntiAD.yaml) | 12.4 万条  | 11.7 万条 | 0.7 万条 | 
@@ -774,7 +774,7 @@
 
   #### 注意：以下模版，在上述 “适配电脑 的 模版” 基础上，又又再次裁剪、阉割（ 0添加 新代码 ）。进一步 额外阉割了 “10万条的ChinaMax分流规则” （以便 优化功耗。极致省电 🔥 ）
 
-| 📱 适配手机  | 总规则数 | RuleSet规则数 | GeoSite规则数 |
+| 📱 📱 📱 适配手机  | 总规则数 | RuleSet规则数 | GeoSite规则数 |
 |---|---|---|---|
 | [[Mobile]-WhiteList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-01.yaml)  | 12.5 万条 |  9.8 万条 | 2.7 万条 | 
 | [[Mobile]-WhiteList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-02-Min.AntiAD.yaml) 🔥🔥🔥  | 1.9 万条  | 1.2 万条 | 0.7 万条 | 
