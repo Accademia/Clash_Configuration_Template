@@ -1201,6 +1201,13 @@ Stash for iOS 用户，需要等Stash客户端在DNS分流策略中支持 “Rul
 
 ```
 
+PS：导入后，如果觉得 “选项过多” ，可以 通过以下开关，使界面清爽
+  >``` yaml
+  >  hidden : false
+  >  # 替换成
+  >  hidden : true      
+  >```
+  
 <br>
 <br> 
 
