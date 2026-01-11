@@ -887,7 +887,7 @@
 
  ### 以下表格，只体现 差异项目 
 
-| 差异表    |   模式    | 总计  \(万条\)    | 兼容 Stash |      广告 \(万条\)  |  隐私 \(万条\)  |   成人  \(万条\)   | GFWlist \(万条\)   |  ChinaMax \(万条\)  | 
+| 差异表    |   模式    | 总计  \(万条\)    | 兼容 Stash |      广告 \(万\)  |  隐私 \(万\)  |   成人  \(万\)   | GFWlist \(万\)   |  ChinaMax \(万\)  | 
 |-----------|-----------|------------|-----------|-----------|------------|-----------|-----------|-----------|       
 | [\[通用模版\]-WhiteList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-01.yaml)                                  |     白名单       |     12.5   |      ✅   |    3     |     4        |         2    |     0.7       |   🚫      |      
 | [\[通用模版\]-WhiteList-02-Min.AntiAD.yamll](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-02-Min.AntiAD.yaml)           |     白名单       |     1.9    |      ✅   |  0.15    |      🚫       |     🚫 |      0.7      |    🚫      |    
