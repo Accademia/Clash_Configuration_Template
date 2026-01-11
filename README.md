@@ -888,7 +888,7 @@
 <br>
 
 
- ### 以下表格，只体现 差异项目 
+ ### 以下表格，只体现 “差异项”
 
 | 差异表    |   模式    | 总计  \(万条\)    | 兼容 Stash |      广告 \(万\)  |  隐私 \(万\)  |   成人  \(万\)   | GFWlist \(万\)   |  ChinaMax \(万\)  | 
 |-----------|-----------|------------|-----------|-----------|------------|-----------|-----------|-----------|       
@@ -901,8 +901,8 @@
 | [[Desktop]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-03-Non.AntiAD.yaml) 👌                                              |     白名单       |    12.2    |    🚫    |  0.15    |      🚫       |   🚫   |      0.7      |   10      |    
 |           |            |         |          |         |         |          |           |        
 | [[Mobile]-WhiteList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-01.yaml)                                                                         |     白名单       |    12.5    |    🚫    |     3     |     4        |        2     |      🚫   |    🚫      |    
-| [[Mobile]-WhiteList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-02-Min.AntiAD.yaml) 🔥🔥🔥 推荐                                           |     白名单       |    1.9     |    🚫    |  0.15    |      🚫       |  🚫    |      🚫   |    🚫      |     
-| [[Mobile]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-03-Non.AntiAD.yaml) 🔥🔥🔥 推荐                                           |     白名单       |    1.7     |    🚫    |  0.15    |      🚫       |  🚫    |      🚫   |    🚫      |     
+| [[Mobile]-WhiteList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-02-Min.AntiAD.yaml) 🔥🔥🔥                                            |     白名单       |    1.9     |    🚫    |  0.15    |      🚫       |  🚫    |      🚫   |    🚫      |     
+| [[Mobile]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-03-Non.AntiAD.yaml) 🔥🔥🔥                                            |     白名单       |    1.7     |    🚫    |  0.15    |      🚫       |  🚫    |      🚫   |    🚫      |     
 |           |            |         |          |         |         |          |           |        
 | [BlackList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-01.yaml)                                                                                          |   🏴 黑名单       |    13.2    |    🚫    |     3     |     4        |        2    |     0.7       |    🚫      | 
 | [BlackList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-02-Min.AntiAD.yaml)                                                                    |   🏴 黑名单       |    2.6     |    🚫    |  0.15    |      🚫       |   🚫    |      0.7      |    🚫      |    
