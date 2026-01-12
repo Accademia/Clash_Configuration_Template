@@ -19,6 +19,7 @@
    
 客户端 ：
  - Clash Verge Rev 配置
+ - OpenClash配置
  - ClashMeta配置
  - Clash配置
  - Stash配置
