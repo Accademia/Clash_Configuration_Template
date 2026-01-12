@@ -2,11 +2,11 @@
 
 # 项目概述
 
-项目名称：超级省电clash配置模版
+项目名称 ：超级省电clash配置模版
 
-项目链接： https://github.com/Accademia/Clash_Configuration_Template
+项目链接 ： https://github.com/Accademia/Clash_Configuration_Template
  
-项目简述：
+项目简述 ：
 
  - 提供一套 同时支持  “ Clash Meta （ 如 ：Clash Verge Rev 、 OpenClash 等 ） / Stash for iPhone ”  的分流策略模版。
 
@@ -17,6 +17,14 @@
    + 0 代价 修改IP归属地显示 
    + 0 频繁维护（省心） 
    
+客户端 ：
+ - Clash Verge Rev 配置
+ - ClashMeta配置
+ - Clash配置
+ - Stash配置
+
+
+
 
 <br>
 <br>
