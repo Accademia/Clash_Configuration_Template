@@ -608,14 +608,11 @@
 # [6st-01] [7st-01]                                        
 #- { name : '🇯🇵.<Country>—JP'                                          
 #- { name : '🇬🇧.<Country>—UK'                                          
-#- { name : '🇦🇺.<Country>—AU'                                          
-#- { name : '🇭🇰.<Country>—HK'                                          
+#- { name : '🇦🇺.<Country>—AU'                                           
 #- { name : '🇹🇼.<Country>—TW'                                          
 #- { name : '🇸🇬.<Country>—SG'                                          
 #- { name : '🇳🇱.<Country>—NL'                                          
-#- { name : '🇩🇪.<Country>—DE'                                          
-#- { name : '🇫🇷.<Country>—FR'                                          
-#- { name : '🇨🇦.<Country>—CA'        
+#- { name : '🇩🇪.<Country>—DE'         
                                   
 # [6st-02] [7st-02] 
  - { name : '🌎.<Region>—North.America'                                
@@ -1463,7 +1460,7 @@ If you don't understand how to use this template, please throw this template to 
  
 <br>
 
-### 请不要再如下条目中，加入 🇭🇰 香港节点 ❕
+### ❌❌❌ 请不要再如下条目中，加入 🇭🇰 香港节点 ❕ ❌❌❌
 
 
 ```yaml
@@ -1476,7 +1473,7 @@ If you don't understand how to use this template, please throw this template to 
   
 <br>
   
-### 原则上来说，本项目已经 放弃适配 🇭🇰 香港节点 ⚠️ （ 力求省心 + 0频繁维护 ）
+### ❌❌❌ 原则上来说，本项目已经 放弃适配 🇭🇰 香港节点 ❌❌❌ （ 力求省心 + 0频繁维护 ） 
 
 
 <br>
