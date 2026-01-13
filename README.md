@@ -731,12 +731,12 @@
    >   https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-01.yaml
 
 
-- ### 订阅链接   :   [[Mobile]-WhiteList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-02-Min.AntiAD.yaml) 🔥🔥🔥      （ 移动端 推荐使用 ）                                
+- ### 订阅链接   :   [[Mobile]-WhiteList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-02-Min.AntiAD.yaml) 🔥🔥🔥      （  推荐 ）                                
                     
    >    https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-02-Min.AntiAD.yaml
 
 
-- ### 订阅链接   :   [[Mobile]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-03-Non.AntiAD.yaml) 🔥🔥🔥      （ 桌面端 推荐使用 ）                                 
+- ### 订阅链接   :   [[Mobile]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-03-Non.AntiAD.yaml) 🔥🔥🔥      （ 推荐 ）                                 
        
    >    https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-03-Non.AntiAD.yaml
 
