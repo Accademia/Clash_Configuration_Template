@@ -1054,7 +1054,9 @@
  
 - ### 冷门域名，发生了绕路，怎么办？
      
-     - 请跳至文章末尾的 [如下章节](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#%E6%9C%AC%E6%A8%A1%E7%89%88%E5%86%85-%E5%B0%8F%E8%80%8C%E7%B2%BE%E5%87%86%E7%9A%84-geositecn--geoipcn-%E7%9C%9F%E4%B8%8D%E8%83%BD%E6%BB%A1%E8%B6%B3-%E6%88%91%E7%9A%84%E5%9C%BA%E6%99%AF%E9%9C%80%E6%B1%82%E6%80%8E%E4%B9%88%E5%8A%9E) 
+     - 方法 1 : 请跳至文章末尾的 [如下章节](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#%E6%9C%AC%E6%A8%A1%E7%89%88%E5%86%85-%E5%B0%8F%E8%80%8C%E7%B2%BE%E5%87%86%E7%9A%84-geositecn--geoipcn-%E7%9C%9F%E4%B8%8D%E8%83%BD%E6%BB%A1%E8%B6%B3-%E6%88%91%E7%9A%84%E5%9C%BA%E6%99%AF%E9%9C%80%E6%B1%82%E6%80%8E%E4%B9%88%E5%8A%9E) 
+
+     - 方法 2 ：使用 第三套模版 ：\[Desktop\] 模版。桌面级模版，额外 又包含了9.8万条 中国分流规则 （ ChinaMax分流规则 ） ，用来查缺补漏，从而最大化避免中国流量 绕路海外。（仅建议 PC、Mac 、软路由 使用， 如果电池供电设备，不建议用，这会导致 规则数量 x10倍，会导致过于耗电 ）
 
 <br>
 <br>
