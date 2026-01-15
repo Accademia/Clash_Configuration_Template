@@ -1162,12 +1162,12 @@ Stash for iOS 用户，需要等Stash客户端在DNS分流策略中支持 “Rul
 
 <br>
 
-### 开箱即用 的 订阅链接
+### 前置步骤：开箱即用 的 订阅链接
 
-本模版开箱即用 你可以通过下载链接，将本模版直接 下载、导入 到你的 Clash Meta / Stash 软件中。
+本模版开箱即用 你可以通过下载链接，将本模版直接 下载、导入 到你的 Clash Meta / Stash 软件中。从以下多套订阅链接中，任选一套。
 
 
-#### 第一套 模版 ：兼容 Clash Meta / Stash + 白名单模式 
+#### 【第一套】 兼容 Clash Meta / Stash + 白名单模式 
 
    - #### 订阅链接   :   [\[通用模版\]-WhiteList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-01.yaml) 
    
@@ -1185,7 +1185,7 @@ Stash for iOS 用户，需要等Stash客户端在DNS分流策略中支持 “Rul
 
 <br>  
 
-#### 第二套 模版 ：仅兼容 Clash Meta + 白名单模版  +  手机 移动端优化
+#### 【第二套】 仅兼容 Clash Meta + 白名单模版  +  手机 移动端优化
 
 - #### 订阅链接   :   [[Mobile]-WhiteList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-01.yaml)                                                   
                 
@@ -1203,7 +1203,7 @@ Stash for iOS 用户，需要等Stash客户端在DNS分流策略中支持 “Rul
 
 <br>  
 
-#### 第三套 模版 ： 仅兼容 Clash Meta + 白名单模版  +  💻 桌面端优化
+#### 【第三套】 仅兼容 Clash Meta + 白名单模版  +  💻 桌面端优化
 
 - #### 订阅链接   :   [[Desktop]-WhiteList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-01.yaml)                                                                 
           
@@ -1221,7 +1221,7 @@ Stash for iOS 用户，需要等Stash客户端在DNS分流策略中支持 “Rul
 
 <br>   
 
-#### 第四套 模版 ： 仅兼容 Clash Meta + 黑名单模版  
+#### 【第四套】 仅兼容 Clash Meta + 黑名单模版  
 
 
 - #### 订阅链接   :   [BlackList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-01.yaml)                                                                                       
@@ -1249,6 +1249,13 @@ Stash for iOS 用户，需要等Stash客户端在DNS分流策略中支持 “Rul
   >  hidden : true      
   >```
   
+  当上述导入完成后，下面 你就可以开始配置模版。
+
+   - 将自己购买的机场订阅，添加进本模版
+
+   - 将自己搭建的的私有节点，添加进本模版
+
+
 <br> 
 <br>
 
