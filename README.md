@@ -1158,7 +1158,7 @@ Stash for iOS 用户，需要等Stash客户端在DNS分流策略中支持 “Rul
 > - [BlackList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-03-Non.AntiAD.yaml)       
 
 
-对于 Stash用户，可以通过 手动修改 《 通用模版 》实现黑名单模式 ，只需要在配置模版中，进行如下三步之后，你就会得到一个 仅支持 黑名单模式 的模版：
+对于 Stash 用户，可以通过 手动修改 《 通用模版 》实现黑名单模式 ，只需要在配置模版中，进行如下三步之后，你就会得到一个 仅支持 黑名单模式 的模版：
 
   - 检索 “**GFWList**”  关键词，然后  ✅ 启用   “**GFWList**” 关键词包裹着的代码 
   
@@ -1349,7 +1349,7 @@ proxy-providers:
  ``` 
 
 
-#### 为什么订阅节点导入后，没有被收集节点的代理组 识别出来、识别全？
+#### 为什么填入订阅信息后，代理组 没有识别出来（或没有识别全）订阅的节点？
 
 1. ##### 通用模版 ：没有适配订阅节点！
 
