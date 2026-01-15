@@ -1335,19 +1335,75 @@ PS：导入后，如果觉得 “选项过多” ，可以 通过以下开关，
   >  hidden : true      
   >```
   
-<br>
 <br> 
 
 ### 🟩🟩🟩🟩  建议步骤（ 如何导入 订阅节点 ）🟩🟩🟩🟩
 
 <br> 
 
-对于导入 订阅节点，请查找模版中的如下字段进行填写 ： 
+ 订阅节点 的 导入，请查找模版中，如下代码 ： 
  
-  > proxy-providers
+ ``` yaml
+proxy-providers:
 
-注意：通用模版 没有适配订阅节点！
+   SUB-Provider-01:
+      type     : http
+      url      : 'https://example.com/replace/your/subscription/url'  # <------ 此处添加你的订阅节点 ！！！
+      interval : 43200
+      path     : ./proxy-providers/SUB-Provider-01.yaml
+ 
+ ``` 
 
+
+#### 为什么订阅节点导入后，没有被收集节点的代理组 识别出来？
+
+1. ##### 通用模版 ：没有适配订阅节点！
+
+   由于，通用模版 要适配Stash，而Stash却少一些关键的特性。特别是 其过滤器中 没有 “排除关键词” 的功能，所以通用模版，没有适配订阅节点。
+
+2. ##### Clash模版 ：需要定制过滤器，来适配你的机场风味！
+
+   由于每一家机场，对节点命名规则不同，所以，如何通过过滤节点命名，来归纳节点到不同的代理组，是需要针对每家机场进行适配的（而且这些命名往往是冲突的）。你可以问机场主，要filter的表达式。或者让机场主 帮你修改本模版，毕竟它收了你钱，这就是他应该干的活。
+
+   本模版自己的命名规则 ，按如下优先级排序 ： 
+    >
+    > - 美国住宅IP 的 代理组 ： 带有 ”US“ + “HomeIP” \ “住宅” 关键词 的节点
+    >
+    > - 纯中转 、 中转落地一体 代理组 ： 带有 "中转" \ "Relay" 关键词 的节点 
+    >
+   
+   <br>
+
+   本模版中，涉及 过滤收集节点 的代理组，如下：
+
+   ``` yaml
+      ### 筛选  代理链  
+       - { name : '🇺🇸🍟.Multi.PrxChain—[US.HomeIP]'               
+       - { name : '🇺🇸📍.Multi.PrxChain—[US.ShowIP]'               
+       - { name : '🇺🇸.Multi.PrxChain—[US]'                        
+       - { name : '🇯🇵.Multi.PrxChain—[JP]'                        
+       - { name : '🇬🇧.Multi.PrxChain—[UK]'                        
+       - { name : '🇦🇺.Multi.PrxChain—[AU]'                        
+       - { name : '🇹🇼.Multi.PrxChain—[TW]'                        
+       - { name : '🇸🇬.Multi.PrxChain—[SG]'                        
+      #- { name : '🇳🇱.Multi.PrxChain—[NL]'                        
+      #- { name : '🇩🇪.Multi.PrxChain—[DE]'                        
+
+
+      #### 筛选  节点                                          
+       - { name : '🇺🇸🔰.VPS—[US.HomeIP]—(美国住宅节点信息)'       
+       - { name : '🇺🇸🔰.VPS—[US.ShowIP]—(归属地落地节点信息)'     
+       - { name : '🇺🇸🔰.VPS—[US-Relay]—(美国中转节点信息)'        
+       - { name : '🇯🇵🔰.VPS—[JP-Relay]—(日本中转节点信息)'        
+       - { name : '🇬🇧🔰.VPS—[UK-Relay]—(英国中转节点信息)'        
+       - { name : '🇦🇺🔰.VPS—[AU-Relay]—(澳洲中转节点信息)'        
+       - { name : '🇹🇼🔰.VPS—[TW-Realy]—(台湾中转节点信息)'        
+       - { name : '🇸🇬🔰.VPS—[SG-Realy]—(新加坡中转节点信息)'      
+      #- { name : '🇳🇱🔰.VPS—[NL-Relay]—(荷兰中转节点信息)'        
+      #- { name : '🇩🇪🔰.VPS—[DE-Realy]—(德国中转节点信息)'        
+
+   ``` 
+   
 <br>
 <br> 
 
@@ -2231,9 +2287,9 @@ PS：如果Stash已经兼容上述功能，而本模版尚未改进，希望也�
 
 <br>
 
-以下 五大功能，是本模版需要用到，Stash for iOS 不兼容的 （ 但 Clash Meta 完美兼容 ）。
+以下 六六六六 六大功能，是本模版需要用到，Stash for iOS 不兼容的 （ 但 Clash Meta 完美兼容 ）。
 
-目前，虽然**不影响 本模版 基础分流** 进行日常翻墙上网，但是会使得本模版，缺失很多核心功能。无法做到想做到完美。必须需要Stash开发者补齐这 5 个功能短板（至少要补齐 前4个功能！）
+目前，虽然**不影响 本模版 基础分流** 进行日常翻墙上网，但是会使得本模版，缺失很多核心功能。无法做到想做到完美。必须需要Stash开发者补齐这 6 个功能短板（至少要补齐 前5个功能！）
 
 
 <br>
@@ -2278,7 +2334,15 @@ PS：如果Stash已经兼容上述功能，而本模版尚未改进，希望也�
 
 <br>
 
-### 3. 💩💩💩💩💩 Stash 的 代理组 不支持 PASS 规则
+### 2. 💩💩💩💩💩 Stash 的代理组，其过滤器功能，没有排除关键词的功能
+<br>
+
+这导致了，无法做到精确收入。如，要在收集VPS节点的过滤器上，必须加入 “代理链” 关键词的排除选项。而在Stash是做不到的。，会造成极大混淆
+
+
+<br>
+
+### 4. 💩💩💩💩💩 Stash 的 代理组 不支持 PASS 规则
 
 <br>
 
@@ -2289,7 +2353,7 @@ PS：如果Stash已经兼容上述功能，而本模版尚未改进，希望也�
 
 <br>
 
-### 4. 💩💩💩💩💩 Stash ，**无法支持  “远程规则 内预设的 REJECT、REJECT-DROP、DIRECT”**
+### 5. 💩💩💩💩💩 Stash ，**无法支持  “远程规则 内预设的 REJECT、REJECT-DROP、DIRECT”**
 
 <br>
 
@@ -2302,7 +2366,7 @@ PS：如果Stash已经兼容上述功能，而本模版尚未改进，希望也�
    
 <br>
 
-### 5. 💩💩💩💩💩 Stash ，即**无法 “关闭DNS的IPv6解析”** ，**也无做到 “全透明转发IPv6流量”**。
+### 6. 💩💩💩💩💩 Stash ，即**无法 “关闭DNS的IPv6解析”** ，**也无做到 “全透明转发IPv6流量”**。
 
 <br>
     
