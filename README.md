@@ -1489,11 +1489,11 @@ proxy-providers:
           
           > 在 上述启用 的过程中，建议 “不必启用” 如下规则     
           
-            ``` yaml
-             - RULE-SET        , GFWList_Domain                             , 🚧.<GFWList>
-             - RULE-SET        , ChinaMax_Domain                            , 🇨🇳.<Country>—CN  
-             # 原因 ：默认白名单下，上述这些规则都是冗余规则。如果启用了，不会起到效果，反而可能会出错
-            ```
+           ``` yaml
+            - RULE-SET        , GFWList_Domain                             , 🚧.<GFWList>
+            - RULE-SET        , ChinaMax_Domain                            , 🇨🇳.<Country>—CN  
+            # 原因 ：默认白名单下，上述这些规则都是冗余规则。如果启用了，不会起到效果，反而可能会出错
+           ```
 
       - ⚠️ 注意：仅电脑，可以考虑开启 第五步。而在手机，尤其是在iphone，强烈不建议开启 第五步 。因为开启第五步后，规则数量 会暴增10倍，从1.2万条规则，膨胀到12万条。会导致 触发 iOS 50MB网络内存限制的概率增加，从而导致VPN软件崩溃。而且手机耗电也会大大增加！！
          
