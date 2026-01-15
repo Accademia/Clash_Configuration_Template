@@ -1149,7 +1149,7 @@ Stash for iOS 用户，需要等Stash客户端在DNS分流策略中支持 “Rul
 
 <br>
 
-对于Clash模版，有配置的好的黑名单模式，直接下载就能用。
+对于 纯 Clash Meta 用户，有配置的好的 Clash 黑名单模版 ，直接下载就能用。如下：
 
 > - [BlackList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-01.yaml)           
 
@@ -1158,9 +1158,11 @@ Stash for iOS 用户，需要等Stash客户端在DNS分流策略中支持 “Rul
 > - [BlackList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-03-Non.AntiAD.yaml)       
 
 
-对于 通用模版，只需要在配置模版中，进行如下两步之后，你就会得到一个 仅支持 黑名单模式 的模版：
+对于 Stash用户，可以通过 手动修改 《 通用模版 》实现黑名单模式 ，只需要在配置模版中，进行如下两步之后，你就会得到一个 仅支持 黑名单模式 的模版：
 
-  - 检索 “**GFWList**” 关键词，然后 -✅启用-  “**GFWList**” 关键词包裹着的代码 
+  - 检索 “**GFWList**”  关键词，然后  ✅ 启用   “**GFWList**” 关键词包裹着的代码 
+  
+  - 检索 “**BlackList**” 关键词，然后  ✅ 启用  “**BlackList**” 关键词包裹着的代码 
 
   - 检索 “**WhiteList**” 关键词，然后 -❌注释掉- “**WhiteList**” 关键词包裹住的代码 （ 注意：被 “**WhiteList**” 包裹着的代码，都是白名单专属的分流规则 ）
 
