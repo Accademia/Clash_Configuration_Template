@@ -437,213 +437,213 @@
 
 
 # [1st-01] -  DNS \ NTP                                                 
- - { name : '📡.<DNS>—GlobalDNS'                                       
- - { name : '📡.<DNS>—ChinaDNS'                                        
- - { name : '📡.<NTP>—GlobalNTP'                                       
- - { name : '📡.<NTP>—ChinaNTP'                         
+ - { name : '📡.<DNS>-GlobalDNS'                                       
+ - { name : '📡.<DNS>-ChinaDNS'                                        
+ - { name : '📡.<NTP>-GlobalNTP'                                       
+ - { name : '📡.<NTP>-ChinaNTP'                         
                   
 # [1st-05] -   反私有DNS跟踪（HttpDNS）  
- - { name : '⛔️.<Protection>—HttpDNS'     
+ - { name : '⛔️.<Protection>-HttpDNS'     
  - 
 # [1st-06] -  反劫持（Hijacking）  
- - { name : '⛔️.<Protection>—Hijacking'                  
+ - { name : '⛔️.<Protection>-Hijacking'                  
                
 # [1st-08]  [1st-09] -  隐私保护（Privacy） 屏蔽广告 
- - { name : '⛔️.<Protection>—Privacy'                                  
- - { name : '⛔️.<Protection>—ADblock'                                  
+ - { name : '⛔️.<Protection>-Privacy'                                  
+ - { name : '⛔️.<Protection>-ADblock'                                  
 
 # [1st-10] -  UDP 
-#- { name : '🎲.<Protocol>—GlobalUDP'                                  
-#- { name : '🎲.<Protocol>—ChinaUDP'                                   
+#- { name : '🎲.<Protocol>-GlobalUDP'                                  
+#- { name : '🎲.<Protocol>-ChinaUDP'                                   
 
 # [1st-02] -  局域网（Lan）         
  - { name : '💻.<Lan>'              
                                     
 # [3st-01] -  智能设备           
- - { name : '💻.<NAS>—Synology'                                        
-#- { name : '💻.<NAS>—QNAP'                                            
- - { name : '🔌.<Home>—AqaraGlobal'          
+ - { name : '💻.<NAS>-Synology'                                        
+#- { name : '💻.<NAS>-QNAP'                                            
+ - { name : '🔌.<Home>-AqaraGlobal'          
                            
 # [3st-02] -  公有云：云盘、云存储                                     
-#- { name : '📂.<Drive>—iCloud'                                        
- - { name : '📂.<Drive>—OneDrive'                                      
- - { name : '📂.<Drive>—Dropbox'                                       
- - { name : '📂.<Drive>—GoogleDrive'                                   
- - { name : '📂.<Drive>—MEGA'                                          
- - { name : '📂.<Drive>—Imgur'                                         
- - { name : '📂.<Drive>—InternetArchive'  
+#- { name : '📂.<Drive>-iCloud'                                        
+ - { name : '📂.<Drive>-OneDrive'                                      
+ - { name : '📂.<Drive>-Dropbox'                                       
+ - { name : '📂.<Drive>-GoogleDrive'                                   
+ - { name : '📂.<Drive>-MEGA'                                          
+ - { name : '📂.<Drive>-Imgur'                                         
+ - { name : '📂.<Drive>-InternetArchive'  
                               
 # [3st-04] -  被GFW阻挡的，其他下载站云盘                              
- - { name : '⬇️.<P2P>—PT-Server'                                        
- - { name : '⬇️.<P2P>—eMule-Server'      
+ - { name : '⬇️.<P2P>-PT-Server'                                        
+ - { name : '⬇️.<P2P>-eMule-Server'      
                                 
 # [3st-05] -  需加速 才能流畅访问的网站                                
- - { name : '⬇️.<Download>—MacAppUpgrade'    
+ - { name : '⬇️.<Download>-MacAppUpgrade'    
                             
 # [3st-11] -  金融                                                    
- - { name : '💰.<Finance>—Paypal'                                      
- - { name : '💰.<Finance>—Wise'                                        
- - { name : '₿.<Crypto>—Binance'                                       
- - { name : '₿.<Crypto>—OKX'                                           
- - { name : '💳.<Virtual>—Monzo'                                       
- - { name : '💳.<Virtual>—Revolut'             
+ - { name : '💰.<Finance>-Paypal'                                      
+ - { name : '💰.<Finance>-Wise'                                        
+ - { name : '₿.<Crypto>-Binance'                                       
+ - { name : '₿.<Crypto>-OKX'                                           
+ - { name : '💳.<Virtual>-Monzo'                                       
+ - { name : '💳.<Virtual>-Revolut'             
                          
  [3st-12] -  各国银行                                                  
- - { name : '🇺🇸.<Bank>—US'                                             
- - { name : '🇨🇦.<Bank>—CA'                                             
- - { name : '🇬🇧.<Bank>—UK'                                             
- - { name : '🇦🇺.<Bank>—AU'                                             
- - { name : '🇯🇵.<Bank>—JP'                              
- - { name : '🇭🇰.<Bank>—HK'  
- - { name : '🇸🇬.<Bank>—SG'  
-#- { name : '🇳🇱.<Bank>—NL'  
-#- { name : '🇩🇪.<Bank>—DE'  
-#- { name : '🇫🇷.<Bank>—FR'                         
+ - { name : '🇺🇸.<Bank>-US'                                             
+ - { name : '🇨🇦.<Bank>-CA'                                             
+ - { name : '🇬🇧.<Bank>-UK'                                             
+ - { name : '🇦🇺.<Bank>-AU'                                             
+ - { name : '🇯🇵.<Bank>-JP'                              
+ - { name : '🇭🇰.<Bank>-HK'  
+ - { name : '🇸🇬.<Bank>-SG'  
+#- { name : '🇳🇱.<Bank>-NL'  
+#- { name : '🇩🇪.<Bank>-DE'  
+#- { name : '🇫🇷.<Bank>-FR'                         
                   
 # [3st-13] -  专属网站（必须要所属国IP才能正常下单的网站，银行除外…）  
- - { name : '🇺🇸.<HomeIP>—US'                                           
-#- { name : '🇨🇦.<HomeIP>—CA'                                           
-#- { name : '🇬🇧.<HomeIP>—UK'                                           
-#- { name : '🇦🇺.<HomeIP>—AU'                                           
- - { name : '🇯🇵.<HomeIP>—JP'     
+ - { name : '🇺🇸.<HomeIP>-US'                                           
+#- { name : '🇨🇦.<HomeIP>-CA'                                           
+#- { name : '🇬🇧.<HomeIP>-UK'                                           
+#- { name : '🇦🇺.<HomeIP>-AU'                                           
+ - { name : '🇯🇵.<HomeIP>-JP'     
                  
 # [3st-14] - 不支持VPN的网站（除 银行、HomeIP 分流规则以外的 网站）    
  - { name : '❌.<UnsupportVPN>'              
                            
 # [3st-20] -  购物                                                     
- - { name : '🛒.<Shopping>—eBay'                                       
- - { name : '🛒.<Shopping>—Patreon'     
+ - { name : '🛒.<Shopping>-eBay'                                       
+ - { name : '🛒.<Shopping>-Patreon'     
                                 
 # [3st-21] -  游戏平台                                                 
- - { name : '🕹️.<Game>—Xbox'                                           
- - { name : '🕹️.<Game>—PlayStation'                                    
- - { name : '🕹️.<Game>—Nintendo'                                       
- - { name : '🕹️.<Game>—Steam'                                          
- - { name : '🕹️.<Game>—EPIC'                                           
- - { name : '🕹️.<Game>—GOG'                                            
- - { name : '🕹️.<Game>—RockStar'                                       
- - { name : '🕹️.<Game>—EA.Origin'                                      
- - { name : '🕹️.<Game>—UbiSoft'   
+ - { name : '🕹️.<Game>-Xbox'                                           
+ - { name : '🕹️.<Game>-PlayStation'                                    
+ - { name : '🕹️.<Game>-Nintendo'                                       
+ - { name : '🕹️.<Game>-Steam'                                          
+ - { name : '🕹️.<Game>-EPIC'                                           
+ - { name : '🕹️.<Game>-GOG'                                            
+ - { name : '🕹️.<Game>-RockStar'                                       
+ - { name : '🕹️.<Game>-EA.Origin'                                      
+ - { name : '🕹️.<Game>-UbiSoft'   
                                       
 # [3st-22] -  视频 软件                                                
- - { name : '📺.<Video>—YouTube'                                       
- - { name : '📺.<Video>—Netflix'                                       
- - { name : '📺.<Video>—PrimeVideo'                                    
- - { name : '📺.<Video>—Disney'                                        
- - { name : '📺.<Video>—HBO'                                           
- - { name : '📺.<Video>—FOX'                                           
- - { name : '📺.<Video>—AppleTV'                                       
- - { name : '📺.<Video>—Porn'       
+ - { name : '📺.<Video>-YouTube'                                       
+ - { name : '📺.<Video>-Netflix'                                       
+ - { name : '📺.<Video>-PrimeVideo'                                    
+ - { name : '📺.<Video>-Disney'                                        
+ - { name : '📺.<Video>-HBO'                                           
+ - { name : '📺.<Video>-FOX'                                           
+ - { name : '📺.<Video>-AppleTV'                                       
+ - { name : '📺.<Video>-Porn'       
                                     
 # [3st-23] -  短视频                                                   
- - { name : '🎬.<Short>—TikTok'                                      
- - { name : '🎬.<Short>—Kwai'                                         
- - { name : '🎬.<Short>—Instagram'          
+ - { name : '🎬.<Short>-TikTok'                                      
+ - { name : '🎬.<Short>-Kwai'                                         
+ - { name : '🎬.<Short>-Instagram'          
                               
 # [3st-24] -  直播                                                     
- - { name : '🎞️.<Live>—Twitch'            
+ - { name : '🎞️.<Live>-Twitch'            
                               
 # [3st-25] -  音频                                                     
- - { name : '🎧.<Audio>—Spotify'                                       
- - { name : '🎧.<Audio>—YouTubeMusic'                                  
-#- { name : '🎧.<Audio>—AppleMusic'       
+ - { name : '🎧.<Audio>-Spotify'                                       
+ - { name : '🎧.<Audio>-YouTubeMusic'                                  
+#- { name : '🎧.<Audio>-AppleMusic'       
                               
 # [3st-26] -  社交                                                     
- - { name : '💛.<Social>—Facebook'                                     
- - { name : '💛.<Social>—Twitter'                                      
- - { name : '💛.<Social>—Reddit'                                       
- - { name : '💛.<Social>—Telegram'                                     
- - { name : '💛.<Social>—Whatsapp'                                     
- - { name : '💛.<Social>—Line'                                         
- - { name : '💛.<Social>—Discord'                                      
- - { name : '💛.<Social>—LinkedIn'                                      
- - { name : '💛.<Social>—Clubhouse'                                    
- - { name : '💛.<Social>—Signal'                                    
-#- { name : '💛.<Social>—Teams'                                         
-#- { name : '💛.<Social>—Snapchat'                                     
-#- { name : '💛.<Social>—Tumblr'                                       
-#- { name : '💛.<Social>—Pixiv'          
+ - { name : '💛.<Social>-Facebook'                                     
+ - { name : '💛.<Social>-Twitter'                                      
+ - { name : '💛.<Social>-Reddit'                                       
+ - { name : '💛.<Social>-Telegram'                                     
+ - { name : '💛.<Social>-Whatsapp'                                     
+ - { name : '💛.<Social>-Line'                                         
+ - { name : '💛.<Social>-Discord'                                      
+ - { name : '💛.<Social>-LinkedIn'                                      
+ - { name : '💛.<Social>-Clubhouse'                                    
+ - { name : '💛.<Social>-Signal'                                    
+#- { name : '💛.<Social>-Teams'                                         
+#- { name : '💛.<Social>-Snapchat'                                     
+#- { name : '💛.<Social>-Tumblr'                                       
+#- { name : '💛.<Social>-Pixiv'          
                                
 # [3st-28] -  资讯                                                     
- - { name : '📰.<News>—Wikipedia'                                      
- - { name : '📰.<News>—AppleNews'      
+ - { name : '📰.<News>-Wikipedia'                                      
+ - { name : '📰.<News>-AppleNews'      
                                  
 # [3st-29] -  AI                 
- - { name : '💡.<AI>—AppleAI'                                          
- - { name : '💡.<AI>—OpenAI'                                           
- - { name : '💡.<AI>—Grok'                                             
- - { name : '💡.<AI>—Claude'                                           
- - { name : '💡.<AI>—Gemini'                                           
- - { name : '💡.<AI>—Copilot'                                          
- - { name : '💡.<AI>—GlobalAI'     
+ - { name : '💡.<AI>-AppleAI'                                          
+ - { name : '💡.<AI>-OpenAI'                                           
+ - { name : '💡.<AI>-Grok'                                             
+ - { name : '💡.<AI>-Claude'                                           
+ - { name : '💡.<AI>-Gemini'                                           
+ - { name : '💡.<AI>-Copilot'                                          
+ - { name : '💡.<AI>-GlobalAI'     
  -                                     
 # [3st-30] -  工具                                                     
- - { name : '🔧.<Tools>—Adobe'                                         
- - { name : '🔧.<Tools>—Github'                                        
- - { name : '🔧.<Tools>—Notion'                                        
- - { name : '🔧.<Tools>—Pinterest'                                     
- - { name : '🔧.<Tools>—Bing/Edge'                                     
- - { name : '🖥️.<Remote>—Rustdesk'                                     
- - { name : '🖥️.<Remote>—Parsec'                                       
+ - { name : '🔧.<Tools>-Adobe'                                         
+ - { name : '🔧.<Tools>-Github'                                        
+ - { name : '🔧.<Tools>-Notion'                                        
+ - { name : '🔧.<Tools>-Pinterest'                                     
+ - { name : '🔧.<Tools>-Bing/Edge'                                     
+ - { name : '🖥️.<Remote>-Rustdesk'                                     
+ - { name : '🖥️.<Remote>-Parsec'                                       
 
 # [4st-01] -  大厂                                                     
- - { name : '☁️.<Apps>—Google'                                         
- - { name : '☁️.<Apps>—Microsoft'                                      
- - { name : '☁️.<Apps>—Apple'                                          
- - { name : '☁️.<Apps>—Amazon'                                        
+ - { name : '☁️.<Apps>-Google'                                         
+ - { name : '☁️.<Apps>-Microsoft'                                      
+ - { name : '☁️.<Apps>-Apple'                                          
+ - { name : '☁️.<Apps>-Amazon'                                        
 
 # [2st-01] -  修改IP归属地   
- - { name : '🇨🇳.<ShowIP>—BiliBili'                                     
- - { name : '🇨🇳.<ShowIP>—抖音'                                         
- - { name : '🇨🇳.<ShowIP>—快手'                                         
- - { name : '🇨🇳.<ShowIP>—小红书'                                       
- - { name : '🇨🇳.<ShowIP>—西瓜'                                         
- - { name : '🇨🇳.<ShowIP>—微博'                                         
- - { name : '🇨🇳.<ShowIP>—知乎'                                         
- - { name : '🇨🇳.<ShowIP>—贴吧'                                         
- - { name : '🇨🇳.<ShowIP>—豆瓣'                                         
- - { name : '🇨🇳.<ShowIP>—闲鱼'                                         
+ - { name : '🇨🇳.<ShowIP>-BiliBili'                                     
+ - { name : '🇨🇳.<ShowIP>-抖音'                                         
+ - { name : '🇨🇳.<ShowIP>-快手'                                         
+ - { name : '🇨🇳.<ShowIP>-小红书'                                       
+ - { name : '🇨🇳.<ShowIP>-西瓜'                                         
+ - { name : '🇨🇳.<ShowIP>-微博'                                         
+ - { name : '🇨🇳.<ShowIP>-知乎'                                         
+ - { name : '🇨🇳.<ShowIP>-贴吧'                                         
+ - { name : '🇨🇳.<ShowIP>-豆瓣'                                         
+ - { name : '🇨🇳.<ShowIP>-闲鱼'                                         
 
 # [2st-02] -  回国 - 网盘  视频  社交  媒体  购物  硬件  大厂  其他    
-#- { name : '🇨🇳.<Country>—CN.Drive'         
-#- { name : '🇨🇳.<Country>—CN.Video'         
-#- { name : '🇨🇳.<Country>—CN.Social'        
-#- { name : '🇨🇳.<Country>—CN.News'          
-#- { name : '🇨🇳.<Country>—CN.Shopping'      
-#- { name : '🇨🇳.<Country>—CN.Hardware'      
-#- { name : '🇨🇳.<Country>—CN.BAT'           
-#- { name : '🇨🇳.<Country>—CN.Other'                                         
+#- { name : '🇨🇳.<Country>-CN.Drive'         
+#- { name : '🇨🇳.<Country>-CN.Video'         
+#- { name : '🇨🇳.<Country>-CN.Social'        
+#- { name : '🇨🇳.<Country>-CN.News'          
+#- { name : '🇨🇳.<Country>-CN.Shopping'      
+#- { name : '🇨🇳.<Country>-CN.Hardware'      
+#- { name : '🇨🇳.<Country>-CN.BAT'           
+#- { name : '🇨🇳.<Country>-CN.Other'                                         
     
 # [2st-05] -  回国
- - { name : '🇨🇳.<Country>—CN' 
- - { name : '🇺🇸.<Country>—US' 
+ - { name : '🇨🇳.<Country>-CN' 
+ - { name : '🇺🇸.<Country>-US' 
    
 # [6st-01] [7st-01]                                        
-#- { name : '🇯🇵.<Country>—JP'                                          
-#- { name : '🇬🇧.<Country>—UK'                                          
-#- { name : '🇦🇺.<Country>—AU'                                           
-#- { name : '🇹🇼.<Country>—TW'                                          
-#- { name : '🇸🇬.<Country>—SG'                                          
-#- { name : '🇳🇱.<Country>—NL'                                          
-#- { name : '🇩🇪.<Country>—DE'         
+#- { name : '🇯🇵.<Country>-JP'                                          
+#- { name : '🇬🇧.<Country>-UK'                                          
+#- { name : '🇦🇺.<Country>-AU'                                           
+#- { name : '🇹🇼.<Country>-TW'                                          
+#- { name : '🇸🇬.<Country>-SG'                                          
+#- { name : '🇳🇱.<Country>-NL'                                          
+#- { name : '🇩🇪.<Country>-DE'         
                                   
 # [6st-02] [7st-02] 
- - { name : '🌎.<Region>—North.America'                                
- - { name : '🌎.<Region>—South.America'                                
- - { name : '🌍.<Region>—Europe'                                       
- - { name : '🌏.<Region>—Oceania'                                      
- - { name : '🌏.<Region>—East.Asia'                                    
- - { name : '🌏.<Region>—West.Asia'                                    
- - { name : '🌍.<Region>—Africa'   
+ - { name : '🌎.<Region>-North.America'                                
+ - { name : '🌎.<Region>-South.America'                                
+ - { name : '🌍.<Region>-Europe'                                       
+ - { name : '🌏.<Region>-Oceania'                                      
+ - { name : '🌏.<Region>-East.Asia'                                    
+ - { name : '🌏.<Region>-West.Asia'                                    
+ - { name : '🌍.<Region>-Africa'   
                                      
 # [7st-01] -  CDN                                     
- - { name : '☁️.<Global>—CDN'                                       
+ - { name : '☁️.<Global>-CDN'                                       
 
 # [8st-01] - GFW黑名单            
 #- { name : '🚧.<GFWList>'                                             
 
 # [9st-01]  - 中国兜底 （ ChinaMax ）  
-# 与[2st-05]的 '🇨🇳.<Country>—CN' 相同
+# 与[2st-05]的 '🇨🇳.<Country>-CN' 相同
  
 # [10st-01] - 全球兜底  
  - { name : '♾️.<Final>'                                               
@@ -1248,93 +1248,75 @@ Stash for iOS 用户，需要等Stash客户端在DNS分流策略中支持 “Rul
 
 ###  在模版中， 需修改的 “VPN节点配置”
 
-   ### ----------------------------------------------------------------
-   ### 美国（US） -                                                    
-   ### ----------------------------------------------------------------
+### --------------------------------------------------------------------
+### 美国（US） -                                                        
+### --------------------------------------------------------------------
 
+ - &VPS_US_HomeIP_RT_00 { name : 'VPS-[US.HomeIP]-RT-00-(美国住宅节点)' 
+ - &VPS_US_HomeIP_RT_01 { name : 'VPS-[US.HomeIP]-RT-01-(美国住宅节点)' 
 
-    - &RT_US_HomeIP_00 { name : 'RT-00—[US.HomeIP]—(美国住宅节点)' 
-    - &RT_US_HomeIP_01 { name : 'RT-01—[US.HomeIP]—(美国住宅节点)' 
+### --------------------------------------------------------------------
+### 美国（US） -                                                        
+### --------------------------------------------------------------------
 
+ - &VPS_US_ShowIP_RT_00 { name : 'VPS-[US.ShowIP]-RT-00-(归属地落地节点)
+ - &VPS_US_ShowIP_RT_01 { name : 'VPS-[US.ShowIP]-RT-01-(归属地落地节点)
 
-   ### ----------------------------------------------------------------
-   ### 美国（US） -                                                    
-   ### ----------------------------------------------------------------
+### --------------------------------------------------------------------
+### 美国（US） -                                                        
+### --------------------------------------------------------------------
 
+ - &VPS_US_Relay_RT_00  { name : 'VPS-[US.Relay]-RT-00-(美国中转节点)'  
+ - &VPS_US_Relay_RT_01  { name : 'VPS-[US.Relay]-RT-01-(美国中转节点)'  
 
-    - &RT_US_ShowIP_00 { name : 'RT-00—[US.ShowIP]—(归属地落地节点)
-    - &RT_US_ShowIP_01 { name : 'RT-01—[US.ShowIP]—(归属地落地节点)
+### --------------------------------------------------------------------
+### 日本（JP） -                                                        
+### --------------------------------------------------------------------
 
+ - &VPS_JP_Relay_RT_00  { name : 'VPS-[JP.Relay]-RT-00-(日本中转节点)'  
+ - &VPS_JP_Relay_RT_01  { name : 'VPS-[JP.Relay]-RT-01-(日本中转节点)'  
 
-   ### ----------------------------------------------------------------
-   ### 美国（US） -                                                    
-   ### ----------------------------------------------------------------
+### --------------------------------------------------------------------
+### 英国（UK） -                                                        
+### --------------------------------------------------------------------
 
+ - &VPS_UK_Relay_RT_00  { name : 'VPS-[UK.Relay]-RT-00-(英国中转节点)'  
+ - &VPS_UK_Relay_RT_01  { name : 'VPS-[UK.Relay]-RT-01-(英国中转节点)'  
 
-    - &RT_US_Relay_00 { name : 'RT-00—[US-Relay]—(美国中转节点)'   
-    - &RT_US_Relay_01 { name : 'RT-01—[US-Relay]—(美国中转节点)'   
+### --------------------------------------------------------------------
+### 澳洲（AU） -                                                        
+### --------------------------------------------------------------------
 
+ - &VPS_AU_Relay_RT_00  { name : 'VPS-[AU.Relay]-RT-00-(澳洲中转节点)'  
+ - &VPS_AU_Relay_RT_01  { name : 'VPS-[AU.Relay]-RT-01-(澳洲中转节点)'  
 
-   ### ----------------------------------------------------------------
-   ### 日本（JP） -                                                    
-   ### ----------------------------------------------------------------
+### --------------------------------------------------------------------
+### 台湾（TW） -                                                        
+### --------------------------------------------------------------------
 
+ - &VPS_TW_Relay_RT_00  { name : 'VPS-[TW.Relay]-RT-00-(台湾中转节点)'  
+ - &VPS_TW_Relay_RT_01  { name : 'VPS-[TW.Relay]-RT-01-(台湾中转节点)'  
 
-    - &RT_JP_Relay_00 { name : 'RT-00—[JP-Relay]—(日本中转节点)'   
-    - &RT_JP_Relay_01 { name : 'RT-01—[JP-Relay]—(日本中转节点)'   
+### --------------------------------------------------------------------
+### 新加坡（SG） -                                                      
+### --------------------------------------------------------------------
 
+ - &VPS_SG_Relay_RT_00  { name : 'VPS-[SG.Relay]-RT-00-(新加坡中转节点)'
+ - &VPS_SG_Relay_RT_01  { name : 'VPS-[SG.Relay]-RT-01-(新加坡中转节点)'
 
-   ### ----------------------------------------------------------------
-   ### 英国（UK） -                                                    
-   ### ----------------------------------------------------------------
+### --------------------------------------------------------------------
+### 荷兰（NL） -                                                        
+### --------------------------------------------------------------------
 
+ - &VPS_NL_Relay_RT_00  { name : 'VPS-[NL.Relay]-RT-00-(荷兰中转节点)'  
+ - &VPS_NL_Relay_RT_01  { name : 'VPS-[NL.Relay]-RT-01-(荷兰中转节点)'  
 
-    - &RT_UK_Relay_00 { name : 'RT-00—[UK-Relay]—(英国中转节点)'   
-    - &RT_UK_Relay_01 { name : 'RT-01—[UK-Relay]—(英国中转节点)'   
+### --------------------------------------------------------------------
+### 德国（DE） -                                                        
+### --------------------------------------------------------------------
 
-
-   ### ----------------------------------------------------------------
-   ### 澳洲（AU） -                                                    
-   ### ----------------------------------------------------------------
-
-
-    - &RT_AU_Relay_00 { name : 'RT-00—[AU-Relay]—(澳洲中转节点)'   
-    - &RT_AU_Relay_01 { name : 'RT-01—[AU-Relay]—(澳洲中转节点)'   
-
-
-   ### ----------------------------------------------------------------
-   ### 台湾（TW） -                                                    
-   ### ----------------------------------------------------------------
-
-
-    - &RT_TW_Relay_00 { name : 'RT-00—[TW-Relay]—(台湾中转节点)'   
-    - &RT_TW_Relay_01 { name : 'RT-01—[TW-Relay]—(台湾中转节点)'   
-
-
-   ### ----------------------------------------------------------------
-   ### 新加坡（SG） -                                                  
-   ### ----------------------------------------------------------------
-
-
-    - &RT_SG_Relay_00 { name : 'RT-00—[SG-Relay]—(新加坡中转节点)' 
-    - &RT_SG_Relay_01 { name : 'RT-01—[SG-Relay]—(新加坡中转节点)' 
-
-
-#  ### ----------------------------------------------------------------
-#  ### 荷兰（NL） -                                                    
-#  ### ----------------------------------------------------------------
-#
-#   - &RT_NL_Relay_00 { name : 'RT-00—[NL-Relay]—(荷兰中转节点)'   
-#   - &RT_NL_Relay_01 { name : 'RT-01—[NL-Relay]—(荷兰中转节点)'   
-#
-#  ### ----------------------------------------------------------------
-#  ### 德国（DE） -                                                    
-#  ### ----------------------------------------------------------------
-#
-#   - &RT_DE_Relay_00 { name : 'RT-00—[DE-Relay]—(德国中转节点)'   
-#   - &RT_DE_Relay_01 { name : 'RT-01—[DE-Relay]—(德国中转节点)'   
-
-
+ - &VPS_DE_Relay_RT_00  { name : 'VPS-[DE.Relay]-RT-00-(德国中转节点)'  
+ - &VPS_DE_Relay_RT_01  { name : 'VPS-[DE.Relay]-RT-01-(德国中转节点)'  
 
 ```
 
@@ -1418,16 +1400,16 @@ proxy-providers:
    
    >  ‼️ ‼️ 按上述 线路命名标准 举例 ‼️ ‼️ 
    >  
-   >  -  【 范例 1 】: PrxChain—[US.HomeIP]-RT-03--<<-JP.Relay 
+   >  -  【 范例 1 】: PrxChain-[US.HomeIP]-RT-03--<<-JP.Relay 
    >       - 美国住宅IP的代理链  
    >           - 【出口】落地节点 ： 美国住宅IP 、 Reality 协议 、 第3个端口   
    >           - 【入口】中转节点 ： 日本中转线路 
    >           - 【多级代理链】 ： 从右向左 =  从入口到出口 如 ： 出口 <<- 中转 3 <- 中转 2  <- 中转 1 ｜ 入口
    >
-   >  - 【 范例 2 】: VPS—[US-Relay]-H2-01
+   >  - 【 范例 2 】: VPS-[US-Relay]-H2-01
    >       - 美国中转节点 、 使用 Hysteria2 协议 、 第1个端口
    >
-   >  - 【 范例 3 】: VPS—[US.HomeIP]-H2-1133 
+   >  - 【 范例 3 】: VPS-[US.HomeIP]-H2-1133 
    >       - 美国住宅IP节点 + 使用 Hysteria2 协议 + 1133端口
    >  
 
@@ -1449,29 +1431,29 @@ proxy-providers:
 
    ``` yaml
       ### 筛选  代理链  
-       - { name : '🇺🇸🍟.Multi.PrxChain—[US.HomeIP]'               
-       - { name : '🇺🇸📍.Multi.PrxChain—[US.ShowIP]'               
-       - { name : '🇺🇸.Multi.PrxChain—[US]'                        
-       - { name : '🇯🇵.Multi.PrxChain—[JP]'                        
-       - { name : '🇬🇧.Multi.PrxChain—[UK]'                        
-       - { name : '🇦🇺.Multi.PrxChain—[AU]'                        
-       - { name : '🇹🇼.Multi.PrxChain—[TW]'                        
-       - { name : '🇸🇬.Multi.PrxChain—[SG]'                        
-      #- { name : '🇳🇱.Multi.PrxChain—[NL]'                        
-      #- { name : '🇩🇪.Multi.PrxChain—[DE]'                        
+       - { name : '🇺🇸🍟.Multi.PrxChain-[US.HomeIP]'               
+       - { name : '🇺🇸📍.Multi.PrxChain-[US.ShowIP]'               
+       - { name : '🇺🇸.Multi.PrxChain-[US]'                        
+       - { name : '🇯🇵.Multi.PrxChain-[JP]'                        
+       - { name : '🇬🇧.Multi.PrxChain-[UK]'                        
+       - { name : '🇦🇺.Multi.PrxChain-[AU]'                        
+       - { name : '🇹🇼.Multi.PrxChain-[TW]'                        
+       - { name : '🇸🇬.Multi.PrxChain-[SG]'                        
+      #- { name : '🇳🇱.Multi.PrxChain-[NL]'                        
+      #- { name : '🇩🇪.Multi.PrxChain-[DE]'                        
 
 
       #### 筛选  节点                                          
-       - { name : '🇺🇸🔰.VPS—[US.HomeIP]—(美国住宅节点)'       
-       - { name : '🇺🇸🔰.VPS—[US.ShowIP]—(归属地落地节点)'     
-       - { name : '🇺🇸🔰.VPS—[US-Relay]—(美国中转节点)'        
-       - { name : '🇯🇵🔰.VPS—[JP-Relay]—(日本中转节点)'        
-       - { name : '🇬🇧🔰.VPS—[UK-Relay]—(英国中转节点)'        
-       - { name : '🇦🇺🔰.VPS—[AU-Relay]—(澳洲中转节点)'        
-       - { name : '🇹🇼🔰.VPS—[TW-Realy]—(台湾中转节点)'        
-       - { name : '🇸🇬🔰.VPS—[SG-Realy]—(新加坡中转节点)'      
-      #- { name : '🇳🇱🔰.VPS—[NL-Relay]—(荷兰中转节点)'        
-      #- { name : '🇩🇪🔰.VPS—[DE-Realy]—(德国中转节点)'        
+       - { name : '🇺🇸🔰.VPS-[US.HomeIP]-(美国住宅节点)'       
+       - { name : '🇺🇸🔰.VPS-[US.ShowIP]-(归属地落地节点)'     
+       - { name : '🇺🇸🔰.VPS-[US-Relay]-(美国中转节点)'        
+       - { name : '🇯🇵🔰.VPS-[JP-Relay]-(日本中转节点)'        
+       - { name : '🇬🇧🔰.VPS-[UK-Relay]-(英国中转节点)'        
+       - { name : '🇦🇺🔰.VPS-[AU-Relay]-(澳洲中转节点)'        
+       - { name : '🇹🇼🔰.VPS-[TW-Realy]-(台湾中转节点)'        
+       - { name : '🇸🇬🔰.VPS-[SG-Realy]-(新加坡中转节点)'      
+      #- { name : '🇳🇱🔰.VPS-[NL-Relay]-(荷兰中转节点)'        
+      #- { name : '🇩🇪🔰.VPS-[DE-Realy]-(德国中转节点)'        
 
    ``` 
    
@@ -1551,7 +1533,7 @@ proxy-providers:
           
            ``` yaml
             - RULE-SET        , GFWList_Domain                             , 🚧.<GFWList>
-            - RULE-SET        , ChinaMax_Domain                            , 🇨🇳.<Country>—CN  
+            - RULE-SET        , ChinaMax_Domain                            , 🇨🇳.<Country>-CN  
             # 原因 ：默认白名单下，上述这些规则都是冗余规则。如果启用了，不会起到效果，反而可能会出错
            ```
 
@@ -1690,7 +1672,7 @@ If you don't understand how to use this template, please throw this template to 
 
 
 ```yaml
-    - { name : '🔰⚡.Line—[Relay.VPS]—Low.Latency'
+    - { name : '🔰⚡.Line-[Relay.VPS]-Low.Latency'
 ```
   
   -  因为 🇭🇰 香港IP ，在很多 🇺🇸 美国APP 中，会与 🇷🇺 俄罗斯、🇧🇾 白俄罗斯、🇮🇷 伊朗 、 🇨🇺古巴 等其他流氓国家的IP 待遇相同，被禁止连接。 而本模版中，很多国外APP会使用到上面这个代理集合，来优化访问速度，如果你在这里，填入香港节点，会导致有些对中港澳IP ，以及对 俄罗斯等其他流氓国家IP ，进行风封锁的APP无法使用。
@@ -1784,7 +1766,7 @@ If you don't understand how to use this template, please throw this template to 
 <br>
 
 
-If I am not a user in China—such as in 🇷🇺 Russia, 🇧🇾 Belarus, 🇮🇷 Iran, 🇰🇵 North Korea, 🇨🇺 Cuba, or the 🇰🇿 Central Asian countries—how should I modify the template?
+If I am not a user in China-such as in 🇷🇺 Russia, 🇧🇾 Belarus, 🇮🇷 Iran, 🇰🇵 North Korea, 🇨🇺 Cuba, or the 🇰🇿 Central Asian countries-how should I modify the template?
 
 If you are not located in China but instead in rogue countries like Russia, Iran, Belarus, North Korea, Cuba, or the Central Asian states, you can still give this template to ChatGPT Pro and ask it to modify it for you.The simplest method is:
 
@@ -2388,7 +2370,7 @@ PS：如果Stash已经兼容上述功能，而本模版尚未改进，希望也�
         “Geosite:XXX“ :
             - 'DOH链接#代理集合'  
             - 'DOH链接#代理集合'  
-     ```
+    ```
    
    所以导致了，不可接受的核心问题，在Stash上
         
