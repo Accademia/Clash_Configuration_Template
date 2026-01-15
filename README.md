@@ -708,86 +708,6 @@
 
 ------
 
-# 订阅链接：
-
-### 第一套 模版 ： 通用模版 + 白名单模式 （ 兼容 Clash Meta + Stash ）
-
-   - ### 订阅链接   :   [\[通用模版\]-WhiteList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-01.yaml) 
-   
-      > https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-01.yaml                         
-   
-   
-   - ### 订阅链接   :   [\[通用模版\]-WhiteList-02-Min.AntiAD.yamll](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-02-Min.AntiAD.yaml)    
-   
-      >   https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-02-Min.AntiAD.yaml
-   
-   
-   - ### 订阅链接   :   [\[通用模版\]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-03-Non.AntiAD.yaml)    
-                            
-      >   https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-03-Non.AntiAD.yaml
-
-<br>  
-
-### 第二套 模版 ： 移动端优化 + 白名单模版 （ 仅兼容 Clash Meta ）
-
-- ### 订阅链接   :   [[Mobile]-WhiteList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-01.yaml)                                                   
-                
-   >   https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-01.yaml
-
-
-- ### 订阅链接   :   [[Mobile]-WhiteList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-02-Min.AntiAD.yaml) 🔥🔥🔥      （  推荐 ）                                
-                    
-   >    https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-02-Min.AntiAD.yaml
-
-
-- ### 订阅链接   :   [[Mobile]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-03-Non.AntiAD.yaml) 🔥🔥🔥      （ 推荐 ）                                 
-       
-   >    https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-03-Non.AntiAD.yaml
-
-<br>  
-
-### 第三套 模版 ： 桌面端优化 + 白名单模版 （ 仅兼容 Clash Meta ）
-
-- ### 订阅链接   :   [[Desktop]-WhiteList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-01.yaml)                                                                 
-          
-   >    https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-01.yaml
-
-
-- ### 订阅链接   :   [[Desktop]-WhiteList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-02-Min.AntiAD.yaml)                                           
-          
-   >    https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-02-Min.AntiAD.yaml
-
-
-- ### 订阅链接   :  [[Desktop]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-03-Non.AntiAD.yaml)                                         
-                         
-   > https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-03-Non.AntiAD.yaml
-
-<br>   
-
-### 第四套 模版 ： 黑名单模版 （ 仅兼容 Clash Meta ）
-
-
-- ### 订阅链接   :   [BlackList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-01.yaml)                                                                                       
-                      
-   >  https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-01.yaml           
-
-
-- ### 订阅链接   :   [BlackList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-02-Min.AntiAD.yaml)                                                               
-                           
-   > https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-02-Min.AntiAD.yaml     
-
-
-- ### 订阅链接   :   [BlackList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-03-Non.AntiAD.yaml)                                                               
-           
-   > https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-03-Non.AntiAD.yaml       
-
-<br> 
-
-
-<br>
-<br>
-
-------
 
 
 # 规格说明
@@ -1242,87 +1162,87 @@ Stash for iOS 用户，需要等Stash客户端在DNS分流策略中支持 “Rul
 
 <br>
 
-本模版开箱即用，你只需要 在模版的源代码中，找到下面 6处  。将你的 VPN节点 配置到下面六处后，即可将本模版 导入到 Clash Meta 客户端 / Stash for iPhone ，开始 🌍 网上冲浪。
+### 开箱即用 的 订阅链接
+
+本模版开箱即用 你可以通过下载链接，将本模版直接 下载、导入 到你的 Clash Meta / Stash 软件中。
 
 
+#### 第一套 模版 ：兼容 Clash Meta / Stash + 白名单模式 
 
-```yaml 
+   - #### 订阅链接   :   [\[通用模版\]-WhiteList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-01.yaml) 
+   
+      > https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-01.yaml                         
+   
+   
+   - #### 订阅链接   :   [\[通用模版\]-WhiteList-02-Min.AntiAD.yamll](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-02-Min.AntiAD.yaml)    
+   
+      >   https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-02-Min.AntiAD.yaml
+   
+   
+   - #### 订阅链接   :   [\[通用模版\]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-03-Non.AntiAD.yaml)    
+                            
+      >   https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-03-Non.AntiAD.yaml
 
-###  在模版中， 需修改的 “VPN节点配置”
+<br>  
 
-### --------------------------------------------------------------------
-### 美国（US） -                                                        
-### --------------------------------------------------------------------
+#### 第二套 模版 ：仅兼容 Clash Meta + 白名单模版  +  手机 移动端优化
 
- - &VPS_US_HomeIP_RT_00 { name : 'VPS-[US.HomeIP]-RT-00-(美国住宅节点)' 
- - &VPS_US_HomeIP_RT_01 { name : 'VPS-[US.HomeIP]-RT-01-(美国住宅节点)' 
+- #### 订阅链接   :   [[Mobile]-WhiteList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-01.yaml)                                                   
+                
+   >   https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-01.yaml
 
-### --------------------------------------------------------------------
-### 美国（US） -                                                        
-### --------------------------------------------------------------------
 
- - &VPS_US_ShowIP_RT_00 { name : 'VPS-[US.ShowIP]-RT-00-(归属地落地节点)
- - &VPS_US_ShowIP_RT_01 { name : 'VPS-[US.ShowIP]-RT-01-(归属地落地节点)
+- #### 订阅链接   :   [[Mobile]-WhiteList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-02-Min.AntiAD.yaml) 🔥🔥🔥      （  推荐 ）                                
+                    
+   >    https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-02-Min.AntiAD.yaml
 
-### --------------------------------------------------------------------
-### 美国（US） -                                                        
-### --------------------------------------------------------------------
 
- - &VPS_US_Relay_RT_00  { name : 'VPS-[US.Relay]-RT-00-(美国中转节点)'  
- - &VPS_US_Relay_RT_01  { name : 'VPS-[US.Relay]-RT-01-(美国中转节点)'  
+- #### 订阅链接   :   [[Mobile]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-03-Non.AntiAD.yaml) 🔥🔥🔥      （ 推荐 ）                                 
+       
+   >    https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-03-Non.AntiAD.yaml
 
-### --------------------------------------------------------------------
-### 日本（JP） -                                                        
-### --------------------------------------------------------------------
+<br>  
 
- - &VPS_JP_Relay_RT_00  { name : 'VPS-[JP.Relay]-RT-00-(日本中转节点)'  
- - &VPS_JP_Relay_RT_01  { name : 'VPS-[JP.Relay]-RT-01-(日本中转节点)'  
+#### 第三套 模版 ： 仅兼容 Clash Meta + 白名单模版  +  💻 桌面端优化
 
-### --------------------------------------------------------------------
-### 英国（UK） -                                                        
-### --------------------------------------------------------------------
+- #### 订阅链接   :   [[Desktop]-WhiteList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-01.yaml)                                                                 
+          
+   >    https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-01.yaml
 
- - &VPS_UK_Relay_RT_00  { name : 'VPS-[UK.Relay]-RT-00-(英国中转节点)'  
- - &VPS_UK_Relay_RT_01  { name : 'VPS-[UK.Relay]-RT-01-(英国中转节点)'  
 
-### --------------------------------------------------------------------
-### 澳洲（AU） -                                                        
-### --------------------------------------------------------------------
+- #### 订阅链接   :   [[Desktop]-WhiteList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-02-Min.AntiAD.yaml)                                           
+          
+   >    https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-02-Min.AntiAD.yaml
 
- - &VPS_AU_Relay_RT_00  { name : 'VPS-[AU.Relay]-RT-00-(澳洲中转节点)'  
- - &VPS_AU_Relay_RT_01  { name : 'VPS-[AU.Relay]-RT-01-(澳洲中转节点)'  
 
-### --------------------------------------------------------------------
-### 台湾（TW） -                                                        
-### --------------------------------------------------------------------
+- #### 订阅链接   :  [[Desktop]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-03-Non.AntiAD.yaml)                                         
+                         
+   > https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-03-Non.AntiAD.yaml
 
- - &VPS_TW_Relay_RT_00  { name : 'VPS-[TW.Relay]-RT-00-(台湾中转节点)'  
- - &VPS_TW_Relay_RT_01  { name : 'VPS-[TW.Relay]-RT-01-(台湾中转节点)'  
+<br>   
 
-### --------------------------------------------------------------------
-### 新加坡（SG） -                                                      
-### --------------------------------------------------------------------
+#### 第四套 模版 ： 仅兼容 Clash Meta + 黑名单模版  
 
- - &VPS_SG_Relay_RT_00  { name : 'VPS-[SG.Relay]-RT-00-(新加坡中转节点)'
- - &VPS_SG_Relay_RT_01  { name : 'VPS-[SG.Relay]-RT-01-(新加坡中转节点)'
 
-### --------------------------------------------------------------------
-### 荷兰（NL） -                                                        
-### --------------------------------------------------------------------
+- #### 订阅链接   :   [BlackList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-01.yaml)                                                                                       
+                      
+   >  https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-01.yaml           
 
- - &VPS_NL_Relay_RT_00  { name : 'VPS-[NL.Relay]-RT-00-(荷兰中转节点)'  
- - &VPS_NL_Relay_RT_01  { name : 'VPS-[NL.Relay]-RT-01-(荷兰中转节点)'  
 
-### --------------------------------------------------------------------
-### 德国（DE） -                                                        
-### --------------------------------------------------------------------
+- #### 订阅链接   :   [BlackList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-02-Min.AntiAD.yaml)                                                               
+                           
+   > https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-02-Min.AntiAD.yaml     
 
- - &VPS_DE_Relay_RT_00  { name : 'VPS-[DE.Relay]-RT-00-(德国中转节点)'  
- - &VPS_DE_Relay_RT_01  { name : 'VPS-[DE.Relay]-RT-01-(德国中转节点)'  
 
-```
+- #### 订阅链接   :   [BlackList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-03-Non.AntiAD.yaml)                                                               
+           
+   > https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-03-Non.AntiAD.yaml       
 
-PS：导入后，如果觉得 “选项过多” ，可以 通过以下开关，使界面清爽
+
+<br>
+
+
+注意，：本模版导入后，如果觉得 “选项过多” ，可以 通过以下开关，使界面清爽
   >``` yaml
   >  hidden : false
   >  # 替换成
@@ -1330,6 +1250,7 @@ PS：导入后，如果觉得 “选项过多” ，可以 通过以下开关，
   >```
   
 <br> 
+<br>
 
 ### 🟩🟩🟩🟩  建议步骤（ 如何导入 订阅节点 ）🟩🟩🟩🟩
 
@@ -1468,7 +1389,84 @@ proxy-providers:
   
   - ### 🟩 第一步： 只验证一个节点
     
-    > 首次验证时，只使用一个VPN节点，将配置信息，复制到以上8个节点中对应位置（注意，只做填空，不要修改节点的name 。观察 ：是否能跑通（ = 能否在Clash Verge Rev / Stash 中 测出延迟 ）
+    > 首次验证时，只使用一个VPN节点，将配置信息，复制到以下8个节点中的所有位置（注意，只做填空，不要修改节点的name 。观察 ：是否能跑通（ = 能否在Clash Verge Rev / Stash 中 测出延迟 ）
+
+
+    ```yaml 
+    
+    ###  在模版中， 需修改的 “VPN节点配置”
+    
+    ### --------------------------------------------------------------------
+    ### 美国（US） -                                                        
+    ### --------------------------------------------------------------------
+    
+     - &VPS_US_HomeIP_RT_00 { name : 'VPS-[US.HomeIP]-RT-00-(美国住宅节点)' 
+     - &VPS_US_HomeIP_RT_01 { name : 'VPS-[US.HomeIP]-RT-01-(美国住宅节点)' 
+    
+    ### --------------------------------------------------------------------
+    ### 美国（US） -                                                        
+    ### --------------------------------------------------------------------
+    
+     - &VPS_US_ShowIP_RT_00 { name : 'VPS-[US.ShowIP]-RT-00-(归属地落地节点)
+     - &VPS_US_ShowIP_RT_01 { name : 'VPS-[US.ShowIP]-RT-01-(归属地落地节点)
+    
+    ### --------------------------------------------------------------------
+    ### 美国（US） -                                                        
+    ### --------------------------------------------------------------------
+    
+     - &VPS_US_Relay_RT_00  { name : 'VPS-[US.Relay]-RT-00-(美国中转节点)'  
+     - &VPS_US_Relay_RT_01  { name : 'VPS-[US.Relay]-RT-01-(美国中转节点)'  
+    
+    ### --------------------------------------------------------------------
+    ### 日本（JP） -                                                        
+    ### --------------------------------------------------------------------
+    
+     - &VPS_JP_Relay_RT_00  { name : 'VPS-[JP.Relay]-RT-00-(日本中转节点)'  
+     - &VPS_JP_Relay_RT_01  { name : 'VPS-[JP.Relay]-RT-01-(日本中转节点)'  
+    
+    ### --------------------------------------------------------------------
+    ### 英国（UK） -                                                        
+    ### --------------------------------------------------------------------
+    
+     - &VPS_UK_Relay_RT_00  { name : 'VPS-[UK.Relay]-RT-00-(英国中转节点)'  
+     - &VPS_UK_Relay_RT_01  { name : 'VPS-[UK.Relay]-RT-01-(英国中转节点)'  
+    
+    ### --------------------------------------------------------------------
+    ### 澳洲（AU） -                                                        
+    ### --------------------------------------------------------------------
+    
+     - &VPS_AU_Relay_RT_00  { name : 'VPS-[AU.Relay]-RT-00-(澳洲中转节点)'  
+     - &VPS_AU_Relay_RT_01  { name : 'VPS-[AU.Relay]-RT-01-(澳洲中转节点)'  
+    
+    ### --------------------------------------------------------------------
+    ### 台湾（TW） -                                                        
+    ### --------------------------------------------------------------------
+    
+     - &VPS_TW_Relay_RT_00  { name : 'VPS-[TW.Relay]-RT-00-(台湾中转节点)'  
+     - &VPS_TW_Relay_RT_01  { name : 'VPS-[TW.Relay]-RT-01-(台湾中转节点)'  
+    
+    ### --------------------------------------------------------------------
+    ### 新加坡（SG） -                                                      
+    ### --------------------------------------------------------------------
+    
+     - &VPS_SG_Relay_RT_00  { name : 'VPS-[SG.Relay]-RT-00-(新加坡中转节点)'
+     - &VPS_SG_Relay_RT_01  { name : 'VPS-[SG.Relay]-RT-01-(新加坡中转节点)'
+    
+    ### --------------------------------------------------------------------
+    ### 荷兰（NL） -                                                        
+    ### --------------------------------------------------------------------
+    
+     - &VPS_NL_Relay_RT_00  { name : 'VPS-[NL.Relay]-RT-00-(荷兰中转节点)'  
+     - &VPS_NL_Relay_RT_01  { name : 'VPS-[NL.Relay]-RT-01-(荷兰中转节点)'  
+    
+    ### --------------------------------------------------------------------
+    ### 德国（DE） -                                                        
+    ### --------------------------------------------------------------------
+    
+     - &VPS_DE_Relay_RT_00  { name : 'VPS-[DE.Relay]-RT-00-(德国中转节点)'  
+     - &VPS_DE_Relay_RT_01  { name : 'VPS-[DE.Relay]-RT-01-(德国中转节点)'  
+    
+   ```
 
     <br> 
     
