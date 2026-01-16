@@ -890,7 +890,7 @@
 
 <br>
 
-### 前置步骤：开箱即用 的 订阅链接
+### 第一阶段 ：在VPN软件中，导入 本模版的 订阅链接 
 
 本模版开箱即用 你可以通过 如下 订阅链接，将本模版直接 下载+导入 到你的 Clash Meta / Stash 软件中。（建议订阅的模版，已经用🔥标注出来了）
 
@@ -920,12 +920,12 @@
    >   https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-01.yaml
 
 
-- #### 订阅链接   :   [[Mobile]-WhiteList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-02-Min.AntiAD.yaml) 🔥🔥🔥      （  推荐 ）                                
+- #### 订阅链接   :   [[Mobile]-WhiteList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-02-Min.AntiAD.yaml) 🔥🔥🔥🔥🔥      （ 推荐，手机 ）                                
                     
    >    https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-02-Min.AntiAD.yaml
 
 
-- #### 订阅链接   :   [[Mobile]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-03-Non.AntiAD.yaml) 🔥🔥🔥      （ 推荐 ）                                 
+- #### 订阅链接   :   [[Mobile]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-03-Non.AntiAD.yaml) 🔥🔥🔥🔥🔥      （ 推荐，电脑 ）                                 
        
    >    https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-03-Non.AntiAD.yaml
 
@@ -943,7 +943,7 @@
    >    https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-02-Min.AntiAD.yaml
 
 
-- #### 订阅链接   :  [[Desktop]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-03-Non.AntiAD.yaml)                                         
+- #### 订阅链接   :  [[Desktop]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-03-Non.AntiAD.yaml)  🔥    （ 备选，电脑 ）                                    
                          
    > https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-03-Non.AntiAD.yaml
 
@@ -982,19 +982,20 @@
 
   当上述导入完成后，下面 你就可以开始配置模版。
 
-   - 将自己购买的机场订阅，添加进本模版
+   - 第二阶段 ：将自己购买的 “机场订阅” ，添加进 本模版
 
-   - 将自己搭建的的私有节点，添加进本模版
+   - 第三阶段 ：将自己搭建的的 “私有节点” ，添加进 本模版
 
 
 <br> 
 <br>
 
-### 🟩🟩🟩🟩  建议步骤（ 如何导入 订阅节点 ）🟩🟩🟩🟩
+### 🟩🟩🟩🟩  第二阶段： 如何导入 订阅节点 🟩🟩🟩🟩
 
 <br> 
 
  订阅节点 的 导入，请查找模版中，如下代码 ： 
+  > 通用模版 ：🈚️🈚️ 无 订阅功能 ！
  
  ``` yaml
 proxy-providers:
@@ -1010,13 +1011,9 @@ proxy-providers:
 
 #### 为什么填入订阅信息后，代理组 没有识别出来（或没有识别全）订阅的节点？
 
-1. ##### 通用模版 ：🈚️🈚️ 无 订阅功能 ！
+  ##### Clash模版 ：需要定制过滤器，来适配你机场的节点命名风味！
 
-   由于，通用模版 要适配Stash，而Stash却少一些关键的特性。特别是 其过滤器中 没有 “排除关键词” 的功能，所以通用模版，没有适配订阅节点。
-
-2. ##### Clash模版 ：需要定制过滤器，来适配你机场的节点命名风味！
-
-   由于每一家机场，对节点命名规则不同，所以，需要针对每家机场进行适配（而且这些命名往往是冲突的）。
+   由于每一家机场，对节点命名规则不同，所以，需要针对每家机场进行适配，即，针对每家机场定制过滤器（很多机场之间，其命名往往是冲突的）
    
    > -  如果你自己不会改 “过滤器”，你可以问机场主，要他们家机场的filter表达式。或者让机场主 帮你修改本模版，毕竟 🤮🤮🤮🤮  丫收了你钱，丫必须得干活，不然丫吃相太难看了 🤮🤮🤮🤮 。
    >
@@ -1024,7 +1021,7 @@ proxy-providers:
    > 
    > - 当然，如果有适配性更好的表达式 ，也欢迎贴在issue中。（注意，不跟现在的规则冲突。当前过滤器表达式，主要面向本模版内置的自建节点。必须保证存量功能的完整性。其实，我是不建议 任何订阅，作为落地节点，那些都是 “癌症级IP” ，纯废物 ）。
 
-   #### ⚠️⚠️⚠️⚠️⚠️ 本模版自己的命名规则  ⚠️⚠️⚠️⚠️⚠️
+   #### ⚠️⚠️⚠️⚠️⚠️ 本模版中的 “内置过滤器” ，其适配的 “命名规则”  ⚠️⚠️⚠️⚠️⚠️
     
    >  ▶ ▶ ▶  线路结构  ◀ ◀ ◀
    >      
@@ -1121,7 +1118,7 @@ proxy-providers:
 <br>
 <br> 
 
-### 🟩🟩🟩🟩  建议步骤（ 如何导入 自建节点 ） 🟩🟩🟩🟩
+### 🟩🟩🟩🟩  第三阶段：如何导入 自建节点  🟩🟩🟩🟩
 
 <br> 
   
