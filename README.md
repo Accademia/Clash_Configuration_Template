@@ -716,7 +716,7 @@
 
 四套模版 ，分别对应四大场景：
   
-  >   通用模版  === 白名单 + 兼容 Stash \ Clash Meta （派生出其他模版）
+  >   通用模版  === 白名单 + 兼容 Stash \ Clash Meta （此模版，派生出，以下三个模版）
 
   >  - 📱 Mobile    === 白名单 + 只兼容 Clash Meta + 移动端优化
 
@@ -727,110 +727,36 @@
 <br>
 <br>
 
-### 1.   第一套模版 ： [通用模版] + 白名单模版  （ 同时兼容 Stash \ Clash Meta ）  
 
 
-|  基础模版  🏳️ 白名单  | 总规则数 | RuleSet规则数 | GeoSite规则数 |
-|---|---|---|---|
-| [[通用模版]-WhiteList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[通用模版]-WhiteList-01.yaml)  | 12.5 万条 |  9.8 万条 | 2.7 万条 | 
-| [[通用模版]-WhiteList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[通用模版]-WhiteList-02-Min.AntiAD.yaml) | 1.9 万条  | 1.2 万条 | 0.7 万条 | 
-| [[通用模版]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[通用模版]-WhiteList-03-Non.AntiAD.yaml) | 1.7 万条 | 1.2 万条 | 0.5 万条|
+ ### 以下表格，只体现 “差异项”
 
-  - #### 模版 01 ：[通用模版]-WhiteList-01.yaml  
-    
-    > 最大特色：
-    >
-    >  - 防护方面最全面 = 3万条反广告 + 4万条隐私保护 （ 基于EasyPrivacy ）
-    >
-      
+ > 建议 “每一列 竖向对比” 寻找差异
 
-  - #### 模版 02 ：[通用模版]-WhiteList-02-Min.AntiAD.yaml 
-    
-     > 从 模版 01 中，阉割 了哪些 规则、功能 ？ 
-     >
-     >    + 缩减  “屏蔽广告 + 隐私保护” ：从7.7万条 精简到 1500 条（ 基于Geosite ）
-     > 
-     >    + 缩减 “成人网站” ：从 1.3万 精简到 仅十几条（ 成人站中 99.99%规则 是用不到的 ）
-     
-
-   - #### 模版 03 ：[通用模版]-WhiteList-03-Non.AntiAD.yaml 
-     
-     > 从 模版 02 中，阉割 了哪些 规则、功能 ？ 
-     >
-     >    + 删除了所有的 “屏蔽广告 + 隐私保护” 
-
-   - ⚠️ 注意： 后面的所有模版，都是通过在上述三个模版 ，进行 剪裁、阉割 ，从而得到的。
-
-<br>
-<br>
-
-### 2.  第二套模版 ： 移动端 + 白名单模版 ：专属 Clash Meta模版 
-
-  #### 注意：以下所有模版，都是，通过对 上述《通用模版》进行进一步 裁剪、阉割，从而得到的 （ = 极少的新功能 ）。三套模版的关系，与通用模版一一对应。只从模版中删除了 Stash兼容，变成了 只适配 Clash Meta内核 客户端。
-  
-  #### 注意：本移动端模版的规则数量，与 “通用模版” 0 差异。 （以便 适配 “移动端” ：优化功耗。极致省电 🔥 ）
-
-<br>
-
-|  适配手机 📱 📱 📱 🏳️ 白名单  | 总规则数 | RuleSet规则数 | GeoSite规则数 |
-|---|---|---|---|
-| [[Mobile]-WhiteList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-01.yaml)  | 12.5 万条 |  9.8 万条 | 2.7 万条 | 
-| [[Mobile]-WhiteList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-02-Min.AntiAD.yaml) 🔥🔥🔥   | 1.9 万条  | 1.2 万条 | 0.7 万条 | 
-| [[Mobile]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-03-Non.AntiAD.yaml) 🔥🔥🔥   | 1.7 万条 | 1.2 万条 | 0.5 万条 |
-
-<br>
-<br>
-
-### 3.  第三套模版 ：桌面端 + 白名单模版 （ 只兼容 Clash Meta ） 
-
-#### 注意：本模版启用了 上述所有模版，都未启用的 ChinaMax规则 + GFWlist规则 （ 10万条 + 0.7万条 ）， 用以加强 🇨🇳中国分流，避免国内流量绕路到海外。 
-
-#### 强烈建议： [Desktop] 本系列所有模版，只在电脑端使用，其 内存消耗、算力消耗，并不适用 手机。（ 性能强大的软路由除外 ）
-
-<br>
-
-|  适配电脑 💻 💻 💻  🏳️ 白名单   | 总规则数 | RuleSet规则数 | GeoSite规则数 |
-|---|---|---|---|
-| [[Desktop]-WhiteList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-01.yaml)  | 23万条 |  20.3 万条 | 2.7 万条 | 
-| [[Desktop]-WhiteList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-02-Min.AntiAD.yaml) | 12.4 万条  | 11.7 万条 | 0.7 万条 | 
-| [[Desktop]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-03-Non.AntiAD.yaml) 👌 | 12.2 万条 | 11.7 万条 | 0.5 万条 |
+| 差异表    |   ?名单    |  面向    | 总计  \(万条\)    | 兼容 Stash |      广告 \(万\)  |  隐私 \(万\)  |   成人  \(万\)   | GFWlist \(万\)   |  ChinaMax \(万\)  | 
+|-----------|-----------|------------|-----------|-----------|------------|-----------|-----------|-----------|-----------|       
+| [\[通用模版\]-WhiteList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-01.yaml)                                  |     白     |            |     12.5   |      ✅   |    3     |     4        |     1.3    |      🚫      |   🚫      |      
+| [\[通用模版\]-WhiteList-02-Min.AntiAD.yamll](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-02-Min.AntiAD.yaml)   🔥      |    白      |           |     1.9    |      ✅   |  0.15    |      ❌       |    🔞  |       🚫     |    🚫      |    
+| [\[通用模版\]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-03-Non.AntiAD.yaml)  🔥        |     白     |            |     1.7    |      ✅   |  ❌     |      ❌      |    🔞  |       🚫     |    🚫      |    
+|           |            |         |          |         |         |          |           |      
+| [[Mobile]-WhiteList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-01.yaml)                                                                        |     白     |     📱     |    12.5    |     🛑    |     3     |     4        |    1.3   |      🚫   |    🚫      |    
+| [[Mobile]-WhiteList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-02-Min.AntiAD.yaml) 🔥🔥🔥                                           |     白     |     📱     |    1.9     |    🛑    |  0.15    |      ❌       |  🔞    |      🚫   |    🚫      |     
+| [[Mobile]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-03-Non.AntiAD.yaml) 🔥🔥🔥                                           |     白     |     📱     |    1.7     |    🛑    |  ❌    |      ❌       |  🔞    |      🚫   |    🚫      |     
+|           |            |         |          |         |         |          |           |     
+| [[Desktop]-WhiteList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-01.yaml)                                                                      |     白     |     💻     |    23     |     🛑    |    3     |     4        |         1.3    |     0.7       |   10    |       
+| [[Desktop]-WhiteList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-02-Min.AntiAD.yaml)                                                |     白     |     💻     |    12.4    |    🛑    |  0.15    |      ❌       |   🔞   |      0.7      |   10      |    
+| [[Desktop]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-03-Non.AntiAD.yaml) 👌                                             |     白     |     💻     |    12.2    |    🛑    |  ❌   |      ❌       |   🔞   |      0.7      |   10      |    
+|           |            |         |          |         |         |          |           |        
+| [BlackList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-01.yaml)                                                                                          |    黑名单  |             |    13.2    |  🛑    |     3     |     4        |        1.3    |     0.7       |    🚫      | 
+| [BlackList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-02-Min.AntiAD.yaml)                                                                    |    黑名单  |             |    2.6     |  🛑    |  0.15    |      ❌       |   🔞    |      0.7      |    🚫      |    
+| [BlackList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-03-Non.AntiAD.yaml)                                                                    |    黑名单  |             |    2.4     |  🛑    |  ❌   |      ❌       |   🔞    |      0.7      |    🚫      |    
 
 
-<br>
-<br>
+> 黑名单模版 ，同时适合移动端的桌面端。其潜在风险 ：市面上所有黑名单模版，100%都会造成DNS泄漏。只有白名单能解决此问题 。（轻度用户可无视此问题 ）
 
-### 第四套模版 ： 纯 黑名单模版 （ 只兼容 Clash Meta ） 
-
-#### 注意：与 通用模版比，在 兜底规则前，启用了 GFWlist规则 （7000条） （未启用ChinaMax ），用于在黑名单模式下，增强突破GFW的能力。此模版同时适配 ，手机端 + 电脑端 。
-
-#### 目标人群 ：此模版，为流量不多的人准备 ，以及为轻度翻墙用户准备。
-
-#### 潜在风险 ：市面上所有黑名单模版，100%都会造成DNS泄漏。只有白名单能解决此问题 。（轻度用户可无视此问题 ）
-
-<br>
-
-|  手机、电脑  🏴 黑名单 | 总规则数 | RuleSet规则数 | GeoSite规则数 |
-|---|---|---|---|
-| [BlackList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-01.yaml)  | 13.2 万条 |  10.5 万条 | 2.7 万条 | 
-| [BlackList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-02-Min.AntiAD.yaml)  | 2.6 万条  | 1.9 万条 | 0.7 万条 | 
-| [BlackList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-03-Non.AntiAD.yaml) | 2.4 万条 | 1.9 万条 | 0.5 万条 |
+>  [Desktop] 系列模版，建议只电脑端使用，其 内存消耗、算力消耗，并不适用 手机。（ 性能强大的软路由除外 ）
 
 
-<br>
-
-### 如何使用 上述模版 ？
-
- - #### \[通用模版\] ： 同时适配 Stash / Clash Meta 
-   
-   > 不仅要填入节点，还需必须要 按照 [《 如何将 VPN节点，加入到本模版，并导入VPN软件 》](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#%E5%A6%82%E4%BD%95-%E4%BD%BF%E7%94%A8%E6%9C%AC%E6%A8%A1%E7%89%88-%E5%A6%82%E4%BD%95%E5%B0%86-vpn%E8%8A%82%E7%82%B9%E5%8A%A0%E5%85%A5%E5%88%B0%E6%9C%AC%E6%A8%A1%E7%89%88%E5%B9%B6%E5%AF%BC%E5%85%A5vpn%E8%BD%AF%E4%BB%B6) 进行 五个步骤的 手工配置，才能使用。 
-
-- #### \[Mobile\] + \[Desktop\]  +  黑名单模版 ： 纯 Clash Meta 模版  
-     
-    > 只需 填入节点 ，即可使用 （ [配置教程](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#%E5%A6%82%E4%BD%95-%E4%BD%BF%E7%94%A8%E6%9C%AC%E6%A8%A1%E7%89%88-%E5%A6%82%E4%BD%95%E5%B0%86-vpn%E8%8A%82%E7%82%B9%E5%8A%A0%E5%85%A5%E5%88%B0%E6%9C%AC%E6%A8%A1%E7%89%88%E5%B9%B6%E5%AF%BC%E5%85%A5vpn%E8%BD%AF%E4%BB%B6) ）
-    >
-
-
-<br>
 
 
 <br>
@@ -838,7 +764,7 @@
 
 ------
 
-#  所有模版 ，选哪一个？
+#  上述所有模版 ，选哪一个？
 
 <br>
 
@@ -846,16 +772,16 @@
  
    - #### 首选 :  ✅ [\[手机\]-WhiteList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-02-Min.AntiAD.yaml) ✅
      
-     > 规则数量 ：1.2 万条
+     > (RuleSet) 规则数量 ：1.2 万条
      > 
      > 入选理由：🔥🔥🔥 超级省电 🔥🔥🔥
  
 
    - #### 为什么不选 01 模版？
      > 
-     > “模版 01” 虽然更全面，但是在手机会极大消耗电力（规则数量膨胀了10倍），续航➗2。
+     > “模版 01” (12万条规则) 虽然更全面，但是在手机会极大消耗电力（规则数量膨胀了10倍），续航➗2。
      >
-     > “模版 02” 已经可以屏蔽90%的广告，并且电力消耗 与 “模版 03”（无反广告 无反隐私泄漏）基本持平。
+     > “模版 02”（1.2万条规则），将广告规则和成人规则，从8.3下降到1500条。即，用10%的规则数量，已经可以屏蔽90%的广告，是绝对超值的。并且电力消耗 与 “模版 03”（无反广告 无反隐私泄漏）基本持平。
     
      总结：在手机，每次网络请求都要匹配10万条规则，是完全没有必要的🤣🤣。纯粹是冤大头！！！ 用1500条规则的反广告就可以解决90%广告问题，从而换来，一倍以上的续航提升，是非常值得的。（而且iOS还有50MB网络内存限制。为了避免网络内存因过载而崩溃，在规则上做“减法”，也是最佳选择 ）
     
@@ -893,136 +819,28 @@
 <br>
 <br>
 
-
- ### 以下表格，只体现 “差异项”
-
- > 建议 “每一列 竖向对比” 寻找差异
-
-| 差异表    |   名单 模式    | 总计  \(万条\)    | 兼容 Stash |      广告 \(万\)  |  隐私 \(万\)  |   成人  \(万\)   | GFWlist \(万\)   |  ChinaMax \(万\)  | 
-|-----------|-----------|------------|-----------|-----------|------------|-----------|-----------|-----------|       
-| [\[通用模版\]-WhiteList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-01.yaml)                                  |     白     |     12.5   |      ✅   |    3     |     4        |     1.3    |      🚫      |   🚫      |      
-| [\[通用模版\]-WhiteList-02-Min.AntiAD.yamll](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-02-Min.AntiAD.yaml)   🔥        |  白     |     1.9    |      ✅   |  0.15    |      ❌       |    🔞  |       🚫     |    🚫      |    
-| [\[通用模版\]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-03-Non.AntiAD.yaml)  🔥          |   白     |     1.7    |      ✅   |  ❌     |      ❌      |    🔞  |       🚫     |    🚫      |    
-|           |            |         |          |         |         |          |           |      
-| [[Mobile]-WhiteList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-01.yaml)                                                                         |     白    |    12.5    |     🛑    |     3     |     4        |    1.3   |      🚫   |    🚫      |    
-| [[Mobile]-WhiteList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-02-Min.AntiAD.yaml) 🔥🔥🔥                                            |     白    |    1.9     |    🛑    |  0.15    |      ❌       |  🔞    |      🚫   |    🚫      |     
-| [[Mobile]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-03-Non.AntiAD.yaml) 🔥🔥🔥                                            |     白    |    1.7     |    🛑    |  ❌    |      ❌       |  🔞    |      🚫   |    🚫      |     
-|           |            |         |          |         |         |          |           |     
-| [[Desktop]-WhiteList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-01.yaml)                                                                       |     白    |    23     |     🛑    |    3     |     4        |         1.3    |     0.7       |   10    |       
-| [[Desktop]-WhiteList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-02-Min.AntiAD.yaml)                                                 |     白    |    12.4    |    🛑    |  0.15    |      ❌       |   🔞   |      0.7      |   10      |    
-| [[Desktop]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-03-Non.AntiAD.yaml) 👌                                              |     白    |    12.2    |    🛑    |  ❌   |      ❌       |   🔞   |      0.7      |   10      |    
-|           |            |         |          |         |         |          |           |        
-| [BlackList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-01.yaml)                                                                                          |   🏴 黑      |    13.2    |  🛑    |     3     |     4        |        1.3    |     0.7       |    🚫      | 
-| [BlackList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-02-Min.AntiAD.yaml)                                                                    |   🏴 黑      |    2.6     |  🛑    |  0.15    |      ❌       |   🔞    |      0.7      |    🚫      |    
-| [BlackList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-03-Non.AntiAD.yaml)                                                                    |   🏴 黑      |    2.4     |  🛑    |  ❌   |      ❌       |   🔞    |      0.7      |    🚫      |    
-
-
-<br>
-<br>
-<br>
-
-
 ------
 
-#  本模版，是 “黑名单模式” ？ 还是 “白名单模式” ？
+#  为什么不推荐 “黑名单模版”  ❓  “白名单模版” or “白名单模版” ，哪个好   ❓
 
 <br>
 
-### 翻墙模式 ？
+   ### 两种模式 的 区别 ：
 
- - WhiteList  ：只支持 白名单模式 ❕ 🔥 （ 推荐使用 ！ ）
+   > - 黑名单模式 ：没有分流选项的 海外流量 = 直连
 
- - BlackList : 只支持 黑名单模式 ❕
-
- - 通用模版 ：只支持 白名单模式 ❕
+   > - 白名单模式 ：没有分流选项的 海外流量 = 走VPN代理
 
 
 <br>
-<br>
 
-------
-
-#  本模版，访问 “🇨🇳中国网站” 时 ， 会不会 “绕路” 到海外 ？ 导致 大量消耗VPN流量 ？
-
-<br>
-
-### 💥 几乎不会❕❕❕
-
-<br>
-
-
- -  通过识别 🇨🇳 中国IP ： 让99.99% 中国网站 =  🇨🇳 国内直连  
-
- 
-<br>
-
- -  白名单模式下，为了避免，过量消耗VPN出镜流量。本模版，对🇨🇳中国友好 的国际大厂，默认直连模式（但是，其 AI服务、搜索服务、虚拟机云服务、社交服务 除外），包括
-
-    |  |  | 
-    |---|---|
-    | 苹果 | 不包含 ：AI | 
-    | 微软 | 不包含 ：AI 、搜索 、Auzra云服务、Linkedin、Github | 
-    | 索尼 | 仅 Playstation | 
-    | 任天堂 |  | 
-    | WeChat |  | 
-    
-    注意， 挑选上述国际大厂的特定服务，允许直连国外，不仅仅因为，避免VPN流量 被过度消耗。还因为，必须释放一些正常海外流量给GFW，让GFW忙起来。不然，如果你连接到海外的所有流量中，除了纯VPN流量，其他海外流量都是0 。那特征太明显、太假了😂。 而这 四个国际大厂 + WeChat，正好是都用是100%正常流量，且系统更新、APP更新、游戏更新的流量消耗 都非常大，而且还有众多海外CDN、国内CDN节点 （ WeChat服务器在🇸🇬新加坡，并没有在🇨🇳中国境内 ），非常适合用于 让自己翻墙的 “白名单特征” 不那么明显 ，从而达到 “明修栈道” 的效果 🤣 
-
-<br>
- 
- - ### 用户体验：
- 
-    我本人已经使用本模版 > 1年 ，自用 IPhone > 1000个国内外APP。样本已经比较充足了。体验 = 完全无感。只会在极个别、极个别、极个别 的情况出现问题，但是也完全无感，只有看了后台之后，才能发现。而且这种下，其链接的消耗流量都极低到忽略不计。
-
-<br>
- 
-- ### 冷门域名，发生了绕路，怎么办？
-     
-     - 方法 1 : 请跳至文章末尾的 [如下章节](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#%E6%9C%AC%E6%A8%A1%E7%89%88%E5%86%85-%E5%B0%8F%E8%80%8C%E7%B2%BE%E5%87%86%E7%9A%84-geositecn--geoipcn-%E7%9C%9F%E4%B8%8D%E8%83%BD%E6%BB%A1%E8%B6%B3-%E6%88%91%E7%9A%84%E5%9C%BA%E6%99%AF%E9%9C%80%E6%B1%82%E6%80%8E%E4%B9%88%E5%8A%9E) 
-
-     - 方法 2 ：使用 第三套模版 ：\[Desktop\] 模版。桌面级模版，额外 又包含了9.8万条 中国分流规则 （ ChinaMax分流规则 ） ，用来查缺补漏，从而最大化避免中国流量 绕路海外。（仅建议 PC、Mac 、软路由 使用， 如果电池供电设备，不建议用，这会导致 规则数量 x10倍，会导致过于耗电 ）
-
-<br>
-<br>
-
-
-<br>
-<br>
-
-------
-
-#  本模版 访问 “🌍海外网站” 时 ， 会不会 “跨国绕路” ？ 比如 是否会出现 “ 美国落地节点 去 访问日本CDN ” 的情况 ？
-
-<br>
-
-|---| 客户端 |---|
-|---|---|---|
-| ✅ | Clash Meta 内核  | 100% 不会❕❕❕| 
-| ❌ | Stash for iOS  | 极大概率 会绕路 | 
-
-<br>
-
-由于，本模版的 “DNS分流策略（nameserver-policy）”  和  “分流规则（rule）” ，两者是 1:1 互为镜像的。使得本模版，可以100%避免，如 “美国落地节点 去 访问日本CDN” 的情况 ❕ （⚠️注意，此功能为Clash Meta内核独占功能）
-
-在 [Desktop] \ [Mobile] \ BleckList 模版中，此功能默认启用，但是，在 [通用模版] 中，为了保证本模版在iOS、Android、Win、Mac之间的通用性，所以，此功能默认关闭。
-
-Stash for iOS 用户，需要等Stash客户端在DNS分流策略中支持 “Rule-Set” 和 “代理集合” 这两个功能后，才能支持。 本人已经向 Stash开发组 提交过多次反馈。而针对此问题，开发组压根 0反馈 、0回复。🤣🤣🤣 100% 纯血版 已读不回 ～
-
-<br>
-<br>
-
-------
-
-
-#  为什么 本模版 不推荐 “黑名单模式”   ❓
-
-<br>
-
-想要 **“跨洋体验 = 本地网络”** ，100% 必须白名单❕
- 
- - ✅ “富帅” = 闭眼白名单❕
+### ▶ 黑名单的核心优势 ： 节约流量 ！（适合轻度用户）
  
  - ❌  “穷哥们” = 没钱买优质线路 ，才会选 黑名单 🤣 
+
+### ▶ 白名单的核心优势 ： 想要 **“跨洋体验 = 本地网络”** ，100% 必须白名单❕
+ 
+ - ✅ “富帅” = 闭眼白名单❕
 <br>
 <br>
 
@@ -1032,13 +850,11 @@ Stash for iOS 用户，需要等Stash客户端在DNS分流策略中支持 “Rul
      
      > 跨洋连接时，优质线路 = 花钱加塞 ！！！ 手机直连 🇺🇸美国网站，远远没有通过 “优质9929或CN2线路” 进行中转加速快。尤其是晚高峰，优质线路可以到 60 MByte/s, 而 直连 估计连 6 MByte/s可能都保证不了。还会有抖动。
      
-<br>
 
 - ###  理由 2 ：白名单 = 足够省心❕ ❤️❤️❤️
      
      > 黑名单 可能会三天两头 补充规则，不胜其烦。
 
-<br>
 
 - ###  理由 3 ：白名单 = 私密性高❕ 🫥🫥🫥🫥🫥
      
@@ -1046,114 +862,25 @@ Stash for iOS 用户，需要等Stash客户端在DNS分流策略中支持 “Rul
      
      > 高私密性的VPN都是白名单。不仅仅在中国，即便是在🇺🇸美国， 美国上市公司，像诺顿、麦咖啡 这些美国顶级杀毒软件公司，在零售市场主推的VPN，也都是白名单VPN。其主要营收，早已不是杀毒软件了，而是白名单VPN、全局VPN，核心卖点就是，基于VPN保护自己网络安全，尤其是私密性，防止被第三方深度包检测 或 防止被检测到自己的网络位置。可以认为，卖点是基于VPN加速的安全通道（或称之为 基于VPN的防火墙）
  
-<br>
 
 - ### 理由 4 ：白名单 = 规则数量最低❕ 🔥
      
      > 在本模版中，黑名单模式，规则会膨胀到2.7w条规则。而白名单模式，小于1.8w条规则。减少了接近1万条规则。
 
-<br>
 
 - ### 理由 5 ：白名单 = 🇺🇸 美国数字居民 必备❕ 💲💲💲
      
      > 如果想，避免被 中国政府 全球征税 ？比如， 去美国券商 购买“平均年化10%”的美股指数？开 “活期4%利息” 的美国本土银行账户？最保险的办法，就是白名单翻墙。以免🇺🇸美国银行、券商APP 在某次升级后，加入了新的域名链接，导致你的🇨🇳IP露馅，导致资金账号冻结。
      
      > 运营海外短视频账号，也是一样的规矩。
-<br>
-<br>
-
-
-------
-
-#  如何让 本模版 只支持 “黑名单模式”   ？
-
-<br>
-
-对于 纯 Clash Meta 用户，有配置的好的 Clash 黑名单模版 ，直接下载就能用。如下：
-
-> - [BlackList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-01.yaml)           
-
-> - [BlackList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-02-Min.AntiAD.yaml)        
-
-> - [BlackList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-03-Non.AntiAD.yaml)       
-
-
-对于 Stash 用户，可以通过 手动修改 《 通用模版 》实现黑名单模式 ，只需要在配置模版中，进行如下三步之后，你就会得到一个 仅支持 黑名单模式 的模版：
-
-  - 检索 “**GFWList**”  关键词，然后  ✅ 启用   “**GFWList**” 关键词包裹着的代码 
-  
-  - 检索 “**BlackList**” 关键词，然后  ✅ 启用  “**BlackList**” 关键词包裹着的代码 
-
-  - 检索 “**WhiteList**” 关键词，然后 -❌注释掉- “**WhiteList**” 关键词包裹住的代码 （ 注意：被 “**WhiteList**” 包裹着的代码，都是白名单专属的分流规则 ）
-
-配置后 = 没有 “分流选项”  =  100% “直连”。
-
-
 
 <br>
 <br>
 
 
-------
-
-
-# 在 苹果手机 iPhone 上，如何让 本模版 🔥🔥🔥 更加省电 ？
-
-<br>
-便 优化功
-在 iPhone、iPad、AppleTV 上，目前最好用的Clash客户端是 Stash ： https://stash.wiki/
-
-如果想达到 **最大省电效果** 🔥🔥🔥 以及 **避免网络模块频繁崩溃** ，请在Stash图形界面完成如下配置：
-    
-  - 设置 -> 网络设置 -> 启用混合网络 （ ❌关闭 ）
-
-  - 设置 -> 网络设置 -> 并发连接  （ ❌关闭 ）    
-  
-  - 设置 -> 网络设置 -> 允许外部访问 （ ❌关闭 ）
-  
-  - 设置 -> 网络设置 -> 启用外部控制 （ ❌关闭 ）
-  
-  - 设置 -> 网络设置 -> 启用Fallback DNS （ ❌关闭 ）
-  
-  - 设置 -> 网络设置 -> 虚拟网卡模式 （ iOS = 系统原生 开销最低 ）
-  
-  - 设置 -> 网络设置 -> 包含所有网络 （ ❌关闭 ）
-    
-以上配置后 ，并发连接数，大幅度降低。对应的 “ 功耗、内存占用” 也跟着大幅降低 ！
-
-
-<br>
 <br>
 
 
-
-
-------
-
-#  本模版 会发生 “DNS泄漏” 么？会限制 “DNS解析” 么？
-
-<br>
-
-不会❕❕❕
-
-<br>
-
- - 本模版 = **0 DNS泄漏**
- 
-     > 本模版，任何 🌍 国外域名，都不会向 🇨🇳 中国DNS服务器 发起域名解析请求。为此 ，本模版禁用了 ❌ Fake IP 、 ❌ Fallback DNS 机制 
- 
-<br>
-
- - 本模版  = **满血版 DNS解析**
- 
-     > 本模版 ，禁用了 ❌ no-resolve ，从而达到 满血版DNS解析能力！
-         
-
-<br>
-<br>
-
-
-  
 ------
 
 
@@ -1698,6 +1425,46 @@ If you don't understand how to use this template, please throw this template to 
 <br>
 <br>
 
+
+
+
+
+
+------
+
+
+# 在 苹果手机 iPhone 上，如何让 本模版 🔥🔥🔥 更加省电 ？
+
+<br>
+便 优化功
+在 iPhone、iPad、AppleTV 上，目前最好用的Clash客户端是 Stash ： https://stash.wiki/
+
+如果想达到 **最大省电效果** 🔥🔥🔥 以及 **避免网络模块频繁崩溃** ，请在Stash图形界面完成如下配置：
+    
+  - 设置 -> 网络设置 -> 启用混合网络 （ ❌关闭 ）
+
+  - 设置 -> 网络设置 -> 并发连接  （ ❌关闭 ）    
+  
+  - 设置 -> 网络设置 -> 允许外部访问 （ ❌关闭 ）
+  
+  - 设置 -> 网络设置 -> 启用外部控制 （ ❌关闭 ）
+  
+  - 设置 -> 网络设置 -> 启用Fallback DNS （ ❌关闭 ）
+  
+  - 设置 -> 网络设置 -> 虚拟网卡模式 （ iOS = 系统原生 开销最低 ）
+  
+  - 设置 -> 网络设置 -> 包含所有网络 （ ❌关闭 ）
+    
+以上配置后 ，并发连接数，大幅度降低。对应的 “ 功耗、内存占用” 也跟着大幅降低 ！
+
+
+<br>
+<br>
+
+
+
+
+  
 ------
 
 
@@ -1793,6 +1560,10 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 <br>
 
 
+<br>
+<br>
+
+
 ------
 
 ------
@@ -1821,15 +1592,148 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 <br>
 
 
+
+<br>
+<br>
+
+
+
+------
+
+#  本模版 会发生 “DNS泄漏” 么？会限制 “DNS解析” 么？
+
+<br>
+
+不会❕❕❕
+
+<br>
+
+ - 本模版 = **0 DNS泄漏**
+ 
+     > 本模版，任何 🌍 国外域名，都不会向 🇨🇳 中国DNS服务器 发起域名解析请求。为此 ，本模版禁用了 ❌ Fake IP 、 ❌ Fallback DNS 机制 
+ 
+<br>
+
+ - 本模版  = **满血版 DNS解析**
+ 
+     > 本模版 ，禁用了 ❌ no-resolve ，从而达到 满血版DNS解析能力！
+         
+
+<br>
+<br>
+
+
+------
+
+#  本模版，访问 “🇨🇳中国网站” 时 ， 会不会 “绕路” 到海外 ？ 导致 大量消耗VPN流量 ？
+
+<br>
+
+### 💥 几乎不会❕❕❕
+
+<br>
+
+
+ -  通过识别 🇨🇳 中国IP ： 让99.99% 中国网站 =  🇨🇳 国内直连  
+
+ 
+<br>
+
+ -  白名单模式下，为了避免，过量消耗VPN出镜流量。本模版，对🇨🇳中国友好 的国际大厂，默认直连模式（但是，其 AI服务、搜索服务、虚拟机云服务、社交服务 除外），包括
+
+    |  |  | 
+    |---|---|
+    | 苹果 | 不包含 ：AI | 
+    | 微软 | 不包含 ：AI 、搜索 、Auzra云服务、Linkedin、Github | 
+    | 索尼 | 仅 Playstation | 
+    | 任天堂 |  | 
+    | WeChat |  | 
+    
+    注意， 挑选上述国际大厂的特定服务，允许直连国外，不仅仅因为，避免VPN流量 被过度消耗。还因为，必须释放一些正常海外流量给GFW，让GFW忙起来。不然，如果你连接到海外的所有流量中，除了纯VPN流量，其他海外流量都是0 。那特征太明显、太假了😂。 而这 四个国际大厂 + WeChat，正好是都用是100%正常流量，且系统更新、APP更新、游戏更新的流量消耗 都非常大，而且还有众多海外CDN、国内CDN节点 （ WeChat服务器在🇸🇬新加坡，并没有在🇨🇳中国境内 ），非常适合用于 让自己翻墙的 “白名单特征” 不那么明显 ，从而达到 “明修栈道” 的效果 🤣 
+
+<br>
+ 
+ - ### 用户体验：
+ 
+    我本人已经使用本模版 > 1年 ，自用 IPhone > 1000个国内外APP。样本已经比较充足了。体验 = 完全无感。只会在极个别、极个别、极个别 的情况出现问题，但是也完全无感，只有看了后台之后，才能发现。而且这种下，其链接的消耗流量都极低到忽略不计。
+
+<br>
+ 
+- ### 冷门域名，发生了绕路，怎么办？
+     
+     - 方法 1 : 请跳至文章末尾的 [如下章节](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#%E6%9C%AC%E6%A8%A1%E7%89%88%E5%86%85-%E5%B0%8F%E8%80%8C%E7%B2%BE%E5%87%86%E7%9A%84-geositecn--geoipcn-%E7%9C%9F%E4%B8%8D%E8%83%BD%E6%BB%A1%E8%B6%B3-%E6%88%91%E7%9A%84%E5%9C%BA%E6%99%AF%E9%9C%80%E6%B1%82%E6%80%8E%E4%B9%88%E5%8A%9E) 
+
+     - 方法 2 ：使用 第三套模版 ：\[Desktop\] 模版。桌面级模版，额外 又包含了9.8万条 中国分流规则 （ ChinaMax分流规则 ） ，用来查缺补漏，从而最大化避免中国流量 绕路海外。（仅建议 PC、Mac 、软路由 使用， 如果电池供电设备，不建议用，这会导致 规则数量 x10倍，会导致过于耗电 ）
+
+<br>
+<br>
+
+
+
+
+------
+
+#  本模版 访问 “🌍海外网站” 时 ， 会不会 “跨国绕路” ？ 比如 是否会出现 “ 美国落地节点 去 访问日本CDN ” 的情况 ？
+
+<br>
+
+|---| 客户端 |---|
+|---|---|---|
+| ✅ | Clash Meta 内核  | 100% 不会❕❕❕| 
+| ❌ | Stash for iOS  | 极大概率 会绕路 | 
+
+<br>
+
+由于，本模版的 “DNS分流策略（nameserver-policy）”  和  “分流规则（rule）” ，两者是 1:1 互为镜像的。使得本模版，可以100%避免，如 “美国落地节点 去 访问日本CDN” 的情况 ❕ （⚠️注意，此功能为Clash Meta内核独占功能）
+
+在 [Desktop] \ [Mobile] \ BleckList 模版中，此功能默认启用，但是，在 [通用模版] 中，为了保证本模版在iOS、Android、Win、Mac之间的通用性，所以，此功能默认关闭。
+
+Stash for iOS 用户，需要等Stash客户端在DNS分流策略中支持 “Rule-Set” 和 “代理集合” 这两个功能后，才能支持。 本人已经向 Stash开发组 提交过多次反馈。而针对此问题，开发组压根 0反馈 、0回复。🤣🤣🤣 100% 纯血版 已读不回 ～
+
+<br>
+<br>
+
+
+------
+
+#  如何让 本模版 只支持 “黑名单模式”   ？
+
+<br>
+
+对于 纯 Clash Meta 用户，有配置的好的 Clash 黑名单模版 ，直接下载就能用。如下：
+
+> - [BlackList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-01.yaml)           
+
+> - [BlackList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-02-Min.AntiAD.yaml)        
+
+> - [BlackList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-03-Non.AntiAD.yaml)       
+
+
+对于 Stash 用户，可以通过 手动修改 《 通用模版 》实现黑名单模式 ，只需要在配置模版中，进行如下三步之后，你就会得到一个 仅支持 黑名单模式 的模版：
+
+  - 检索 “**GFWList**”  关键词，然后  ✅ 启用   “**GFWList**” 关键词包裹着的代码 
+  
+  - 检索 “**BlackList**” 关键词，然后  ✅ 启用  “**BlackList**” 关键词包裹着的代码 
+
+  - 检索 “**WhiteList**” 关键词，然后 -❌注释掉- “**WhiteList**” 关键词包裹住的代码 （ 注意：被 “**WhiteList**” 包裹着的代码，都是白名单专属的分流规则 ）
+
+配置后 = 没有 “分流选项”  =  100% “直连”。
+
+
+
+<br>
+<br>
+
+
+------
 # 如何魔改本模版，从而做到 进一步省电？
 
 <br>
 
-首先，如果使用白名单模式，还可以将glwlist相关的规则都注销掉。可以将规则数量，减少7000条
 
-其次，本模版，其实同时内置了两组规则： Ruleset规则 和 Geosite 规则。 如果想进一步省电，请删除其中一套规则（ 并且删除其对应的rule-providers ）。
+本模版，其实同时内置了两组规则： Ruleset规则 和 Geosite 规则。 如果想进一步省电，请删除其中一套规则（ 并且删除其对应的rule-providers ）。
 
-> 这样可以将，总规则数量，可以再次➗2（规则02的规则数量，从 2.8万 下降到 8000条），同时，几乎不会降低分流能力。从而进步一省电。也就是说，这两者是互为冗余部署的。
+> 这样可以将，总规则数量，可以再次➗2（规则02的规则数量，从 1.9万 下降到 8000条），同时，几乎不会降低分流能力。从而进步一省电。也就是说，这两者是互为冗余部署的。
 
 > 注意：Stash 对于Geosite规则的处理效率（耗电），远远优于（使用Classical的）Ruleset规则。
     
