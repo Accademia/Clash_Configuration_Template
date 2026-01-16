@@ -772,7 +772,7 @@
  
    - #### 首选 :  ✅ [\[手机\]-WhiteList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-02-Min.AntiAD.yaml) ✅
      
-     > (RuleSet) 规则数量 ：1.2 万条
+     > (RuleSet) 规则数量 ：1.2 万条 （总规则1.9万条）
      > 
      > 入选理由：🔥🔥🔥 超级省电 🔥🔥🔥
  
@@ -781,7 +781,7 @@
      > 
      > “模版 01” (12万条规则) 虽然更全面，但是在手机会极大消耗电力（规则数量膨胀了10倍），续航➗2。
      >
-     > “模版 02”（1.2万条规则），将广告规则和成人规则，从8.3下降到1500条。即，用10%的规则数量，已经可以屏蔽90%的广告，是绝对超值的。并且电力消耗 与 “模版 03”（无反广告 无反隐私泄漏）基本持平。
+     > “模版 02”（1.2万条规则），将广告规则和成人规则，从8.3万条 下降到1500条。即，用2%的广告隐私规则数量，已经可以屏蔽90%的广告隐私问题，是绝对超值的。并且电力消耗 与 “模版 03”（无反广告 无反隐私泄漏）基本持平。
     
      总结：在手机，每次网络请求都要匹配10万条规则，是完全没有必要的🤣🤣。纯粹是冤大头！！！ 用1500条规则的反广告就可以解决90%广告问题，从而换来，一倍以上的续航提升，是非常值得的。（而且iOS还有50MB网络内存限制。为了避免网络内存因过载而崩溃，在规则上做“减法”，也是最佳选择 ）
     
@@ -793,14 +793,14 @@
  
    - #### 首选 :  ✅  [\[手机\]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-03-Non.AntiAD.yaml)  ✅  +  Adguard 客户端
      
-     > 规则数量 ：1.2 万条
+     > (RuleSet) 规则数量 ：1.2 万条 （总规则1.9万条）
      >
      > 入选理由 ：🔥🔥🔥 超级省电 🔥🔥🔥
 
  
    - #### 次选 :  ✅ [\[电脑\]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-02-Min.AntiAD.yaml) ✅  +  Adguard 客户端
      
-     > 规则数量 ：12 万条
+     > (RuleSet) 规则数量 ：12 万条 （总规则23万条）
      >
      > 入选理由 ：如果出现 🇨🇳中国流量绕路海外的情况，请部署此规则 （ 增强了 中国分流规则 额外增加10万条 ）
    
