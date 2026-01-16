@@ -800,7 +800,7 @@
  
    - #### 次选 :  ✅ [\[电脑\]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-02-Min.AntiAD.yaml) ✅  +  Adguard 客户端
      
-     > (RuleSet) 规则数量 ：12 万条 （总规则23万条）
+     > (RuleSet) 规则数量 ：12 万条 （总规则13万条）
      >
      > 入选理由 ：如果出现 🇨🇳中国流量绕路海外的情况，请部署此规则 （ 增强了 中国分流规则 额外增加10万条 ）
    
