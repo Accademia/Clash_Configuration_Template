@@ -1546,7 +1546,7 @@ If you don't understand how to use this template, please throw this template to 
 
 <br>
 
-如果你不在中国，而是在俄罗斯、白俄罗斯、伊朗、朝鲜、古巴、中亚五国，等其他**流氓国家**，你 仍旧可以将本模版扔给ChatGPT Pro，让他给你修改。最简单的方法，就是将模版中的 “**第二级**“，从中国改为你所在国。
+如果你不在中国，而是在俄罗斯、白俄罗斯、伊朗、朝鲜、古巴、中亚五国，等其他**流氓国家**，你 仍旧可以将本模版扔给ChatGPT Pro，让他给你修改。最简单的方法，就是将模版中的 “**第二级**“ 、 “**第九级**“，从中国改为你所在国。
 
 <br>
 
@@ -1555,7 +1555,7 @@ If I am not a user in China-such as in 🇷🇺 Russia, 🇧🇾 Belarus, 🇮�
 
 If you are not located in China but instead in rogue countries like Russia, Iran, Belarus, North Korea, Cuba, or the Central Asian states, you can still give this template to ChatGPT Pro and ask it to modify it for you.The simplest method is:
 
-  - In the template, replace the “second-level region（ 2st ）” from China to the country where you actually live.
+  - In the template, replace the “second-level region（ 2st ）” + “nine-level region（ 9st ）”  from China to the country where you actually live.
 
 
 
