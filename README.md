@@ -735,21 +735,21 @@
 
 | 差异表    |   ?名单    |  面向    | 总计  \(万条\)    | 兼容 Stash |      广告 \(万\)  |  隐私 \(万\)  |   成人  \(万\)   | GFWlist \(万\)   |  ChinaMax \(万\)  | 
 |-----------|-----------|------------|-----------|-----------|------------|-----------|-----------|-----------|-----------|       
-| [\[通用模版\]-WhiteList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-01.yaml)                                  |     白     |            |     12.5   |      ✅   |    3     |     4        |     1.3    |      🚫      |   🚫      |      
-| [\[通用模版\]-WhiteList-02-Min.AntiAD.yamll](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-02-Min.AntiAD.yaml)   🔥      |    白      |           |     1.9    |      ✅   |  0.15    |      ❌       |    🔞  |       🚫     |    🚫      |    
-| [\[通用模版\]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-03-Non.AntiAD.yaml)  🔥        |     白     |            |     1.7    |      ✅   |  ❌     |      ❌      |    🔞  |       🚫     |    🚫      |    
+| [\[通用模版\]-WhiteList-01.yaml](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-01.yaml)                                  |     白     |            |     12.5   |      ✅   |    3     |     4        |     1.3    |      🚫      |   🚫      |      
+| [\[通用模版\]-WhiteList-02-Min.AntiAD.yamll](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-02-Min.AntiAD.yaml)   🔥      |    白      |           |     1.9    |      ✅   |  0.15    |      ❌       |    🔞  |       🚫     |    🚫      |    
+| [\[通用模版\]-WhiteList-03-Non.AntiAD.yaml](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-03-Non.AntiAD.yaml)  🔥        |     白     |            |     1.7    |      ✅   |  ❌     |      ❌      |    🔞  |       🚫     |    🚫      |    
 |           |            |         |          |         |         |          |           |      
-| [[Mobile]-WhiteList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-01.yaml)                                                                        |     白     |     📱     |    12.5    |     🛑    |     3     |     4        |    1.3   |      🚫   |    🚫      |    
-| [[Mobile]-WhiteList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-02-Min.AntiAD.yaml) 🔥🔥🔥                                           |     白     |     📱     |    1.9     |    🛑    |  0.15    |      ❌       |  🔞    |      🚫   |    🚫      |     
-| [[Mobile]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-03-Non.AntiAD.yaml) 🔥🔥🔥                                           |     白     |     📱     |    1.7     |    🛑    |  ❌    |      ❌       |  🔞    |      🚫   |    🚫      |     
+| [[Mobile]-WhiteList-01.yaml](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/[Mobile]-WhiteList-01.yaml)                                                                        |     白     |     📱     |    12.5    |     🛑    |     3     |     4        |    1.3   |      🚫   |    🚫      |    
+| [[Mobile]-WhiteList-02-Min.AntiAD.yaml](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/[Mobile]-WhiteList-02-Min.AntiAD.yaml) 🔥🔥🔥                                           |     白     |     📱     |    1.9     |    🛑    |  0.15    |      ❌       |  🔞    |      🚫   |    🚫      |     
+| [[Mobile]-WhiteList-03-Non.AntiAD.yaml](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/[Mobile]-WhiteList-03-Non.AntiAD.yaml) 🔥🔥🔥                                           |     白     |     📱     |    1.7     |    🛑    |  ❌    |      ❌       |  🔞    |      🚫   |    🚫      |     
 |           |            |         |          |         |         |          |           |     
-| [[Desktop]-WhiteList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-01.yaml)                                                                      |     白     |     💻     |    23     |     🛑    |    3     |     4        |         1.3    |     0.7       |   10    |       
-| [[Desktop]-WhiteList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-02-Min.AntiAD.yaml)                                                |     白     |     💻     |    12.4    |    🛑    |  0.15    |      ❌       |   🔞   |      0.7      |   10      |    
-| [[Desktop]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-03-Non.AntiAD.yaml) 👌                                             |     白     |     💻     |    12.2    |    🛑    |  ❌   |      ❌       |   🔞   |      0.7      |   10      |    
+| [[Desktop]-WhiteList-01.yaml](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/[Desktop]-WhiteList-01.yaml)                                                                      |     白     |     💻     |    23     |     🛑    |    3     |     4        |         1.3    |     0.7       |   10    |       
+| [[Desktop]-WhiteList-02-Min.AntiAD.yaml](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/[Desktop]-WhiteList-02-Min.AntiAD.yaml)                                                |     白     |     💻     |    12.4    |    🛑    |  0.15    |      ❌       |   🔞   |      0.7      |   10      |    
+| [[Desktop]-WhiteList-03-Non.AntiAD.yaml](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/[Desktop]-WhiteList-03-Non.AntiAD.yaml) 👌                                             |     白     |     💻     |    12.2    |    🛑    |  ❌   |      ❌       |   🔞   |      0.7      |   10      |    
 |           |            |         |          |         |         |          |           |        
-| [BlackList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-01.yaml)                                                                                          |    黑名单  |             |    13.2    |  🛑    |     3     |     4        |        1.3    |     0.7       |    🚫      | 
-| [BlackList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-02-Min.AntiAD.yaml)                                                                    |    黑名单  |             |    2.6     |  🛑    |  0.15    |      ❌       |   🔞    |      0.7      |    🚫      |    
-| [BlackList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-03-Non.AntiAD.yaml)                                                                    |    黑名单  |             |    2.4     |  🛑    |  ❌   |      ❌       |   🔞    |      0.7      |    🚫      |    
+| [BlackList-01.yaml](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/BlackList-01.yaml)                                                                                          |    黑名单  |             |    13.2    |  🛑    |     3     |     4        |        1.3    |     0.7       |    🚫      | 
+| [BlackList-02-Min.AntiAD.yaml](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/BlackList-02-Min.AntiAD.yaml)                                                                    |    黑名单  |             |    2.6     |  🛑    |  0.15    |      ❌       |   🔞    |      0.7      |    🚫      |    
+| [BlackList-03-Non.AntiAD.yaml](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/BlackList-03-Non.AntiAD.yaml)                                                                    |    黑名单  |             |    2.4     |  🛑    |  ❌   |      ❌       |   🔞    |      0.7      |    🚫      |    
 
 
 > 黑名单模版 ，同时适合移动端的桌面端。其潜在风险 ：市面上所有黑名单模版，100%都会造成DNS泄漏。只有白名单能解决此问题 。（轻度用户可无视此问题 ）
@@ -770,7 +770,7 @@
 
 ### 设备 ： 📱 手机、平板、路由器、智能电视 （ = 低算力负载 设备 ） 
  
-   - #### 首选 :  ✅ [\[手机\]-WhiteList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-02-Min.AntiAD.yaml) ✅
+   - #### 首选 :  ✅ [\[手机\]-WhiteList-02-Min.AntiAD.yaml](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/[Mobile]-WhiteList-02-Min.AntiAD.yaml) ✅
      
      > (RuleSet) 规则数量 ：1.2 万条 （总规则1.9万条）
      > 
@@ -791,14 +791,14 @@
 
 ###  设备 ： 💻 个人电脑  （ = 高算力负载 设备 ）
  
-   - #### 首选 :  ✅  [\[手机\]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-03-Non.AntiAD.yaml)  ✅  +  Adguard 客户端
+   - #### 首选 :  ✅  [\[手机\]-WhiteList-03-Non.AntiAD.yaml](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/[Mobile]-WhiteList-03-Non.AntiAD.yaml)  ✅  +  Adguard 客户端
      
      > (RuleSet) 规则数量 ：1.2 万条 （总规则1.9万条）
      >
      > 入选理由 ：🔥🔥🔥 超级省电 🔥🔥🔥
 
  
-   - #### 次选 :  ✅ [\[电脑\]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-02-Min.AntiAD.yaml) ✅  +  Adguard 客户端
+   - #### 次选 :  ✅ [\[电脑\]-WhiteList-03-Non.AntiAD.yaml](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/[Desktop]-WhiteList-02-Min.AntiAD.yaml) ✅  +  Adguard 客户端
      
      > (RuleSet) 规则数量 ：12 万条 （总规则13万条）
      >
@@ -899,74 +899,74 @@
 
 #### 【第一套】 兼容 Stash / Clash Meta   + 白名单模式 
 
-   - #### 订阅链接   :   [\[通用模版\]-WhiteList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-01.yaml) 
+   - #### 订阅链接   :   [\[通用模版\]-WhiteList-01.yaml](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-01.yaml) 
    
-      > https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-01.yaml                         
-   
-   
-   - #### 订阅链接   :   [\[通用模版\]-WhiteList-02-Min.AntiAD.yamll](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-02-Min.AntiAD.yaml)    
-   
-      >   https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-02-Min.AntiAD.yaml
+      > https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-01.yaml                         
    
    
-   - #### 订阅链接   :   [\[通用模版\]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-03-Non.AntiAD.yaml)    
+   - #### 订阅链接   :   [\[通用模版\]-WhiteList-02-Min.AntiAD.yamll](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-02-Min.AntiAD.yaml)    
+   
+      >   https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-02-Min.AntiAD.yaml
+   
+   
+   - #### 订阅链接   :   [\[通用模版\]-WhiteList-03-Non.AntiAD.yaml](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-03-Non.AntiAD.yaml)    
                             
-      >   https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-03-Non.AntiAD.yaml
+      >   https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-03-Non.AntiAD.yaml
 
 <br>  
 
 #### 【第二套】 仅兼容 Clash Meta + 白名单模版  +  手机 移动端优化
 
-- #### 订阅链接   :   [[Mobile]-WhiteList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-01.yaml)                                                   
+- #### 订阅链接   :   [[Mobile]-WhiteList-01.yaml](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/[Mobile]-WhiteList-01.yaml)                                                   
                 
-   >   https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-01.yaml
+   >   https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/[Mobile]-WhiteList-01.yaml
 
 
-- #### 订阅链接   :   [[Mobile]-WhiteList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-02-Min.AntiAD.yaml) 🔥🔥🔥🔥🔥      （ 推荐，手机 ）                                
+- #### 订阅链接   :   [[Mobile]-WhiteList-02-Min.AntiAD.yaml](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/[Mobile]-WhiteList-02-Min.AntiAD.yaml) 🔥🔥🔥🔥🔥      （ 推荐，手机 ）                                
                     
-   >    https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-02-Min.AntiAD.yaml
+   >    https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/[Mobile]-WhiteList-02-Min.AntiAD.yaml
 
 
-- #### 订阅链接   :   [[Mobile]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-03-Non.AntiAD.yaml) 🔥🔥🔥🔥🔥      （ 推荐，电脑 ）                                 
+- #### 订阅链接   :   [[Mobile]-WhiteList-03-Non.AntiAD.yaml](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/[Mobile]-WhiteList-03-Non.AntiAD.yaml) 🔥🔥🔥🔥🔥      （ 推荐，电脑 ）                                 
        
-   >    https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Mobile]-WhiteList-03-Non.AntiAD.yaml
+   >    https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/[Mobile]-WhiteList-03-Non.AntiAD.yaml
 
 <br>  
 
 #### 【第三套】 仅兼容 Clash Meta + 白名单模版  +  💻 桌面端优化
 
-- #### 订阅链接   :   [[Desktop]-WhiteList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-01.yaml)                                                                 
+- #### 订阅链接   :   [[Desktop]-WhiteList-01.yaml](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/[Desktop]-WhiteList-01.yaml)                                                                 
           
-   >    https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-01.yaml
+   >    https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/[Desktop]-WhiteList-01.yaml
 
 
-- #### 订阅链接   :   [[Desktop]-WhiteList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-02-Min.AntiAD.yaml)                                           
+- #### 订阅链接   :   [[Desktop]-WhiteList-02-Min.AntiAD.yaml](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/[Desktop]-WhiteList-02-Min.AntiAD.yaml)                                           
           
-   >    https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-02-Min.AntiAD.yaml
+   >    https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/[Desktop]-WhiteList-02-Min.AntiAD.yaml
 
 
-- #### 订阅链接   :  [[Desktop]-WhiteList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-03-Non.AntiAD.yaml)  🔥    （ 备选，电脑 ）                                    
+- #### 订阅链接   :  [[Desktop]-WhiteList-03-Non.AntiAD.yaml](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/[Desktop]-WhiteList-03-Non.AntiAD.yaml)  🔥    （ 备选，电脑 ）                                    
                          
-   > https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-03-Non.AntiAD.yaml
+   > https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/[Desktop]-WhiteList-03-Non.AntiAD.yaml
 
 <br>   
 
 #### 【第四套】 仅兼容 Clash Meta + 黑名单模版  
 
 
-- #### 订阅链接   :   [BlackList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-01.yaml)                                                                                       
+- #### 订阅链接   :   [BlackList-01.yaml](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/BlackList-01.yaml)                                                                                       
                       
-   >  https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-01.yaml           
+   >  https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/BlackList-01.yaml           
 
 
-- #### 订阅链接   :   [BlackList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-02-Min.AntiAD.yaml)                                                               
+- #### 订阅链接   :   [BlackList-02-Min.AntiAD.yaml](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/BlackList-02-Min.AntiAD.yaml)                                                               
                            
-   > https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-02-Min.AntiAD.yaml     
+   > https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/BlackList-02-Min.AntiAD.yaml     
 
 
-- #### 订阅链接   :   [BlackList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-03-Non.AntiAD.yaml)                                                               
+- #### 订阅链接   :   [BlackList-03-Non.AntiAD.yaml](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/BlackList-03-Non.AntiAD.yaml)                                                               
            
-   > https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-03-Non.AntiAD.yaml       
+   > https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/BlackList-03-Non.AntiAD.yaml       
 
 
 <br>
@@ -1709,11 +1709,11 @@ Stash for iOS 用户，需要等Stash客户端在DNS分流策略中支持 “Rul
 
 对于 纯 Clash Meta 用户，有配置的好的 Clash 黑名单模版 ，直接下载就能用。如下：
 
-> - [BlackList-01.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-01.yaml)           
+> - [BlackList-01.yaml](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/BlackList-01.yaml)           
 
-> - [BlackList-02-Min.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-02-Min.AntiAD.yaml)        
+> - [BlackList-02-Min.AntiAD.yaml](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/BlackList-02-Min.AntiAD.yaml)        
 
-> - [BlackList-03-Non.AntiAD.yaml](https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-03-Non.AntiAD.yaml)       
+> - [BlackList-03-Non.AntiAD.yaml](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/BlackList-03-Non.AntiAD.yaml)       
 
 
 对于 Stash 用户，可以通过 手动修改 《 通用模版 》实现黑名单模式 ，只需要在配置模版中，进行如下三步之后，你就会得到一个 仅支持 黑名单模式 的模版：
