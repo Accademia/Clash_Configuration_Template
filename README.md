@@ -733,8 +733,8 @@
 
  > 建议 “每一列 竖向对比” 寻找差异
 
-| 差异表    |   ?名单    |  面向    | 总计  \(万条\)    | 兼容 Stash |      广告 \(万\)  |  隐私 \(万\)  |   成人  \(万\)   | GFWlist \(万\)   |  ChinaMax \(万\)  | 
-|-----------|-----------|------------|-----------|-----------|------------|-----------|-----------|-----------|-----------|       
+| 差异表    |   下载    |   ?名单    |  面向    | 总计  \(万条\)    | 兼容 Stash |      广告 \(万\)  |  隐私 \(万\)  |   成人  \(万\)   | GFWlist \(万\)   |  ChinaMax \(万\)  | 
+|-----------|-----------|-----------|------------|-----------|-----------|------------|-----------|-----------|-----------|-----------|       
 | [\[通用模版\]-WhiteList-01.yaml](https://github.com/Accademia/Clash_Configuration_Template/blob/main/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-01.yaml)                                  |     [订阅](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-01.yaml)      |     白     |            |     12.5   |      ✅   |    3     |     4        |     1.3    |      🚫      |   🚫      |      
 | [\[通用模版\]-WhiteList-02-Min.AntiAD.yamll](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-02-Min.AntiAD.yaml)   🔥       |     [订阅](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-02-Min.AntiAD.yaml)      |    白      |            |     1.9    |      ✅   |  0.15    |      ❌       |    🔞  |       🚫     |    🚫      |    
 | [\[通用模版\]-WhiteList-03-Non.AntiAD.yaml](https://github.com/Accademia/Clash_Configuration_Template/blob/main/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-03-Non.AntiAD.yaml)  🔥        |     [订阅](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-03-Non.AntiAD.yaml)      |     白     |            |     1.7    |      ✅   |  ❌     |      ❌      |    🔞  |       🚫     |    🚫      |    
