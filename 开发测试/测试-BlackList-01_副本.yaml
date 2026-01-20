@@ -157,7 +157,7 @@ dns                               :
                                      
                                      
                                     ### --------------------------------------------------------------------------------------------------
-                                    ###  [1st-01]  DNS分流 ： 自己的翻墙域名
+                                    ###  [1st-01]  DNS分流 ： DNS服务器
                                     ### --------------------------------------------------------------------------------------------------
                                      'RULE-SET:GlobalDNS_Domain'                        : [ 'system'                                                                                                                                                    ]   ### [1st-01]          
                                      'RULE-SET:ChinaDNS_Domain'                         : [ 'system'                                                                                                                                                    ]   ### [1st-01]          
@@ -166,7 +166,11 @@ dns                               :
                                     ### --------------------------------------------------------------------------------------------------
                                     ###  [1st-03]  DNS分流 ： 自己的翻墙域名
                                     ### --------------------------------------------------------------------------------------------------
-                                   
+                                      
+                                    #'+.?????'                                          : [ 'system'                                                                                                                                                    ]   ### [1st-03]         
+                                    #'+.?????'                                          : [ 'system'                                                                                                                                                    ]   ### [1st-03]         
+                                    #'+.?????'                                          : [ 'system'                                                                                                                                                    ]   ### [1st-03]         
+                                    #'+.?????'                                          : [ 'system'                                                                                                                                                    ]   ### [1st-03]        
                                      
                                      'RULE-SET:Kwai_Domain'                             : [ 'https://cloudflare-dns.com/dns-query#🎬.<Short>--Kwai'                        , 'https://dns.google/dns-query#🎬.<Short>--Kwai'                            ]   ### [3st-23]  
                                    
@@ -1647,8 +1651,8 @@ rules:
 
    ### [1st-02] -  局域网   
 
-    - GEOSITE         , private                                    , 💻.<Lan>                                         #                                       ### [1st-01] [ Default : DIRECT       ]     
-    - RULE-SET        , Lan_Do_Resolve                             , 💻.<Lan>                                         # , no-resolve                          ### [1st-01] [ Default : DIRECT       ]      https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Lan                    私有地址 - Lan                
+    - GEOSITE         , private                                    , 💻.<Lan>                                         #                                       ### [1st-02] [ Default : DIRECT       ]     
+    - RULE-SET        , Lan_Do_Resolve                             , 💻.<Lan>                                         # , no-resolve                          ### [1st-02] [ Default : DIRECT       ]      https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Lan                    私有地址 - Lan                
 
 
    ### [1st-03] -  翻墙节点的 < 域名 + IP >     
@@ -1852,10 +1856,10 @@ rules:
 
    ### [3st-01] -  智能设备     
 
-    - GEOSITE         , synology                                   , 💻.<NAS>--Synology                               #                                       ### [1st-01] [ Default : DIRECT       ]    
-    - RULE-SET        , Synology_Do_Resolve                        , 💻.<NAS>--Synology                               # , no-resolve                          ### [1st-01] [ Default : DIRECT       ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Synology               NAS    -  Synology              
+    - GEOSITE         , synology                                   , 💻.<NAS>--Synology                               #                                       ### [3st-01] [ Default : DIRECT       ]    
+    - RULE-SET        , Synology_Do_Resolve                        , 💻.<NAS>--Synology                               # , no-resolve                          ### [3st-01] [ Default : DIRECT       ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Synology               NAS    -  Synology              
 
-    - RULE-SET        , AqaraGlobal_Do_Resolve                     , 🔌.<Home>--AqaraGlobal                           # , no-resolve                          ### [1st-01] [ Default : DIRECT       ]     https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/AqaraGlobal                智能设备    -  AqaraGlobal              
+    - RULE-SET        , AqaraGlobal_Do_Resolve                     , 🔌.<Home>--AqaraGlobal                           # , no-resolve                          ### [3st-01] [ Default : DIRECT       ]     https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/AqaraGlobal                智能设备    -  AqaraGlobal              
 
 
 
@@ -2437,8 +2441,8 @@ rule-providers:
     Speedtest_Do_Resolve                      : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line-[Relay.VPS]-Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@latest/rule/Clash/Speedtest/Speedtest.yaml'                                           , path : './ruleset/Speedtest.yaml'                                     }           ### [3st-00]  [ Default : DIRECT      ]     🎚.<Speedtest>                   https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Speedtest             测速  - Speedtest + Fast          
 
    ### [3st-01] -  智能设备     
-    Synology_Do_Resolve                       : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line-[Relay.VPS]-Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@latest/rule/Clash/Synology/Synology.yaml'                                             , path : './ruleset/Synology.yaml'                                      }           ### [1st-01]  [ Default : DIRECT      ]     💻.<NAS>--Synology               https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Synology              NAS - Synology                 
-    AqaraGlobal_Do_Resolve                    : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line-[Relay.VPS]-Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/Accademia/Additional_Rule_For_Clash@latest/Aqara/AqaraGlobal.yaml'                                                 , path : './ruleset/AqaraGlobal.yaml'                                   }           ### [3st-28]  [ Default : DIRECT      ]     🔌.<Home>--AqaraGlobal           https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/AqaraGlobal                 Home - AqaraGlobal                               
+    Synology_Do_Resolve                       : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line-[Relay.VPS]-Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@latest/rule/Clash/Synology/Synology.yaml'                                             , path : './ruleset/Synology.yaml'                                      }           ### [3st-01]  [ Default : DIRECT      ]     💻.<NAS>--Synology               https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Synology              NAS - Synology                 
+    AqaraGlobal_Do_Resolve                    : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line-[Relay.VPS]-Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/Accademia/Additional_Rule_For_Clash@latest/Aqara/AqaraGlobal.yaml'                                                 , path : './ruleset/AqaraGlobal.yaml'                                   }           ### [3st-01]  [ Default : DIRECT      ]     🔌.<Home>--AqaraGlobal           https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/AqaraGlobal                 Home - AqaraGlobal                               
 
    ### [3st-02] -  公有云：云盘、云存储     
   # iCloud_Do_Resolve                         : { type : 'http'  , behavior : 'classical'  , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line-[Relay.VPS]-Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@latest/rule/Clash/iCloud/iCloud.yaml'                                                 , path : './ruleset/iCloud.yaml'                                        }           ### [3st-02]  [ Default : DIRECT      ]     📂.<Drive>--iCloud               https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/iCloud                云存储（海外） - iCloud                                    
