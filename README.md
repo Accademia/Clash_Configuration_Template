@@ -1264,20 +1264,20 @@ proxy-providers:
 
       ### [1st-03] -  翻墙节点的 < 域名 + IP >    
 
-      #- domain-suffix   ,                                            , direct    
-      #- domain-suffix   ,                                            , direct    
-      #- domain-suffix   ,                                            , direct    
-      #- domain-suffix   ,                                            , direct    
+      #- domain-suffix   ,                                            , DIRECT    
+      #- domain-suffix   ,                                            , DIRECT    
+      #- domain-suffix   ,                                            , DIRECT    
+      #- domain-suffix   ,                                            , DIRECT    
 
-      #- ip-cidr         , 0.0.0.0/32                                 , direct    
-      #- ip-cidr         , 0.0.0.0/32                                 , direct    
-      #- ip-cidr         , 0.0.0.0/32                                 , direct    
-      #- ip-cidr         , 0.0.0.0/32                                 , direct    
+      #- ip-cidr         , 0.0.0.0/32                                 , DIRECT    
+      #- ip-cidr         , 0.0.0.0/32                                 , DIRECT    
+      #- ip-cidr         , 0.0.0.0/32                                 , DIRECT    
+      #- ip-cidr         , 0.0.0.0/32                                 , DIRECT    
 
-      #- ip-cidr6        , ::/128                                     , direct    
-      #- ip-cidr6        , ::/128                                     , direct    
-      #- ip-cidr6        , ::/128                                     , direct    
-      #- ip-cidr6        , ::/128                                     , direct    
+      #- ip-cidr6        , ::/128                                     , DIRECT    
+      #- ip-cidr6        , ::/128                                     , DIRECT    
+      #- ip-cidr6        , ::/128                                     , DIRECT    
+      #- ip-cidr6        , ::/128                                     , DIRECT    
       
     ```
 
@@ -2438,7 +2438,7 @@ PS：如果Stash已经兼容上述功能，而本模版尚未改进，希望也�
 
 <br>
 
-### 5. 💩💩💩💩💩 Stash ，**无法支持  “远程规则 内预设的 REJECT、REJECT-DROP、direct”**
+### 5. 💩💩💩💩💩 Stash ，**无法支持  “远程规则 内预设的 REJECT、REJECT-DROP、DIRECT”**
 
 <br>
 
