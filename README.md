@@ -756,7 +756,7 @@
 | 差异表    |   下载    |   ?名单    |  面向    | 总计  \(万条\)    | 兼容 Stash |      广告 \(万\)  |  隐私 \(万\)  |   成人  \(万\)   | GFWlist \(万\)   |  ChinaMax \(万\)  | 
 |-----------|-----------|-----------|------------|-----------|-----------|------------|-----------|-----------|-----------|-----------|       
 | [\[通用模版\]-WhiteList-01.yaml](https://github.com/Accademia/Clash_Configuration_Template/blob/main/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-01.yaml)                                  |     [订阅](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-01.yaml)      |     白     |            |     12.5   |      ✅   |    3     |     4        |     1.3    |      🚫      |   🚫      |      
-| [\[通用模版\]-WhiteList-02-Min.AntiAD.yamll](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-02-Min.AntiAD.yaml)   🔥       |     [订阅](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-02-Min.AntiAD.yaml)      |    白      |            |     1.9    |      ✅   |  0.15    |      ❌       |    🔞  |       🚫     |    🚫      |    
+| [\[通用模版\]-WhiteList-02-Min.AntiAD.yaml](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-02-Min.AntiAD.yaml)   🔥       |     [订阅](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-02-Min.AntiAD.yaml)      |    白      |            |     1.9    |      ✅   |  0.15    |      ❌       |    🔞  |       🚫     |    🚫      |    
 | [\[通用模版\]-WhiteList-03-Non.AntiAD.yaml](https://github.com/Accademia/Clash_Configuration_Template/blob/main/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-03-Non.AntiAD.yaml)  🔥        |     [订阅](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-03-Non.AntiAD.yaml)      |     白     |            |     1.7    |      ✅   |  ❌     |      ❌      |    🔞  |       🚫     |    🚫      |    
 |           |            |         |          |         |         |          |           |      
 | [[Mobile]-WhiteList-01.yaml](https://github.com/Accademia/Clash_Configuration_Template/blob/main/[Mobile]-WhiteList-01.yaml)                                                                        |     [订阅](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/[Mobile]-WhiteList-01.yaml)      |     白     |     📱     |    12.5    |     🛑    |     3     |     4        |    1.3   |      🚫   |    🚫      |    
@@ -924,7 +924,7 @@
       > https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-01.yaml                         
    
    
-   - #### 订阅链接   :   [\[通用模版\]-WhiteList-02-Min.AntiAD.yamll](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-02-Min.AntiAD.yaml)    
+   - #### 订阅链接   :   [\[通用模版\]-WhiteList-02-Min.AntiAD.yaml](https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-02-Min.AntiAD.yaml)    
    
       >   https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-02-Min.AntiAD.yaml
    
@@ -1264,20 +1264,20 @@ proxy-providers:
 
       ### [1st-03] -  翻墙节点的 < 域名 + IP >    
 
-      #- DOMAIN-SUFFIX   ,                                            , DIRECT    
-      #- DOMAIN-SUFFIX   ,                                            , DIRECT    
-      #- DOMAIN-SUFFIX   ,                                            , DIRECT    
-      #- DOMAIN-SUFFIX   ,                                            , DIRECT    
+      #- domain-suffix   ,                                            , direct    
+      #- domain-suffix   ,                                            , direct    
+      #- domain-suffix   ,                                            , direct    
+      #- domain-suffix   ,                                            , direct    
 
-      #- IP-CIDR         , 0.0.0.0/32                                 , DIRECT    
-      #- IP-CIDR         , 0.0.0.0/32                                 , DIRECT    
-      #- IP-CIDR         , 0.0.0.0/32                                 , DIRECT    
-      #- IP-CIDR         , 0.0.0.0/32                                 , DIRECT    
+      #- ip-cidr         , 0.0.0.0/32                                 , direct    
+      #- ip-cidr         , 0.0.0.0/32                                 , direct    
+      #- ip-cidr         , 0.0.0.0/32                                 , direct    
+      #- ip-cidr         , 0.0.0.0/32                                 , direct    
 
-      #- IP-CIDR6        , ::/128                                     , DIRECT    
-      #- IP-CIDR6        , ::/128                                     , DIRECT    
-      #- IP-CIDR6        , ::/128                                     , DIRECT    
-      #- IP-CIDR6        , ::/128                                     , DIRECT    
+      #- ip-cidr6        , ::/128                                     , direct    
+      #- ip-cidr6        , ::/128                                     , direct    
+      #- ip-cidr6        , ::/128                                     , direct    
+      #- ip-cidr6        , ::/128                                     , direct    
       
     ```
 
@@ -1340,8 +1340,8 @@ proxy-providers:
           > 在 上述启用 的过程中，建议 “不必启用” 如下规则     
           
            ``` yaml
-            - RULE-SET        , GFWList_Domain                             , 🚧.<GFWList>
-            - RULE-SET        , ChinaMax_Domain                            , 🇨🇳.<Country>--CN  
+            - rule-set        , GFWList_Domain                             , 🚧.<GFWList>
+            - rule-set        , ChinaMax_Domain                            , 🇨🇳.<Country>--CN  
             # 原因 ：默认白名单下，上述这些规则都是冗余规则。如果启用了，不会起到效果，反而可能会出错
            ```
 
@@ -2328,7 +2328,7 @@ Fake IP 唯一的好处就是 ，打开页面的延迟能感觉更低一些，�
      - 即，nameserver-policy 可以使用 ：
       
         ``` yaml
-        “RULE-SET:远程规则” :
+        “rule-set:远程规则” :
             - 'DOH链接#代理集合'  
             - 'DOH链接#代理集合'  
         “Geosite:XXX“ :
@@ -2381,12 +2381,12 @@ PS：如果Stash已经兼容上述功能，而本模版尚未改进，希望也�
 
 ### 1. 💩💩💩💩💩 Stash **无法 “批量分流” DNS查询** 到 指定的DNS服务器
    
-  Stash 无法按照（RULE-SET、Geosite）分流 🇨🇳 中国域名 的 DNS查询 ，到 🇨🇳 中国大陆的DNS服务器
+  Stash 无法按照（rule-set、Geosite）分流 🇨🇳 中国域名 的 DNS查询 ，到 🇨🇳 中国大陆的DNS服务器
     
 由于 Stash并不支持在DNS的nameserver-policy: 中 做如下声明 
 
     ``` yaml
-        “RULE-SET:远程规则” :
+        “rule-set:远程规则” :
             - 'DOH链接#代理集合'  
             - 'DOH链接#代理集合'  
         “Geosite:XXX“ :
@@ -2400,7 +2400,7 @@ PS：如果Stash已经兼容上述功能，而本模版尚未改进，希望也�
 
         - 在Stash，由于不支持规则集合批量分流，导致必须要手动展开geosite:cn,但是导致了，本模版多了7000多行。❌❌❌
         
-        一旦Stash的nameserver-policy支持 “RULE-SET:远程规则#代理组” ，本套模版将立刻删除这些手动展开的规则。以确保 模版拥有最低的行数。
+        一旦Stash的nameserver-policy支持 “rule-set:远程规则#代理组” ，本套模版将立刻删除这些手动展开的规则。以确保 模版拥有最低的行数。
     
 以上问题，我反馈了很多次给Stash开发组，🤣🤣🤣 压根没人理。 💥💥💥💥 100% 已读不回套餐吃满了算是。而Clash Verga rec客户端（Clash Meta核心），而Clash Meta 完美支持 ✅ ✅ ✅ ，不会有这个问题。
    
@@ -2438,7 +2438,7 @@ PS：如果Stash已经兼容上述功能，而本模版尚未改进，希望也�
 
 <br>
 
-### 5. 💩💩💩💩💩 Stash ，**无法支持  “远程规则 内预设的 REJECT、REJECT-DROP、DIRECT”**
+### 5. 💩💩💩💩💩 Stash ，**无法支持  “远程规则 内预设的 REJECT、REJECT-DROP、direct”**
 
 <br>
 
