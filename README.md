@@ -1251,7 +1251,38 @@ proxy-providers:
     
     > 如果前两步 已经验证通过，再根据你的节点，对 “ 节点名称 + 中转线路名称 ” 做 批量改名（只改name字段，不改其他配置）。
     
-    > 如果你下载的是 “纯ClashMeta模版” 即 [Desktop] / [Mobile] / BlackList 模版 ，到这一步就结束了 ❕ 好了，光速外网装逼去吧 ❕ ❕ ❕ ❕ ❕ ❕  
+
+    <br> 
+    
+  - ### 🟩 第四步，将你VPS节点的 《 域名 + IP 》 都添加到 本模版的 “直连白名单” 中
+
+    > 用以避免，在路由器上 （或作为热点）时 ，出现 链上加链 、 娃上套娃 的情况 （ 如果子网设备也启用 相同的翻墙软件 ）
+
+    > 请搜索 如下内容 ，并填充
+    
+    ```yaml 
+
+      ### [1st-03] -  翻墙节点的 < 域名 + IP >    
+
+      #- DOMAIN-SUFFIX   ,                                            , DIRECT    
+      #- DOMAIN-SUFFIX   ,                                            , DIRECT    
+      #- DOMAIN-SUFFIX   ,                                            , DIRECT    
+      #- DOMAIN-SUFFIX   ,                                            , DIRECT    
+
+      #- IP-CIDR         , 0.0.0.0/32                                 , DIRECT    
+      #- IP-CIDR         , 0.0.0.0/32                                 , DIRECT    
+      #- IP-CIDR         , 0.0.0.0/32                                 , DIRECT    
+      #- IP-CIDR         , 0.0.0.0/32                                 , DIRECT    
+
+      #- IP-CIDR6        , ::/128                                     , DIRECT    
+      #- IP-CIDR6        , ::/128                                     , DIRECT    
+      #- IP-CIDR6        , ::/128                                     , DIRECT    
+      #- IP-CIDR6        , ::/128                                     , DIRECT    
+      
+    ```
+    > 注意：对于非本模版VPN，如 诺顿VPN 等，依然可以通过本模版实现链式代理的效果（毕竟🇨🇳中国大陆、和俄罗斯等流氓国家，是直连不上这种VPN的）
+
+    > 如果你下载的是 “纯ClashMeta模版” 即 [Desktop] / [Mobile] / BlackList 模版 ，到这一步就结束了 ❕❕❕ 好啦，光速外网装逼去吧 ❕ ❕ ❕ ❕ ❕ ❕  
   
     📮📮📮📮📮📮📮📮📮📮📮📮📮📮📮
     
@@ -1259,7 +1290,7 @@ proxy-providers:
 
     <br> 
     
-  - ### 🟩 第四步 ，导入到 Clash Meta 或 Stash 前的必备工作 
+  - ### 🟩 第五步 ，导入到 Clash Meta 或 Stash 前的必备工作 
       
       - 如果你要将配置 在导入到 Clash Meta 客户端， 请在已完成第三步的基础上，完成本步。在源代码中查找：
           
@@ -1284,7 +1315,7 @@ proxy-providers:
          
 <br>
    
-  - ### 🟩 第五步（非必要），中国分流增强（防绕路海外）
+  - ### 🟩 第六步（非必要），中国分流增强（防绕路海外）
      
       - 如果 你是电脑设备（非手机） ，且 你访问的 中国网站 发生了 绕路海外VPN的情况，可以考虑启用 ChinaMax 规则
       
@@ -1306,7 +1337,7 @@ proxy-providers:
          
 <br>
    
-  - ### 🟩 第六步（非必要+只适合穷人），切换到 “仅支持” 黑名单模式
+  - ### 🟩 第七步（非必要+只适合穷人），切换到 “仅支持” 黑名单模式
   
       - 启用方法，在源代码中查找：
           
@@ -1404,7 +1435,7 @@ If you don't understand how to use this template, please throw this template to 
 | 线路 | 推建议协议 | 说明 |
 |---|---|---|
 | 优质线路  | Vless + Reality + Vision + XUDP | 优质线路使用 Hysteria2 ，100%会降速  | 
-|  劣质线路 | Hysteria2 （ 歇斯底里2 ） | 中美的劣质线路（如10美金一年不限流量的线路）使用Hysteria2，往往晚高峰能 10MByte/s，其他协议 0.1 MByte/s  | 
+| 劣质线路  | Hysteria2 （ 歇斯底里2 ） | 中美的劣质线路（如10美金一年不限流量的线路）使用Hysteria2，往往晚高峰能 10MByte/s，其他协议 0.1 MByte/s  | 
 
 <br>
 
@@ -1424,11 +1455,11 @@ If you don't understand how to use this template, please throw this template to 
 
   >  - 大原则 ：优先买 发达国家 + 一线城市 + 非华人服务商 的节点（如 🇺🇸美 🇯🇵日 🇦🇺澳 🇬🇧英 🇳🇱荷兰）
   >  
-  >  - 中转节点 ： 别买 离岸国家 的节点（如 🇸🇬 新加坡 ）
+  >  - 中转节点 ： 别买 离岸国家 的节点（如 🇸🇬 新加坡 ），这种弹丸国家，寸土寸金，机房和线路都死贵，还出口小
   >  
-  >  - 落地节点 ： 别买 IP受歧视地区 的节点 （如 🇭🇰 香港）
+  >  - 落地节点 ： 别买 IP受歧视地区 的节点 （如 🇭🇰 香港 ），会导致ChatGPT等AI用不了
   >  
-  >  - 落地节点 ： 别买 DNS污染地区 的节点 （如 🇹🇼 台湾）
+  >  - 落地节点 ： 别买 DNS污染地区 的节点 （如 🇹🇼 台湾），连台湾人自己都要买VPN才能上一些APP（如小红书）
 
 
 <br>
