@@ -96,15 +96,15 @@ tun                               :                                             
 # iproute2-rule-index             : 9000                                                # 仅 Linux ：auto-route 生成的规则起始索引，默认 9000
   stack                           : system                                              # 配置TUN使用哪种核心，自带核心（ gvisor ），系统核心（ system ），混合核心（ mixed ）。 ⚠️ gvisor 在 Mac OS上 对IPv6兼容不佳
   dns-hijack                      : [ 'any:53'         , 'tcp://any:53'     ]           # 把所有 DNS（53 端口）交给内置 DNS 处理，防止 DNS 走直连
-  inet4-route-exclude-address     :                                                     # 排除内网 IPv4（减少TUN负载，保留内网互联；如需更多网段可下方解除注释） RFC1918 全排除（按需启用）
-                                    - '192.168.0.0/16'                                  #       
-                                    - '10.0.0.0/8'                                      #       
-                                    - '172.16.0.0/12'                                   #       
-  inet6-route-address             :                                                     #       
+  route-exclude-address           :                                                     # 哪些网段 被排除。即，不被 TUN 代理（减少TUN负载 ） 
+                                    - '192.168.0.0/16'                                  # RFC1918 全排除（按需启用）      
+                                    - '10.0.0.0/8'                                      # RFC1918 全排除（按需启用）      
+                                    - '172.16.0.0/12'                                   # RFC1918 全排除（按需启用）      
+                                  # - 'fc00::/7'                                        # 可选：排除 ULA/Link-Local（通常不需要，已由 2000::/3 覆盖公网）
+                                  # - 'fe80::/10'                                       # 可选：排除 ULA/Link-Local（通常不需要，已由 2000::/3 覆盖公网） 
+  route-address                   :                                                     # 哪些网段 被包含。即，必须被 TUN 强制接管      
+                                    - '0.0.0.0/0'                                       # ⚠️ 必须补充❕❕❕  原配置中 IPv4 默认全走 TUN，新写法需显式声明
                                     - '2000::/3'                                        # 仅让公网 IPv6通过 TUN，避免 IPv6 泄漏，同时保留本地 IPv6 直连
-# inet6-route-exclude-address     :                                                     # 可选：排除 ULA/Link-Local（通常不需要，已由 2000::/3 覆盖公网）
-#                                   - 'fc00::/7'                                        #     
-#                                   - 'fe80::/10'                                       #     
 
 
 hosts                             :                                                     # Clash:全局生效 / Stash:仅direct生效 
