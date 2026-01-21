@@ -145,51 +145,73 @@ ntp                               :                                             
   port                            : 123             
 
 
-tun                               :                                                     # 配置：TUN 规则  ,避免 “WebRTC泄露” （泄露 “真实IP”） 
-  enable                          : true 
+tun                               :                                                     # 配置：TUN 规则  ,避免 “WebRTC泄露” （泄露 “真实IP”）
+  enable                          : true
   auto-detect-interface           : true                                                # 自动检测出口网卡
-  auto-route                      : true 
-  stack                           : system                                              # 配置TUN使用哪种核心，是自带核心（gvisor），还是系统核心（system）。 ⚠️ gvisor 在Mac OS上对IPv6兼容不佳
-  dns-hijack                      : [ 'any:53'   ]                                      # 把所有 DNS（53 端口）交给内置 DNS 处理，防止 DNS 走直连                                 
-  inet6-route-address             : [ '2000::/3' ]                                      # 仅让公网 IPv6通过 TUN，避免 IPv6 泄漏，同时保留本地 IPv6 直连
+# include-interface               : [ 'en0'                                 ]           # 手动指定出口网卡（ 多网卡同时连接且自动识别不稳定时使用；Mac 常见 en0=WiFi ）
+# exclude-interface               : [ 'en0'                                 ]           # 排除路由的接口（ 与 include-interface 冲突，不可一起配置）
+  auto-route                      : true                                                # 自动设置全局路由
+# strict-route                    : true                                                # 严格路由（ 防止 IP/DNS 泄露 ，它会把所有网络接口的流量都死死地按在 TUN 接口里 ）。潜在代价：
+#                                                                                       #  - Windows  ：开启这个通常会导致 无法开启移动热点，或者 VMware/WSL2 虚拟机无法联网。
+#                                                                                       #  - macOS    ：通常问题不大，但如果你发现 Parallels Desktop 或者 Docker 的网络不通了，第一时间把这里改成 false 
+# device                          : utun0                                               # 指定 tun 网卡名称，MacOS 只能使用 utun 开头的网卡名
+# mtu                             : 9000                                                # 最大传输单元，影响极限速率（10G/高带宽可尝试；默认一般即可 ）
+# udp-timeout                     : 300                                                 # UDP NAT 过期时间（秒），默认 300
+# endpoint-independent-nat        : false                                               # 独立于端点的 NAT（ 性能可能略降，不需要时不建议开启 ）
+# auto-redirect                   : true                                                # 仅 Linux ：自动配置 iptables/nftables 重定向 TCP 连接（路由器/OpenClash 可考虑开启，需 auto-route ）
+# gso                             : true                                                # 仅 Linux ：启用 GSO（提升吞吐；部分场景可能略增延迟）
+# gso-max-size                    : 65536                                               # 仅 Linux ：GSO 数据块最大长度
+# iproute2-table-index            : 2022                                                # 仅 Linux ：auto-route 生成的路由表索引，默认 2022
+# iproute2-rule-index             : 9000                                                # 仅 Linux ：auto-route 生成的规则起始索引，默认 9000
+  stack                           : system                                              # 配置TUN使用哪种核心，自带核心（ gvisor ），系统核心（ system ），混合核心（ mixed ）。 ⚠️ gvisor 在 Mac OS上 对IPv6兼容不佳
+  dns-hijack                      : [ 'any:53'         , 'tcp://any:53'     ]           # 把所有 DNS（53 端口）交给内置 DNS 处理，防止 DNS 走直连
+  inet4-route-exclude-address     :                                                     # 排除内网 IPv4（减少TUN负载，保留内网互联；如需更多网段可下方解除注释） RFC1918 全排除（按需启用）
+                                    - '192.168.0.0/16'                                  #       
+                                    - '10.0.0.0/8'                                      #       
+                                    - '172.16.0.0/12'                                   #       
+  inet6-route-address             :                                                     #       
+                                    - '2000::/3'                                        # 仅让公网 IPv6通过 TUN，避免 IPv6 泄漏，同时保留本地 IPv6 直连
+# inet6-route-exclude-address     :                                                     # 可选：排除 ULA/Link-Local（通常不需要，已由 2000::/3 覆盖公网）
+#                                   - 'fc00::/7'                                        #     
+#                                   - 'fe80::/10'                                       #     
 
 
-hosts                             :                                                     # Clash:全局生效 / Stash:仅DIRECT生效 
-  '+.clash.dev'                   :   '127.0.0.1'                                       # 支持通配符域名 (例如: *.clash.dev, *.foo.*.example.com 。+.foo.com 的效果等同于 .foo.com 和 foo.com)
-  '+.stash.dev'                   :   '127.0.0.1'
- #'dns.alidns.com'                : [ '223.5.5.5'      , '223.6.6.6'        ]           # 🇨🇳 阿里 DNS
- #'pdns.dnspod.cn'                : [ '119.29.29.29'   , '119.28.28.28'     ]           # 🇨🇳 腾讯 DNS \ DNSPod
- #'dns.pub'                       :   '119.29.29.29'                                    # 🇨🇳 腾讯 DNS  
- #'doh.pub'                       : [ '1.12.12.12'     , '120.53.53.53'     ]           # 🇨🇳 腾讯 DNS
- #'dot.pub'                       : [ '1.12.12.12'     , '120.53.53.53'     ]           # 🇨🇳 腾讯 DNS
- #'one.one.one.one'               : [ '1.0.0.1'        , '1.1.1.1'          ]           # 🇺🇸 Cloudflare DNS
- #'dns.google'                    : [ '8.8.8.8'        , '8.8.4.4'          ]           # 🇺🇸 Google DNS  
- #'dns.adguard.com'               : [ '94.140.14.14'   , '94.140.15.15'     ]           # 🇺🇸 AdGuard DNS
- #'dns.adguard-dns.com'           : [ '94.140.14.14'   , '94.140.15.15'     ]           # 🇺🇸 AdGuard DNS
- #'dns.quad9.net'                 :   '9.9.9.9'                                         # 🇺🇸 Quad9 DNS 威胁拦截 + DNSSEC
- #'dns10.quad9.net'               :   '9.9.9.10'                                        # 🇺🇸 Quad9 DNS 无拦截
- #'dns11.quad9.net'               :   '9.9.9.11'                                        # 🇺🇸 Quad9 DNS Secured w/ECS
- #'dns12.quad9.net'               :   '9.9.9.12'                                        # 🇺🇸 Quad9 DNS No blocking + ECS
- #'a.resolvers.level3.net'        :   '4.2.2.1'                                         # 🇺🇸 Level 3 DNS
- #'b.resolvers.level3.net'        :   '4.2.2.2'                                         # 🇺🇸 Level 3 DNS
- #'c.resolvers.level3.net'        :   '4.2.2.3'                                         # 🇺🇸 Level 3 DNS
- #'d.resolvers.level3.net'        :   '4.2.2.4'                                         # 🇺🇸 Level 3 DNS
- #'e.resolvers.level3.net'        :   '4.2.2.5'                                         # 🇺🇸 Level 3 DNS
- #'f.resolvers.level3.net'        :   '4.2.2.6'                                         # 🇺🇸 Level 3 DNS
- #'security.cloudflare-dns.com'   : [ '1.0.0.2'         , '1.1.1.2'         ]           # 🇺🇸 Cloudflare Families（恶意软件 / 成人内容过滤） 
- #'family.cloudflare-dns.com'     : [ '1.0.0.3'         , '1.1.1.3'         ]           # 🇺🇸 Cloudflare Families（恶意软件 / 成人内容过滤） 
- #'family.adguard-dns.com'        : [ '94.140.14.15'    , '94.140.15.16'    ]           # 🇺🇸 AdGuard DNS 家庭保护（成人内容拦截）
- #'unfiltered.adguard-dns.com'    : [ '94.140.14.140'   , '94.140.14.141'   ]           # 🇺🇸 AdGuard DNS 非过滤
+hosts                             :                                                     # Clash:全局生效 / Stash:仅direct生效 
+  '+.clash.dev'                   : [ '127.0.0.1'                           ]           # 支持通配符域名 (例如: *.clash.dev, *.foo.*.example.com 。+.foo.com 的效果等同于 .foo.com 和 foo.com)
+  '+.stash.dev'                   : [ '127.0.0.1'                           ]                     
+# 'dns.alidns.com'                : [ '223.5.5.5'      , '223.6.6.6'        ]           # 🇨🇳 阿里 DNS
+# 'pdns.dnspod.cn'                : [ '119.29.29.29'   , '119.28.28.28'     ]           # 🇨🇳 腾讯 DNS \ DNSPod
+# 'dns.pub'                       : [ '119.29.29.29'                        ]           # 🇨🇳 腾讯 DNS  
+# 'doh.pub'                       : [ '1.12.12.12'     , '120.53.53.53'     ]           # 🇨🇳 腾讯 DNS
+# 'dot.pub'                       : [ '1.12.12.12'     , '120.53.53.53'     ]           # 🇨🇳 腾讯 DNS
+# 'one.one.one.one'               : [ '1.0.0.1'        , '1.1.1.1'          ]           # 🇺🇸 Cloudflare DNS
+# 'dns.google'                    : [ '8.8.8.8'        , '8.8.4.4'          ]           # 🇺🇸 Google DNS  
+# 'dns.adguard.com'               : [ '94.140.14.14'   , '94.140.15.15'     ]           # 🇺🇸 AdGuard DNS
+# 'dns.adguard-dns.com'           : [ '94.140.14.14'   , '94.140.15.15'     ]           # 🇺🇸 AdGuard DNS
+# 'dns.quad9.net'                 : [ '9.9.9.9'                             ]           # 🇺🇸 Quad9 DNS 威胁拦截 + DNSSEC
+# 'dns10.quad9.net'               : [ '9.9.9.10'                            ]           # 🇺🇸 Quad9 DNS 无拦截
+# 'dns11.quad9.net'               : [ '9.9.9.11'                            ]           # 🇺🇸 Quad9 DNS Secured w/ECS
+# 'dns12.quad9.net'               : [ '9.9.9.12'                            ]           # 🇺🇸 Quad9 DNS No blocking + ECS
+# 'a.resolvers.level3.net'        : [ '4.2.2.1'                             ]           # 🇺🇸 Level 3 DNS
+# 'b.resolvers.level3.net'        : [ '4.2.2.2'                             ]           # 🇺🇸 Level 3 DNS
+# 'c.resolvers.level3.net'        : [ '4.2.2.3'                             ]           # 🇺🇸 Level 3 DNS
+# 'd.resolvers.level3.net'        : [ '4.2.2.4'                             ]           # 🇺🇸 Level 3 DNS
+# 'e.resolvers.level3.net'        : [ '4.2.2.5'                             ]           # 🇺🇸 Level 3 DNS
+# 'f.resolvers.level3.net'        : [ '4.2.2.6'                             ]           # 🇺🇸 Level 3 DNS
+# 'security.cloudflare-dns.com'   : [ '1.0.0.2'         , '1.1.1.2'         ]           # 🇺🇸 Cloudflare Families（恶意软件 / 成人内容过滤） 
+# 'family.cloudflare-dns.com'     : [ '1.0.0.3'         , '1.1.1.3'         ]           # 🇺🇸 Cloudflare Families（恶意软件 / 成人内容过滤） 
+# 'family.adguard-dns.com'        : [ '94.140.14.15'    , '94.140.15.16'    ]           # 🇺🇸 AdGuard DNS 家庭保护（成人内容拦截）
+# 'unfiltered.adguard-dns.com'    : [ '94.140.14.140'   , '94.140.14.141'   ]           # 🇺🇸 AdGuard DNS 非过滤
 
 #proxy-hosts                      :                                                     # Stash:仅通过节点代理生效
-# #'grok.com'                     : [ '104.18.29.234' , '104.18.29.234' ]
+# #'grok.com'                     : [ '104.18.29.234'   , '104.18.29.234'   ]
 
 
 dns                               :
   enable                          : true                                                # 如果配置为关闭，则将仅仅使用系统 DNS
   prefer-h3                       : false                                               # ⚠️ ⚠️ 需要节点协议支持。 设置：是否开启 DOH 的 http/3（加密DNS请求）
   ipv6                            : false                                               # 设置：是否启动 基于IPV6的DNS查询
-  listen                          : '0.0.0.0:53'                                        # 设置，如何拦截本地所有DNS请求 ： 方法 ，监听本地的53端口 ，如果此选项配置错误，则Clash 的DNS代理分流逻辑将不生效
+  listen                          : '0.0.0.0:1053'                                      # 设置，如何拦截本地所有DNS请求 ： 方法 ，监听本地的53端口 ，如果此选项配置错误，则Clash 的DNS代理分流逻辑将不生效
   use-hosts                       : true                                                # 使用hosts # lookup hosts and return IP record
   use-system-hosts                : true                                                # 
   skip-cert-verify                : false                                               # TLS 握手时是否忽略证书验证    （ 如果设置为 true ，即，跳过证书验证，用来解决部分兼容性问题 ）
