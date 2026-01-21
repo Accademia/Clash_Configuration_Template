@@ -76,13 +76,33 @@ ntp                               :                                             
   port                            : 123             
 
 
-tun                               :                                                     # 配置：TUN 规则  ,避免 “WebRTC泄露” （泄露 “真实IP”） 
-  enable                          : true 
+tun                               :                                                     # 配置：TUN 规则  ,避免 “WebRTC泄露” （泄露 “真实IP”）
+  enable                          : true
   auto-detect-interface           : true                                                # 自动检测出口网卡
-  auto-route                      : true 
-  stack                           : system                                              # 配置TUN使用哪种核心，是自带核心（gvisor），还是系统核心（system）。 ⚠️ gvisor 在Mac OS上对IPv6兼容不佳
-  dns-hijack                      : [ 'any:53'   ]                                      # 把所有 DNS（53 端口）交给内置 DNS 处理，防止 DNS 走直连                                 
-  inet6-route-address             : [ '2000::/3' ]                                      # 仅让公网 IPv6通过 TUN，避免 IPv6 泄漏，同时保留本地 IPv6 直连
+# include-interface               : [ 'en0'                                 ]           # 手动指定出口网卡（ 多网卡同时连接且自动识别不稳定时使用；Mac 常见 en0=WiFi ）
+# exclude-interface               : [ 'en0'                                 ]           # 排除路由的接口（ 与 include-interface 冲突，不可一起配置）
+  auto-route                      : true                                                # 自动设置全局路由
+  strict-route                    : true                                                # 严格路由（ 防止 IP/DNS 泄露；Windows 会附加防火墙规则，可能影响 VirtualBox 等软件 ）
+# device                          : utun0                                               # 指定 tun 网卡名称，MacOS 只能使用 utun 开头的网卡名
+# mtu                             : 9000                                                # 最大传输单元，影响极限速率（10G/高带宽可尝试；默认一般即可 ）
+# udp-timeout                     : 300                                                 # UDP NAT 过期时间（秒），默认 300
+# endpoint-independent-nat        : false                                               # 独立于端点的 NAT（ 性能可能略降，不需要时不建议开启 ）
+# auto-redirect                   : true                                                # 仅 Linux ：自动配置 iptables/nftables 重定向 TCP 连接（路由器/OpenClash 可考虑开启，需 auto-route ）
+# gso                             : true                                                # 仅 Linux ：启用 GSO（提升吞吐；部分场景可能略增延迟）
+# gso-max-size                    : 65536                                               # 仅 Linux ：GSO 数据块最大长度
+# iproute2-table-index            : 2022                                                # 仅 Linux ：auto-route 生成的路由表索引，默认 2022
+# iproute2-rule-index             : 9000                                                # 仅 Linux ：auto-route 生成的规则起始索引，默认 9000
+  stack                           : system                                              # 配置TUN使用哪种核心，自带核心（ gvisor ），系统核心（ system ），混合核心（ mixed ）。 ⚠️ gvisor 在 Mac OS上 对IPv6兼容不佳
+  dns-hijack                      : [ 'any:53'         , 'tcp://any:53'     ]           # 把所有 DNS（53 端口）交给内置 DNS 处理，防止 DNS 走直连
+  inet4-route-exclude-address     :                                                     # 排除内网 IPv4（减少TUN负载，保留内网互联；如需更多网段可下方解除注释） RFC1918 全排除（按需启用）
+                                    - '192.168.0.0/16'                                  #       
+                                    - '10.0.0.0/8'                                      #       
+                                    - '172.16.0.0/12'                                   #       
+  inet6-route-address             :                                                     #       
+                                    - '2000::/3'                                        # 仅让公网 IPv6通过 TUN，避免 IPv6 泄漏，同时保留本地 IPv6 直连
+# inet6-route-exclude-address     :                                                     # 可选：排除 ULA/Link-Local（通常不需要，已由 2000::/3 覆盖公网）
+#                                   - 'fc00::/7'                                        #     
+#                                   - 'fe80::/10'                                       #     
 
 
 hosts                             :                                                     # Clash:全局生效 / Stash:仅DIRECT生效 
@@ -120,7 +140,7 @@ dns                               :
   enable                          : true                                                # 如果配置为关闭，则将仅仅使用系统 DNS
   prefer-h3                       : false                                               # ⚠️ ⚠️ 需要节点协议支持。 设置：是否开启 DOH 的 http/3（加密DNS请求）
   ipv6                            : false                                               # 设置：是否启动 基于IPV6的DNS查询
-  listen                          : '0.0.0.0:53'                                        # 设置，如何拦截本地所有DNS请求 ： 方法 ，监听本地的53端口 ，如果此选项配置错误，则Clash 的DNS代理分流逻辑将不生效
+  listen                          : '0.0.0.0:1053'                                      # 设置，如何拦截本地所有DNS请求 ： 方法 ，监听本地的53端口 ，如果此选项配置错误，则Clash 的DNS代理分流逻辑将不生效
   use-hosts                       : true                                                # 使用hosts # lookup hosts and return IP record
   use-system-hosts                : true                                                # 
   skip-cert-verify                : false                                               # TLS 握手时是否忽略证书验证    （ 如果设置为 true ，即，跳过证书验证，用来解决部分兼容性问题 ）

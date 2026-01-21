@@ -244,8 +244,8 @@
 - ### **内置双远程规则源**：
 
    > 同时内置两组 互为备份的 远程规则集 ：
-   >    + 第一组 ：Geosite
-   >    + 第二组 ：blackmatrix7/ios_rule_script  + Additional_Rule_For_Clash
+   >    + 第一组 ： geosite 
+   >    + 第二组 ： blackmatrix7/ios_rule_script  + Additional_Rule_For_Clash
    >    + 两组规则 = 90%重叠 ：即，哪怕任意一组 维护更新慢 或 停更，另外一组也能覆盖住。
 
 - ### **完全隐秘行踪**：
@@ -1758,7 +1758,7 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 在 [Desktop] \ [Mobile] \ BleckList 模版中，此功能默认启用，但是，在 [通用模版] 中，为了保证本模版在iOS、Android、Win、Mac之间的通用性，所以，此功能默认关闭。
 
-Stash for iOS 用户，需要等Stash客户端在DNS分流策略中支持 “Rule-Set” 和 “代理集合” 这两个功能后，才能支持。 本人已经向 Stash开发组 提交过多次反馈。而针对此问题，开发组压根 0反馈 、0回复。🤣🤣🤣 100% 纯血版 已读不回 ～
+Stash for iOS 用户，需要等Stash客户端在DNS分流策略中支持 “rule-set” 和 “代理集合” 这两个功能后，才能支持。 本人已经向 Stash开发组 提交过多次反馈。而针对此问题，开发组压根 0反馈 、0回复。🤣🤣🤣 100% 纯血版 已读不回 ～
 
 <br>
 <br>
@@ -1801,11 +1801,11 @@ Stash for iOS 用户，需要等Stash客户端在DNS分流策略中支持 “Rul
 <br>
 
 
-本模版，其实同时内置了两组规则： Ruleset规则 和 Geosite 规则。 如果想进一步省电，请删除其中一套规则（ 并且删除其对应的rule-providers ）。
+本模版，其实同时内置了两组规则： Ruleset规则 和 geosite 规则。 如果想进一步省电，请删除其中一套规则（ 并且删除其对应的rule-providers ）。
 
 > 这样可以将，总规则数量，可以再次➗2（规则02的规则数量，从 1.9万 下降到 8000条），同时，几乎不会降低分流能力。从而进步一省电。也就是说，这两者是互为冗余部署的。
 
-> 注意：Stash 对于Geosite规则的处理效率（耗电），远远优于（使用Classical的）Ruleset规则。
+> 注意：Stash 对于 geosite 规则的处理效率（耗电），远远优于（使用Classical的）Ruleset规则。
     
 
 <br>
@@ -1819,7 +1819,7 @@ Stash for iOS 用户，需要等Stash客户端在DNS分流策略中支持 “Rul
 
 为了 省心 + 0频繁维护 ❕
 
-  > 通过冗余部署，两套远程规则（Rule-Set + Geosite ），避免因某一个规则库停止更新（或更新慢），而导致，使用者频繁手动维护yaml。
+  > 通过冗余部署，两套远程规则（rule-set + geosite ），避免因某一个规则库停止更新（或更新慢），而导致，使用者频繁手动维护yaml。
 
 <br>
 <br>
@@ -2036,7 +2036,7 @@ Stash for iOS 用户，需要等Stash客户端在DNS分流策略中支持 “Rul
 
 <br>
 
-总之！未来，在Geosite官方修正BUG后（达到本模版需求的精准级别后），本模版会再及时替换回官方的规则集的。
+总之！未来，在 geosite 官方修正BUG后（达到本模版需求的精准级别后），本模版会再及时替换回官方的规则集的。
 
 <br>
 <br>
@@ -2123,7 +2123,7 @@ Stash for iOS 用户，需要等Stash客户端在DNS分流策略中支持 “Rul
 ------
 
 
-# 本模版内 小而精准的 GeositeCN + geoip:cn 真不能满足 我的场景需求，怎么办？
+# 本模版内 小而精准的 rule-set:GeositeCN + geoip:cn 真不能满足 我的场景需求，怎么办？
 
 <br>
 
@@ -2177,7 +2177,7 @@ Stash for iOS 用户，需要等Stash客户端在DNS分流策略中支持 “Rul
 ------
 
 
-# 关于 Geosite ，给 Clash Verge Rev 、 Stash 开发者社区 的建议
+# 关于 geosite ，给 Clash Verge Rev 、 Stash 开发者社区 的建议
 
 <br>
 
@@ -2381,7 +2381,7 @@ PS：如果Stash已经兼容上述功能，而本模版尚未改进，希望也�
 
 ### 1. 💩💩💩💩💩 Stash **无法 “批量分流” DNS查询** 到 指定的DNS服务器
    
-  Stash 无法按照（rule-set、Geosite）分流 🇨🇳 中国域名 的 DNS查询 ，到 🇨🇳 中国大陆的DNS服务器
+  Stash 无法按照（ rule-set 、 geosite ）分流 🇨🇳 中国域名 的 DNS查询 ，到 🇨🇳 中国大陆的DNS服务器
     
 由于 Stash并不支持在DNS的nameserver-policy: 中 做如下声明 
 
@@ -2724,6 +2724,28 @@ PS：如果Stash已经兼容上述功能，而本模版尚未改进，希望也�
 | pinterest | 104 | [2st-30] -  工具 |
 | **总计** | **19461** |  |
 
+
+
+<br>
+<br>
+
+
+------
+
+# 官方手册
+
+<br>
+
+
+### Stash 
+
+ > https://stash.wiki/  
+
+<br>
+
+### Clash Meta ( mihomo ) 
+
+ > https://wiki.metacubex.one/config/
 
 
 <br>
