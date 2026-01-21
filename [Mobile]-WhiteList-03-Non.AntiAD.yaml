@@ -83,8 +83,8 @@ tun                               :                                             
 # exclude-interface               : [ 'en0'                                 ]           # 排除路由的接口（ 与 include-interface 冲突，不可一起配置）
   auto-route                      : true                                                # 自动设置全局路由
 # strict-route                    : true                                                # 严格路由（ 防止 IP/DNS 泄露 ，它会把所有网络接口的流量都死死地按在 TUN 接口里 ）。潜在代价：
-#                                                                                       #  - Windows用户：开启这个通常会导致 无法开启移动热点，或者 VMware/WSL2 虚拟机无法联网。
-#                                                                                       #  - macOS用户（我知道你是 Mac 用户）：通常问题不大，但如果你发现 Parallels Desktop 或者 Docker 的网络不通了，第一时间把这里改成 false 
+#                                                                                       #  - Windows  ：开启这个通常会导致 无法开启移动热点，或者 VMware/WSL2 虚拟机无法联网。
+#                                                                                       #  - macOS    ：通常问题不大，但如果你发现 Parallels Desktop 或者 Docker 的网络不通了，第一时间把这里改成 false 
 # device                          : utun0                                               # 指定 tun 网卡名称，MacOS 只能使用 utun 开头的网卡名
 # mtu                             : 9000                                                # 最大传输单元，影响极限速率（10G/高带宽可尝试；默认一般即可 ）
 # udp-timeout                     : 300                                                 # UDP NAT 过期时间（秒），默认 300
