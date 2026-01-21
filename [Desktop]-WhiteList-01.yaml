@@ -107,35 +107,35 @@ tun                               :                                             
 #                                   - 'fe80::/10'                                       #     
 
 
-hosts                             :                                                     # Clash:全局生效 / Stash:仅DIRECT生效 
-  '+.clash.dev'                   :   '127.0.0.1'                                       # 支持通配符域名 (例如: *.clash.dev, *.foo.*.example.com 。+.foo.com 的效果等同于 .foo.com 和 foo.com)
-  '+.stash.dev'                   :   '127.0.0.1'
- #'dns.alidns.com'                : [ '223.5.5.5'      , '223.6.6.6'        ]           # 🇨🇳 阿里 DNS
- #'pdns.dnspod.cn'                : [ '119.29.29.29'   , '119.28.28.28'     ]           # 🇨🇳 腾讯 DNS \ DNSPod
- #'dns.pub'                       :   '119.29.29.29'                                    # 🇨🇳 腾讯 DNS  
- #'doh.pub'                       : [ '1.12.12.12'     , '120.53.53.53'     ]           # 🇨🇳 腾讯 DNS
- #'dot.pub'                       : [ '1.12.12.12'     , '120.53.53.53'     ]           # 🇨🇳 腾讯 DNS
- #'one.one.one.one'               : [ '1.0.0.1'        , '1.1.1.1'          ]           # 🇺🇸 Cloudflare DNS
- #'dns.google'                    : [ '8.8.8.8'        , '8.8.4.4'          ]           # 🇺🇸 Google DNS  
- #'dns.adguard.com'               : [ '94.140.14.14'   , '94.140.15.15'     ]           # 🇺🇸 AdGuard DNS
- #'dns.adguard-dns.com'           : [ '94.140.14.14'   , '94.140.15.15'     ]           # 🇺🇸 AdGuard DNS
- #'dns.quad9.net'                 :   '9.9.9.9'                                         # 🇺🇸 Quad9 DNS 威胁拦截 + DNSSEC
- #'dns10.quad9.net'               :   '9.9.9.10'                                        # 🇺🇸 Quad9 DNS 无拦截
- #'dns11.quad9.net'               :   '9.9.9.11'                                        # 🇺🇸 Quad9 DNS Secured w/ECS
- #'dns12.quad9.net'               :   '9.9.9.12'                                        # 🇺🇸 Quad9 DNS No blocking + ECS
- #'a.resolvers.level3.net'        :   '4.2.2.1'                                         # 🇺🇸 Level 3 DNS
- #'b.resolvers.level3.net'        :   '4.2.2.2'                                         # 🇺🇸 Level 3 DNS
- #'c.resolvers.level3.net'        :   '4.2.2.3'                                         # 🇺🇸 Level 3 DNS
- #'d.resolvers.level3.net'        :   '4.2.2.4'                                         # 🇺🇸 Level 3 DNS
- #'e.resolvers.level3.net'        :   '4.2.2.5'                                         # 🇺🇸 Level 3 DNS
- #'f.resolvers.level3.net'        :   '4.2.2.6'                                         # 🇺🇸 Level 3 DNS
- #'security.cloudflare-dns.com'   : [ '1.0.0.2'         , '1.1.1.2'         ]           # 🇺🇸 Cloudflare Families（恶意软件 / 成人内容过滤） 
- #'family.cloudflare-dns.com'     : [ '1.0.0.3'         , '1.1.1.3'         ]           # 🇺🇸 Cloudflare Families（恶意软件 / 成人内容过滤） 
- #'family.adguard-dns.com'        : [ '94.140.14.15'    , '94.140.15.16'    ]           # 🇺🇸 AdGuard DNS 家庭保护（成人内容拦截）
- #'unfiltered.adguard-dns.com'    : [ '94.140.14.140'   , '94.140.14.141'   ]           # 🇺🇸 AdGuard DNS 非过滤
+hosts                             :                                                     # Clash:全局生效 / Stash:仅direct生效 
+  '+.clash.dev'                   : [ '127.0.0.1'                           ]           # 支持通配符域名 (例如: *.clash.dev, *.foo.*.example.com 。+.foo.com 的效果等同于 .foo.com 和 foo.com)
+  '+.stash.dev'                   : [ '127.0.0.1'                           ]                     
+# 'dns.alidns.com'                : [ '223.5.5.5'      , '223.6.6.6'        ]           # 🇨🇳 阿里 DNS
+# 'pdns.dnspod.cn'                : [ '119.29.29.29'   , '119.28.28.28'     ]           # 🇨🇳 腾讯 DNS \ DNSPod
+# 'dns.pub'                       : [ '119.29.29.29'                        ]           # 🇨🇳 腾讯 DNS  
+# 'doh.pub'                       : [ '1.12.12.12'     , '120.53.53.53'     ]           # 🇨🇳 腾讯 DNS
+# 'dot.pub'                       : [ '1.12.12.12'     , '120.53.53.53'     ]           # 🇨🇳 腾讯 DNS
+# 'one.one.one.one'               : [ '1.0.0.1'        , '1.1.1.1'          ]           # 🇺🇸 Cloudflare DNS
+# 'dns.google'                    : [ '8.8.8.8'        , '8.8.4.4'          ]           # 🇺🇸 Google DNS  
+# 'dns.adguard.com'               : [ '94.140.14.14'   , '94.140.15.15'     ]           # 🇺🇸 AdGuard DNS
+# 'dns.adguard-dns.com'           : [ '94.140.14.14'   , '94.140.15.15'     ]           # 🇺🇸 AdGuard DNS
+# 'dns.quad9.net'                 : [ '9.9.9.9'                             ]           # 🇺🇸 Quad9 DNS 威胁拦截 + DNSSEC
+# 'dns10.quad9.net'               : [ '9.9.9.10'                            ]           # 🇺🇸 Quad9 DNS 无拦截
+# 'dns11.quad9.net'               : [ '9.9.9.11'                            ]           # 🇺🇸 Quad9 DNS Secured w/ECS
+# 'dns12.quad9.net'               : [ '9.9.9.12'                            ]           # 🇺🇸 Quad9 DNS No blocking + ECS
+# 'a.resolvers.level3.net'        : [ '4.2.2.1'                             ]           # 🇺🇸 Level 3 DNS
+# 'b.resolvers.level3.net'        : [ '4.2.2.2'                             ]           # 🇺🇸 Level 3 DNS
+# 'c.resolvers.level3.net'        : [ '4.2.2.3'                             ]           # 🇺🇸 Level 3 DNS
+# 'd.resolvers.level3.net'        : [ '4.2.2.4'                             ]           # 🇺🇸 Level 3 DNS
+# 'e.resolvers.level3.net'        : [ '4.2.2.5'                             ]           # 🇺🇸 Level 3 DNS
+# 'f.resolvers.level3.net'        : [ '4.2.2.6'                             ]           # 🇺🇸 Level 3 DNS
+# 'security.cloudflare-dns.com'   : [ '1.0.0.2'         , '1.1.1.2'         ]           # 🇺🇸 Cloudflare Families（恶意软件 / 成人内容过滤） 
+# 'family.cloudflare-dns.com'     : [ '1.0.0.3'         , '1.1.1.3'         ]           # 🇺🇸 Cloudflare Families（恶意软件 / 成人内容过滤） 
+# 'family.adguard-dns.com'        : [ '94.140.14.15'    , '94.140.15.16'    ]           # 🇺🇸 AdGuard DNS 家庭保护（成人内容拦截）
+# 'unfiltered.adguard-dns.com'    : [ '94.140.14.140'   , '94.140.14.141'   ]           # 🇺🇸 AdGuard DNS 非过滤
 
 #proxy-hosts                      :                                                     # Stash:仅通过节点代理生效
-# #'grok.com'                     : [ '104.18.29.234' , '104.18.29.234' ]
+# #'grok.com'                     : [ '104.18.29.234'   , '104.18.29.234'   ]
 
 
 dns                               :

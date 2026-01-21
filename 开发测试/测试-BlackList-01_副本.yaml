@@ -82,7 +82,9 @@ tun                               :                                             
 # include-interface               : [ 'en0'                                 ]           # 手动指定出口网卡（ 多网卡同时连接且自动识别不稳定时使用；Mac 常见 en0=WiFi ）
 # exclude-interface               : [ 'en0'                                 ]           # 排除路由的接口（ 与 include-interface 冲突，不可一起配置）
   auto-route                      : true                                                # 自动设置全局路由
-  strict-route                    : true                                                # 严格路由（ 防止 IP/DNS 泄露；Windows 会附加防火墙规则，可能影响 VirtualBox 等软件 ）
+# strict-route                    : true                                                # 严格路由（ 防止 IP/DNS 泄露 ，它会把所有网络接口的流量都死死地按在 TUN 接口里 ）。潜在代价：
+#                                                                                       #  - Windows  ：开启这个通常会导致 无法开启移动热点，或者 VMware/WSL2 虚拟机无法联网。
+#                                                                                       #  - macOS    ：通常问题不大，但如果你发现 Parallels Desktop 或者 Docker 的网络不通了，第一时间把这里改成 false 
 # device                          : utun0                                               # 指定 tun 网卡名称，MacOS 只能使用 utun 开头的网卡名
 # mtu                             : 9000                                                # 最大传输单元，影响极限速率（10G/高带宽可尝试；默认一般即可 ）
 # udp-timeout                     : 300                                                 # UDP NAT 过期时间（秒），默认 300
@@ -133,7 +135,7 @@ hosts                             :                                             
 # 'unfiltered.adguard-dns.com'    : [ '94.140.14.140'   , '94.140.14.141'   ]           # 🇺🇸 AdGuard DNS 非过滤
 
 #proxy-hosts                      :                                                     # Stash:仅通过节点代理生效
-# #'grok.com'                     : [ '104.18.29.234' , '104.18.29.234' ]
+# #'grok.com'                     : [ '104.18.29.234'   , '104.18.29.234'   ]
 
 
 dns                               :
