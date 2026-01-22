@@ -790,7 +790,7 @@
 
 ### 设备 ： 📱 手机、平板、路由器、智能电视 （ = 低算力负载 设备 ） 
  
-   - #### 首选 :  ✅ [\[手机\]-WhiteList-02-Min.AntiAD.yaml](https://github.com/Accademia/Clash_Configuration_Template/blob/main/[Mobile]-WhiteList-02-Min.AntiAD.yaml) ✅
+   - #### 首选 :  ✅✅✅ [\[手机\]-WhiteList-02-Min.AntiAD.yaml](https://github.com/Accademia/Clash_Configuration_Template/blob/main/[Mobile]-WhiteList-02-Min.AntiAD.yaml) ✅✅✅
      
      > (RuleSet) 规则数量 ：1.2 万条 （总规则1.9万条）
      > 
@@ -810,13 +810,17 @@
       
       > 如果你是 🍏🍏🍏 《Stash 客户端》 🍏🍏🍏 ，选 “ [通用模版]-02 ”
 
-      > ⚠️⚠️⚠️⚠️ 非 Stash客户端的 用户，千万别选 《 通用模版 》 ， 其配置步骤远比其他模版繁琐的多 ❕❕❕❕❕
+      > ⚠️ 非 Stash客户端的 用户，千万别选 《 通用模版 》 ❕❕❕
+      >
+      > ⚠️ 非 Stash客户端的 用户，千万别选 《 通用模版 》 ❕❕❕
+      >
+      > ⚠️ 非 Stash客户端的 用户，千万别选 《 通用模版 》 ❕❕❕
 
 <br>
 
 ###  设备 ： 💻 个人电脑  （ = 高算力负载 设备 ）
  
-   - #### 首选 :  ✅  [\[手机\]-WhiteList-03-Non.AntiAD.yaml](https://github.com/Accademia/Clash_Configuration_Template/blob/main/[Mobile]-WhiteList-03-Non.AntiAD.yaml)  ✅  +  Adguard 客户端
+   - #### 首选 :  ✅✅✅  [\[手机\]-WhiteList-03-Non.AntiAD.yaml](https://github.com/Accademia/Clash_Configuration_Template/blob/main/[Mobile]-WhiteList-03-Non.AntiAD.yaml)  ✅✅✅  +  Adguard 客户端
      
      > (RuleSet) 规则数量 ：1.2 万条 （总规则1.9万条）
      >
