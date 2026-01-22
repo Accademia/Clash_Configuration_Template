@@ -810,11 +810,7 @@
       
       > 如果你是 🍏🍏🍏 《Stash 客户端》 🍏🍏🍏 ，选 “ [通用模版]-02 ”
 
-      > ⚠️ 非 Stash客户端的 用户，千万别选 《 通用模版 》 ❕❕❕
-      >
-      > ⚠️ 非 Stash客户端的 用户，千万别选 《 通用模版 》 ❕❕❕
-      >
-      > ⚠️ 非 Stash客户端的 用户，千万别选 《 通用模版 》 ❕❕❕
+      > ⚠️ 非 Stash iOS 用户，不建议选 《 通用模版 》 ，维护成本高❕❕❕
 
 <br>
 
@@ -945,6 +941,7 @@
       >   https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-03-Non.AntiAD.yaml
 
    - 仅限 Stash 客户端 用户，选第一套模版。其他客户端用户，千万别选第一套模版（ 配置繁琐 ），请从第2-4套中选择。
+
 <br>  
 
 #### 【第二套】 仅兼容 Clash Meta + 白名单模版  +  手机 移动端优化
@@ -1005,11 +1002,13 @@
 
 
 注意，：上述模版，在导入后，如果觉得 “选项过多” ，可以 通过以下开关，使界面清爽
+  
   >``` yaml
   >  hidden : false
   >  # 替换成
   >  hidden : true      
   >```
+  
   我本人必启动此项，力求简洁清爽。但是，如果你是第一次导入，那么在第一次节点配置成功前，最好不要隐藏。因为调试时需要看。
   
   <br> 
@@ -1032,14 +1031,14 @@
   > 通用模版 ：🈚️🈚️ 无 订阅功能 ！
  
  ``` yaml
-proxy-providers:
+   proxy-providers:
 
-   SUB-Provider-01:
-      type     : http
-      url      : 'https://example.com/replace/your/subscription/url'  # <------ 此处添加你的订阅节点 ！！！
-      interval : 43200
-      path     : ./proxy-providers/SUB-Provider-01.yaml
- 
+      SUB-Provider-01:
+         type     : http
+         url      : 'https://example.com/replace/your/subscription/url'  # <------ 此处添加你的订阅节点 ！！！
+         interval : 43200
+         path     : ./proxy-providers/SUB-Provider-01.yaml
+   
  ``` 
 
 <br>
