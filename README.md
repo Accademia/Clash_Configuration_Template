@@ -944,6 +944,7 @@
                             
       >   https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/%5B%E9%80%9A%E7%94%A8%E6%A8%A1%E7%89%88%5D-WhiteList-03-Non.AntiAD.yaml
 
+   - 仅限 Stash 客户端 用户，选第一套模版。其他客户端用户，千万别选第一套模版（ 配置繁琐 ），请从第2-4套中选择。
 <br>  
 
 #### 【第二套】 仅兼容 Clash Meta + 白名单模版  +  手机 移动端优化
