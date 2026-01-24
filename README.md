@@ -792,11 +792,11 @@
  
    - #### 首选 :  ✅✅✅ [\[手机\]-WhiteList-02-Min.AntiAD.yaml](https://github.com/Accademia/Clash_Configuration_Template/blob/main/[Mobile]-WhiteList-02-Min.AntiAD.yaml) ✅✅✅
      
-     > 订阅链接 ： https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/[Mobile]-WhiteList-02-Min.AntiAD.yaml
-     >
      > (RuleSet) 规则数量 ：1.2 万条 （总规则1.9万条）
      > 
      > 入选理由：🔥🔥🔥 超级省电 🔥🔥🔥
+     >
+     > 订阅链接 ： https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/[Mobile]-WhiteList-02-Min.AntiAD.yaml
  
 
    - #### 为什么不选 01 模版 ？
@@ -820,20 +820,20 @@
  
    - #### 首选 :  ✅✅✅  [\[手机\]-WhiteList-03-Non.AntiAD.yaml](https://github.com/Accademia/Clash_Configuration_Template/blob/main/[Mobile]-WhiteList-03-Non.AntiAD.yaml)  ✅✅✅  +  Adguard 客户端
      
-     > 订阅链接 ： https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/[Mobile]-WhiteList-03-Non.AntiAD.yaml
-     >
      > (RuleSet) 规则数量 ：1.2 万条 （总规则1.9万条）
      >
      > 入选理由 ：🔥🔥🔥 超级省电 🔥🔥🔥
+     >
+     > 订阅链接 ： https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/[Mobile]-WhiteList-03-Non.AntiAD.yaml
 
  
    - #### 次选 :  ✅ [\[电脑\]-WhiteList-03-Non.AntiAD.yaml](https://github.com/Accademia/Clash_Configuration_Template/blob/main/[Desktop]-WhiteList-02-Min.AntiAD.yaml) ✅  +  Adguard 客户端
      
-     > 订阅链接 ： https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/[Desktop]-WhiteList-03-Non.AntiAD.yaml
-     >
      > (RuleSet) 规则数量 ：12 万条 （总规则13万条）
      >
      > 入选理由 ：如果出现 🇨🇳中国流量绕路海外的情况，请部署此规则 （ 增强了 中国分流规则 额外增加10万条 ）
+     >
+     > 订阅链接 ： https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/[Desktop]-WhiteList-03-Non.AntiAD.yaml
    
    - #### 上述组合 意义是什么 ？
       
