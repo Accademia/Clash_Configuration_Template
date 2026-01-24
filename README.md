@@ -796,9 +796,8 @@
      > 
      > 入选理由：🔥🔥🔥 超级省电 🔥🔥🔥
      >
-     
+
      > 订阅链接 ： 
-     >
      >   - https://cdn.jsdelivr.net/gh/Accademia/Clash_Configuration_Template/[Mobile]-WhiteList-02-Min.AntiAD.yaml
  
 
