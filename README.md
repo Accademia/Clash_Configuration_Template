@@ -1679,38 +1679,7 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 
 
-------
 
-#  如何魔改本模版 ： 我的🇺🇸住宅IP节点，是优质线路（如CN2），如何优先使用直连，而非优先中转？
-
-<br>
-
-本模版会假设所有的 住宅IP节点，都是垃圾线路。如果你是优质线路（如 CN2-GIA、9929、10099、CMI等线路）。那么你可以通过在源代码中，搜索如下内容，进行替换，从而达到 “ 优先 直连 + 代理链 灾备” 的效果。
-
-
-
-   ``` yaml
-    - { name : '🇺🇸🍟.Line-[US.HomeIP]'                                     , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/Fries.png'                 , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'select'       , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [ '🇺🇸🍟.Multi.PrxChain-[US.HomeIP]'                , '🇺🇸🔰.VPS-[US.HomeIP]-(美国住宅节点)'    ] }                                           # 由于假定美国住宅节点是垃圾线路，所以，这里不能用fallback，只能手动选择                              
-
-   ```
-   替换为
-
-   ``` yaml
-    - { name : '🇺🇸🍟.Line-[US.HomeIP]'                                     , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/Fries.png'                 , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'fallback'     , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [ '🇺🇸🔰.VPS-[US.HomeIP]-(美国住宅节点)'            ,  '🇺🇸🍟.Multi.PrxChain-[US.HomeIP]'       ] }   
-
-   ``` 
-   > 修改后，🇺🇸美国住宅IP的节点，会优先直连，仅在无法连接到🇺🇸当前美国住宅IP节点时，才会通过代理链去中转连接🇺🇸美国住宅IP节点。
-   
-   > 当然，你也可以将 上述的 fallback 关键词，改为 url-test 关键词 ，则会选取延迟最低的方式连接🇺🇸美国住宅IP节点，而不是将代理链仅作为灾备线路。（但是要注意，你要确认你代理链上的所有节点，是否都支持UDP流量的转发，以及你的客户端是否支持UDP代理链，比如Stash就不支持。如果上述不能都打成，那代理链最好只作为备选）。
-   
-   > 总之，无论选那种模式，抗节点损毁、保IP地址不乱跳 等功能会完美保留。
-
-   其他国家的住宅IP节点，也可以以此类推的方式添加。
-   
-   对于 手笨的，千万别在本项目中发issue（ = 无脑让人给你当保姆 ），100%喜提0社交关闭issue🤣。建议谁收你钱，你找谁（你找机场主），或者你去寻求AI帮你全自动处理。跟AI交流，可以将 ： 《 你的需求 + 本说明文件全部内容 + 你要修改的模版 》 全部扔给 付费AI（20、200美金一个月的ChatGPT Think/Pro ）来修改，并让AI提供修改好的下载链接，并且告诉AI保留所有原功能（不然AI会乱删代码，已达到偷懒的目的），不建议用 gemini pro 和 grok think ，这俩AI对MB级别大文本处理能力不好。
-
-<br>
-<br>
 
 
 
@@ -1812,7 +1781,40 @@ Stash for iOS 用户，需要等Stash客户端在DNS分流策略中支持 “rul
 
 ------
 
-#  如何让 本模版 只支持 “黑名单模式”   ？
+#  如何魔改本模版 ： 如果你的🇺🇸住宅IP节点 是优质线路（如CN2），如何 优先直连，而非 优先代理链中转连接 ？
+
+<br>
+
+本模版会假设所有的 住宅IP节点，都是垃圾线路。如果你是优质线路（如 CN2-GIA、9929、10099、CMI等线路）。那么你可以通过在源代码中，搜索如下内容，进行替换，从而达到 《 优先 直连 》 + 《 代理链 仅作为 灾备》 的效果。
+
+
+
+   ``` yaml
+    - { name : '🇺🇸🍟.Line-[US.HomeIP]'                                     , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/Fries.png'                 , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'select'       , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [ '🇺🇸🍟.Multi.PrxChain-[US.HomeIP]'                , '🇺🇸🔰.VPS-[US.HomeIP]-(美国住宅节点)'    ] }                                           # 由于假定美国住宅节点是垃圾线路，所以，这里不能用fallback，只能手动选择                              
+
+   ```
+   替换为
+
+   ``` yaml
+    - { name : '🇺🇸🍟.Line-[US.HomeIP]'                                     , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/Fries.png'                 , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'fallback'     , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [ '🇺🇸🔰.VPS-[US.HomeIP]-(美国住宅节点)'            ,  '🇺🇸🍟.Multi.PrxChain-[US.HomeIP]'       ] }   
+
+   ``` 
+   > 修改后，🇺🇸美国住宅IP的节点，会优先直连，仅在无法连接到🇺🇸当前美国住宅IP节点时，才会通过代理链去中转连接🇺🇸美国住宅IP节点。
+   
+   > 当然，你也可以将 上述的 fallback 关键词，改为 url-test 关键词 ，则会选取延迟最低的方式连接🇺🇸美国住宅IP节点，而不是将代理链仅作为灾备线路。（但是要注意，你要确认你代理链上的所有节点，是否都支持UDP流量的转发，以及你的客户端是否支持UDP代理链，比如Stash就不支持。如果上述不能都打成，那代理链最好只作为备选）。
+   
+   > 总之，无论选那种模式，抗节点损毁、保IP地址不乱跳 等功能会完美保留。
+
+   其他国家的住宅IP节点，也可以以此类推的方式添加。
+   
+   对于 手笨的，千万别在本项目中发issue（ = 无脑让人给你当保姆 ），100%喜提0社交关闭issue🤣。建议谁收你钱，你找谁（你找机场主），或者你去寻求AI帮你全自动处理。跟AI交流，可以将 ： 《 你的需求 + 本说明文件全部内容 + 你要修改的模版 》 全部扔给 付费AI（20、200美金一个月的ChatGPT Think/Pro ）来修改，并让AI提供修改好的下载链接，并且告诉AI保留所有原功能（不然AI会乱删代码，已达到偷懒的目的），不建议用 gemini pro 和 grok think ，这俩AI对MB级别大文本处理能力不好。更不要不信邪，用免费AI。改坏之后来这里哭诉，AI不适合改本模版。100%喜提拉黑。
+
+<br>
+<br>
+
+------
+
+#  如何魔改本模版 ：让 本模版 只支持 “黑名单模式”   ？
 
 <br>
 
