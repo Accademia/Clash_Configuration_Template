@@ -1681,6 +1681,37 @@ If you are not located in China but instead in rogue countries like Russia, Iran
 
 ------
 
+#  如何魔改本模版 ： 我的🇺🇸住宅IP节点，是优质线路（如CN2），如何优先使用直连，而非优先中转？
+
+<br>
+
+本模版会假设所有的住宅IP节点，都是垃圾线路。如果你是优质线路（如 CN2-GIA、9929、10099、CMI等线路），如果在源代码中搜索如下内容进行替换
+
+
+
+   ``` yaml
+    - { name : '🇺🇸🍟.Line-[US.HomeIP]'                                     , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/Fries.png'                 , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'select'       , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [ '🇺🇸🍟.Multi.PrxChain-[US.HomeIP]'                , '🇺🇸🔰.VPS-[US.HomeIP]-(美国住宅节点)'    ] }                                           # 由于假定美国住宅节点是垃圾线路，所以，这里不能用fallback，只能手动选择                              
+
+   ```
+   替换为
+
+   ``` yaml
+    - { name : '🇺🇸🍟.Line-[US.HomeIP]'                                     , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/Fries.png'                 , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'fallback'     , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [ '🇺🇸🔰.VPS-[US.HomeIP]-(美国住宅节点)'            ,  '🇺🇸🍟.Multi.PrxChain-[US.HomeIP]'       ] }   
+
+   ``` 
+   修改后，🇺🇸美国住宅IP的节点，会优先直连，在无发链接时，才会使用代理链。或者将 fallback 关键词改为 url-test ，则会选取延迟最低的方式连接🇺🇸美国住宅IP节点（但是要注意，你要确认你的代理链上的所有节点，是否都对UDP流量友好，如果不是，那代理链最好只作为备选）。总之，无论选那种模式，抗节点损毁、保IP地址不乱跳 等功能会完美保留。
+
+   其他国家的住宅IP节点，也可以以此类推的方式添加。
+   
+   对于不会添加的，手笨的，千万别在本项目中发issue（无脑让人给你当保姆），100%喜提0社交关闭issue🤣。建议谁收你钱，你找谁（你找机场主帮你处理），或者你去寻求AI帮你全自动处理。跟AI交流，可以将 ： 《 你的需求 + 本说明文件全部内容 + 你要修改的模版 》 全部扔给 付费AI（20、200美金一个月的ChatGPT Think/Pro ）来修改，并让AI提供修改好的下载链接，并且告诉AI保留所有原功能（不然AI会乱删代码，已达到偷懒的目的），不建议用 gemini pro 和 grok think ，这俩AI对MB级别大文本处理能力不好。
+
+<br>
+<br>
+
+
+
+------
+
 #  本模版 会发生 “DNS泄漏” 么？会限制 “DNS解析” 么？
 
 <br>
