@@ -2269,7 +2269,7 @@ Stash for iOS 用户，需要等Stash客户端在DNS分流策略中支持 “rul
 
   - ### ❌ FakeIP + Fallback DNS + no-resolve 
 
-    > “Fake IP + Fallback DNS + no-resolve” （不推荐使用）。这是 上一代 防DNS污染 技术 ：其同时向 “国内 国外 DNS” 发起域名解析，然后让国外DNS 给结果纠错，从而避免DNS污染。 
+    > “Fake IP + Fallback DNS + no-resolve” （不推荐使用）。这是 上一代 防DNS污染 技术 ：其同时向 “国内 国外 DNS” 发起域名解析，然后让国外DNS 给结果纠错，从而 100% 避免DNS污染（ 但是会100%造成DNS泄漏 ）
 
   
   - ### ✅ Redir-Host + Nameserver-Policy DNS
