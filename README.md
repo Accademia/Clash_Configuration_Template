@@ -2269,12 +2269,12 @@ Stash for iOS 用户，需要等Stash客户端在DNS分流策略中支持 “rul
 
   - ### ❌ FakeIP + Fallback DNS + no-resolve 
 
-    > “Fake IP + Fallback DNS + no-resolve” （不推荐使用）。这是 上一代 防DNS污染 技术 ：其同时向 “国内 国外 DNS” 发起域名解析，然后让国外DNS 给结果纠错，从而 100% 避免DNS污染（ 但是会100%造成DNS泄漏 ）
+    > “Fake IP + Fallback DNS + no-resolve” （不推荐使用）。这是 上一代 防DNS污染 技术 ：其同时向 “国内 国外 DNS” 发起域名解析，然后让国外DNS 给结果纠错，从而 100% 避免DNS污染（ 但是会，100%造成DNS泄漏 + 100%造成DNS解析能力阉割 ）
 
   
   - ### ✅ Redir-Host + Nameserver-Policy DNS
   
-    > “Redir-Host + Nameserver-Policy DNS” （推荐使用）。 这是 最新一代 防DNS污染 技术 ：是基于 域名黑名单（如 geosite:cn）机制的DNS分流。从而达到，只有名单内的中国域名 才会请求 中国国内的DNS请求域名解析。而名单内外的域名，一律当作海外域名，只向海外DNS请求解析（不像 “ FakeIP + Fallback DNS + no-resolve ”  那样，同时向国内外DNS发起请求解析 ） ，从而既100%避免DNS泄漏，又100%避免DNS污染。
+    > “Redir-Host + Nameserver-Policy DNS” （推荐使用）。 这是 最新一代 防DNS污染 技术 ：是基于 域名黑名单（如 geosite:cn）机制的DNS分流。从而达到，只有名单内的中国域名 才会请求 中国国内的DNS请求域名解析。而名单内外的域名，一律当作海外域名，只向海外DNS请求解析（不像 “ FakeIP + Fallback DNS + no-resolve ”  那样，同时向国内外DNS发起请求解析 ） ，从而既100%避免DNS泄漏，又100%避免DNS污染，还100%获得满血版DNS解析能力。
 
 <br>
 
