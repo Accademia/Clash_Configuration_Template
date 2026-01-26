@@ -2274,7 +2274,7 @@ Stash for iOS 用户，需要等Stash客户端在DNS分流策略中支持 “rul
   
   - ### ✅ Redir-Host + Nameserver-Policy DNS
   
-    > “Redir-Host + Nameserver-Policy DNS” （推荐使用）。 这是 最新一代 防DNS污染 技术 ：其通过 域名黑名单（如 geosite:cn）控制，只有中国域名才会请求中国DNS，非名单内的域名，一律当作海外域名请求海外DNS解析 。从而避免DNS污染。
+    > “Redir-Host + Nameserver-Policy DNS” （推荐使用）。 这是 最新一代 防DNS污染 技术 ：是基于 域名黑名单（如 geosite:cn）机制的DNS分流。从而达到，只有名单内的中国域名 才会请求 中国国内的DNS请求域名解析。而名单内外的域名，一律当作海外域名，只向海外DNS请求解析（不像 “ FakeIP + Fallback DNS + no-resolve ”  那样，同时向国内外DNS发起请求解析 ） ，从而既100%避免DNS泄漏，又100%避免DNS污染。
 
 <br>
 
