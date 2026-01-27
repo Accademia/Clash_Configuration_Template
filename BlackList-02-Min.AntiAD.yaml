@@ -32,14 +32,19 @@ geodata-mode                      : false                                       
 geodata-loader                    : memconservative                                     # GEO 文件加载模式 :  standard：标准加载器  \  memconservative：专为内存受限 (小内存) 设备优化的加载器 (默认值)
 geo-auto-update                   : true                                                # 自动更新GeoIP数据库
 geo-update-interval               : 24                                                  # 更新GeoIP数据库的 时间间隔（小时）
-geox-url                          :                                                     # 更新GeoIP数据库的 链接
-# geoip                           : 'https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat'
-# geosite                         : 'https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat'
-  geoip                           : 'https://cdn.jsdelivr.net/gh/v2fly/geoip@release/geoip.dat'
-  geosite                         : 'https://cdn.jsdelivr.net/gh/v2fly/domain-list-community@release/dlc.dat'
-  mmdb                            : 'https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb'
-  asn                             : 'https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb'
-
+geox-url                          :                                                     # GeoIP、GeoSite 数据库
+  geoip                           : 'https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/geoip.dat'                              # https://github.com/Loyalsoldier/geoip
+# geosite                         : 'https://cdn.jsdelivr.net/gh/Loyalsoldier/domain-list-custom@release/geosite.dat'               # https://github.com/Loyalsoldier/domain-list-custom
+  mmdb                            : 'https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country-without-asn.mmdb'               # https://github.com/Loyalsoldier/geoip
+  asn                             : 'https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/GeoLite2-ASN.mmdb'                      # https://github.com/Loyalsoldier/geoip
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# geoip                           : 'https://cdn.jsdelivr.net/gh/v2fly/geoip@release/geoip.dat'                                     # https://github.com/v2fly/domain-list-community
+  geosite                         : 'https://cdn.jsdelivr.net/gh/v2fly/domain-list-community@release/dlc.dat'                       # https://github.com/v2fly/domain-list-community
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# geoip                           : 'https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat'                  # https://github.com/MetaCubeX/meta-rules-dat
+# geosite                         : 'https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat'                # https://github.com/MetaCubeX/meta-rules-dat
+# mmdb                            : 'https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb'               # https://github.com/MetaCubeX/meta-rules-dat
+# asn                             : 'https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb'               # https://github.com/MetaCubeX/meta-rules-dat
 
 
 profile                           :                                                     # 其他首选项
