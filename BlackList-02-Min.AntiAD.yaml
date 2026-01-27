@@ -1733,7 +1733,7 @@ rules:
     - rule-set        , HijackingPlus_Do_Resolve                   , ⛔️.<Protection>--Hijacking       # , no-track    # , no-resolve                          ### [1st-06]  [ Default : REJECT      ]       https://github.com/Accademia/Additional_Rule_For_Clash/tree/master/HijackingPlus             反劫持 - HijackingPlus       
 
    
-  ###[1st-08] -  保护隐私  -  补充
+  ###  [1st-08] -  保护隐私  -  补充
     - rule-set        , PreRepairEasyPrivacy_REJECT_Do_Resolve     , REJECT-DROP                      # , no-track    # , no-resolve                          ### [1st-08]  [ Default : REJECT      ]      https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/PreRepairEasyPrivacy        保护隐私 - PreRepairEasyPrivacy                                                                                                                                           
 ###### 🔻🔻🔻 开始（Min.AntiAD） ✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅   开始（Min.AntiAD）      
 # ###  [1st-08] -  保护隐私                                                                                                                                   
