@@ -4,7 +4,7 @@
 #   Clash.Meta                    |     https://wiki.metacubex.one/config/                                             # 
 # --------------------------------+----------------------------------------------------------------------------------- #
 
-# v.2026.01.19
+# v.2026.01.22
 # ⚠️⚠️⚠️ 如果出现，显示不对齐的情况，请使用《 对齐中文字体 + 对齐emoji字体 》❕❕❕❕ 比如 'Inconsolata' 等字体
 
 #---------------------------------+------------------------------------------------------------------------------------+
@@ -33,10 +33,13 @@ geodata-loader                    : memconservative                             
 geo-auto-update                   : true                                                # 自动更新GeoIP数据库
 geo-update-interval               : 24                                                  # 更新GeoIP数据库的 时间间隔（小时）
 geox-url                          :                                                     # 更新GeoIP数据库的 链接
-  geoip                           : 'https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat'
-  geosite                         : 'https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat'
+# geoip                           : 'https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat'
+# geosite                         : 'https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat'
+  geoip                           : 'https://cdn.jsdelivr.net/gh/v2fly/geoip@release/geoip.dat'
+  geosite                         : 'https://cdn.jsdelivr.net/gh/v2fly/domain-list-community@release/dlc.dat'
   mmdb                            : 'https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb'
   asn                             : 'https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb'
+
 
 
 profile                           :                                                     # 其他首选项
@@ -181,10 +184,19 @@ dns                               :
                                     ### --------------------------------------------------------------------------------------------------
                                     ###  [1st-01]  DNS分流 ： DNS服务器
                                     ### --------------------------------------------------------------------------------------------------
+
                                      'rule-set:GlobalDNS_Domain'                        : [ 'system'                                                                                                                                                    ]   ### [1st-01]          
                                      'rule-set:ChinaDNS_Domain'                         : [ 'system'                                                                                                                                                    ]   ### [1st-01]          
-                                      
-                                      
+
+
+                                    ### --------------------------------------------------------------------------------------------------
+                                    ###  [1st-02]  DNS分流 ： 局域网
+                                    ### --------------------------------------------------------------------------------------------------
+
+                                     'geosite:private'                                  : [ 'system'                                                                                                                                                    ]   ### [1st-02]          
+                                     'rule-set:Lan_Do_Resolve'                          : [ 'system'                                                                                                                                                    ]   ### [1st-02]          
+
+
                                     ### --------------------------------------------------------------------------------------------------
                                     ###  [1st-03]  DNS分流 ： 自己的翻墙域名
                                     ### --------------------------------------------------------------------------------------------------
