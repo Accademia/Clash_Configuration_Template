@@ -504,7 +504,7 @@ dns                               :
                                        'rule-set:AppleTV_Do_Resolve'                      : [ 'https://cloudflare-dns.com/dns-query#📺.<Video>--AppleTV'                     , 'https://dns.google/dns-query#📺.<Video>--AppleTV'                         ]   ### [3st-22]                       
                                        
                                    ###### 🔻🔻🔻 开始（ Min.AntiAD ）✅
-                                     # 'geosite:category-porn'                            : [ 'https://cloudflare-dns.com/dns-query#📺.<Video>--Porn'                        , 'https://dns.google/dns-query#📺.<Video>--Porn'                            ]   ### [3st-22]                      
+                                  #   'geosite:category-porn'                            : [ 'https://cloudflare-dns.com/dns-query#📺.<Video>--Porn'                        , 'https://dns.google/dns-query#📺.<Video>--Porn'                            ]   ### [3st-22]                      
                                    ###### 🔺🔺🔺 结束（ Min.AntiAD ）✅
                                        
                                        'geosite:pornhub'                                  : [ 'https://cloudflare-dns.com/dns-query#📺.<Video>--Porn'                        , 'https://dns.google/dns-query#📺.<Video>--Porn'                            ]   ### [3st-22]                       
