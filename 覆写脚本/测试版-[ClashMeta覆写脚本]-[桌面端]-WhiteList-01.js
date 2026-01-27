@@ -73,7 +73,7 @@ const TEMPLATE_YAML = String.raw`
 #   Clash.Meta                    |     https://wiki.metacubex.one/config/                                             # 
 # --------------------------------+----------------------------------------------------------------------------------- #
 
-# v.2026.01.19
+# v.2026.01.22
 # ⚠️⚠️⚠️ 如果出现，显示不对齐的情况，请使用《 对齐中文字体 + 对齐emoji字体 》❕❕❕❕ 比如 'Inconsolata' 等字体
 
 #---------------------------------+------------------------------------------------------------------------------------+
@@ -101,11 +101,20 @@ geodata-mode                      : false                                       
 geodata-loader                    : memconservative                                     # GEO 文件加载模式 :  standard：标准加载器  \  memconservative：专为内存受限 (小内存) 设备优化的加载器 (默认值)
 geo-auto-update                   : true                                                # 自动更新GeoIP数据库
 geo-update-interval               : 24                                                  # 更新GeoIP数据库的 时间间隔（小时）
-geox-url                          :                                                     # 更新GeoIP数据库的 链接
-  geoip                           : 'https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat'
-  geosite                         : 'https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat'
-  mmdb                            : 'https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb'
-  asn                             : 'https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb'
+geox-url                          :                                                     # GeoIP、GeoSite 数据库
+  geoip                           : 'https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/geoip.dat'                              # https://github.com/Loyalsoldier/geoip
+# geosite                         : 'https://cdn.jsdelivr.net/gh/Loyalsoldier/domain-list-custom@release/geosite.dat'               # https://github.com/Loyalsoldier/domain-list-custom
+  mmdb                            : 'https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country-without-asn.mmdb'               # https://github.com/Loyalsoldier/geoip
+  asn                             : 'https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/GeoLite2-ASN.mmdb'                      # https://github.com/Loyalsoldier/geoip
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# geoip                           : 'https://cdn.jsdelivr.net/gh/v2fly/geoip@release/geoip.dat'                                     # https://github.com/v2fly/domain-list-community
+  geosite                         : 'https://cdn.jsdelivr.net/gh/v2fly/domain-list-community@release/dlc.dat'                       # https://github.com/v2fly/domain-list-community
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# geoip                           : 'https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat'                  # https://github.com/MetaCubeX/meta-rules-dat
+# geosite                         : 'https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat'                # https://github.com/MetaCubeX/meta-rules-dat
+# mmdb                            : 'https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb'               # https://github.com/MetaCubeX/meta-rules-dat
+# asn                             : 'https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb'               # https://github.com/MetaCubeX/meta-rules-dat
+
 
 
 profile                           :                                                     # 其他首选项
@@ -250,10 +259,19 @@ dns                               :
                                     ### --------------------------------------------------------------------------------------------------
                                     ###  [1st-01]  DNS分流 ： DNS服务器
                                     ### --------------------------------------------------------------------------------------------------
+
                                      'rule-set:GlobalDNS_Domain'                        : [ 'system'                                                                                                                                                    ]   ### [1st-01]          
                                      'rule-set:ChinaDNS_Domain'                         : [ 'system'                                                                                                                                                    ]   ### [1st-01]          
-                                      
-                                      
+
+
+                                    ### --------------------------------------------------------------------------------------------------
+                                    ###  [1st-02]  DNS分流 ： 局域网
+                                    ### --------------------------------------------------------------------------------------------------
+
+                                     'geosite:private'                                  : [ 'system'                                                                                                                                                    ]   ### [1st-02]          
+                                     'rule-set:Lan_Do_Resolve'                          : [ 'system'                                                                                                                                                    ]   ### [1st-02]          
+
+
                                     ### --------------------------------------------------------------------------------------------------
                                     ###  [1st-03]  DNS分流 ： 自己的翻墙域名
                                     ### --------------------------------------------------------------------------------------------------
@@ -1647,8 +1665,8 @@ proxy-groups:
   # - { name : '🌐🇩🇪.Line-[Global]-DE.First'                               , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/Available_1.png'           , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'fallback'     , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [     ] }  
 
    ### 线路：按国家分流 + 只使用本国线路（包括节点、代理链）进行灾备
-    - { name : '🇺🇸🍟.Line-[US.HomeIP]'                                     , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/Fries.png'                 , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'select'       , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [  '🇺🇸🍟.Multi.PrxChain-[US.HomeIP]'                , '🇺🇸🔰.VPS-[US.HomeIP]-(美国住宅节点)'    ] }
-    - { name : '🇺🇸📍.Line-[US.ShowIP]'                                     , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/Area.png'                  , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'fallback'     , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [  '🇺🇸🔰.VPS-[US.ShowIP]-(归属地落地节点)'          ,  '🇺🇸📍.Multi.PrxChain-[US.ShowIP]'       ,  DIRECT        ] }                            
+    - { name : '🇺🇸🍟.Line-[US.HomeIP]'                                     , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/Fries.png'                 , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'select'       , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [ '🇺🇸🍟.Multi.PrxChain-[US.HomeIP]'                , '🇺🇸🔰.VPS-[US.HomeIP]-(美国住宅节点)'    ] }                                           # 由于假定美国住宅节点是垃圾线路，所以，这里不能用fallback，只能手动选择                              
+    - { name : '🇺🇸📍.Line-[US.ShowIP]'                                     , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/Area.png'                  , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'fallback'     , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [  '🇺🇸🔰.VPS-[US.ShowIP]-(归属地落地节点)'          ,  '🇺🇸📍.Multi.PrxChain-[US.ShowIP]'       , '🇨🇳.Line-[CN]' , DIRECT        ] }         # 必须加中国线路和直连，以便于，即便ShowIP线路上所有的节点、代理链都挂掉，也不影响国内APP的使用 ！！！                      
     - { name : '🇺🇸.Line-[US]'                                              , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/United_States.png'         , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'fallback'     , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [  '🇺🇸🔰.VPS-[US.Relay]-(美国中转节点)'             ,  '🇺🇸.Multi.PrxChain-[US]'                ] }                                 
     - { name : '🇯🇵.Line-[JP]'                                              , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/Japan.png'                 , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'fallback'     , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [  '🇯🇵🔰.VPS-[JP.Relay]-(日本中转节点)'             ,  '🇯🇵.Multi.PrxChain-[JP]'                ] }                                    
     - { name : '🇬🇧.Line-[UK]'                                              , icon : 'https://fastly.jsdelivr.net/gh/Koolson/Qure@latest/IconSet/Color/United_Kingdom.png'        , url : 'https://www.apple.com/library/test/success.html' , expected-status : 200 , max-failed-times : 5 , type : 'fallback'     , interval :  900                    , timeout :  5000 , lazy : true  , proxies : [  '🇬🇧🔰.VPS-[UK.Relay]-(英国中转节点)'             ,  '🇬🇧.Multi.PrxChain-[UK]'                ] }                                   
