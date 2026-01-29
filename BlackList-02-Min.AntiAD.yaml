@@ -110,11 +110,8 @@ tun                               :                                             
 #                                   - '172.16.0.0/12'                                   # RFC1918 全排除（按需启用）      
 #                                 # - 'fc00::/7'                                        # 可选：排除 ULA/Link-Local（通常不需要，已由 2000::/3 覆盖公网）
 #                                 # - 'fe80::/10'                                       # 可选：排除 ULA/Link-Local（通常不需要，已由 2000::/3 覆盖公网） 
-#                                                                                       # 以下配置为了 防止 TUN回环：务必排除“上游端点” （ ⚠️⚠️ 如果启用了 route-address  ，此处必须配置，不然会导致无法上网 ）
-#                                 # - '???.???.???.???/32'                              #   1) 代理节点服务器 IP（必须排除，否则可能自我回环）
-#                                 # - '???.???.???.???/32'                              #   2) 上游 DNS 服务器 IP（视你的上游 DNS 类型而定）
-# route-address                   :                                                     # 哪些网段 被包含。即，必须被 TUN 强制接管      
-#                                   - '0.0.0.0/0'                                       # ⚠️ 必须补充❕❕❕  原配置中 IPv4 默认全走 TUN，新写法需显式声明
+# route-address                   :                                                     # 哪些网段 被包含。即，必须被 TUN 强制接管      # ⚠️⚠️⚠️⚠️ 强烈不建议启用 ❕❕❕❕❕ 非常容易造成回环 ❕ 如果启用 route-address，必须将所有用到的代理节点和DNS都配置到 route-exclude-address 中。不然 100%造成回环 ，维护成本极差！！   
+#                                 # - '0.0.0.0/0'                                       # 老写法中 ，IPv4 默认全走 TUN，新写法需显式声明
 #                                   - '2000::/3'                                        # 仅让公网 IPv6通过 TUN，避免 IPv6 泄漏，同时保留本地 IPv6 直连
 
 
@@ -2386,7 +2383,7 @@ rules:
 
 
 
-rule-providers: 
+rule-providers :                              ### ⚠️⚠️⚠️ 特别注意 ： 远程规则集合，必须优先使用 behavior = domain / ipcidr 的规则 。 比起 classical ，domain / ipcidr 的  内存占用 节约 50% ， 功耗和计算负载 节约 70% 以上 ❕❕❕❕❕❕
 
   ###  [1st-01] -  DNS \ NTP 
     GlobalDNS_Domain                          : { type : 'http'  , behavior : 'domain'     , format : 'yaml'  , interval : 86400  , proxy : '🔰⚡.Line-[Relay.VPS]-Low.Latency'        , url : 'https://cdn.jsdelivr.net/gh/Accademia/Additional_Rule_For_Clash@latest/GlobalDNS/GlobalDNS_Domain.yaml'                                        , path : './ruleset/GlobalDNS_Domain.yaml'                              }           ### [1st-01]  [ Default : US          ]     📡.<DNS>--GlobalDNS              https://github.com/Accademia/Additional_Rule_For_Clash                                       全球 安全DNS - GlobalDNS            

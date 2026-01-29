@@ -9460,7 +9460,7 @@ rules:
 
 
 
-rule-providers: 
+rule-providers :                              ### ⚠️⚠️⚠️ 特别注意 ： 远程规则集合，必须优先使用 behavior = domain / ipcidr 的规则 。 比起 classical ，domain / ipcidr 的  内存占用 节约 50% ， 功耗和计算负载 节约 70% 以上 ❕❕❕❕❕❕
 
   ###  [1st-01] -  DNS \ NTP 
     GlobalDNS_Domain                          : { type : 'http'  , behavior : 'domain'     , format : 'yaml'  , interval : 86400  ,  proxy : '🔰⚡.Line-[Relay.VPS]-Low.Latency'       , url : 'https://cdn.jsdelivr.net/gh/Accademia/Additional_Rule_For_Clash@latest/GlobalDNS/GlobalDNS_Domain.yaml'                                        , path : './ruleset/GlobalDNS_Domain.yaml'                              }           ### [1st-02]  [ Default : US          ]     📡.<DNS>--GlobalDNS              https://github.com/Accademia/Additional_Rule_For_Clash                                       全球 安全DNS - GlobalDNS            
