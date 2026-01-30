@@ -933,9 +933,9 @@
 >
 >  - [【 第一阶段 】选择模版 并导入订阅链接](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5-%E5%9C%A8vpn%E8%BD%AF%E4%BB%B6%E4%B8%AD%E5%AF%BC%E5%85%A5-%E6%9C%AC%E6%A8%A1%E7%89%88%E7%9A%84-%E8%AE%A2%E9%98%85%E9%93%BE%E6%8E%A5)
 >
->  - [【 第二阶段 】填入订阅节点](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#--%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5-%E5%A6%82%E4%BD%95%E5%AF%BC%E5%85%A5-%E9%85%8D%E7%BD%AE%E7%9B%B4%E8%BF%9E%E5%90%8D%E5%8D%95-)
+>  - [【 第二阶段 】填入订阅节点](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#--%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5-%E5%A6%82%E4%BD%95%E5%AF%BC%E5%85%A5-%E6%9C%BA%E5%9C%BA%E8%AE%A2%E9%98%85%E8%8A%82%E7%82%B9-)
 >
->  - [【 第三阶段 】填入VPS自建节点](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#--%E7%AC%AC%E4%B8%89%E9%98%B6%E6%AE%B5%E5%A6%82%E4%BD%95%E5%AF%BC%E5%85%A5-%E8%87%AA%E5%BB%BA%E8%8A%82%E7%82%B9--)
+>  - [【 第三阶段 】填入VPS自建节点](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#--%E7%AC%AC%E4%B8%89%E9%98%B6%E6%AE%B5%E5%A6%82%E4%BD%95%E5%AF%BC%E5%85%A5-vps-%E8%87%AA%E5%BB%BA%E8%8A%82%E7%82%B9--)
 >
 >  - [【 第四阶段 】避免 链上套链](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#--%E7%AC%AC%E5%9B%9B%E9%98%B6%E6%AE%B5--%E9%81%BF%E5%85%8D-%E9%93%BE%E4%B8%8A%E5%8A%A0%E9%93%BE-%E5%A8%83%E4%B8%8A%E5%A5%97%E5%A8%83-%E9%80%89%E4%BD%9C--)
 
@@ -1040,9 +1040,9 @@
 
   当上述导入完成后，下面 你就可以开始配置模版。
 
-   - [【 第二阶段 】填入机场订阅节点](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#--%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5-%E5%A6%82%E4%BD%95%E5%AF%BC%E5%85%A5-%E9%85%8D%E7%BD%AE%E7%9B%B4%E8%BF%9E%E5%90%8D%E5%8D%95-)
+   - [【 第二阶段 】填入机场订阅节点](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#--%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5-%E5%A6%82%E4%BD%95%E5%AF%BC%E5%85%A5-%E6%9C%BA%E5%9C%BA%E8%AE%A2%E9%98%85%E8%8A%82%E7%82%B9-)
 
-   - [【 第三阶段 】填入自建节点](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#--%E7%AC%AC%E4%B8%89%E9%98%B6%E6%AE%B5%E5%A6%82%E4%BD%95%E5%AF%BC%E5%85%A5-%E8%87%AA%E5%BB%BA%E8%8A%82%E7%82%B9--)
+   - [【 第三阶段 】填入自建节点](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#--%E7%AC%AC%E4%B8%89%E9%98%B6%E6%AE%B5%E5%A6%82%E4%BD%95%E5%AF%BC%E5%85%A5-vps-%E8%87%AA%E5%BB%BA%E8%8A%82%E7%82%B9--)
 
    - [【 第四阶段 】 避免 链上套链](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#--%E7%AC%AC%E5%9B%9B%E9%98%B6%E6%AE%B5--%E9%81%BF%E5%85%8D-%E9%93%BE%E4%B8%8A%E5%8A%A0%E9%93%BE-%E5%A8%83%E4%B8%8A%E5%A5%97%E5%A8%83-%E9%80%89%E4%BD%9C--)
 <br> 
@@ -1053,7 +1053,7 @@
 
 <br> 
 
-> 对于 只有 “ 自建节点” 的用户，而无机场订阅节点的，可以 “跳过” 本阶段配置，直接进行下一阶段配置 ： [【 第三阶段 】填入VPS自建节点](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#--%E7%AC%AC%E4%B8%89%E9%98%B6%E6%AE%B5%E5%A6%82%E4%BD%95%E5%AF%BC%E5%85%A5-%E8%87%AA%E5%BB%BA%E8%8A%82%E7%82%B9--)
+> 对于 只有 “ 自建节点” 的用户，而无机场订阅节点的，可以 “跳过” 本阶段配置，直接进行下一阶段配置 ： [【 第三阶段 】填入VPS自建节点](https://github.com/Accademia/Clash_Configuration_Template?tab=readme-ov-file#--%E7%AC%AC%E4%B8%89%E9%98%B6%E6%AE%B5%E5%A6%82%E4%BD%95%E5%AF%BC%E5%85%A5-vps-%E8%87%AA%E5%BB%BA%E8%8A%82%E7%82%B9--)
 
  订阅节点 的 导入，请查找模版中，如下代码 ： 
   > 通用模版 ：🈚️🈚️ 无 订阅功能 ！
