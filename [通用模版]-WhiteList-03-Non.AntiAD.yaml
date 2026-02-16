@@ -174,16 +174,16 @@ dns                               :
                                  # ####  [2st-01]  DNS分流 ： 修改IP归属地显示 
                                  # #### --------------------------------------------------------------------------------------------------
                                    #    
-                                 #   'RULE-SET:FakeLocationBiliBili_Do_Resolve'         : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>--BiliBili'                       , 'https://dns.google/dns-query#🇨🇳.<ShowIP>--BiliBili'                       ]   ### [2st-01]   
-                                 #   'RULE-SET:FakeLocationDouYin_Do_Resolve'           : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>--抖音'                           , 'https://dns.google/dns-query#🇨🇳.<ShowIP>--抖音'                           ]   ### [2st-01]   
-                                 #   'RULE-SET:FakeLocationKuaiShou_Do_Resolve'         : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>--快手'                           , 'https://dns.google/dns-query#🇨🇳.<ShowIP>--快手'                           ]   ### [2st-01]   
-                                 #   'RULE-SET:FakeLocationXiaoHongShu_Do_Resolve'      : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>--小红书'                         , 'https://dns.google/dns-query#🇨🇳.<ShowIP>--小红书'                         ]   ### [2st-01]   
-                                 #   'RULE-SET:FakeLocationXiGua_Do_Resolve'            : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>--西瓜'                           , 'https://dns.google/dns-query#🇨🇳.<ShowIP>--西瓜'                           ]   ### [2st-01]   
-                                 #   'RULE-SET:FakeLocationWeiBo_Do_Resolve'            : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>--微博'                           , 'https://dns.google/dns-query#🇨🇳.<ShowIP>--微博'                           ]   ### [2st-01]   
-                                 #   'RULE-SET:FakeLocationZhiHu_Do_Resolve'            : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>--知乎'                           , 'https://dns.google/dns-query#🇨🇳.<ShowIP>--知乎'                           ]   ### [2st-01]   
-                                 #   'RULE-SET:FakeLocationTieBa_Do_Resolve'            : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>--贴吧'                           , 'https://dns.google/dns-query#🇨🇳.<ShowIP>--贴吧'                           ]   ### [2st-01]   
-                                 #   'RULE-SET:FakeLocationDouBan_Do_Resolve'           : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>--豆瓣'                           , 'https://dns.google/dns-query#🇨🇳.<ShowIP>--豆瓣'                           ]   ### [2st-01]   
-                                 #   'RULE-SET:FakeLocationXianYu_Do_Resolve'           : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>--闲鱼'                           , 'https://dns.google/dns-query#🇨🇳.<ShowIP>--闲鱼'                           ]   ### [2st-01]   
+                                 # # 'RULE-SET:FakeLocationBiliBili_Do_Resolve'         : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>--BiliBili'                       , 'https://dns.google/dns-query#🇨🇳.<ShowIP>--BiliBili'                       ]   ### [2st-01]   
+                                 # # 'RULE-SET:FakeLocationDouYin_Do_Resolve'           : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>--抖音'                           , 'https://dns.google/dns-query#🇨🇳.<ShowIP>--抖音'                           ]   ### [2st-01]   
+                                 # # 'RULE-SET:FakeLocationKuaiShou_Do_Resolve'         : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>--快手'                           , 'https://dns.google/dns-query#🇨🇳.<ShowIP>--快手'                           ]   ### [2st-01]   
+                                 # # 'RULE-SET:FakeLocationXiaoHongShu_Do_Resolve'      : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>--小红书'                         , 'https://dns.google/dns-query#🇨🇳.<ShowIP>--小红书'                         ]   ### [2st-01]   
+                                 # # 'RULE-SET:FakeLocationXiGua_Do_Resolve'            : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>--西瓜'                           , 'https://dns.google/dns-query#🇨🇳.<ShowIP>--西瓜'                           ]   ### [2st-01]   
+                                 # # 'RULE-SET:FakeLocationWeiBo_Do_Resolve'            : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>--微博'                           , 'https://dns.google/dns-query#🇨🇳.<ShowIP>--微博'                           ]   ### [2st-01]   
+                                 # # 'RULE-SET:FakeLocationZhiHu_Do_Resolve'            : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>--知乎'                           , 'https://dns.google/dns-query#🇨🇳.<ShowIP>--知乎'                           ]   ### [2st-01]   
+                                 # # 'RULE-SET:FakeLocationTieBa_Do_Resolve'            : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>--贴吧'                           , 'https://dns.google/dns-query#🇨🇳.<ShowIP>--贴吧'                           ]   ### [2st-01]   
+                                 # # 'RULE-SET:FakeLocationDouBan_Do_Resolve'           : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>--豆瓣'                           , 'https://dns.google/dns-query#🇨🇳.<ShowIP>--豆瓣'                           ]   ### [2st-01]   
+                                 # # 'RULE-SET:FakeLocationXianYu_Do_Resolve'           : [ 'https://dns.alidns.com/dns-query#🇨🇳.<ShowIP>--闲鱼'                           , 'https://dns.google/dns-query#🇨🇳.<ShowIP>--闲鱼'                           ]   ### [2st-01]   
                                    #    
                                    #    
                                  # #### --------------------------------------------------------------------------------------------------
@@ -743,35 +743,35 @@ dns                               :
                                    ###  --------------------------------------------------------------------------------------------------
                                    ###  修改IP归属地显示 规则                                                             
                                    ###  --------------------------------------------------------------------------------------------------            
-                                     '+.biliapi.net'                                    : 'https://dns.google/dns-query'              # Bilibili    
-                                     '+.bilibili.com'                                   : 'https://dns.google/dns-query'              # Bilibili
-                                     '+.httpdns.bilivideo.com'                          : 'https://dns.google/dns-query'              # Bilibili
-                                     '+.amemv.com'                                      : 'https://dns.google/dns-query'              # 抖音
-                                     '+.amemv.com.*'                                    : 'https://dns.google/dns-query'              # 抖音
-                                     '+.amemv.com.*.*'                                  : 'https://dns.google/dns-query'              # 抖音
-                                     '+.amemv.com.*.*.*'                                : 'https://dns.google/dns-query'              # 抖音
-                                     '+.amemv.com.*.*.*.*'                              : 'https://dns.google/dns-query'              # 抖音
-                                     '+.gifshow.com'                                    : 'https://dns.google/dns-query'              # 快手
-                                     '+.ksapisrv.com'                                   : 'https://dns.google/dns-query'              # 快手
-                                     '+.edith.xiaohongshu.com'                          : 'https://dns.google/dns-query'              # 小红书  
-                                     '+.www.xiaohongshu.com'                            : 'https://dns.google/dns-query'              # 小红书  
-                                     '+.ixigua.com'                                     : 'https://dns.google/dns-query'              # 西瓜 
-                                     '+.weibo.cn'                                       : 'https://dns.google/dns-query'              # 微博
-                                     '+.weibo.com'                                      : 'https://dns.google/dns-query'              # 微博
-                                     '+.weibo.com.cn'                                   : 'https://dns.google/dns-query'              # 微博
-                                     '+.weibocdn.com'                                   : 'https://dns.google/dns-query'              # 微博
-                                     '+.wbimg.cn'                                       : 'https://dns.google/dns-query'              # 微博         
-                                     '+.wbimg.com'                                      : 'https://dns.google/dns-query'              # 微博         
-                                     '+.sinaimg.cn'                                     : 'https://dns.google/dns-query'              # 微博         
-                                     '+.zhihu.com'                                      : 'https://dns.google/dns-query'              # 知乎
-                                     '+.tiebac.baidu.com'                               : 'https://dns.google/dns-query'              # 贴吧  
-                                     '+.douban.com'                                     : 'https://dns.google/dns-query'              # 豆瓣
-                                     '+.guide-acs.taobao.com'                           : 'https://dns.google/dns-query'              # 闲鱼、淘宝
-                                     '+.h-adashx.ut.taobao.com'                         : 'https://dns.google/dns-query'              # 闲鱼、淘宝
-                                     '+.adashx.m.taobao.com'                            : 'https://dns.google/dns-query'              # 闲鱼、淘宝
-                                     '+.amdc.m.taobao.com'                              : 'https://dns.google/dns-query'              # 闲鱼、淘宝
-                                     '+.acs.m.goofish.com'                              : 'https://dns.google/dns-query'              # 闲鱼、淘宝
-                                     'dns.alidns.com'                                   : 'https://dns.google/dns-query'              # 闲鱼、淘宝
+                                    #'+.biliapi.net'                                    : 'https://dns.google/dns-query'              # Bilibili    
+                                    #'+.bilibili.com'                                   : 'https://dns.google/dns-query'              # Bilibili
+                                    #'+.httpdns.bilivideo.com'                          : 'https://dns.google/dns-query'              # Bilibili
+                                    #'+.amemv.com'                                      : 'https://dns.google/dns-query'              # 抖音
+                                    #'+.amemv.com.*'                                    : 'https://dns.google/dns-query'              # 抖音
+                                    #'+.amemv.com.*.*'                                  : 'https://dns.google/dns-query'              # 抖音
+                                    #'+.amemv.com.*.*.*'                                : 'https://dns.google/dns-query'              # 抖音
+                                    #'+.amemv.com.*.*.*.*'                              : 'https://dns.google/dns-query'              # 抖音
+                                    #'+.gifshow.com'                                    : 'https://dns.google/dns-query'              # 快手
+                                    #'+.ksapisrv.com'                                   : 'https://dns.google/dns-query'              # 快手
+                                    #'+.edith.xiaohongshu.com'                          : 'https://dns.google/dns-query'              # 小红书  
+                                    #'+.www.xiaohongshu.com'                            : 'https://dns.google/dns-query'              # 小红书  
+                                    #'+.ixigua.com'                                     : 'https://dns.google/dns-query'              # 西瓜 
+                                    #'+.weibo.cn'                                       : 'https://dns.google/dns-query'              # 微博
+                                    #'+.weibo.com'                                      : 'https://dns.google/dns-query'              # 微博
+                                    #'+.weibo.com.cn'                                   : 'https://dns.google/dns-query'              # 微博
+                                    #'+.weibocdn.com'                                   : 'https://dns.google/dns-query'              # 微博
+                                    #'+.wbimg.cn'                                       : 'https://dns.google/dns-query'              # 微博         
+                                    #'+.wbimg.com'                                      : 'https://dns.google/dns-query'              # 微博         
+                                    #'+.sinaimg.cn'                                     : 'https://dns.google/dns-query'              # 微博         
+                                    #'+.zhihu.com'                                      : 'https://dns.google/dns-query'              # 知乎
+                                    #'+.tiebac.baidu.com'                               : 'https://dns.google/dns-query'              # 贴吧  
+                                    #'+.douban.com'                                     : 'https://dns.google/dns-query'              # 豆瓣
+                                    #'+.guide-acs.taobao.com'                           : 'https://dns.google/dns-query'              # 闲鱼、淘宝
+                                    #'+.h-adashx.ut.taobao.com'                         : 'https://dns.google/dns-query'              # 闲鱼、淘宝
+                                    #'+.adashx.m.taobao.com'                            : 'https://dns.google/dns-query'              # 闲鱼、淘宝
+                                    #'+.amdc.m.taobao.com'                              : 'https://dns.google/dns-query'              # 闲鱼、淘宝
+                                    #'+.acs.m.goofish.com'                              : 'https://dns.google/dns-query'              # 闲鱼、淘宝
+                                    #'dns.alidns.com'                                   : 'https://dns.google/dns-query'              # 闲鱼、淘宝
 
 
                                    ###  --------------------------------------------------------------------------------------------------
@@ -3087,11 +3087,11 @@ dns                               :
                                      '+.activity-wbsj.com'                              : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
                                      '+.aihst8.com'                                     : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
                                    # '+.amemv.cn'                                       : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin                                # duplicate .cn suffix rule
-                                   # '+.amemv.com'                                      : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
-                                   # '+.amemv.com.*'                                    : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
-                                   # '+.amemv.com.*.*'                                  : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
-                                   # '+.amemv.com.*.*.*'                                : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
-                                   # '+.amemv.com.*.*.*.*'                              : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                                     '+.amemv.com'                                      : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                                     '+.amemv.com.*'                                    : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                                     '+.amemv.com.*.*'                                  : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                                     '+.amemv.com.*.*.*'                                : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
+                                     '+.amemv.com.*.*.*.*'                              : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
                                      '+.amemv.net'                                      : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin   
                                    # '+.*-aweme-*.*.*'                                  : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
                                    # '+.*-aweme-*.*.*.*'                                : 'https://dns.alidns.com/dns-query'          # GeoSite:douyin
