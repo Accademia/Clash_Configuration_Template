@@ -1565,6 +1565,25 @@ If you don't understand how to use this template, please throw this template to 
   
 ### ❌❌❌ 原则上来说，本项目已经 放弃适配 🇭🇰 香港节点 ❌❌❌ （ 力求省心 + 0频繁维护 ） 
 
+<br>
+<br>
+
+
+<br>
+
+
+------
+
+
+#  开启 本模版 加载规则时，出现了大量的EOF，规则加载不上 怎么办？
+
+<br>
+
+如果你的 github.com 、jsdelivr.net 网络访问没有问题。那么这是正常现象，因为引用规则数量太多（并发请求太大），所以会被cdn阻止。你要做的就是多手动开关几次，直到所有的规则都加载到本地。
+
+说实话，这应该是clash软件在后台做的事情。
+
+
 
 <br>
 <br>
