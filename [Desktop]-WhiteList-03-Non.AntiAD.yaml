@@ -545,7 +545,10 @@ dns                               :
                                        
                                      ###  --------------------------------------------------------------------------------------------------
                                      ###   [3st-26]  DNS分流 ： 社交             
-                                     ###  --------------------------------------------------------------------------------------------------
+                                     ###  --------------------------------------------------------------------------------------------------    
+                                       
+                                       'geosite:whatsapp'                                 : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>--Whatsapp'                   , 'https://dns.google/dns-query#💛.<Social>--Whatsapp'                       ]   ### [3st-26]         
+                                       'rule-set:Whatsapp_Do_Resolve'                     : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>--Whatsapp'                   , 'https://dns.google/dns-query#💛.<Social>--Whatsapp'                       ]   ### [3st-26]  
                                        
                                        'geosite:facebook'                                 : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>--Facebook'                   , 'https://dns.google/dns-query#💛.<Social>--Facebook'                       ]   ### [3st-26]         
                                        'rule-set:Facebook_Do_Resolve'                     : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>--Facebook'                   , 'https://dns.google/dns-query#💛.<Social>--Facebook'                       ]   ### [3st-26]         
@@ -558,10 +561,7 @@ dns                               :
                                        'rule-set:Reddit_Do_Resolve'                       : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>--Reddit'                     , 'https://dns.google/dns-query#💛.<Social>--Reddit'                         ]   ### [3st-26]         
                                        
                                        'geosite:telegram'                                 : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>--Telegram'                   , 'https://dns.google/dns-query#💛.<Social>--Telegram'                       ]   ### [3st-26]         
-                                       'rule-set:Telegram_Do_Resolve'                     : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>--Telegram'                   , 'https://dns.google/dns-query#💛.<Social>--Telegram'                       ]   ### [3st-26]         
-                                       
-                                       'geosite:whatsapp'                                 : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>--Whatsapp'                   , 'https://dns.google/dns-query#💛.<Social>--Whatsapp'                       ]   ### [3st-26]         
-                                       'rule-set:Whatsapp_Do_Resolve'                     : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>--Whatsapp'                   , 'https://dns.google/dns-query#💛.<Social>--Whatsapp'                       ]   ### [3st-26]         
+                                       'rule-set:Telegram_Do_Resolve'                     : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>--Telegram'                   , 'https://dns.google/dns-query#💛.<Social>--Telegram'                       ]   ### [3st-26]            
                                        
                                        'geosite:line'                                     : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>--Line'                       , 'https://dns.google/dns-query#💛.<Social>--Line'                           ]   ### [3st-26]         
                                        'rule-set:Line_Do_Resolve'                         : [ 'https://cloudflare-dns.com/dns-query#💛.<Social>--Line'                       , 'https://dns.google/dns-query#💛.<Social>--Line'                           ]   ### [3st-26]         
@@ -2094,7 +2094,10 @@ rules :
   # - rule-set        , AppleMusic_Do_Resolve                      , 🎧.<Audio>--AppleMusic                           # , no-resolve                          ### [3st-25]  [ Default : US          ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/AppleMusic            音频 - AppleMusic                                           
 
 
-  ###  [3st-26] -  社交         
+  ###  [3st-26] -  社交                                                                          
+
+    - geosite         , whatsapp                                   , 💛.<Social>--Whatsapp                            #                                       ### [3st-26]  [ Default : Global      ]    
+    - rule-set        , Whatsapp_Do_Resolve                        , 💛.<Social>--Whatsapp                            # , no-resolve                          ### [3st-26]  [ Default : Global      ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Whatsapp              社交 -  Whatsapp    # 注意：发送即时消息时，最好多次跳转，或使用Tor等匿名网络     
 
     - geosite         , facebook                                   , 💛.<Social>--Facebook                            #                                       ### [3st-26]  [ Default : Global      ]    
     - rule-set        , Facebook_Do_Resolve                        , 💛.<Social>--Facebook                            # , no-resolve                          ### [3st-26]  [ Default : Global      ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Facebook              社交 -  Facebook      # 注意：发送即时消息时，最好多次跳转，或使用Tor等匿名网络                                                                    
@@ -2107,10 +2110,7 @@ rules :
     - rule-set        , Reddit_Do_Resolve                          , 💛.<Social>--Reddit                              # , no-resolve                          ### [3st-26]  [ Default : Global      ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Reddit                社交 -  Reddit                                                                             
 
     - geosite         , telegram                                   , 💛.<Social>--Telegram                            #                                       ### [3st-26]  [ Default : Global      ]    
-    - rule-set        , Telegram_Do_Resolve                        , 💛.<Social>--Telegram                            # , no-resolve                          ### [3st-26]  [ Default : Global      ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Telegram              社交 -  Telegram    # 注意：发送即时消息时，最好多次跳转，或使用Tor等匿名网络                                                                        
-
-    - geosite         , whatsapp                                   , 💛.<Social>--Whatsapp                            #                                       ### [3st-26]  [ Default : Global      ]    
-    - rule-set        , Whatsapp_Do_Resolve                        , 💛.<Social>--Whatsapp                            # , no-resolve                          ### [3st-26]  [ Default : Global      ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Whatsapp              社交 -  Whatsapp    # 注意：发送即时消息时，最好多次跳转，或使用Tor等匿名网络                                                                               
+    - rule-set        , Telegram_Do_Resolve                        , 💛.<Social>--Telegram                            # , no-resolve                          ### [3st-26]  [ Default : Global      ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Telegram              社交 -  Telegram    # 注意：发送即时消息时，最好多次跳转，或使用Tor等匿名网络                                                                                 
 
     - geosite         , line                                       , 💛.<Social>--Line                                #                                       ### [3st-26]  [ Default : Global      ]    
     - rule-set        , Line_Do_Resolve                            , 💛.<Social>--Line                                # , no-resolve                          ### [3st-26]  [ Default : Global      ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Line                  社交 -  Line        # 注意：发送即时消息时，最好多次跳转，或使用Tor等匿名网络                                                                       
