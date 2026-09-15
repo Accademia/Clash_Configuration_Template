@@ -110,10 +110,9 @@ tun                               :                                             
 #                                   - '172.16.0.0/12'                                   # RFC1918 全排除（按需启用）      
 #                                 # - 'fc00::/7'                                        # 可选：排除 ULA/Link-Local（通常不需要，已由 2000::/3 覆盖公网）
 #                                 # - 'fe80::/10'                                       # 可选：排除 ULA/Link-Local（通常不需要，已由 2000::/3 覆盖公网） 
-# route-address                   :                                                     # 哪些网段 被包含。即，必须被 TUN 强制接管      # ⚠️⚠️⚠️⚠️ 强烈不建议启用 ❕❕❕❕❕ 非常容易造成回环 ❕ 如果启用 route-address，必须将所有用到的代理节点和DNS都配置到 route-exclude-address 中。不然 100%造成回环 ，维护成本极差！！   
+# route-address                   :                                                     # 哪些网段 被包含。即，必须被 TUN 强制接管      # ⚠️⚠️⚠️⚠️ 强烈不建议启用 ❕❕❕❕❕ 非常容易造成回环 ❕ 如果启用 route-address，必须将所有用到的代理节点和DNS都配置到 route-exclude-address 中。不然 100%造成回环 ，维护成本极差！！     
 #                                 # - '0.0.0.0/0'                                       # 老写法中 ，IPv4 默认全走 TUN，新写法需显式声明
 #                                   - '2000::/3'                                        # 仅让公网 IPv6通过 TUN，避免 IPv6 泄漏，同时保留本地 IPv6 直连
-
 
 
 hosts                             :                                                     # Clash:全局生效 / Stash:仅direct生效 
@@ -305,6 +304,7 @@ dns                               :
                                      # 'rule-set:360_Do_Resolve'                          : [ 'https://dns.alidns.com/dns-query#🇨🇳.<Country>--CN'                            , 'https://doh.pub/dns-query#🇨🇳.<Country>--CN'                               ]   ### [2st-02]
                                        
                                        
+                                       'geosite:cn'                                       : [ 'https://dns.alidns.com/dns-query#🇨🇳.<Country>--CN'                            , 'https://doh.pub/dns-query#🇨🇳.<Country>--CN'                               ]   ### [2st-05]
                                        'rule-set:GeositeCN_Domain'                        : [ 'https://dns.alidns.com/dns-query#🇨🇳.<Country>--CN'                            , 'https://doh.pub/dns-query#🇨🇳.<Country>--CN'                               ]   ### [2st-05]
                                        
                                        'geosite:cloudflare-cn'                            : [ 'https://dns.alidns.com/dns-query#🇨🇳.<Country>--CN'                            , 'https://doh.pub/dns-query#🇨🇳.<Country>--CN'                               ]   ### [6st-01]
@@ -1731,9 +1731,9 @@ rules :
 
    
   ###  [1st-08] -  保护隐私  -  补充
-    - rule-set        , PreRepairEasyPrivacy_REJECT_Do_Resolve     , REJECT-DROP                      # , no-track    # , no-resolve                          ### [1st-08]  [ Default : REJECT      ]      https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/PreRepairEasyPrivacy        保护隐私 - PreRepairEasyPrivacy                                                                                                                                           
 ###### 🔻🔻🔻 开始（Min.AntiAD） ✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅   开始（Min.AntiAD）      
 # ###  [1st-08] -  保护隐私                                                                                                                                   
+#   - rule-set        , PreRepairEasyPrivacy_REJECT_Do_Resolve     , REJECT-DROP                      # , no-track    # , no-resolve                          ### [1st-08]  [ Default : REJECT      ]      https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/PreRepairEasyPrivacy        保护隐私 - PreRepairEasyPrivacy                                                                                                                                           
 #   - rule-set        , PreRepairEasyPrivacy_DIRECT_Do_Resolve     , DIRECT                                           # , no-resolve                          ### [1st-08]  [ Default : DIRECT      ]      https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/PreRepairEasyPrivacy        保护隐私 - PreRepairEasyPrivacy        
 #   - rule-set        , PreRepairEasyPrivacy_PROXY_Do_Resolve      , ☁️.<Apps>--Google                                # , no-resolve                          ### [1st-08]  [ Default : US          ]      https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/PreRepairEasyPrivacy        保护隐私 - PreRepairEasyPrivacy                                                                                                                                           
 #   - rule-set        , EasyPrivacy_Domain                         , ⛔️.<Protection>--Privacy         # , no-track    #                                       ### [1st-08]  [ Default : REJECT      ]      https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/EasyPrivacy           保护隐私 - EasyPrivacy       (  3万条规则 )  
@@ -2094,10 +2094,10 @@ rules :
   # - rule-set        , AppleMusic_Do_Resolve                      , 🎧.<Audio>--AppleMusic                           # , no-resolve                          ### [3st-25]  [ Default : US          ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/AppleMusic            音频 - AppleMusic                                           
 
 
-  ###  [3st-26] -  社交                                                                            
+  ###  [3st-26] -  社交                                                                         
 
     - geosite         , whatsapp                                   , 💛.<Social>--Whatsapp                            #                                       ### [3st-26]  [ Default : Global      ]    
-    - rule-set        , Whatsapp_Do_Resolve                        , 💛.<Social>--Whatsapp                            # , no-resolve                          ### [3st-26]  [ Default : Global      ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Whatsapp              社交 -  Whatsapp    # 注意：发送即时消息时，最好多次跳转，或使用Tor等匿名网络   
+    - rule-set        , Whatsapp_Do_Resolve                        , 💛.<Social>--Whatsapp                            # , no-resolve                          ### [3st-26]  [ Default : Global      ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Whatsapp              社交 -  Whatsapp    # 注意：发送即时消息时，最好多次跳转，或使用Tor等匿名网络       
 
     - geosite         , facebook                                   , 💛.<Social>--Facebook                            #                                       ### [3st-26]  [ Default : Global      ]    
     - rule-set        , Facebook_Do_Resolve                        , 💛.<Social>--Facebook                            # , no-resolve                          ### [3st-26]  [ Default : Global      ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Facebook              社交 -  Facebook      # 注意：发送即时消息时，最好多次跳转，或使用Tor等匿名网络                                                                    
@@ -2110,7 +2110,7 @@ rules :
     - rule-set        , Reddit_Do_Resolve                          , 💛.<Social>--Reddit                              # , no-resolve                          ### [3st-26]  [ Default : Global      ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Reddit                社交 -  Reddit                                                                             
 
     - geosite         , telegram                                   , 💛.<Social>--Telegram                            #                                       ### [3st-26]  [ Default : Global      ]    
-    - rule-set        , Telegram_Do_Resolve                        , 💛.<Social>--Telegram                            # , no-resolve                          ### [3st-26]  [ Default : Global      ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Telegram              社交 -  Telegram    # 注意：发送即时消息时，最好多次跳转，或使用Tor等匿名网络                                                                                 
+    - rule-set        , Telegram_Do_Resolve                        , 💛.<Social>--Telegram                            # , no-resolve                          ### [3st-26]  [ Default : Global      ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Telegram              社交 -  Telegram    # 注意：发送即时消息时，最好多次跳转，或使用Tor等匿名网络                                                                                
 
     - geosite         , line                                       , 💛.<Social>--Line                                #                                       ### [3st-26]  [ Default : Global      ]    
     - rule-set        , Line_Do_Resolve                            , 💛.<Social>--Line                                # , no-resolve                          ### [3st-26]  [ Default : Global      ]     https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Line                  社交 -  Line        # 注意：发送即时消息时，最好多次跳转，或使用Tor等匿名网络                                                                       
