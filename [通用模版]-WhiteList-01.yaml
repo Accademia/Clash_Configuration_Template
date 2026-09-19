@@ -7432,8 +7432,8 @@ dns                               :
                                   # #'GEOSITE:qihoo360'                                 : [ 'https://dns.alidns.com/dns-query#🇨🇳.<Country>--CN'                            , 'https://doh.pub/dns-query#🇨🇳.<Country>--CN'                               ]   ### [2st-02]
                                   # #'RULE-SET:360_Do_Resolve'                          : [ 'https://dns.alidns.com/dns-query#🇨🇳.<Country>--CN'                            , 'https://doh.pub/dns-query#🇨🇳.<Country>--CN'                               ]   ### [2st-02]
                                    #    
-                                   #    
-                                     'GEOSITE:cn'                                       : [ 'https://dns.alidns.com/dns-query#🇨🇳.<Country>--CN'                            , 'https://doh.pub/dns-query#🇨🇳.<Country>--CN'                               ]   ### [2st-05] 
+                                   # 此处不能启用！！！！由于没有先做IP归属地DNS分流，所以此处启用 GEOSITE:cn ，会导致IP归属地失败   
+                                   # 'GEOSITE:cn'                                       : [ 'https://dns.alidns.com/dns-query#🇨🇳.<Country>--CN'                            , 'https://doh.pub/dns-query#🇨🇳.<Country>--CN'                               ]   ### [2st-05] 
                                  #   'RULE-SET:GeositeCN_Domain'                        : [ 'https://dns.alidns.com/dns-query#🇨🇳.<Country>--CN'                            , 'https://doh.pub/dns-query#🇨🇳.<Country>--CN'                               ]   ### [2st-05]
                                    #    
                                      'GEOSITE:cloudflare-cn'                            : [ 'https://dns.alidns.com/dns-query#🇨🇳.<Country>--CN'                            , 'https://doh.pub/dns-query#🇨🇳.<Country>--CN'                               ]   ### [6st-01]
