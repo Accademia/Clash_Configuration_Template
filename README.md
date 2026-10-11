@@ -13,12 +13,12 @@
  - 提供一套 同时支持  “ Clash Meta （ 如 ：Clash Verge Rev 、 OpenClash 等 ） / Stash for iPhone ”  的分流策略模版。
 
  - 力求 ：
-   + 数字居民级 7x24 小时挂机 对手机0影响：
      + 极致省电🔥🔥 
      + 0 DNS泄漏 
      + 0 绕路 白名单翻墙 （不干扰日常上网）
      + 0 代价 修改IP归属地显示 
      + 0 频繁维护（省心）
+     + 总结：数字居民级 7x24 小时挂机 对手机0影响
    
 客户端 ：
  - Clash Verge Rev 配置
